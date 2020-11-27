@@ -20362,14 +20362,14 @@ cr.plugins_.video = function(runtime)
 	pluginProto.exps = new Exps();
 }());
 cr.getObjectRefTable = function () { return [
+	cr.plugins_.Browser,
 	cr.plugins_.Button,
 	cr.plugins_.Mouse,
-	cr.plugins_.TiledBg,
-	cr.plugins_.Text,
-	cr.plugins_.Sprite,
 	cr.plugins_.Touch,
+	cr.plugins_.Text,
 	cr.plugins_.video,
-	cr.plugins_.Browser,
+	cr.plugins_.TiledBg,
+	cr.plugins_.Sprite,
 	cr.plugins_.Mouse.prototype.cnds.OnObjectClicked,
 	cr.system_object.prototype.acts.GoToLayout,
 	cr.plugins_.Mouse.prototype.cnds.IsOverObject,
