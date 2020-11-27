@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <script type='text/javascript' src='../js/x3dom.js'></script>
+  </head>
+  <body>
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' height='280px'>
+      <scene DEF='scene'>
+        <background groundAngle='1.57079' groundColor='1 1 1' skyAngle='1.57079' skyColor='1 1 1'></background>
+        <transform DEF='myBox'>
+          <shape>
+            <appearance>
+              <imageTexture url='"../gambar/gbrdpncpu.png"'></imageTexture>
+            </appearance>
+            <box size='4 4 0.05'></box>
+          </shape>
+          <transform translation='0 0 -0.05'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/gbrblkgcpu.png"'></imageTexture>
+              </appearance>
+              <box size='4 4 0.05'></box>
+            </shape>
+          </transform>
+          <sphereSensor DEF='mySensor'></sphereSensor>
+        </transform>
+        <ROUTE fromNode='mySensor' fromField='rotation_changed' toNode='myBox' toField='set_rotation'></ROUTE>
+      </scene>
+    </x3d>
+  </body>
+</html>

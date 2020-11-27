@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                body, html {
+                  height: 100%;
+                  margin: 0;
+                }
+                
+                .bg {
+                  /* The image used */
+                  background-image: url("../gambar/csstr.png");
+                
+                  /* Full height */
+                  height: 100%; 
+                        
+                  /* Center and scale the image nicely */
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
+
+                @media only screen and (max-width: 1080px) {
+			#res3 {
+				display: none;
+                        }
+		}
+                </style>
+
+                <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+                
+<body class="bg">
+        <div >
+                <svg id="res3" width="100%" height="100%" style="position: absolute;">
+                        <a href="csv.html">
+                  <rect x="70" y="230" width="380" height="300" stroke="yellow" style="stroke-width:5;fill-opacity:0;stroke-opacity:0.9;position: absolute;" >
+                    <animate 
+                                attributeType="XML"
+                                attributeName="stroke"
+                                values="#fff;yellow"
+                                dur="1s"
+                                repeatCount="indefinite"
+                                
+                                position= "absolute"/>
+                                
+                            </a>
+                            <text x="600" y="60" fill="white">Klik sisi Casing untuk memulai.</text>
+                  </svg>
+                  <div >
+                        <a id="res4" href="csv.html"><button class="button-mulai pos"> Mulai </button></a>
+                  </div>
+
+        </div>
+</body>
+
+</html>

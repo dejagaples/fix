@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <script type='text/javascript' src='../js/x3dom.js'></script>
+  </head>
+  <body>
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' height='300px'>
+      <scene DEF='scene'>
+        <background groundAngle='1.57079' groundColor='1 1 1' skyAngle='1.57079' skyColor='1 1 1'></background>
+        <transform DEF='myBox'>
+          <shape>
+            <appearance>
+              <imageTexture url='"../gambar/hdddepan.png"'></imageTexture>
+            </appearance>
+            <box size='5 1 0.05'></box>
+          </shape>
+          <transform translation='0 0 -6'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/hddbelakang.png"'></imageTexture>
+              </appearance>
+              <box size='5 1 0.05'></box>
+            </shape>
+          </transform>
+          <transform translation='2.5 0 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/hddkanan.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 1 6'></box>
+            </shape>
+          </transform>
+          <transform translation='-2.5 0 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/hddkiri.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 1 6'></box>
+            </shape>
+          </transform>
+          <transform translation='0 0.5 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/hddatas.png"'></imageTexture>
+              </appearance>
+              <box size='5 0.05 6'></box>
+            </shape>
+          </transform>
+          <transform translation='0 -0.5 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/hddbawah.png"'></imageTexture>
+              </appearance>
+              <box size='5 0.05 6'></box>
+            </shape>
+          </transform>
+          <cylinderSensor DEF='mySensor'></cylinderSensor>
+        </transform>
+        <ROUTE fromNode='mySensor' fromField='rotation_changed' toNode='myBox' toField='set_rotation'></ROUTE>
+      </scene>
+    </x3d>
+  </body>
+</html>

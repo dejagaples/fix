@@ -1,0 +1,110 @@
+{
+	"soal": [
+        "Berikut ini yang termasuk langkah-langkah melepas Case komputer antara lain .... ",
+        "Berikut ini yang termasuk langkah-langkah memasang Power Supply antara lain .... ",
+        "Berikut ini yang termasuk langkah-langkah memasang CPU antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Heatsink antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang RAM antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Motherboard antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang VGA Card Add-on antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Harddisk antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Optical Disc Drive antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Kabel Internal antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Case komputer antara lain ....",
+        "Berikut ini yang termasuk langkah-langkah memasang Kabel Eksternal antara lain ...."
+        
+	],
+
+    "a": [
+        "Lepas sekrup pada bagian samping casing",
+        "Posisikan power supply agar sisi port menghadap ke arah dalam case.",
+        "Buka tuas pengait pada socket prosesor",
+        "Berikan Thermal Paste di atas CPU",
+        "Buka pengunci RAM pada sisi slot yang tersedia",
+        "Pasang sekrup Motherboard di Casing",
+        "Carilah slot PCI pada Motherboard (atau slot yang sesuai dengan VGA card)",
+        "Pasang Harddisk ke tempatnya (di bawah Optical Disc Drive)",
+        "Pasang Optical Disc Drive dari dalam Case",
+        "Cari tahu seri Motherboard",
+        "Pasang HSF pada case",
+        "Pasang kabel VGA dan hubungkan ke Monitor"
+    ],
+    
+    "b": [
+        "Pasang sekrup ke bagian belakang casing",
+        "Posisikan power supply agar sisi kabel menghadap ke arah dalam case",
+        "Buka pelat beban",
+        "Berikan Thermal Paste di atas CPU ( jika ada )",
+        "Posisikan RAM pada slot tersebut dengan melihat bagian atas RAM",
+        "Tentukan posisi lubang yang sesuai dengan form Motherboard yang kita miliki",
+        "Pasang VGA card add-on tersebut",
+        "Posisikan Harddisk sehingga sisi port nya mengarah ke dalam case",
+        "Buka tutup slot Optical Disc Drive dengan cara mendorongnya dengan tangan dari belakang (jika ada tutupnya)",
+        "Pasang kabel power",
+        "Sambungkan konektor HSF dengan power supply",
+        "Pasang kabel mouse"
+    ],
+    
+	"c": [
+        "Lepas sekrup pada bagian belakang casing",
+        "Serasikan sisi kabel pada setiap lubang untuk sekrup",
+        "Pasang CPU dengan melihat tanda segitiga di ujung CPU",
+        "Putar semua clip ke arah kanan sebelum memasang",
+        "Posisikan RAM pada slot tersebut dengan melihat celah kaki RAM",
+        "Pasang baut spacer/standoff (bisa diputar dengan tangan)",
+        "Masukkan port VGA Card Add-On ke backpanel terlebih dahulu",
+        "Masukkan Harddisk ke tempatnya",
+        "Posisikan agar Optical Disc Drive menghadap ke arah depan",
+        "Pasang kabel daya",
+        "Pasang sekrup HSF",
+        "Pasang kabel keyboard"
+    ],
+
+    "d": [
+        "Simpan sekrup casing di tempat yang aman",
+        "Serasikan sisi seberang kabel pada setiap lubang untuk sekrup",
+        "Tutup kembali pelat beban",
+        "Putar semua clip ke arah kiri sebelum memasang",
+        "Pasang RAM dengan menekan sisi atas secara merata dengan menggunakan jempol hingga berbunyi klik",
+        "Masukkan Motherboard ke dalam Casing dengan menyesuaikan dudukan baut",
+        "Jika sudah pas, tinggal kita tekan secara merata seperti memasang RAM",
+        "Lepaskan penutup slot Harddisk",
+        "Posisikan agar Optical Disc Drive bisa masuk dari samping",
+        "Pasang kabel konektor heatsink",
+        "Posisikan sisi casing yang akan dipasang hingga benar",
+        "Pasang kabel ATA"
+        
+    ],
+
+    "e": [
+        "Lepas sisi casing",
+        "Pasang sekrup dengan menggunakan obeng",
+        "Tutup kembali tuas pengait",
+        "Cocokkan kaki heatsink dengan lubang, kemudian tekan secara diagonal berpasangan",
+        "Jika sudah, biasanya pengunci RAM otomatis terkunci. Namun jika belum, kunci kedua sisi secara bersamaan",
+        "Masukkan Motherboard ke dalam Casing dengan memulainya dari backpanel (port belakang case)",
+        "Pasanglah sekrup VGA card untuk finishing",
+        "Pasanglah baut Harddisk",
+        "Masukkan Optical Disc Drive dari luar Case",
+        "Pasang kabel konektor storage",
+        "Pasang Casing kembali seperti semula",
+        "Pasang kabel Front"
+    ],
+
+    "f": [
+        "Pasang sisi casing",
+        "Lepas sekrup dengan menggunakan obeng",
+        "Pasang CPU dengan melihat tanda segiempat di salah satu ujung CPU",
+        "Pasang kabel konektor heatsink ke motherboard",
+        "Jika jumlah RAM lebih dari satu, pastikan kecepatan RAM sama (misal sama-sama PC12800) agar kompatibel",
+        "Pasang sekrup Motherboard dengan obeng",
+        "Jika pada VGA card tersebut terdapat slot power, maka pasanglah kabel konektor power VGA dari power supply",
+        "Cocokkan lubang sekrup, kemudian pasang sekrup",
+        "Pasang sekrup ODD di bagian sampingnya (dalam case)",
+        "Pasang kabel Front",
+        "Pasang sekrup casing",
+        "Pasang kabel power"
+    ]
+
+
+}

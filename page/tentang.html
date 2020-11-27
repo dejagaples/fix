@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="utf-8">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font.css" rel="stylesheet" type="text/css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/duDialog.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+  <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Perakitan Komputer</title>
+  <style>
+  h2 {
+	  color: rgb(12, 121, 12);
+  }
+  </style>
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#myPage"> </a>
+		  <img src="../gambar/Logo.png"  width="50" height="50" >
+		  <span style="color:white;font-weight: bold;" >RAKITOS</span>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="../index.html">BERANDA</a></li>
+			<li>
+				<a href="#">BELAJAR<span class="caret"></span></a>
+				<ul>
+					<li><a href="#" onclick="sabar()">PENGENALAN</a></li>
+					<li><a href="#" onclick="sabar()">ALAT</a></li>
+					<li><a href="#" onclick="sabar()">PERANGKAT</a></li>
+					<li><a href="#" onclick="sabar()">PERAKITAN</a></li> 
+				</ul>
+			</li>
+			<li><a href="#myPage">TENTANG</a></li>
+			<li ><a href="#" onclick="back()" >KEMBALI</a></li>
+		   </ul>
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="container">
+							<label >
+								<b>1. Laman ini berisi informasi terkait pembuat aplikasi.</b>
+							</label>
+							<br/>
+							<label >
+								<b>2. Klik mulai jika Anda sudah siap mencoba aplikasi.</b>
+							</label>
+							<br/><br/>
+						</div>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+<br><br>
+<div style="text-align: center;" class="ttg-putih">
+
+    <h2> RAKITOS</h2>
+    <p>Aplikasi RAKITOS merupakan sebuah media pembelajaran yang dirancang untuk memudahkan praktek
+		perakitan komputer di lapangan. Aplikasi ini dibuat dalam rangka menyelesaikan Tugas Akhir 
+		(Skripsi) pada Program Studi Pendidikan Komputer FKIP Universitas Lambung Mangkurat.
+		Keunggulan yang dimiliki antara lain: 1) menggunakan model tiga dimensi sehingga membuat siswa lebih
+		mudah mengenal perangkat, 2) Penyusunan konten dibuat sederhana tetapi padat informasi, 3)
+		Sangat interaktif sehingga user tidak bosan, 4) Disertai kuis dan evaluasi untuk mengecek pemahaman,
+		5) Terdapat demonstrasi pada tahap perakitan, 6) Tampilan sangat menarik, dan 7) Menggunakan bahasa
+		yang sederhana. Developer berharap semoga aplikasi ini bermanfaat baik untuk sekolah maupun untuk 
+		siapapun yang berniat belajar merakit komputer. Aplikasi dapat diibaratkan sebuah paket kotak yang berisi  
+		berbagai macam suku cadang untuk pemula dalam mempelajari tahap-tahap perakitan.
+	</p>
+</div>
+<div class="ttg-abu">
+		<h2 > SUPERVISOR I</h2>
+		<table >
+		<tr >
+			<th style="width: 70%;padding-right: 50px;padding-top:0px ;">
+			<p style="text-align: justify;">Beliau merupakan sosok inspirator bagi developer dalam mengembangkan aplikasi pembelajaran ini.
+				Beliau ingin mencetuskan konsep BSI (Buku Sekolah Interaktif) sebagai pengembangan
+				dari BSE (Buku Sekolah Eletronik). Salah satunya adalah aplikasi ini. Selain itu, Beliau juga
+				sangat berdedikasi dalam dunia pendidikan kampus, selalu sabar menghadapi tingkah lakon mahasiswa. Alhasil
+				terciptalah Program Studi Pendidikan Komputer yang mencetak generasi-generasi muda harapan bangsa,
+				yang mana memiliki prospek kerja luas, baik dalam bidang pendidikan, teknologi, maupun bisnis. 
+				Belakangan salah satu mahasiswa Program Studi Pendidikan Komputer telah mendapatkan gelar juara dalam 
+				lomba media pembelajaran tingkat nasional.
+	
+		</p>			</th>
+	<th style="width: 30%;padding: 50px; padding-right: 0px;">
+			<p style="text-align: center;">
+			<img src="../gambar/paharja.jpg" style="width: 50%;"/><br><br>
+			Dr. Harja Santana Purba, M.Kom</p>
+	
+</th>
+	</tr>
+	</table>
+		
+</div>
+
+<div class="putih">
+		<h2 > SUPERVISOR II</h2>
+		<table >
+		<tr >
+			<th style="width: 70%;padding-right: 50px;padding-top:0px ;">
+			<p style="text-align: justify;">Beliau merupakan sosok yang sangat friendly terhadap mahasiswa. Sudah
+				banyak karya ilmiah yang Beliau tulis. Sebagai mahasiswa, saya merasakan ketenangan
+				dalam memahami materi ketika Beliau mengajar. Begitu pula dalam pengembangan aplikasi ini,
+				beliau sangat memercayai kemampuan developer. Hal pertama yang beliau perintahkan kepada mahasiswa
+				bimbingan adalah membuat modul (bahan ajar) yang ternyata memang sangat bermanfaat. Aplikasi ini
+				mirip dengan bahan ajar secara fisik, hanya saja aplikasi ini interaktif dan bisa 
+				melakukan pengecekan jawaban user. Selain itu, dalam penyelesaian Tugas Akhir ini Beliau sangat memberikan
+				kemudahan bagi developer dalam menyelesaikan masalah.
+	
+		</p>			</th>
+	<th style="width: 30%;padding: 50px; padding-right: 0px;">
+			<p style="text-align: center;">
+			<img src="../gambar/pahifdzi.jpg" style="width: 40%;"/><br><br>
+			Muhammad Hifdzi Adini, S.Kom, M.T</p>
+	
+</th>
+	</tr>
+	</table>
+		
+</div>
+
+<div class="ttg-abu">
+		<h2 > DEVELOPER</h2>
+		<table >
+		<tr >
+			<th style="width: 70%;padding-right: 50px;padding-top:0px ;">
+			<p style="text-align: justify;">
+					Developer merupakan seorang Half-Stack Developer, yang mana selalu setengah-setegah dalam
+					belajar coding. Kendati demikian, developer bersyukur telah masuk Program Studi Pendidikan Komputer
+					karena akhirnya bisa memahami logika kehidupan. Menurut developer, semua manusia itu 0, cuma
+					Allah yang 1. Maksudnya manusia tidak memiliki sedikit kekuatan pun untuk melakukan sesuatu,
+					kecuali dengan izin Allah.	Salah satu prinsip hidup developer yakni
+					"Kerjakanlah untuk akhirat semaksimalnya, dan untuk dunia seadanya". Alhasil muncullah aplikasi
+					yang seadanya ini. Semoga bermanfaat, hehe.
+	
+		</p>			</th>
+	<th style="width: 30%;padding: 50px; padding-right: 0px;">
+			<p style="text-align: center;">
+			<img src="../gambar/me.jpg" style="width: 50%;"/><br><br>
+			Muhammad Febry Mahfuz</p>
+	
+</th>
+	</tr>
+	</table>
+		
+</div>
+<div style="text-align: center;" class="ttg-putih">
+		<br>
+		<h2> DAFTAR PUSTAKA</h2>
+		<br>
+		<p>
+		<ul style="text-align: left; margin:0px 150px 0px 150px;">
+			<li>Boger, Paul. (2011). IT Essentials: PC Hardware and Software Companion Guide. Indianapolis: Cisco Press.</li>
+			<li>Firmansyah, Ricky. (2018). Teknik Komputer dan Jaringan Dasar SMK/MAK Kelas X. Bandung: HUP.</li>
+			<li>Muhammad, Hamid. (2017). KI dan KD SMA/MAK . Jakarta: Direktorat Pembinaan Sekolah Menengah Kejuruan.</li>
+			<li>Siswati. (2013). Perakitan Komputer1 Untuk SMK/MAK Kelas X. Jakarta: Kementerian Pendidikan dan Kebudayaan.</li>
+		</ul>
+	</p>
+	<br>
+</div>
+<script>
+	function sabar(){
+		new duDialog ('Hai', 'Belajarlah dengan berurutan agar mendapatkan hasil terbaik. ');
+	}
+	function back(){
+		window.history.back();
+	}
+</script>  
+</body>	
+
+<!-- Footer -->
+<footer class="merah">
+  <p style="text-align:center;">FEBRY &copy 
+	<a href="https://www.pilkom.ulm.ac.id" target="_blank" data-toggle="tooltip" title="Visit Pilkom Unlam">
+		Pendidikan Komputer 2015
+	</a>
+  </p> 
+</footer>
+</html>

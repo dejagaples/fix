@@ -1,0 +1,33 @@
+{
+	"soal": [
+        "Sound card berfungsi mengolah data untuk audio. ",
+        "Jika sound card rusak, meskipun ada speaker tetap tidak akan muncul suara.",
+        "Jika Sound Card Onboard rusak, yang harus kita lakukan adalah membeli Sound Card External.",
+        "Gambar tersebut merupakan Sound Card Onboard. ",
+        "Gambar tersebut merupakan Sound Card External. ",
+        "Gambar tersebut merupakan monitor CRT.",
+        "Kabel yang biasa digunakan untuk LAN Card adalah RJ-35",
+        "Monitor LED menggunakan metode emisi cahaya.",
+        "Monitor plasma merupakan kombinasi CRT dan LED.",
+        "Konsumsi listrik LED lebih boros dibanding LCD."
+
+
+	],
+
+    "jawaban": [
+        "true",
+        "true",
+        "true",
+        "false",
+        "false",
+        "true",
+        "false",
+        "true",
+        "false",
+        "false"
+
+    ]
+ 
+
+
+}

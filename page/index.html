@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+
+<body>
+<h1>Coba firebase</h1>
+
+		info1: <input type="text" id="info1"><br>
+		info2: <input type="text" id="info2"><br>
+
+<button id="save_button">SAVE</button>
+<button id="clear_button">CLEAR</button>
+<button id="load_button">LOAD</button>
+<button id="update_button">update</button>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyChAe-cuQmBWxWR78i4k2D6BsdYXnAHsQM",
+    authDomain: "rakitosapp.firebaseapp.com",
+    databaseURL: "https://rakitosapp.firebaseio.com",
+    projectId: "rakitosapp",
+    storageBucket: "rakitosapp.appspot.com",
+    messagingSenderId: "233269109527",
+    appId: "1:233269109527:web:9dcd43b83581fb3c330d52"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  	var rootRef = firebase.database().ref().child('infos');
+
+
+	 
+
+
+	$('#save_button').click(function(){
+		rootRef.push({
+					info1:$('#info1').val(),
+					info2:$('#info2').val(),
+		});
+	});
+
+	
+
+	$('#clear_button').click(function(){
+			$('#info1').val('');
+			$('#info2').val('');
+		
+	});
+
+	$('#load_button').click(function(){
+		
+		rootRef.on('value', function(snapshot) {
+		snapshot.forEach(function(childSnapshot) {
+			
+			$('#info1').val(childSnapshot.child('info1').val());
+			$('#info2').val(childSnapshot.child('info2').val());
+		});
+		});
+	});
+
+
+	$('#update_button').click(function(){
+		rootRef.update({
+					info1:$('#info1').val(),
+					info2:$('#info2').val()
+				});
+	});
+
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <script type='text/javascript' src='../js/x3dom.js'></script>
+  </head>
+  <body>
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' height='300px'>
+      <scene DEF='scene'>
+        <background groundAngle='1.57079' groundColor='1 1 1' skyAngle='1.57079' skyColor='1 1 1'></background>
+        <transform DEF='myBox'>
+          <shape>
+            <appearance>
+              <imageTexture url='"../gambar/odddepan.png"'></imageTexture>
+            </appearance>
+            <box size='8 2 0.05'></box>
+          </shape>
+          <transform translation='0 0 -9'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/oddbelakang.png"'></imageTexture>
+              </appearance>
+              <box size='8 2 0.05'></box>
+            </shape>
+          </transform>
+          <transform translation='4 0 -4.5'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/oddkanan.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 2 9'></box>
+            </shape>
+          </transform>
+          <transform translation='-4 0 -4.5'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/oddkiri.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 2 9'></box>
+            </shape>
+          </transform>
+          <transform translation='0 1 -4.5'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/oddatas.png"'></imageTexture>
+              </appearance>
+              <box size='8 0.05 9'></box>
+            </shape>
+          </transform>
+          <transform translation='0 -1 -4.5'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/oddbawah.png"'></imageTexture>
+              </appearance>
+              <box size='8 0.05 9'></box>
+            </shape>
+          </transform>
+          <cylinderSensor DEF='mySensor'></cylinderSensor>
+        </transform>
+        <ROUTE fromNode='mySensor' fromField='rotation_changed' toNode='myBox' toField='set_rotation'></ROUTE>
+      </scene>
+    </x3d>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="utf-8">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font.css" rel="stylesheet" type="text/css">
+  <script src="../js/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../js/bootstrap.min.js"></script>
+  <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+  <script src="../js/duDialog.js"></script>
+  <link href="../css/fontawesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" src="../css/all.css">
+  <script src="../js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+  <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Berlatih 3</title>
+  <script language="JavaScript">
+		document.addEventListener("contextmenu", function(e){
+			e.preventDefault();
+		}, false);
+  </script>
+  
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- Navbar -->
+	<nav class="navbar navbar-default" style="border-radius: 0;">
+	  <div class="container-fluid">
+		<!-- Navbar Atas Kiri -->  
+		<div class="navbar-header">
+			<img id="logogbr" src="../gambar/Logo.png"  width="50" height="50" >
+			<span id="namalogo" style="color:white;font-weight: bold;" >RAKITOS</span>
+			<i id="menuhp" class="fa fa-bars" aria-hidden="true" style="color: cornsilk;font-size: 30px; margin: 5px;" onclick="hilang()"></i>
+		</div>
+		<!-- Navbar Atas Kanan -->
+	    <div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="../index.html">BERANDA</a></li>
+			<li >
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#myPage">BELAJAR</a>	
+			</li>
+			<li><a href="tentang.html">TENTANG</a></li>
+			<li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
+		  </ul> 
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+			</div>
+				<div class="modal-body">
+					<form>
+						<div class="container">
+							<label >
+								<b>1. Bacalah soal dengan teliti. </b>
+							</label>
+							<br/>
+							<label>
+								<b>2. Semua soal merupakan materi subbab yang telah dipelajari.</b>
+							</label>
+							<br/>
+							<label>
+								<b>3. Klik "Ganti Soal" untuk menambah pengetahuanmu.</b>
+							</label>
+							<br/><br/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--/.sidebar-->
+	<div id="menu-wrap">
+		<ul id="menu" class="nav">
+			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html">Beranda</a></li>
+            <li><a class="tutup" href="#">Pengenalan<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a href="materi0.html">Mapel dan KD</a></li>
+					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
+					<li><a href="materi02.html">Peta Konsep</a></li>
+					<li><a href="materi03.html">Pengertian</a></li>
+				</ul>
+			</li>
+            <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="materi1.html">Obeng</a></li>
+					<li><a  href="materi2.html">Sekrup & Baut</a></li>
+					<li><a href="materi3.html">Kabel</a></li>
+					<li><a href="materi4.html">Jumper</a></li>
+					<li><a href="kuis1.html">Berlatih</a></li>
+					<li><a href="qz1.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup" href="#">Perangkat<span class="caret kiri"></span></a>
+				<ul class="sub">
+					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="materi5.html">Casing</a></li>
+					<li><a href="materi6.html">Power Supply</a></li>
+					<li><a href="materi7.html">Motherboard</a></li>
+					<li><a href="materi8.html">CPU</a></li>
+					<li><a href="materi9.html">RAM</a></li>
+					<li><a href="materi10.html">Harddisk</a></li>
+					<li><a href="odd.html">ODD</a></li>
+					<li><a href="materi11.html">Heatsink Fan</a></li>
+					<li><a href="materi12.html">VGA Card</a></li>
+					<li><a href="materi13.html">Sound Card</a></li>
+					<li><a href="materi14.html">LAN Card</a></li>
+					<li><a href="materi15.html">Monitor</a></li>
+					<li><a href="materi16.html">Keyboard</a></li>
+					<li><a href="materi17.html">Mouse</a></li>
+					<li><a href="materi18.html">Speaker</a></li>
+					<li><a href="kuis4.html">Berlatih</a></li>
+					<li><a href="qz2.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup active" href="#">Perakitan<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="lepascs.html">Case (Buka)</a></li>
+					<li><a href="pasangps.html">Power Supply</a></li>
+					<li><a href="pasangcpu.html">CPU</a></li>
+					<li><a href="pasanghs.html">Heatsink</a></li>
+					<li><a href="pasangram.html">RAM</a></li>
+					<li><a href="pasangmobo.html">Motherboard</a></li>
+					<li><a href="pasangvga.html">VGA Card</a></li>
+					<li><a href="pasanghdd.html">Harddisk</a></li>
+					<li><a href="pasangodd.html">ODD</a></li>
+					<li><a href="pasangkabelin.html">Kabel Internal</a></li>
+					<li><a href="pasangcs.html">Case (Tutup)</a></li>
+					<li><a href="pasangkabeleks.html">Kabel Eksternal</a></li>
+					<li><a class="disini" href="#">Berlatih</a></li>
+					<li><a href="qz3.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup" href="#" onclick="sabar()">Latihan</a></li>
+		</ul>
+	</div>
+	<script src="../js/nav.js"></script>
+	
+		<!-- Konten -->
+		<div class="judul">
+			<h3 >Ayo Berlatih 3  </h3>
+			<hr style="height:1px;border-width:1;background-color:lightgray">
+			<!-- Soal -->
+		<div class="banner-section" id="img-container"></div>
+		
+		<!-- Jawaban -->  
+       
+				<label style="font-size: 20px;">Soal :</label>
+				<p style="margin-left:10px; letter-spacing: 2px;" id="demo"></p>
+				<label style="font-size: 20px;">Jawaban :</label>
+				<br>
+				<div style="margin-left:10px; letter-spacing: 2px;">
+				<input id="a1" name="q4"  type="checkbox" onclick="myFunction()" />
+				<span id="a"></span>
+				<br> 
+				<input id="a2" name="q4" type="checkbox" onclick="myFunction()" />
+				<span id="b"></span>
+				<br>
+				<input id="a3" name="q4" type="checkbox" onclick="myFunction()" />
+				<span id="c"></span>
+				<br> 
+				<input id="a4"name="q4" type="checkbox" onclick="myFunction()" />
+				<span id="d"></span>
+				<br>
+				<input id="a5"name="q4" type="checkbox" onclick="myFunction()" />
+				<span id="e"></span>
+				<br>
+				<input id="a6"name="q4" type="checkbox"  onclick="myFunction()"/>
+				<span id="f"></span>
+				<br>
+				<a href="#" onclick="cekjawaban()"><button class="cek"> Cek Jawaban </button></a>
+				<a href="kuis3.html" ><button class="cek2"> Ganti Soal </button></a>
+				</div>
+				<span id="muncul1"></span>
+				<span id="g1">
+					<hr style="height:1px;border-width:1;background-color:lightgray">
+				   <a href="pasangkabeleks.html"><button class="button-left"> <- Kembali </button></a> 
+				   <a href="qz3.html"><button class="button-right"> Selanjutnya -> </button></a>
+				   </span>
+				   <div id="g10"></div>
+	</div>
+		
+		<p id="simpan" style="display: none;" ></p>
+
+		<!-- Suara -->
+		<audio id="benar">
+				<source src="../suara/benar.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="salah">
+				<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
+
+        <script>
+		//manggil json
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			var r = Math.floor(Math.random() * 12);
+			
+			
+			//ambil data dari database
+			document.getElementById("demo").innerHTML = myObj.soal[r];
+			document.getElementById("a").innerHTML = myObj.a[r];
+			document.getElementById("b").innerHTML = myObj.b[r];
+			document.getElementById("c").innerHTML = myObj.c[r];
+			document.getElementById("d").innerHTML = myObj.d[r];
+			document.getElementById("e").innerHTML = myObj.e[r];
+			document.getElementById("f").innerHTML = myObj.f[r];
+			document.getElementById("simpan").innerHTML = r;
+			
+			
+			}
+		};
+		xmlhttp.open("GET", "../js/kuis3.json", true);
+		xmlhttp.send();
+
+		//ambil suara
+        var z = document.getElementById("benar"); 
+        var y = document.getElementById("salah"); 
+		
+
+		//Cek jawaban
+		function cekjawaban(){
+			document.getElementById("a1").value = document.getElementById("a").innerHTML;
+			document.getElementById("a2").value = document.getElementById("b").innerHTML;
+			document.getElementById("a3").value = document.getElementById("c").innerHTML;
+			document.getElementById("a4").value = document.getElementById("d").innerHTML;
+			document.getElementById("a5").value = document.getElementById("e").innerHTML;
+			document.getElementById("a6").value = document.getElementById("f").innerHTML;
+			var a4 = document.getElementsByName('q4');
+			var a4answers = new Array();
+			
+
+			
+			var g = document.getElementById("simpan").innerHTML;
+			var a4right = new Array ();
+			var jwbn1 = {1: "Lepas sekrup pada bagian belakang casing", 2: "Simpan sekrup casing di tempat yang aman", 3:"Lepas sisi casing"};
+			var jwbn2 = {1: "Posisikan power supply agar sisi kabel menghadap ke arah dalam case", 2: "Serasikan sisi seberang kabel pada setiap lubang untuk sekrup", 3:"Pasang sekrup dengan menggunakan obeng" };
+			var jwbn3 = {1: "Buka tuas pengait pada socket prosesor", 2: "Buka pelat beban", 3:"Pasang CPU dengan melihat tanda segitiga di ujung CPU", 4:"Tutup kembali pelat beban", 5:"Tutup kembali tuas pengait"};
+			var jwbn4 = {1: "Berikan Thermal Paste di atas CPU ( jika ada )", 2: 
+						"Putar semua clip ke arah kanan sebelum memasang", 3: "Cocokkan kaki heatsink dengan lubang, kemudian tekan secara diagonal berpasangan",	
+						4:"Pasang kabel konektor heatsink ke motherboard"};
+			var jwbn5 = {1:"Buka pengunci RAM pada sisi slot yang tersedia", 
+						2:"Posisikan RAM pada slot tersebut dengan melihat celah kaki RAM", 3:"Pasang RAM dengan menekan sisi atas secara merata dengan menggunakan jempol hingga berbunyi klik", 
+						4:"Jika sudah, biasanya pengunci RAM otomatis terkunci. Namun jika belum, kunci kedua sisi secara bersamaan", 
+						5:"Jika jumlah RAM lebih dari satu, pastikan kecepatan RAM sama (misal sama-sama PC12800) agar kompatibel"};
+			var jwbn6 = {1:"Tentukan posisi lubang yang sesuai dengan form Motherboard yang kita miliki", 2:"Pasang baut spacer/standoff (bisa diputar dengan tangan)", 3:"Masukkan Motherboard ke dalam Casing dengan memulainya dari backpanel (port belakang case)", 4:"Pasang sekrup Motherboard dengan obeng"};
+			var jwbn7 = {1:"Carilah slot PCI pada Motherboard (atau slot yang sesuai dengan VGA card)", 2:"Masukkan port VGA Card Add-On ke backpanel terlebih dahulu", 3:"Jika sudah pas, tinggal kita tekan secara merata seperti memasang RAM",
+						4:"Pasanglah sekrup VGA card untuk finishing", 5:"Jika pada VGA card tersebut terdapat slot power, maka pasanglah kabel konektor power VGA dari power supply"};
+			var jwbn8 = {1:"Posisikan Harddisk sehingga sisi port nya mengarah ke dalam case", 2:"Masukkan Harddisk ke tempatnya", 3:"Cocokkan lubang sekrup, kemudian pasang sekrup"};
+			var jwbn9 = {1:"Buka tutup slot Optical Disc Drive dengan cara mendorongnya dengan tangan dari belakang (jika ada tutupnya)", 2:"Posisikan agar Optical Disc Drive menghadap ke arah depan", 3:"Masukkan Optical Disc Drive dari luar Case", 4:"Pasang sekrup ODD di bagian sampingnya (dalam case)"};
+			var jwbn10 = {1:"Cari tahu seri Motherboard", 2:"Pasang kabel daya", 3:"Pasang kabel konektor storage", 4:"Pasang kabel Front"};
+			var jwbn11 = {1:"Posisikan sisi casing yang akan dipasang hingga benar", 2:"Pasang Casing kembali seperti semula", 3:"Pasang sekrup casing"};
+			var jwbn12 = {1:"Pasang kabel VGA dan hubungkan ke Monitor", 2:"Pasang kabel mouse", 3:"Pasang kabel keyboard", 4:"Pasang kabel power"};
+
+			if (g==0){
+				for(var i in jwbn1) {
+					a4right.push(jwbn1[i]);
+				}
+			}
+			else if (g==1){
+				for(var i in jwbn2) {
+					a4right.push(jwbn2[i]);
+				}
+			}
+			else if (g==2){
+				for(var i in jwbn3) {
+					a4right.push(jwbn3[i]);
+				}
+			}
+			else if (g==3){
+				for(var i in jwbn4) {
+					a4right.push(jwbn4[i]);
+				}
+			}
+			else if (g==4){
+				for(var i in jwbn5) {
+					a4right.push(jwbn5[i]);
+				}
+			}
+			else if (g==5){
+				for(var i in jwbn6) {
+					a4right.push(jwbn6[i]);
+				}
+			}
+			else if (g==6){
+				for(var i in jwbn7) {
+					a4right.push(jwbn7[i]);
+				}
+			}
+			else if (g==7){
+				for(var i in jwbn8) {
+					a4right.push(jwbn8[i]);
+				}
+			}
+			else if (g==8){
+				for(var i in jwbn9) {
+					a4right.push(jwbn9[i]);
+				}
+			}
+			else if (g==9){
+				for(var i in jwbn10) {
+					a4right.push(jwbn10[i]);
+				}
+			}
+			else if (g==10){
+				for(var i in jwbn11) {
+					a4right.push(jwbn11[i]);
+				}
+			}
+			else if (g==11){
+				for(var i in jwbn12) {
+					a4right.push(jwbn12[i]);
+				}
+			}
+
+			var a4bool = true;
+			
+			for(i = 0; i < a4.length; i++) {
+				if(a4[i].checked) {
+					a4answers.push(a4[i].value);
+					
+				}
+			}
+			a4answers.sort();
+			a4right.sort();
+			if(a4answers.length == a4right.length) {
+				for(i = 0; i < a4answers.length; i++) {
+					if(a4answers[i] != a4right[i]) {
+						a4bool = false;
+						break;
+					}
+				}
+			}
+			else {
+				a4bool = false;
+			}
+
+			//umpan balik
+			if(a4bool == true) {
+				z.play();
+				document.getElementById("muncul1").innerHTML=`
+				<center>
+				<i class="fas fa-check-square"
+				style="color: rgb(20, 220, 103);"></i> Sangat Teliti
+				</center>
+				`;
+			}
+			else{
+				y.play();
+				document.getElementById("muncul1").innerHTML=`
+				<center>
+				<i class="fas fa-times-circle"
+				style="color: crimson;"></i> Kurang Tepat
+				</center>
+					`;
+			}
+
+			
+    
+			}
+			
+			//clear
+			function myFunction() {
+				var checkBox = document.getElementById("a1");
+				
+
+				if (checkBox.checked == true){
+					document.getElementById("muncul1").innerHTML="";
+				} 
+				
+				
+				
+				else {
+					document.getElementById("muncul1").innerHTML="";
+				}	
+
+			}
+			
+	
+			function sabar(){
+				new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
+			}
+			
+			
+			function responsif(x) {
+				if (x.matches) { // If media query matches
+					document.getElementById("logogbr").style.display="none";
+					document.getElementById("namalogo").style.display="none";
+					document.getElementById("menuhp").style.display="block";
+					document.getElementById("brnd").style.display="block";
+					document.getElementById("menu-wrap").style.display="none";
+					document.getElementById("g1").style.display = "none";
+					document.getElementById("g10").innerHTML = `
+					<br>
+					<div id="bas2" class="next" style="margin:5px;">
+					<a href="pasangkabeleks.html"><button class="button-left-hp"> <- Kembali </button></a> 
+					<a href="qz3.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+					</div>
+					<br>
+					`;
+					
+					
+					
+				} else {
+					document.getElementById("menu-wrap").style.width="18%";
+					document.getElementById("menu-wrap").style.height="100px";
+					document.getElementById("menu-wrap").style.display="block";
+					document.getElementById("logogbr").style.display="";
+					document.getElementById("namalogo").style.display="";
+					document.getElementById("menuhp").style.display="none";
+					document.getElementById("brnd").style.display="none";
+					document.getElementById("g1").style.display = "block";
+					document.getElementById("g10").innerHTML = "";
+					
+				}
+	
+				}
+	
+				var x = window.matchMedia("(max-width: 1000px)")
+				responsif(x) // Call listener function at run time
+				x.addListener(responsif) // Attach listener function on state changes
+			
+			
+	
+			function hilang(){
+				var x = document.getElementById('menu-wrap');
+				if (x.style.display === 'block') {
+					x.style.display = 'none';
+					
+				} else {
+					x.style.display = 'block';
+					x.style.width = '100%';
+					x.style.marginLeft = '0';
+				}
+			}
+			
+			function go(){
+				location.href="../index.html";
+			}
+			
+				
+		</script>
+	
+		
+		
+	</body>
+	</html>  

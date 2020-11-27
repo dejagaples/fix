@@ -1,0 +1,33 @@
+{
+	"soal": [
+        "Kabel yang berfungsi menghubungkan listrik ke power supply adalah kabel power. ",
+        "SATA merupakan model kabel yang lebih lama dibandingkan ATA.",
+        "Pada Kabel Front Audio, pin yang kosong adalah nomor 7.  ",
+        "Gambar tersebut merupakan kabel VGA. ",
+        "Gambar tersebut merupakan kabel ATA. ",
+        "Gambar tersebut merupakan kabel power. ",
+        "Jumper diperlukan agar USB berfungsi.",
+        "Ketika komputer tidak mau hidup, cara mereset settingan CMOS ke posisi default adalah menghubungkan pin 1 dan 2.",
+        "Jumper audio digunakan saat kabel Front Audio ada.",
+        "Jumper diperlukan untuk menentukan status Master atau Slave saat penggabungan perangkat penyimpanan non-volatile."
+
+
+	],
+
+    "jawaban": [
+        "true",
+        "false",
+        "false",
+        "true",
+        "false",
+        "true",
+        "true",
+        "false",
+        "false",
+        "true"
+
+    ]
+ 
+
+
+}

@@ -1,0 +1,68 @@
+{
+	"soal": [
+		"Perangkat di bawah ini yang termasuk dalam kategori perangkat input komputer adalah ....",
+        "Perangkat di bawah ini yang termasuk dalam kategori perangkat output komputer adalah ....",
+        "Jenis keyboard yang kita pakai saat ini adalah ....",
+        "Jenis port yang digunakan keyboard saat ini adalah ....",
+        "Gambar di atas adalah layout keyboard ...",
+        "Perangkat pada gambar tersebut adalah ....",
+        "Perangkat pada gambar tersebut adalah ....",
+        "Touchpad biasanya terdapat pada ....",
+        "Hardware yang berfungsi mengolah data untuk audio/suara adalah ....",
+        "Perangkat pada gambar tersebut adalah ...."
+	],
+
+    "a": [
+        "monitor",
+        "keyboard",
+        "QZERTY",
+        "PS/2",
+        "QWERTY",
+        "Mouse Pad",
+        "microphone",
+        "PC Desktop",
+        "speaker",
+        "mikrofon"
+    ],
+    
+    "b": [
+        "printer",
+        "mouse",
+        "DVORAK",
+        "USB",
+        "AZERTY",
+        "Mouse Gaming",
+        "salon",
+        "Smartphone",
+        "mouse",
+        "speaker"
+    ],
+    
+	"c": [
+        "speaker", 
+        "speaker",
+        "COLEMAK",
+        "VGA",
+        "JCUKEN",
+        "Mouse Wireless",
+        "speaker",
+        "Alas Mouse",
+        "keyboard",
+        "nerve gear"
+    ],
+
+    "d": [
+        "keyboard", 
+        "scanner",
+        "QWERTY",
+        "HDMI",
+        "DVORAK",
+        "Mouse Kabel",
+        "radio",
+        "Laptop",
+        "sound card",
+        "headset"
+    ]
+
+
+}

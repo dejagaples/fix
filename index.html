@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+  <script src="../js/duDialog.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+  <link rel="shortcut icon" href="gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Perakitan Komputer</title>
+  <script language="JavaScript">
+		document.addEventListener("contextmenu", function(e){
+			e.preventDefault();
+		}, false);
+  </script>
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <img src="gambar/Logo.png"  width="50" height="50" >
+		  <span style="color:white;font-weight: bold;" >RAKITOS</span>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="#myPage">BERANDA</a></li>
+			<li>
+				<a href="#">BELAJAR<span class="caret"></span></a>
+				<ul>
+					<li><a href="#" >PENGENALAN</a></li>
+					<li><a href="#" onclick="sabar()" >ALAT</a></li>
+					<li><a href="#" onclick="sabar()" >PERANGKAT</a></li>
+					<li><a href="#" onclick="sabar()" >PERAKITAN</a></li> 
+				</ul>
+			</li>
+			<li><a href="page/tentang.html">TENTANG</a></li>
+			<li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
+		   </ul>
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="container">
+							<label >
+								<b>1. Deskripsi aplikasi pada bagian bawah laman.</b>
+							</label>
+							<br/>
+							<label >
+								<b>2. Klik "Pengenalan" jika baru pertama kali mencoba aplikasi.</b>
+							</label>
+							<br/><br/>
+						</div>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<!-- beranda -->
+	<div id="gbr" style="text-align: center;padding-bottom:50px;width:100%;font-family: 'Lucida Sans';">
+		<br><br><br><br>
+		<div class="row">
+			<a href="page/materi0.html"><div class="col-sm-4">
+				  <img src="gambar/tanya3.jpg" class="card-img-top" style="border-radius: 10%;" alt="Error" width="255" height="255">
+				  <div class="card-body" style="margin-bottom: 30px;">
+				  	<a id="warna" href="page/materi0.html" class="btn baru" style="font-family: sans-serif;letter-spacing: 3px;">PENGENALAN</a>
+				  </div>
+			</div></a>
+			<a href="page/p1.html"><div class="col-sm-4">
+			    <img src="gambar/buku.jpg" class="card-img-top" style="border-radius: 10%;" alt="Error" width="255" height="255">
+				<div class="card-body" style="margin-bottom: 30px;">
+					<a id="warna1" href="page/p1.html" class="btn baru" style="font-family: sans-serif;letter-spacing: 3px;">MATERI</a>
+				</div>
+			</div></a>
+			<a href="page/tentang.html"><div class="col-sm-4">
+			  <img src="gambar/org.jpg" class="card-img-top" style="border-radius: 10%;" alt="Error" width="255" height="255">
+			  <div class="card-body" style="margin-bottom: 30px;">
+					<a id="warna2" href="page/tentang.html" class="btn baru" style="font-family: sans-serif;letter-spacing: 3px;">TENTANG</a>
+			  </div>
+			</div></a>
+		</div>
+	</div>
+
+	<!-- Review Aplikasi -->
+	<div id="band" class="container text-center" style="width:80%;">
+	  <h3> DESKRIPSI APLIKASI RAKITOS</h3>
+	  <p><em>Pada Pembelajaran Perakitan Komputer</em></p>
+	  <p>Aplikasi ini merupakan alat pendukung pembelajaran di kelas, yang mana telah dirancang sedemikian rupa 
+		  sehingga sangat cocok diterapkan pada kurikulum 2013. Konsep pembelajaran mandiri yang berpusat pada 
+		  siswa (SCL) telah dikonversikan ke setiap tahapan	yang ada dalam aplikasi. Sehingga tugas <a href="page/guru.html" style="color:rgb(85, 83, 83);text-decoration: none;">guru</a> sebagai 
+		  fasilitator dapat tercapai dengan maksimal. Tujuan pembuatan aplikasi ini yakni memberikan pembekalan 
+		  kognitif pada siswa sebelum praktek di lapangan. Sehingga siswa tidak bingung lagi ketika praktek 
+		  berlangsung. <a href="page/guru.html" style="color:rgb(85, 83, 83);text-decoration: none;">Guru</a> juga dapat memanajemen waktu dengan lebih efisien. Hadirnya aplikasi diharapkan dapat
+		  meminimalkan kerusakan komponen perangkat keras saat praktek. 
+	  </p> 	  
+	  <br>
+	  <div class="row">
+		<div class="col-sm-4">
+		  <span class="text-center"><strong>MATERI</strong> </span><br>
+			<img src="gambar/beranda1.png" class="img-circle person" alt="Error" width="255" height="255">
+		</div>
+		<div class="col-sm-4">
+		  <span class="text-center"><strong>3D MODEL</strong></span><br>
+		    <img src="gambar/beranda2f.png" class="img-circle person" alt="Error" width="255" height="255">
+		</div>
+		<div class="col-sm-4">
+		  <span class="text-center"><strong>DEMONSTRASI</strong></span><br>
+		  <img src="gambar/tutuprakit.png" class="img-circle person" alt="Error" width="255" height="255">
+		</div>
+	   </div>
+	</div>
+	<script>
+			function sabar(){
+					new duDialog('Hai', 'Pelajarilah Materi Secara Berurutan!');
+			}
+			function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("gbr").style.backgroundColor="rgb(236, 233, 233)";
+				document.getElementById("gbr").style.backgroundImage="";
+				document.getElementById("warna").style.backgroundColor="";
+				document.getElementById("warna").style.Color="";
+				document.getElementById("warna1").style.backgroundColor="";
+				document.getElementById("warna1").style.Color="";
+				document.getElementById("warna2").style.backgroundColor="";
+				document.getElementById("warna2").style.Color="";
+				document.getElementById("warna").style.border="";
+				document.getElementById("warna").style.borderColor="";
+				document.getElementById("warna1").style.border="";
+				document.getElementById("warna1").style.borderColor="";
+				document.getElementById("warna2").style.border="";
+				document.getElementById("warna2").style.borderColor="";
+			} else {
+				document.getElementById("gbr").style.backgroundImage="url(gambar/gbrberanda2.png)";
+				document.getElementById("gbr").style.backgroundRepeat="no-repeat";
+				document.getElementById("gbr").style.backgroundSize="100%";
+				document.getElementById("gbr").style.backgroundColor="";
+				document.getElementById("warna").style.backgroundColor="";
+				document.getElementById("warna").style.border="10px solid";
+				document.getElementById("warna").style.borderColor="white";
+				document.getElementById("warna1").style.border="10px solid";
+				document.getElementById("warna1").style.borderColor="white";
+				document.getElementById("warna2").style.border="10px solid";
+				document.getElementById("warna2").style.borderColor="white";
+				document.getElementById("warna1").style.backgroundColor="";
+				document.getElementById("warna2").style.backgroundColor="";
+				}
+			}
+
+			var x = window.matchMedia("(max-width: 780px)")
+			responsif(x) // Call listener function at run time
+			x.addListener(responsif) // Attach listener function on state changes
+	</script>
+</body>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="merah">
+		<p style="text-align:center;">FEBRY &copy 
+		  <a href="https://www.pilkom.ulm.ac.id" target="_blank" data-toggle="tooltip" title="Visit Pilkom Unlam">
+			  Pendidikan Komputer 2015
+		  </a>
+		</p> 
+	  </footer>
+</html>

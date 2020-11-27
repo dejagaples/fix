@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <script type='text/javascript' src='../js/x3dom.js'></script>
+  </head>
+  <body>
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' height='280px'>
+      <scene DEF='scene'>
+        <background groundAngle='1.57079' groundColor='1 1 1' skyAngle='1.57079' skyColor='1 1 1'></background>
+        <transform DEF='myBox'>
+          <shape>
+            <appearance>
+              <imageTexture url='"../gambar/csdpn.jpg"'></imageTexture>
+            </appearance>
+            <box size='2.5 4.5 0.05'></box>
+          </shape>
+          <transform translation='0 0 -3.5'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/csblkg.jpg"'></imageTexture>
+              </appearance>
+              <box size='2.5 4.5 0.05'></box>
+            </shape>
+          </transform>
+          <transform translation='1.25 0 -1.75'>
+                <shape>
+                  <appearance>
+                    <imageTexture url='"../gambar/csknn.jpg"'></imageTexture>
+                  </appearance>
+                  <box size='0.05 4.5 3.5'></box>
+                </shape>
+              </transform>
+              <transform translation='-1.25 0 -1.75'>
+                    <shape>
+                      <appearance>
+                        <imageTexture url='"../gambar/cskr.jpg"'></imageTexture>
+                      </appearance>
+                      <box size='0.05 4.5 3.5'></box>
+                    </shape>
+                  </transform>
+              <transform translation='0 2.25 -1.75'>
+                    <shape>
+                      <appearance>
+                        <imageTexture url='"../gambar/csatsbwh.jpg"'></imageTexture>
+                      </appearance>
+                      <box size='2.5 0.05 3.5'></box>
+                    </shape>
+                  </transform>
+                  <transform translation='0 -2.25 -1.75'>
+                        <shape>
+                          <appearance>
+                            <imageTexture url='"../gambar/csatsbwh.jpg"'></imageTexture>
+                          </appearance>
+                          <box size='2.5 0.05 3.5'></box>
+                        </shape>
+                </transform>
+          <sphereSensor DEF='mySensor'></sphereSensor>
+        </transform>
+        <ROUTE fromNode='mySensor' fromField='rotation_changed' toNode='myBox' toField='set_rotation'></ROUTE>
+      </scene>
+    </x3d>
+  </body>
+</html>

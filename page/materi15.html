@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font.css" rel="stylesheet" type="text/css">
+  <script src="../js/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../js/bootstrap.min.js"></script>
+  <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+  <script src="../js/duDialog.js"></script>
+  <script src="../js/kabel.js"></script>
+  <link href="../css/fontawesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" src="../css/all.css">
+  <script src="../js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+  <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Monitor</title>
+  <style>
+	  :root {
+	  --color-bg: rgb(194, 54, 54);
+	  --color-bg2: rgb(209, 80, 80);
+	  --color-highlight: white;
+	  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	}
+  </style>
+  <script language="JavaScript">
+	document.addEventListener("contextmenu", function(e){
+		e.preventDefault();
+	}, false);
+</script>
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- Navbar -->
+	<nav class="navbar navbar-default" style="border-radius: 0;">
+	  <div class="container-fluid">
+		<!-- Navbar Atas Kiri -->  
+		<div class="navbar-header">
+			<img id="logogbr" src="../gambar/Logo.png"  width="50" height="50" >
+			<span id="namalogo" style="color:white;font-weight: bold;" >RAKITOS</span>
+			<i id="menuhp" class="fa fa-bars" aria-hidden="true" style="color: cornsilk;font-size: 30px; margin: 5px;" onclick="hilang()"></i>
+		</div>
+		<!-- Navbar Atas Kanan -->
+	    <div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="../index.html">BERANDA</a></li>
+			<li >
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#myPage">BELAJAR</a>	
+			</li>
+			<li><a href="tentang.html">TENTANG</a></li>
+			<li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
+		  </ul> 
+		</div>
+	  </div>
+	</nav>
+
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+					<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+				</div>
+					<div class="modal-body">
+					<form>
+						<div class="container">
+								<label >
+								<b>1. Bacalah penjelasan Monitor dengan tenang secara berurutan.</b>
+							</label>
+							<br/><br/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--/.sidebar-->
+	<div id="menu-wrap">
+		<ul id="menu" class="nav">
+			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html">Beranda</a></li>
+            <li><a class="tutup" href="#">Pengenalan<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a href="materi0.html">Kurikulum</a></li>
+					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
+					<li><a href="materi02.html">Peta Konsep</a></li>
+					<li><a href="materi03.html">Pengertian</a></li>
+				</ul>
+			</li>
+            <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="materi1.html">Obeng</a></li>
+					<li><a  href="materi2.html">Sekrup & Baut</a></li>
+					<li><a  href="materi3.html">Kabel</a></li>
+					<li><a href="materi4.html">Jumper</a></li>
+					<li><a href="kuis1.html">Berlatih</a></li>
+					<li><a href="qz1.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup active" href="#">Perangkat<span class="caret kiri"></span></a>
+				<ul class="sub">
+					<li><a href="p2.html">Pengertian</a></li>
+					<li><a  href="materi5.html">Casing</a></li>
+					<li><a href="materi6.html">Power Supply</a></li>
+					<li><a href="materi7.html">Motherboard</a></li>
+					<li><a  href="materi8.html">CPU</a></li>
+					<li><a href="materi9.html">RAM</a></li>
+					<li><a href="materi10.html">Harddisk</a></li>
+					<li><a href="odd.html">ODD</a></li>
+					<li><a href="materi11.html">Heatsink Fan</a></li>
+					<li><a href="materi12.html">VGA Card</a></li>
+					<li><a href="materi13.html">Sound Card</a></li>
+					<li><a href="materi14.html">LAN Card</a></li>
+					<li><a class="disini" href="#">Monitor</a></li>
+					<li><a href="materi16.html">Keyboard</a></li>
+					<li><a href="materi17.html">Mouse</a></li>
+					<li><a href="materi18.html">Speaker</a></li>
+					<li><a href="kuis4.html">Berlatih</a></li>
+					<li><a href="qz2.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup" href="#">Perakitan<span class="caret kiri" ></span></a>
+				<ul class="sub">
+					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="lepascs.html">Case (Buka)</a></li>
+					<li><a href="pasangps.html">Power Supply</a></li>
+					<li><a href="pasangcpu.html">CPU</a></li>
+					<li><a href="pasanghs.html">Heatsink</a></li>
+					<li><a href="pasangram.html">RAM</a></li>
+					<li><a href="pasangmobo.html">Motherboard</a></li>
+					<li><a href="pasangvga.html">VGA Card</a></li>
+					<li><a href="pasanghdd.html">Harddisk</a></li>
+					<li><a href="pasangodd.html">ODD</a></li>
+					<li><a href="pasangkabelin.html">Kabel Internal</a></li>
+					<li><a href="pasangcs.html">Case (Tutup)</a></li>
+					<li><a href="pasangkabeleks.html">Kabel Eksternal</a></li>
+					<li><a href="kuis3.html">Berlatih</a></li>
+					<li><a href="qz3.html">Kuis</a></li>
+				</ul>
+			</li>
+			<li><a class="tutup" href="#" onclick="sabar()">Latihan</a></li>
+		</ul>
+	</div>
+	<script src="../js/nav.js"></script>
+
+	<!-- Konten -->
+	<div class="judul">
+		<h3 >Monitor <div class="goo edit" >output</div></h3>
+		<hr style="height:1px;border-width:1;background-color:lightgray">
+		</div>
+		<div id="ba" class="kon">
+			<div id="kotak" style="padding-left:20px;"onclick="tj()">Tujuan Pembelajaran</div>
+			<div id="tp" class="isko" > 
+				<ul>
+				<li>
+					Siswa mampu menjelaskan Monitor sebagai perangkat keras komputer beserta fungsinya.
+				</li>
+				</ul>
+			</div>
+			<br>
+				<script>
+				function tj() {
+					var x = document.getElementById("tp");
+					if (x.style.display === "none") {
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+					}
+				}
+				</script>
+			<p>  
+				Monitor adalah hardware yang digunakan untuk menampilkan data secara visual/grafis. Terdapat beberapa jenis monitor
+        yaitu:
+        <ul>
+            <li>Monitor CRT (Chatode Ray Tube)</li>
+            <li>Monitor LCD (Liquid Cristal Display)</li>
+            <li>Monitor LED (Light Emitting Diode)</li>
+            <li>Monitor Plasma </li>
+        </ul>
+					 
+					
+			</p>
+			<p>
+				Mari kita lihat 
+					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> 
+					dan
+					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code>
+					berikut. 
+					<span id="g1" class="text-center"> </span>
+				Adapun perbedaan keempat jenis monitor tersebut dapat kita lihat pada
+				<code><a href="#tabel1" style="text-decoration:none;color:blue;">Tabel 1</a></code> berikut.
+			<span id="g2" class="text-center"> </span>
+		</p>
+			
+			
+			<div id="g9"></div>
+			<div id="g10"></div>
+		</div>
+		<div id="bas" class="kon2">
+				<center><img id="1gb" src="../gambar/crtlcd.png" width=70%>
+				<br>
+				<em><code>Gambar 1</code>. Monitor CRT dan Monitor LCD</em>
+				<br><br>
+				<br>
+				<img id="1gb" src="../gambar/ledplasma.png" width=70%>
+				<br><br>
+				<em><code>Gambar 2</code>. Monitor LED dan Monitor Plasma</em>
+				<br><br>
+				<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
+				</center>
+			  
+			  
+			  <table class="table table-striped">
+				<tr class="thead-dark">
+					<th>Monitor</th>
+					<th style="text-align:center;">Metode</th>
+					<th style="text-align:center;">Fisik</th>
+					<th style="text-align:center;">Deskripsi</th>
+				</tr>
+				<tr >
+					<td >CRT</td>
+					<td >tabung sinar katoda</td>
+					<td >seperti tv tabung</td>
+					<td >merupakan jenis yang lebih lama</td>
+				</tr>
+				<tr>
+					<td >LCD</td>
+					<td >cairan kristal</td>
+					<td >flat (pipih)</td>
+					<td >resolusi lebih tinggi dari CRT</td>
+				</tr>
+				<tr>
+					<td >LED</td>
+					<td >emisi cahaya</td>
+					<td >lebih ramping daripada LCD</td>
+					<td >konsumsi listrik lebih hemat dari LCD, namun lebih mahal.</td>
+				</tr>
+				<tr>
+					<td >Plasma</td>
+					<td >gas neon atau xenon</td>
+					<td >pipih namun sangat lebar</td>
+					<td >merupakan kombinasi CRT dan LCD</td>
+				</tr>
+	  </table>
+
+	  <div id="kotak">Pertanyaan:</div>
+	  <div id="tp" class="isko">
+		Jenis monitor yang palig populer digunakan komputer sekarang antara lain ....
+		  <br>
+		  <input type="checkbox" id="a1" > <span >Monitor CRT</span><br>
+		  <input type="checkbox" id="a2" > <span >Monitor LED</span><br>
+		  <input type="checkbox" id="a3" > <span >Monitor LCD</span><br>
+		  <br>
+			  <button class="button-pertanyaan" onclick="check()">Cek Jawaban</button>
+			  <button class="button-pertanyaan" onclick="ulang()">Ulang</button>
+			  <span id="muncul"></span><p id="tampil"></p>
+			  <br>
+	  </div>
+	  <br>
+</div>
+		
+		</div>
+		<div id="bas2" class="next">
+				<a href="materi14.html"><button class="button-left"> <- Kembali </button></a> 
+				<a href="materi16.html"><button class="button-right"> Selanjutnya -> </button></a>
+		</div>
+	  
+	  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+				</filter>
+			</defs>
+		</svg>
+		
+	  <script>
+		 	function sabar(){
+				new duDialog('Maaf', 'Materi Anda Belum Selesai !');
+			}
+			function check() {
+			if ((document.getElementById("a2").checked == true)&&(document.getElementById("a3").checked == true)&&(document.getElementById("a1").checked == false)){
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+			}
+			else {
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+			}
+		}
+
+		function ulang(){
+			document.getElementById("a1").checked=false;
+			document.getElementById("a2").checked=false;
+			document.getElementById("a3").checked=false;
+			document.getElementById("tampil").innerHTML="";
+		}
+
+		//clear jawaban
+		document.getElementById("a1").addEventListener("click", myFunction);
+		document.getElementById("a2").addEventListener("click", myFunc);
+		document.getElementById("a3").addEventListener("click", myFun);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+				document.getElementById("muncul").innerHTML="";
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				document.getElementById("muncul").innerHTML="";
+		}
+		function myFun() {
+				document.getElementById("tampil").innerHTML="";
+				document.getElementById("muncul").innerHTML="";
+		}
+
+		
+
+		function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("ba").style.width="100%";
+				document.getElementById("bas").style.display="none";
+				document.getElementById("bas2").style.display="none";
+				document.getElementById("ba").style.marginLeft="10px";
+				document.getElementById("ba").style.height="100%";
+				document.getElementById("logogbr").style.display="none";
+				document.getElementById("namalogo").style.display="none";
+				document.getElementById("menuhp").style.display="block";
+				document.getElementById("brnd").style.display="block";
+				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("g1").innerHTML = `
+				<br><br>
+				<center><img id="1gb" src="../gambar/crtlcd.png" width=70%>
+				<br>
+				<em><code>Gambar 1</code>. Monitor CRT dan Monitor LCD</em>
+				<br><br>
+				<br>
+				<img id="1gb" src="../gambar/ledplasma.png" width=70%>
+				<br><br>
+				<em><code>Gambar 2</code>. Monitor LED dan Monitor Plasma</em>
+				<br><br>
+				</center>   
+				`;
+				document.getElementById("g2").innerHTML = `
+				<center>
+					<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
+					<br>
+					<br>
+					<table class="table table-striped">
+				<tr class="thead-dark">
+					<th>Monitor</th>
+					<th style="text-align:center;">Metode</th>
+					<th style="text-align:center;">Fisik</th>
+					<th style="text-align:center;">Deskripsi</th>
+				</tr>
+				<tr >
+					<td >CRT</td>
+					<td >tabung sinar katoda</td>
+					<td >seperti tv tabung</td>
+					<td >merupakan jenis yang lebih lama</td>
+				</tr>
+				<tr>
+					<td >LCD</td>
+					<td >cairan kristal</td>
+					<td >flat (pipih)</td>
+					<td >resolusi lebih tinggi dari CRT</td>
+				</tr>
+				<tr>
+					<td >LED</td>
+					<td >emisi cahaya</td>
+					<td >lebih ramping daripada LCD</td>
+					<td >konsumsi listrik lebih hemat dari LCD, namun lebih mahal.</td>
+				</tr>
+				<tr>
+					<td >Plasma</td>
+					<td >gas neon atau xenon</td>
+					<td >pipih namun sangat lebar</td>
+					<td >merupakan kombinasi CRT dan LCD</td>
+				</tr>
+	  </table>
+				</center>
+				`;
+				
+				document.getElementById("g9").innerHTML = `
+				<br>
+				<div id="kotak">Pertanyaan:</div>
+	  <div id="tp" class="isko">
+		Jenis monitor yang palig populer digunakan komputer sekarang antara lain ....
+		  <br>
+		  <input type="checkbox" id="a1" > <span >Monitor CRT</span><br>
+		  <input type="checkbox" id="a2" > <span >Monitor LED</span><br>
+		  <input type="checkbox" id="a3" > <span >Monitor LCD</span><br>
+		  <br>
+			  <button class="button-pertanyaan" onclick="check()">Cek Jawaban</button>
+			  <button class="button-pertanyaan" onclick="ulang()">Ulang</button>
+			  <span id="muncul"></span><p id="tampil"></p>
+			  <br>
+	  </div>
+				`;
+				document.getElementById("g10").innerHTML = `
+				<br>
+				<div id="bas2" class="next" style="margin:5px;">
+				<a href="materi14.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi16.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				</div>
+				<br>
+				`;
+				
+			} else {
+				document.getElementById("ba").style.width="39%";
+				document.getElementById("bas").style.display="block";
+				document.getElementById("bas2").style.display="block";
+				document.getElementById("ba").style.height="370px";
+				document.getElementById("menu-wrap").style.width="18%";
+				document.getElementById("menu-wrap").style.height="100px";
+				document.getElementById("menu-wrap").style.display="block";
+				document.getElementById("logogbr").style.display="";
+				document.getElementById("namalogo").style.display="";
+				document.getElementById("menuhp").style.display="none";
+				document.getElementById("brnd").style.display="none";
+				document.getElementById("g1").innerHTML = "";
+				document.getElementById("g2").innerHTML = "";
+				document.getElementById("g9").innerHTML = "";
+				document.getElementById("g10").innerHTML = "";
+				document.getElementById("bas2").style.display="block";
+				}
+			}
+
+			var x = window.matchMedia("(max-width: 1000px)");
+			responsif(x); // Call listener function at run time
+			x.addListener(responsif); // Attach listener function on state changes
+		
+
+		function hilang(){
+			var x = document.getElementById('menu-wrap');
+			if (x.style.display === 'block') {
+				x.style.display = 'none';
+				
+			} else {
+				x.style.display = 'block';
+				x.style.width = '100%';
+				x.style.marginLeft = '0';
+			}
+		}
+		
+		
+		function go(){
+			location.href="../index.html";
+		}
+	  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <script type='text/javascript' src='../js/x3dom.js'></script>
+  </head>
+  <body>
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' height='280px'>
+      <scene DEF='scene'>
+        <background groundAngle='1.57079' groundColor='1 1 1' skyAngle='1.57079' skyColor='1 1 1'></background>
+        <transform DEF='myBox'>
+          <shape>
+            <appearance>
+              <imageTexture url='"../gambar/psdpn.png"'></imageTexture>
+            </appearance>
+            <box size='6 3 0.05'></box>
+          </shape>
+          <transform translation='0 0 -6'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/psblkng.png"'></imageTexture>
+              </appearance>
+              <box size='6 3 0.05'></box>
+            </shape>
+          </transform>
+          <transform translation='3 0 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/pskanan.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 3 6'></box>
+            </shape>
+          </transform>
+          <transform translation='-3 0 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/pskiri.png"'></imageTexture>
+              </appearance>
+              <box size='0.05 3 6'></box>
+            </shape>
+          </transform>
+          <transform translation='0 1.5 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/psats.png"'></imageTexture>
+              </appearance>
+              <box size='6 0.05 6'></box>
+            </shape>
+          </transform>
+          <transform translation='0 -1.5 -3'>
+            <shape>
+              <appearance>
+                <imageTexture url='"../gambar/psbawah.png"'></imageTexture>
+              </appearance>
+              <box size='6 0.05 6'></box>
+            </shape>
+          </transform>
+        </transform>
+      </scene>
+    </x3d>
+  </body>
+</html>

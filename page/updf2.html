@@ -1,0 +1,234 @@
+<html>
+<head>
+        <style>  
+                table {  
+                    font-family: arial, sans-serif;  
+                    border-collapse: collapse;  
+                    width: 100%;  
+                }  
+          
+                td, th {  
+                    border: 1px solid #dddddd;  
+                    text-align: left;  
+                    padding: 8px;  
+                }  
+          
+                tr:nth-child(even) {  
+                    background-color: #dddddd;  
+                }  
+            </style>
+            <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+            <title>RAKITOS - Hasil Evaluasi</title>  
+            <script src="../js/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+            <script src="../js/jspdf.min.js"></script>
+</head>
+<script>
+        //pencegahan ganti laman
+        window.onbeforeunload = function () { 
+			return "Tidak Boleh keluar saat tes"; 
+		};
+        window.onload= function awal(){
+            var nama1 = localStorage.getItem("nama1");
+            document.getElementById("isinama1").innerHTML = nama1;
+            var nama2 = localStorage.getItem("nama2");
+            document.getElementById("isinama2").innerHTML = nama2;
+            var nama3 = localStorage.getItem("nama3");
+            document.getElementById("isinama3").innerHTML = nama3;
+            var nama4 = localStorage.getItem("nama4");
+            document.getElementById("isinama4").innerHTML = nama4;
+            var kelas1 = localStorage.getItem("kelas");
+            var kelas2 = localStorage.getItem("kelas");
+            var kelas3 = localStorage.getItem("kelas");
+            var kelas4 = localStorage.getItem("kelas");
+            document.getElementById("isikelas1").innerHTML = kelas1;
+            document.getElementById("isikelas2").innerHTML = kelas2;
+            document.getElementById("isikelas3").innerHTML = kelas3;
+            document.getElementById("isikelas4").innerHTML = kelas4;
+            var nilai1 = localStorage.getItem("nilai");
+            var nilai2 = localStorage.getItem("nilai");
+            var nilai3 = localStorage.getItem("nilai");
+            var nilai4 = localStorage.getItem("nilai");
+            document.getElementById("isinilai1").innerHTML = nilai1;
+            document.getElementById("isinilai2").innerHTML = nilai2;
+            document.getElementById("isinilai3").innerHTML = nilai3;
+            document.getElementById("isinilai4").innerHTML = nilai4;
+            if (document.getElementById("isinama2").innerHTML==""){
+                document.getElementById("tr2").style.display="none";
+            }
+            if (document.getElementById("isinama3").innerHTML==""){
+                document.getElementById("tr3").style.display="none";
+            }
+            if (document.getElementById("isinama4").innerHTML==""){
+                document.getElementById("tr4").style.display="none";
+            }
+
+            var d = new Date();
+			var n = d.toTimeString();
+			var m = d.toDateString();
+            document.getElementById("demo").innerHTML = n;
+            document.getElementById("demo1").innerHTML = m;
+            
+            }
+</script>
+    <body>
+        
+<form class="form" style="max-width: none; width: 1005px;">  
+        <CENTER>
+         <img src="../gambar/Logo.png" width="10%" style="float: left;margin-right:0 ;"/>
+        <h2 style="margin-right: 90px;">UNIVERSITAS LAMBUNG MANGKURAT</h2>
+        <h2 style="margin-right: 90px;">PENDIDIKAN KOMPUTER</h2>
+        <br>
+        <p style="font-size: large">  
+                dengan ini menyatakan bahwa yang tercantum di bawah ini:
+        </p>  
+        <table>   
+            <tbody>  
+                <tr>  
+                    <th>Nama</th>  
+                    <th>Kelas</th>
+                    <th>Nilai</th>  
+                </tr>  
+                <tr>  
+                    <td id="isinama1"></td>  
+                    <td id="isikelas1"></td>
+                    <td id="isinilai1"></td>  
+                </tr>  
+                <tr id="tr2">  
+                    <td id="isinama2"></td>  
+                    <td id="isikelas2"></td>
+                    <td id="isinilai2"></td>  
+                </tr>  
+                <tr id="tr3">  
+                    <td id="isinama3"></td>  
+                    <td id="isikelas3"></td>
+                    <td id="isinilai3"></td>  
+                </tr>  
+                <tr id="tr4">  
+                    <td id="isinama4"></td>
+                    <td id="isikelas4"></td>
+                    <td id="isinilai4"></td>  
+                </tr>  
+                
+            </tbody>  
+        </table>
+        <br>
+        <br>
+        <h3>Telah menyelesaikan tugas <br> KUIS 2</h3>  
+        <span id="demo1"></span>
+        <span id="demo"></span>
+        
+    </CENTER>
+    </form>
+    <input type="button" id="create_pdf" value="Simpan PDF" style="margin-left: 425px;">
+        
+        <a href="p3.html"><button class="button-selesai">Selanjutnya</button> </a>
+    
+        
+    
+    
+
+    <script>  
+            (function () {  
+                var  
+                 form = $('.form'),  
+                 cache_width = form.width(),  
+                 a4 = [850, 700]; // for a4 size paper width and height  
+          
+                $('#create_pdf').on('click', function () {  
+                    $('body').scrollTop(0);  
+                    createPDF();  
+                });  
+                //create pdf  
+                function createPDF() {  
+                    getCanvas().then(function (canvas) {  
+                        var  
+                         img = canvas.toDataURL("image/png"),  
+                         doc = new jsPDF({  
+                             unit: 'px',  
+                             format: 'a4',
+                             orientation: 'landscape'  
+                         });  
+                        doc.addImage(img, 'JPEG', 20, 20);  
+                        doc.save('Kuis 2.pdf');  
+                        form.width(cache_width);  
+                    });  
+                }  
+          
+                // create canvas object  
+                function getCanvas() {  
+                    form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');  
+                    return html2canvas(form, {  
+                        imageTimeout: 2000,  
+                        removeContainer: true  
+                    });  
+                }  
+          
+            }());  
+        </script>  
+        <script>  
+            /* 
+         * jQuery helper plugin for examples and tests 
+         */  
+            (function ($) {  
+                $.fn.html2canvas = function (options) {  
+                    var date = new Date(),  
+                    $message = null,  
+                    timeoutTimer = false,  
+                    timer = date.getTime();  
+                    html2canvas.logging = options && options.logging;  
+                    html2canvas.Preload(this[0], $.extend({  
+                        complete: function (images) {  
+                            var queue = html2canvas.Parse(this[0], images, options),  
+                            $canvas = $(html2canvas.Renderer(queue, options)),  
+                            finishTime = new Date();  
+          
+                            $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);  
+                            $canvas.siblings().toggle();  
+          
+                            $(window).click(function () {  
+                                if (!$canvas.is(':visible')) {  
+                                    $canvas.toggle().siblings().toggle();  
+                                    throwMessage("Canvas Render visible");  
+                                } else {  
+                                    $canvas.siblings().toggle();  
+                                    $canvas.toggle();  
+                                    throwMessage("Canvas Render hidden");  
+                                }  
+                            });  
+                            throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 4000);  
+                        }  
+                    }, options));  
+          
+                    function throwMessage(msg, duration) {  
+                        window.clearTimeout(timeoutTimer);  
+                        timeoutTimer = window.setTimeout(function () {  
+                            $message.fadeOut(function () {  
+                                $message.remove();  
+                            });  
+                        }, duration || 2000);  
+                        if ($message)  
+                            $message.remove();  
+                        $message = $('<div ></div>').html(msg).css({  
+                            margin: 0,  
+                            padding: 10,  
+                            background: "#000",  
+                            opacity: 0.7,  
+                            position: "fixed",  
+                            top: 10,  
+                            right: 10,  
+                            fontFamily: 'Tahoma',  
+                            color: '#fff',  
+                            fontSize: 12,  
+                            borderRadius: 12,  
+                            width: 'auto',  
+                            height: 'auto',  
+                            textAlign: 'center',  
+                            textDecoration: 'none'  
+                        }).hide().fadeIn().appendTo('body');  
+                    }  
+                };  
+            })(jQuery);  
+            
+        </script>
+    </body>
+    </html>

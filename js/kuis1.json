@@ -1,0 +1,93 @@
+{
+	"soal": [
+		"Berdasarkan kaidah tangan kanan, jika kita ingin membuka sekrup dengan obeng maka kita harus memutar ke arah:",
+        "Obeng yang sering digunakan dalam perakitan komputer adalah...",
+        "Fungsi sekrup dan baut adalah untuk ...",
+        "Fungsi obeng adalah untuk ...",
+        "Gambar di atas adalah sekrup untuk ...",
+        "Gambar di atas adalah sekrup untuk ...",
+        "Gambar di atas adalah baut ....",
+        "Ukuran obeng kembang yang biasa digunakan untuk perakitan komputer adalah ....",
+        "Perbedaan sekrup dan baut :",
+        "Berikut ini alat yang dipakai dalam perakitan komputer, kecuali ....",
+        "Kabel yang berfungsi menghubungkan listrik ke power supply adalah kabel ....",
+        "Pada Kabel Front Audio, pin yang kosong adalah ....",
+        "Gambar tersebut merupakan kabel ....",
+        "Jumper audio digunakan saat ....",
+        "Di antara fungsi jumper adalah sebagai berikut, kecuali ...."
+	],
+
+    "a": [
+        "kanan",
+        "slot",
+        "mengencangkan dan mengendorkan",
+        "menahan 2 objek bersamaan",
+        "kipas/fan CPU",
+        "RAM",
+        "tutup casing",
+        "6mm - 8mm",
+        "baut diputar dengan obeng, sedangkan sekrup tidak",
+        "baut",
+        "VGA",
+        "5",
+        "power",
+        "kabel front audio ada",
+        "alternatif ketika kabel front audio tidak berfungsi"
+    ],
+    
+    "b": [
+        "kiri",
+        "pentalobe",
+        "memperindah perangkat",
+        "memudahkan aliran listrik",
+        "tutup casing",
+        "motherboard",
+        "harddisk",
+        "1mm - 2mm",
+        "baut lebih banyak daripada sekrup",
+        "sekrup",
+        "ATA",
+        "6",
+        "VGA",
+        "kabel front audio tidak berfungsi dengan baik",
+        "menentukan status Slave dan Master pada Harddisk"
+    ],
+    
+	"c": [
+        "depan", 
+        "torx",
+        "menahan 2 objek bersamaan",
+        "mengencangkan dan mengendorkan sekrup",
+        "motherboard",
+        "tutup casing",
+        "tutup Power Supply",
+        "1mm - 3mm",
+        "sekrup lebih banyak daripada baut",
+        "paku",
+        "SATA",
+        "7",
+        "ATA",
+        "kabel front audio berfungsi dengan baik",
+        "mengatur CPU"
+    ],
+
+    "d": [
+        "belakang", 
+        "phillips",
+        "memudahkan aliran listrik",
+        "memperindah perangkat",
+        "harddisk",
+        "kipas/fan CPU",
+        "spacer/standoff",
+        "2mm - 6mm",
+        "sekrup diputar dengan obeng, sedangkan baut tidak",
+        "obeng",
+        "power",
+        "8",
+        "SATA",
+        "kabel front audio rusak",
+        "mereset setingan CMOS"
+    ]
+
+
+}

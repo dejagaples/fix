@@ -1,0 +1,54 @@
+{
+	"soal": [
+        "Berikut ini adalah perangkat dan alat yang dapat kita gunakan untuk menulis data, antara lain .... ",
+        "Berikut ini adalah fakta mengenai Heatsink Fan, yaitu ....",
+        "Di bawah ini yang termasuk perangkat proses pada komputer antara lain ....",
+        "Beberapa fakta mengenai VGA Card antara lain ...."
+        
+	],
+
+    "a": [
+        "CD-ROM",
+        "menukar udara di dalam dan di luar case",
+        "cpu",
+        "untuk rendering visual"
+    ],
+    
+    "b": [
+        "CD-RW",
+        "letaknya di dekat case",
+        "ram",
+        "untuk rendering suara"
+    ],
+    
+	"c": [
+        "CD-R",
+        "memiliki sayap",
+        "heatsink",
+        "memiliki GPU"
+    ],
+
+    "d": [
+        "DVD-ROM",
+        "letaknya di dekat cpu",
+        "harddisk",
+        "sudah 1 paket dengan motherboard"
+        
+    ],
+
+    "e": [
+        "DVD-RW",
+        "memiliki 4 kaki",
+        "optical disk drive",
+        "menggunakan sinar laser"
+    ],
+
+    "f": [
+        "DVD Writer",
+        "menyerap panas cpu",
+        "vga card",
+        "memiliki kipas kecil"
+    ]
+
+
+}

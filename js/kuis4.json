@@ -1,0 +1,60 @@
+{
+	"soal": [
+        "Perangkat ... pada komputer berfungsi melindungi komponen-komponen di dalamnya dari debu, panas, air, kotoran, atau saat terjadi benturan fisik. (1 kata)",
+        "Tipe casing yang memiliki ukuran terbesar adalah .... (2 kata)",
+        "Input Power Supply adalah arus listrik .... (1 kata)",
+        "Model/tipe power supply yang terbaru adalah .... (1 kata)",
+        "Motherboard disebut juga .... (2 kata)",
+        "Jenis form factor motherboard dengan ukuran terbesar adalah .... (1 kata)",
+        "Bagian cpu yang berfungsi melakukan semua perhitungan aritmatika (matematika) adalah .... (1 kata)",
+        "Perangkat keras yang berfungsi sebagai otaknya komputer adalah ....  (1 kata <5 huruf)",
+        "Merk cpu yang terkenal di kalangan masyarakat yaitu ... dan AMD. (1 kata)",
+        "Perangkat yang disebut sebagai primary storage adalah .... (1 kata)",
+        "Jenis RAM yang sering digunakan untuk komputer desktop adalah .... atau DIMM. (1 kata)",
+        "Harddisk disebut juga sebagai tempat penyimpanan .... (1 kata)",
+        "Perangkat penyimpanan yang memiliki fungsi serupa dengan HDD adalah .... (1 kata)",
+        "Data yang tersimpan di Harddisk bersifat ... sehingga akan permanen walaupun komputer dimatikan. (2 kata)",
+        "Optical Disc Drive adalah perangkat keras yang menggunakan ... untuk membaca dan menulis data. (2 kata)",
+        "Perangkat ... berfungsi untuk mencegah overheat pada CPU. (1 kata)",
+        "Perangkat keras yang melakukan rendering atau pemrosesan output berupa visual yang ditampilkan di monitor adalah .... (2 kata)",
+        "Perangkat yang berfungsi mengolah data untuk audio/suara adalah .... (2 kata)",
+        "Perangkat yang digunakan untuk memasang kabel RJ-45 adalah .... (2 kata)",
+        "Jenis monitor terbagi menjadi CRT, LCD, LED, dan .... (1 kata)",
+        "Layout keyboard yang paling sering dipakai sekarang adalah .... (1 kata)",
+        "Alas khusus yang digunakan untuk perangkat Mouse disebut .... (1 kata)",
+        "Speaker merupakan hardware yang berfungsi mengeluarkan hasil audio/suara yang diproses oleh perangkat .... (2 kata)"
+
+        
+
+	],
+
+    "jawaban": [
+        "casing",
+        "super tower",
+        "ac",
+        "atx",
+        "main board",
+        "eatx",
+        "alu",
+        "cpu",
+        "intel",
+        "ram",
+        "sdram",
+        "sekunder",
+        "ssd",
+        "non volatile",
+        "sinar laser",
+        "heatsink",
+        "vga card",
+        "sound card",
+        "lan card",
+        "plasma",
+        "qwerty",
+        "mousepad",
+        "sound card"
+
+    ]
+ 
+
+
+}
