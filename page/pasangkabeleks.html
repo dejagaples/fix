@@ -137,7 +137,7 @@
 					<li><a href="qz3.html">Kuis</a></li>
 				</ul>
 			</li>
-			<li><a class="tutup" href="#" onclick="sabar()">Latihan</a></li>
+			<li><a class="tutup" href="#" onclick="langsung()">Latihan</a></li>
 		</ul>
 	</div>
 	<script src="../js/nav.js">	</script>
@@ -206,10 +206,7 @@
 					<em><code>Animasi 1</code>. Memasang Kabel Eksternal</em>
 					<br>
 					<br>
-					<video id="1tb" width="100%" controls>
-							<source src="../vid/kabeleksternal1.mp4" type="video/mp4">
-							Your browser does not support HTML video.
-					</video>
+					<iframe id="1tb" width="100%" height="250" src="https://www.youtube.com/embed/PyxxwssSMvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<br>
 					<em><code  style="text-decoration:none;color:blue;">Video 1</code>. Memasang Kabel Eksternal</em>	
 				</center>
@@ -310,10 +307,7 @@
 				<br>
 				<br>
 				<center>
-						<video id="1tb" width="100%" controls>
-								<source src="../vid/kabeleksternal1.mp4" type="video/mp4">
-							Your browser does not support HTML video.
-					</video>
+					<iframe id="1tb" width="100%" height="250" src="https://www.youtube.com/embed/PyxxwssSMvE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<br>
 					<em><code  style="text-decoration:none;color:blue;">Video 1</code>. Memasang Kabel Eksternal</em>	
 					<br><br>
@@ -392,6 +386,10 @@
 
 		function go(){
 			location.href="../index.html";
+		}
+
+		function langsung(){
+			location.href="penilaian.html";
 		}
 
 		document.querySelector(".button-right").addEventListener('click', function(){
