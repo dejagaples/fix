@@ -19,19 +19,6 @@
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <title>RAKITOS - Guru</title>
-  <script>
-		
-		window.onload = function awal(){
-		rootRef.on('value',function(snapshot){
-			document.getElementById("kuis1").innerHTML=snapshot.child('kuis1').val();
-			document.getElementById("kuis2").innerHTML=snapshot.child('kuis2').val();
-			document.getElementById("kuis3").innerHTML=snapshot.child('kuis3').val();
-			document.getElementById("latihan").innerHTML=snapshot.child('latihan').val();
-		});
-		
-				
-	  	};
-	</script>
   <style>
       #customers {
   font-family: Arial, Helvetica, sans-serif;
@@ -97,11 +84,7 @@
 					<form>
 						<div class="container">
 							<label >
-								<b>1. Menu Token pada Sidebar berfungsi untuk mengganti kode tugas/ujian. </b>
-							</label>
-							<br/>
-							<label>
-								<b>2. Menu Nilai Siswa berfungsi untuk melihat semua nilai siswa. </b>
+								<b>1. Tabel menunjukkan nilai siswa pada kegiatan Latihan </b>
 							</label>
 							<br/><br/>
 						</div>
@@ -113,15 +96,15 @@
 
 	<!--/.sidebar-->
 	<div id="menu-wrap">
-		<ul id="menu" class="nav">
+		<ul id="menu" class="nav" >
 				<li id="brnd" onclick="go()"><a  href="#">Beranda</a></li>
-				<li><a class="tutup active" href="#">Token</a></li>
-				<li><a class="tutup " href="#">Nilai Siswa<span class="caret kiri" ></span></a>
+				<li><a class="tutup" href="#" onclick="guru()">Token</a></li>
+				<li><a class="tutup active" href="#">Nilai Siswa<span class="caret kiri" ></span></a>
 					<ul class="sub">
-						<li><a href="guru1.html">Kuis 1</a></li>
+						<li><a  href="guru1.html">Kuis 1</a></li>
 						<li><a href="guru2.html">Kuis 2</a></li>
 						<li><a href="guru3.html">Kuis 3</a></li>
-						<li><a href="guru4.html">Latihan</a></li>
+						<li><a class="disini" href="#">Latihan</a></li>
 					</ul>
 				</li>
 		</ul>
@@ -144,48 +127,33 @@
 			};
 			// Initialize Firebase
 			firebase.initializeApp(firebaseConfig);
-			var rootRef = firebase.database().ref().child('token');
+			
 	</script>
 
 		<!-- Konten -->
 		<div class="judul">
-		<h3 >Token Ujian</h3>
+		<h3>Latihan</h3>
         <hr style="height:1px;border-width:1;background-color:lightgray">
         <center>
 				
 		<table id="customers">
-            <tr >
-                <th>Kegiatan</th>
-                <th>Token</th>
-                <th>Aksi</th>
-            </tr>
-            <tr>
-                <td>Kuis 1</td>
-                <td id="kuis1"></td>
-                <td><center><button class="button-pertanyaan" id="ganti1">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Kuis 2</td>
-                <td id="kuis2"></td>
-                <td><center><button class="button-pertanyaan" id="ganti2">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Kuis 3</td>
-                <td id="kuis3"></td>
-                <td><center><button class="button-pertanyaan" id="ganti3">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Latihan</td>
-                <td id="latihan"></td>
-                <td><center><button class="button-pertanyaan" id="ganti4">Ganti</button></center></td>
-            </tr>
+			<thead>
+				<tr >
+					<th>Nama</th>
+					<th>Kelas</th>
+					<th>Nilai</th>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+			</tbody>
         </table>
-    </center>
+	</center>
+	
+	<script src="../js/index4.js"></script>
+         <br>
+         <br>
+         <br>
 		 
-         <br>
-         <br>
-         <br>
-		
 		<div id="g10"></div>
 		</div>
 			
@@ -197,38 +165,7 @@
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
 		
-		$('#ganti1').click(function(){
-			var person = prompt("Masukkan token baru", document.getElementById("kuis1").innerHTML);
-			if (person != null) {
-				rootRef.update({
-					kuis1:person,
-				});
-			}
-		});
-		$('#ganti2').click(function(){
-			var person1 = prompt("Masukkan token baru", document.getElementById("kuis2").innerHTML);
-			if (person1 != null) {
-				rootRef.update({
-					kuis2:person1,
-				});
-			}
-		});
-		$('#ganti3').click(function(){
-			var person2 = prompt("Masukkan token baru", document.getElementById("kuis3").innerHTML);
-			if (person2 != null) {
-				rootRef.update({
-					kuis3:person2,
-				});
-			}
-		});
-		$('#ganti4').click(function(){
-			var person3 = prompt("Masukkan token baru", document.getElementById("latihan").innerHTML);
-			if (person3 != null) {
-				rootRef.update({
-					latihan:person3,
-				});
-			}
-		});
+		
 		
 		function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -241,8 +178,8 @@
 				document.getElementById("g10").innerHTML = `
 				<br>
 				<div id="bas2" class="next" style="margin:5px;">
-				<a href="../index.html"><button class="button-left-hp"> <- Beranda </button></a> 
-				<a href="guru1.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				<a href="guru3.html"><button class="button-left-hp"> <- Sebelumnya </button></a> 
+				<a href="../index.html"><button class="button-right-hp"> Beranda -> </button></a>
 				</div>
 				<br>
 				`;
@@ -286,6 +223,9 @@
 			location.href="../index.html";
 		}
 		
+        function guru(){
+			location.href="guru.html";
+		}
 		
     		
 	</script>
@@ -293,4 +233,4 @@
 	
 	
 </body>
-</html>
+</html>  
