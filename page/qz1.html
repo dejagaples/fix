@@ -431,30 +431,44 @@
 		//Cek jawaban
 		function cek(){
 			var nilai=0;
+			var no1="S";
+			var no2="S";
+			var no3="S";
+			var no4="S";
+			var no5="S";
             if(form.pilihan.value=='D. sekrup diputar dengan obeng, sedangkan baut tidak'){
 				nilai=nilai+20;
+				no1="B";
 			}
             if (form2.pilihan2.value=='D. power'){
 				nilai=nilai+20;
+				no2="B";
 			}
+
 			if (form3.pilihan3.value=='C. Jika ada kabel merah, berarti merah negatif(-).'){
 				nilai=nilai+20;
+				no3="B";
 			}
+
 			if (form4.pilihan4.value=='B. HDD LED'){
 				nilai=nilai+20;
+				no4="B";
 			}
+
 			if (form5.pilihan5.value=='C. mengatur CPU'){
 				nilai=nilai+20;
+				no5="B";
 			}
 
 			
 			//to storage
 			var f = nilai.toFixed(0);
 			localStorage.setItem("nilai", f);
-
-			
-			
-
+			localStorage.setItem("no1", no1);
+			localStorage.setItem("no2", no2);
+			localStorage.setItem("no3", no3);
+			localStorage.setItem("no4", no4);
+			localStorage.setItem("no5", no5);
 
 			//confirm and move
 			swal({
@@ -468,10 +482,22 @@
 				}).then(function() {
 					nama_1 = localStorage.getItem("nama1");
 					kelas = localStorage.getItem("kelas");
+					no_1 = localStorage.getItem("no1");
+					no_2 = localStorage.getItem("no2");
+					no_3 = localStorage.getItem("no3");
+					no_4 = localStorage.getItem("no4");
+					no_5 = localStorage.getItem("no5");
+					
+					
 					var data = {
 						nama: nama_1,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 
 					}
 
@@ -487,7 +513,12 @@
 						var data2 = {
 						nama: nama_2,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}
 						database.ref("kuis_1").push(data2);	
 					}
@@ -495,7 +526,12 @@
 						var data3 = {
 						nama: nama_3,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}	
 						database.ref("kuis_1").push(data3);
 					}
@@ -503,7 +539,12 @@
 						var data4 = {
 						nama: nama_4,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}	
 						database.ref("kuis_1").push(data4);
 					}
