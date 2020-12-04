@@ -710,11 +710,16 @@
 
 			function cek(){
 				var nilai=0;
-
+				var no1=0;
+				var no2=0;
+				var no3=0;
+				var no4=0;
+				var no5=0;
 				//soal 1
 				if (($('#div2').find('#drag1').length == 1) && ($('#div1').find('#drag2').length == 1) && ($('#div3').find('#drag3').length == 1))
   				{
-    				nilai=nilai+10;
+					nilai=nilai+10;
+					no1=no1+10;
 				}
 
 				//soal2
@@ -744,93 +749,116 @@
 				var i12 = x12.selectedIndex;
 				if (x.options[i].text=="Lepas Case"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				} 
 				if (x2.options[i2].text=="Pasang Power Supply"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x3.options[i3].text=="Pasang CPU"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x4.options[i4].text=="Pasang Heatsink Fan"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x5.options[i5].text=="Pasang RAM"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x6.options[i6].text=="Pasang Motherboard"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x7.options[i7].text=="Pasang VGA Card"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x8.options[i8].text=="Pasang Harddisk Drive"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x9.options[i9].text=="Pasang ODD"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x10.options[i10].text=="Pasang Kabel Internal"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x11.options[i11].text=="Pasang Case"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				if (x12.options[i12].text=="Pasang Kabel Eksternal"){
 					nilai=nilai+3.33;
+					no2=no2+3.33;
 				}
 				
 
 				//soal 3
 				if (($('#div4').find('#drag6').length == 1) && ($('#div5').find('#drag4').length == 1) && ($('#div6').find('#drag5').length == 1))
   				{
-    				nilai=nilai+10;
+					nilai=nilai+10;
+					no3=no3+10;
 				}
 
 				//soal 4
 				if(document.getElementById("powerledplus").selectedIndex == "3"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				if(document.getElementById("powerledmin").selectedIndex == "7"){
 					nilai=nilai+3.75;
+					no4=no4+3.75;
 					
 				}
 				if(document.getElementById("powerswplus").selectedIndex == "5"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				if(document.getElementById("powerswmin").selectedIndex == "8"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				
 				if(document.getElementById("hddledplus").selectedIndex == "6"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				if(document.getElementById("hddledmin").selectedIndex == "2"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				
 				if(document.getElementById("resetswmin").selectedIndex == "4"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 				if(document.getElementById("resetswplus").selectedIndex == "1"){
 					nilai=nilai+3.75;
-					
+					no4=no4+3.75;
 				}
 
 				//soal 5
 				if (($('#div7').find('#drag9').length == 1) && ($('#div8').find('#drag7').length == 1) && ($('#div7').find('#drag9').length == 1))
   				{
-    				nilai=nilai+10;
+					nilai=nilai+10;
+					no5=no5+10;
 				}
 
 				//to storage
 				var f = nilai.toFixed(2);
 				localStorage.setItem("nilai", f);
+				localStorage.setItem("nilai", f);
+				localStorage.setItem("no1", no1);
+				localStorage.setItem("no2", no2);
+				localStorage.setItem("no3", no3);
+				localStorage.setItem("no4", no4);
+				localStorage.setItem("no5", no5);
+				
+								
 
 				//confirm and move
 				swal({
@@ -844,10 +872,20 @@
 				}).then(function() {
 					nama_1 = localStorage.getItem("nama1");
 					kelas = localStorage.getItem("kelas");
+					no_1 = localStorage.getItem("no1");
+					no_2 = localStorage.getItem("no2");
+					no_3 = localStorage.getItem("no3");
+					no_4 = localStorage.getItem("no4");
+					no_5 = localStorage.getItem("no5");
 					var data = {
 						nama: nama_1,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 
 					}
 
@@ -863,7 +901,12 @@
 						var data2 = {
 						nama: nama_2,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}
 						database.ref("latihan").push(data2);	
 					}
@@ -871,7 +914,12 @@
 						var data3 = {
 						nama: nama_3,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}	
 						database.ref("latihan").push(data3);
 					}
@@ -879,7 +927,12 @@
 						var data4 = {
 						nama: nama_4,
 						kelas: kelas,
-						nilai: f
+						nilai: f,
+						no1: no_1,
+						no2: no_2,
+						no3: no_3,
+						no4: no_4,
+						no5: no_5
 						}	
 						database.ref("latihan").push(data4);
 					}
@@ -909,6 +962,223 @@
         		seconds = seconds < 10 ? "0" + seconds : seconds;
 				display.textContent = minutes + " : " + seconds;
 					if (--timer == 0) {
+						var nilai=0;
+						var no1=0;
+						var no2=0;
+						var no3=0;
+						var no4=0;
+						var no5=0;
+						//soal 1
+						if (($('#div2').find('#drag1').length == 1) && ($('#div1').find('#drag2').length == 1) && ($('#div3').find('#drag3').length == 1))
+						{
+							nilai=nilai+10;
+							no1=no1+10;
+						}
+
+						//soal2
+						var x = document.getElementById("mySelect");
+						var x2 = document.getElementById("mySelect2");
+						var x3 = document.getElementById("mySelect3");
+						var x4 = document.getElementById("mySelect4");
+						var x5 = document.getElementById("mySelect5");
+						var x6 = document.getElementById("mySelect6");
+						var x7 = document.getElementById("mySelect7");
+						var x8 = document.getElementById("mySelect8");
+						var x9 = document.getElementById("mySelect9");
+						var x10 = document.getElementById("mySelect10");
+						var x11 = document.getElementById("mySelect11");
+						var x12 = document.getElementById("mySelect12");
+						var i = x.selectedIndex;
+						var i2 = x2.selectedIndex;
+						var i3 = x3.selectedIndex;
+						var i4 = x4.selectedIndex;
+						var i5 = x5.selectedIndex;
+						var i6 = x6.selectedIndex;
+						var i7 = x7.selectedIndex;
+						var i8 = x8.selectedIndex;
+						var i9 = x9.selectedIndex;
+						var i10 = x10.selectedIndex;
+						var i11 = x11.selectedIndex;
+						var i12 = x12.selectedIndex;
+						if (x.options[i].text=="Lepas Case"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						} 
+						if (x2.options[i2].text=="Pasang Power Supply"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x3.options[i3].text=="Pasang CPU"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x4.options[i4].text=="Pasang Heatsink Fan"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x5.options[i5].text=="Pasang RAM"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x6.options[i6].text=="Pasang Motherboard"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x7.options[i7].text=="Pasang VGA Card"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x8.options[i8].text=="Pasang Harddisk Drive"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x9.options[i9].text=="Pasang ODD"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x10.options[i10].text=="Pasang Kabel Internal"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x11.options[i11].text=="Pasang Case"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						if (x12.options[i12].text=="Pasang Kabel Eksternal"){
+							nilai=nilai+3.33;
+							no2=no2+3.33;
+						}
+						
+
+						//soal 3
+						if (($('#div4').find('#drag6').length == 1) && ($('#div5').find('#drag4').length == 1) && ($('#div6').find('#drag5').length == 1))
+						{
+							nilai=nilai+10;
+							no3=no3+10;
+						}
+
+						//soal 4
+						if(document.getElementById("powerledplus").selectedIndex == "3"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						if(document.getElementById("powerledmin").selectedIndex == "7"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+							
+						}
+						if(document.getElementById("powerswplus").selectedIndex == "5"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						if(document.getElementById("powerswmin").selectedIndex == "8"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						
+						if(document.getElementById("hddledplus").selectedIndex == "6"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						if(document.getElementById("hddledmin").selectedIndex == "2"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						
+						if(document.getElementById("resetswmin").selectedIndex == "4"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+						if(document.getElementById("resetswplus").selectedIndex == "1"){
+							nilai=nilai+3.75;
+							no4=no4+3.75;
+						}
+
+						//soal 5
+						if (($('#div7').find('#drag9').length == 1) && ($('#div8').find('#drag7').length == 1) && ($('#div7').find('#drag9').length == 1))
+						{
+							nilai=nilai+10;
+							no5=no5+10;
+						}
+
+						//to storage
+						var f = nilai.toFixed(2);
+						localStorage.setItem("nilai", f);
+						localStorage.setItem("nilai", f);
+						localStorage.setItem("no1", no1);
+						localStorage.setItem("no2", no2);
+						localStorage.setItem("no3", no3);
+						localStorage.setItem("no4", no4);
+						localStorage.setItem("no5", no5);
+
+						nama_1 = localStorage.getItem("nama1");
+							kelas = localStorage.getItem("kelas");
+							no_1 = localStorage.getItem("no1");
+							no_2 = localStorage.getItem("no2");
+							no_3 = localStorage.getItem("no3");
+							no_4 = localStorage.getItem("no4");
+							no_5 = localStorage.getItem("no5");
+							var data = {
+								nama: nama_1,
+								kelas: kelas,
+								nilai: f,
+								no1: no_1,
+								no2: no_2,
+								no3: no_3,
+								no4: no_4,
+								no5: no_5
+
+							}
+
+							nama_2 = localStorage.getItem("nama2");
+							nama_3 = localStorage.getItem("nama3");
+							nama_4 = localStorage.getItem("nama4");
+							
+							
+
+							var database = firebase.database();
+							database.ref("latihan").push(data);
+							if(nama_2 != "") {
+								var data2 = {
+								nama: nama_2,
+								kelas: kelas,
+								nilai: f,
+								no1: no_1,
+								no2: no_2,
+								no3: no_3,
+								no4: no_4,
+								no5: no_5
+								}
+								database.ref("latihan").push(data2);	
+							}
+							if(nama_3 != "") {
+								var data3 = {
+								nama: nama_3,
+								kelas: kelas,
+								nilai: f,
+								no1: no_1,
+								no2: no_2,
+								no3: no_3,
+								no4: no_4,
+								no5: no_5
+								}	
+								database.ref("latihan").push(data3);
+							}
+							if(nama_4 != "") {
+								var data4 = {
+								nama: nama_4,
+								kelas: kelas,
+								nilai: f,
+								no1: no_1,
+								no2: no_2,
+								no3: no_3,
+								no4: no_4,
+								no5: no_5
+								}	
+								database.ref("latihan").push(data4);
+							}
+
+
 						location.href="updf.html";
 					}
     			}, 1000);
