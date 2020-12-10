@@ -306,49 +306,56 @@
 				display.textContent = minutes + " : " + seconds;
 					if (--timer == 0) {
 						var nilai=0;
-			var no1="S";
-			var no2="S";
-			var no3="S";
-			var no4="S";
-			var no5="S";
-            if(form.pilihan.value=='C. Casing rumahnya hardware, CPU otaknya komputer'){
-				nilai=nilai+20;
-				no1="B";
-			}
-            if (form2.pilihan2.value=='C. mengubah arus DC menjadi AC'){
-				nilai=nilai+20;
-				no2="B";
-			}
-			if (form3.pilihan3.value=='A. RAM tempat penyimpanan sementara, Harddisk tempat penyimpanan permanen'){
-				nilai=nilai+20;
-				no3="B";
-			}
-			if (form4.pilihan4.value=='D. keyboard, mouse, scanner'){
-				nilai=nilai+20;
-				no4="B";
-			}
-			if (form5.pilihan5.value=='C. Sound Card'){
-				nilai=nilai+20;
-				no5="B";
-			}
+						var no1="S";
+						var no2="S";
+						var no3="S";
+						var no4="S";
+						var no5="S";
+						var d = new Date();
+						var n = d.getHours() + ":" + d.getMinutes();
+						var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
+						if(form.pilihan.value=='C. Casing rumahnya hardware, CPU otaknya komputer'){
+							nilai=nilai+20;
+							no1="B";
+						}
+						if (form2.pilihan2.value=='C. mengubah arus DC menjadi AC'){
+							nilai=nilai+20;
+							no2="B";
+						}
+						if (form3.pilihan3.value=='A. RAM tempat penyimpanan sementara, Harddisk tempat penyimpanan permanen'){
+							nilai=nilai+20;
+							no3="B";
+						}
+						if (form4.pilihan4.value=='D. keyboard, mouse, scanner'){
+							nilai=nilai+20;
+							no4="B";
+						}
+						if (form5.pilihan5.value=='C. Sound Card'){
+							nilai=nilai+20;
+							no5="B";
+						}
 
-			//to storage
-			var f = nilai.toFixed(0);
-			localStorage.setItem("nilai", f);
-			localStorage.setItem("no1", no1);
-			localStorage.setItem("no2", no2);
-			localStorage.setItem("no3", no3);
-			localStorage.setItem("no4", no4);
-			localStorage.setItem("no5", no5);
+						//to storage
+						var f = nilai.toFixed(0);
+						localStorage.setItem("nilai", f);
+						localStorage.setItem("no1", no1);
+						localStorage.setItem("no2", no2);
+						localStorage.setItem("no3", no3);
+						localStorage.setItem("no4", no4);
+						localStorage.setItem("no5", no5);
+						localStorage.setItem("waktu", n);
+						localStorage.setItem("tanggal", m);
 
-			//push to firebase
-			nama_1 = localStorage.getItem("nama1");
-					kelas = localStorage.getItem("kelas");
-					no_1 = localStorage.getItem("no1");
-					no_2 = localStorage.getItem("no2");
-					no_3 = localStorage.getItem("no3");
-					no_4 = localStorage.getItem("no4");
-					no_5 = localStorage.getItem("no5");
+						//push to firebase
+						nama_1 = localStorage.getItem("nama1");
+						kelas = localStorage.getItem("kelas");
+						no_1 = localStorage.getItem("no1");
+						no_2 = localStorage.getItem("no2");
+						no_3 = localStorage.getItem("no3");
+						no_4 = localStorage.getItem("no4");
+						no_5 = localStorage.getItem("no5");
+						waktu_ = localStorage.getItem("waktu");
+						tanggal_ = localStorage.getItem("tanggal");
 
 					var data = {
 						nama: nama_1,
@@ -358,7 +365,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 
 					}
 
@@ -379,7 +388,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}
 						database.ref("kuis_2").push(data2);	
 					}
@@ -392,7 +403,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_2").push(data3);
 					}
@@ -405,7 +418,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_2").push(data4);
 					}
@@ -520,6 +535,9 @@
 			var no3="S";
 			var no4="S";
 			var no5="S";
+			var d = new Date();
+			var n = d.getHours() + ":" + d.getMinutes();
+			var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
             if(form.pilihan.value=='C. Casing rumahnya hardware, CPU otaknya komputer'){
 				nilai=nilai+20;
 				no1="B";
@@ -549,6 +567,8 @@
 			localStorage.setItem("no3", no3);
 			localStorage.setItem("no4", no4);
 			localStorage.setItem("no5", no5);
+			localStorage.setItem("waktu", n);
+			localStorage.setItem("tanggal", m);
 			
 			//confirm and move
 			swal({
@@ -567,6 +587,8 @@
 					no_3 = localStorage.getItem("no3");
 					no_4 = localStorage.getItem("no4");
 					no_5 = localStorage.getItem("no5");
+					waktu_ = localStorage.getItem("waktu");
+					tanggal_ = localStorage.getItem("tanggal");
 
 					var data = {
 						nama: nama_1,
@@ -576,7 +598,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 
 					}
 
@@ -597,7 +621,10 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
+						
 						}
 						database.ref("kuis_2").push(data2);	
 					}
@@ -610,7 +637,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_2").push(data3);
 					}
@@ -623,7 +652,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_2").push(data4);
 					}

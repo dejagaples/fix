@@ -222,10 +222,11 @@
 						<ul style="list-style: none;">
 							<li><b>PETUNJUK SOAL : </b>  </li>
 							<li>1. Evaluasi hanya dapat diakses menggunakan perangkat laptop/PC.</li>
-							<li>2. Isikan nama lengkap kalian.</li>
-							<li>2. Waktu mengerjakan adalah 15 menit.</li>
+							<li>2. Pastikan koneksi internet lancar.</li>
+							<li>2. Waktu mengerjakan adalah 20 menit.</li>
 							<li>3. Kerjakan soal yang mudah terlebih dahulu.</li>
-							<li>4. Jangan lupa berdoa sebelum mengerjakan.</li>
+							<li>4. Isikan nama lengkap kalian.</li>
+							<li>5. Jangan lupa berdoa sebelum mengerjakan.</li>
 						</ul>			
 						
 				
@@ -262,7 +263,7 @@
 			<button style="margin:5px" onclick="nav5()">5</button>
 			
 			
-			<span style="font-weight: bold; float: right;" id="stopwatch">15 : 00</span>
+			<span style="font-weight: bold; float: right;" id="stopwatch">20 : 00</span>
 			
 			<br>
 			<br>
@@ -287,9 +288,9 @@
 					
 					<div id="tampung" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
 							<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
-							<img src="../gambar/ramsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag1" width="200px" height="200px">
-							<img src="../gambar/msoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag2" width="200px" height="200px">
-							<img src="../gambar/ssoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag3" width="200px" height="200px">
+							<img src="../gambar/ramsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag1" >
+							<img src="../gambar/msoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag2" >
+							<img src="../gambar/ssoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag3" >
 					</div>
 				</div>
 				<div id="soal2">
@@ -514,9 +515,9 @@
 						</div>
 						<div id="tampung2" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
 								<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
-								<img src="../gambar/evmobo.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag4" width="200px" height="200px">
-								<img src="../gambar/evcpu1.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag5" width="180px" height="180px">
-								<img src="../gambar/evcase.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag6" width="180px" height="180px">
+								<img src="../gambar/evmobo.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag4" >
+								<img src="../gambar/evcpu1.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag5" >
+								<img src="../gambar/evcase.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag6" >
 						</div>
 					</div>
 					
@@ -659,9 +660,9 @@
 									
 									<div id="tampung2" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
 											<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
-											<img src="../gambar/hddsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag7" width="200px" height="200px">
-											<img src="../gambar/evprint.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag8" width="165px" height="165px">
-											<img src="../gambar/evscan.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag9" width="160px" height="160px">
+											<img src="../gambar/hddsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag7" >
+											<img src="../gambar/evprint.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag8" >
+											<img src="../gambar/evscan.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag9" >
 									</div>
 							</div>
 					</div>
@@ -715,6 +716,9 @@
 				var no3=0;
 				var no4=0;
 				var no5=0;
+				var d = new Date();
+				var n = d.getHours() + ":" + d.getMinutes();
+				var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
 				//soal 1
 				if (($('#div2').find('#drag1').length == 1) && ($('#div1').find('#drag2').length == 1) && ($('#div3').find('#drag3').length == 1))
   				{
@@ -851,13 +855,13 @@
 				//to storage
 				var f = nilai.toFixed(2);
 				localStorage.setItem("nilai", f);
-				localStorage.setItem("nilai", f);
 				localStorage.setItem("no1", no1);
 				localStorage.setItem("no2", no2);
 				localStorage.setItem("no3", no3);
 				localStorage.setItem("no4", no4);
 				localStorage.setItem("no5", no5);
-				
+				localStorage.setItem("waktu", n);
+				localStorage.setItem("tanggal", m);	
 								
 
 				//confirm and move
@@ -877,6 +881,9 @@
 					no_3 = localStorage.getItem("no3");
 					no_4 = localStorage.getItem("no4");
 					no_5 = localStorage.getItem("no5");
+					waktu_ = localStorage.getItem("waktu");
+					tanggal_ = localStorage.getItem("tanggal");
+
 					var data = {
 						nama: nama_1,
 						kelas: kelas,
@@ -885,7 +892,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 
 					}
 
@@ -906,7 +915,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}
 						database.ref("latihan").push(data2);	
 					}
@@ -919,7 +930,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("latihan").push(data3);
 					}
@@ -932,7 +945,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("latihan").push(data4);
 					}
@@ -968,6 +983,9 @@
 						var no3=0;
 						var no4=0;
 						var no5=0;
+						var d = new Date();
+						var n = d.getHours() + ":" + d.getMinutes();
+						var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
 						//soal 1
 						if (($('#div2').find('#drag1').length == 1) && ($('#div1').find('#drag2').length == 1) && ($('#div3').find('#drag3').length == 1))
 						{
@@ -1110,14 +1128,19 @@
 						localStorage.setItem("no3", no3);
 						localStorage.setItem("no4", no4);
 						localStorage.setItem("no5", no5);
+						localStorage.setItem("waktu", n);
+						localStorage.setItem("tanggal", m);
 
 						nama_1 = localStorage.getItem("nama1");
-							kelas = localStorage.getItem("kelas");
-							no_1 = localStorage.getItem("no1");
-							no_2 = localStorage.getItem("no2");
-							no_3 = localStorage.getItem("no3");
-							no_4 = localStorage.getItem("no4");
-							no_5 = localStorage.getItem("no5");
+						kelas = localStorage.getItem("kelas");
+						no_1 = localStorage.getItem("no1");
+						no_2 = localStorage.getItem("no2");
+						no_3 = localStorage.getItem("no3");
+						no_4 = localStorage.getItem("no4");
+						no_5 = localStorage.getItem("no5");
+						waktu_ = localStorage.getItem("waktu");
+						tanggal_ = localStorage.getItem("tanggal");
+
 							var data = {
 								nama: nama_1,
 								kelas: kelas,
@@ -1126,7 +1149,9 @@
 								no2: no_2,
 								no3: no_3,
 								no4: no_4,
-								no5: no_5
+								no5: no_5,
+								waktu: waktu_,
+								tanggal: tanggal_
 
 							}
 
@@ -1147,7 +1172,9 @@
 								no2: no_2,
 								no3: no_3,
 								no4: no_4,
-								no5: no_5
+								no5: no_5,
+								waktu: waktu_,
+								tanggal: tanggal_
 								}
 								database.ref("latihan").push(data2);	
 							}
@@ -1160,7 +1187,9 @@
 								no2: no_2,
 								no3: no_3,
 								no4: no_4,
-								no5: no_5
+								no5: no_5,
+								waktu: waktu_,
+								tanggal: tanggal_
 								}	
 								database.ref("latihan").push(data3);
 							}
@@ -1173,7 +1202,9 @@
 								no2: no_2,
 								no3: no_3,
 								no4: no_4,
-								no5: no_5
+								no5: no_5,
+								waktu: waktu_,
+								tanggal: tanggal_
 								}	
 								database.ref("latihan").push(data4);
 							}
@@ -1212,21 +1243,21 @@
 					document.getElementById("soal3").hidden=true;
 					document.getElementById("soal4").hidden=true;
 					document.getElementById("soal5").hidden=true;
-
+					var kelas = document.getElementById("kelas");
+					localStorage.setItem("kelas", kelas.value);
+					var kelompok = document.getElementById("kelompok");
+					localStorage.setItem("kelompok", kelompok.value);
+					var nama2 = document.getElementById("nama2");
+					localStorage.setItem("nama2", nama2.value);
+					var nama3 = document.getElementById("nama3");
+					localStorage.setItem("nama3", nama3.value);
+					var nama4 = document.getElementById("nama4");
+					localStorage.setItem("nama4", nama4.value);
+					var tenMinutes = 60 * 20;
+					display = document.querySelector('#stopwatch');
+					startTimer(tenMinutes, display);
 				}
-				var kelas = document.getElementById("kelas");
-				localStorage.setItem("kelas", kelas.value);
-				var kelompok = document.getElementById("kelompok");
-				localStorage.setItem("kelompok", kelompok.value);
-				var nama2 = document.getElementById("nama2");
-				localStorage.setItem("nama2", nama2.value);
-				var nama3 = document.getElementById("nama3");
-				localStorage.setItem("nama3", nama3.value);
-				var nama4 = document.getElementById("nama4");
-				localStorage.setItem("nama4", nama4.value);
-				var tenMinutes = 60 * 15;
-				display = document.querySelector('#stopwatch');
-				startTimer(tenMinutes, display);
+				
 
 			}
 
@@ -1289,6 +1320,24 @@
 				document.getElementById("nama4").style.marginLeft= "0";
 				document.getElementById("token").style.width= "70%";
 				document.getElementById("token").style.marginLeft= "0";
+				document.getElementById("drag1").style.width= "100px";
+				document.getElementById("drag1").style.height= "100px";
+				document.getElementById("drag2").style.width= "100px";
+				document.getElementById("drag2").style.height= "100px";
+				document.getElementById("drag3").style.width= "100px";
+				document.getElementById("drag3").style.height= "100px";
+				document.getElementById("drag4").style.width= "100px";
+				document.getElementById("drag4").style.height= "100px";
+				document.getElementById("drag5").style.width= "100px";
+				document.getElementById("drag5").style.height= "100px";
+				document.getElementById("drag6").style.width= "100px";
+				document.getElementById("drag6").style.height= "100px";
+				document.getElementById("drag7").style.width= "100px";
+				document.getElementById("drag7").style.height= "100px";
+				document.getElementById("drag8").style.width= "65px";
+				document.getElementById("drag8").style.height= "65px";
+				document.getElementById("drag9").style.width= "60px";
+				document.getElementById("drag9").style.height= "60px";
 				
 			} else {
 				document.getElementById("utama").style.paddingLeft= "50px";
@@ -1307,6 +1356,25 @@
 				document.getElementById("nama4").style.marginLeft= "";
 				document.getElementById("token").style.width= "";
 				document.getElementById("token").style.marginLeft= "";
+				document.getElementById("drag1").style.width= "200px";
+				document.getElementById("drag1").style.height= "200px";
+				document.getElementById("drag2").style.width= "200px";
+				document.getElementById("drag2").style.height= "200px";
+				document.getElementById("drag3").style.width= "200px";
+				document.getElementById("drag3").style.height= "200px";
+				document.getElementById("drag4").style.width= "200px";
+				document.getElementById("drag4").style.height= "200px";
+				document.getElementById("drag5").style.width= "200px";
+				document.getElementById("drag5").style.height= "200px";
+				document.getElementById("drag6").style.width= "200px";
+				document.getElementById("drag6").style.height= "200px";
+				document.getElementById("drag7").style.width= "200px";
+				document.getElementById("drag7").style.height= "200px";
+				document.getElementById("drag8").style.width= "165px";
+				document.getElementById("drag8").style.height= "165px";
+				document.getElementById("drag9").style.width= "160px";
+				document.getElementById("drag9").style.height= "160px";
+				
 				
 				}
 			}

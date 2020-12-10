@@ -321,6 +321,9 @@
 						var no3="S";
 						var no4="S";
 						var no5="S";
+						var d = new Date();
+						var n = d.getHours() + ":" + d.getMinutes();
+						var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
 						if(form.pilihan.value=='C. Harddisk'){
 							nilai=nilai+20;
 							no1="B";
@@ -350,6 +353,8 @@
 						localStorage.setItem("no3", no3);
 						localStorage.setItem("no4", no4);
 						localStorage.setItem("no5", no5);
+						localStorage.setItem("waktu", n);
+						localStorage.setItem("tanggal", m);
 
 						//push to firebase
 						nama_1 = localStorage.getItem("nama1");
@@ -359,6 +364,8 @@
 						no_3 = localStorage.getItem("no3");
 						no_4 = localStorage.getItem("no4");
 						no_5 = localStorage.getItem("no5");
+						waktu_ = localStorage.getItem("waktu");
+						tanggal_ = localStorage.getItem("tanggal");
 
 						var data = {
 							nama: nama_1,
@@ -368,7 +375,9 @@
 							no2: no_2,
 							no3: no_3,
 							no4: no_4,
-							no5: no_5
+							no5: no_5,
+							waktu: waktu_,
+							tanggal: tanggal_
 
 						}
 
@@ -389,7 +398,9 @@
 							no2: no_2,
 							no3: no_3,
 							no4: no_4,
-							no5: no_5
+							no5: no_5,
+							waktu: waktu_,
+							tanggal: tanggal_
 							}
 							database.ref("kuis_3").push(data2);	
 						}
@@ -402,7 +413,9 @@
 							no2: no_2,
 							no3: no_3,
 							no4: no_4,
-							no5: no_5
+							no5: no_5,
+							waktu: waktu_,
+							tanggal: tanggal_
 							}	
 							database.ref("kuis_3").push(data3);
 						}
@@ -415,7 +428,9 @@
 							no2: no_2,
 							no3: no_3,
 							no4: no_4,
-							no5: no_5
+							no5: no_5,
+							waktu: waktu_,
+							tanggal: tanggal_
 							}	
 							database.ref("kuis_3").push(data4);
 						}
@@ -529,6 +544,9 @@
 			var no3="S";
 			var no4="S";
 			var no5="S";
+			var d = new Date();
+			var n = d.getHours() + ":" + d.getMinutes();
+			var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
             if(form.pilihan.value=='C. Harddisk'){
 				nilai=nilai+20;
 				no1="B";
@@ -558,6 +576,8 @@
 			localStorage.setItem("no3", no3);
 			localStorage.setItem("no4", no4);
 			localStorage.setItem("no5", no5);
+			localStorage.setItem("waktu", n);
+			localStorage.setItem("tanggal", m);
 
 			//confirm and move
 			swal({
@@ -576,6 +596,8 @@
 					no_3 = localStorage.getItem("no3");
 					no_4 = localStorage.getItem("no4");
 					no_5 = localStorage.getItem("no5");
+					waktu_ = localStorage.getItem("waktu");
+					tanggal_ = localStorage.getItem("tanggal");
 
 					var data = {
 						nama: nama_1,
@@ -585,7 +607,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 
 					}
 
@@ -606,7 +630,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}
 						database.ref("kuis_3").push(data2);	
 					}
@@ -619,7 +645,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_3").push(data3);
 					}
@@ -632,7 +660,9 @@
 						no2: no_2,
 						no3: no_3,
 						no4: no_4,
-						no5: no_5
+						no5: no_5,
+						waktu: waktu_,
+						tanggal: tanggal_
 						}	
 						database.ref("kuis_3").push(data4);
 					}
