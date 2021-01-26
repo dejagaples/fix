@@ -21,6 +21,12 @@
 		document.addEventListener("contextmenu", function(e){
 			e.preventDefault();
 		}, false);
+		window.onload = function awal(){
+				document.getElementById("dua").hidden = true;
+				document.getElementById("tiga").hidden = true;
+				document.getElementById("lima").hidden = true;
+				document.getElementById("enam").hidden = true;
+		};
   </script>
   
 </head>
@@ -65,10 +71,6 @@
 								<b>1. Bacalah penjelasan sekrup dan baut terlebih dahulu.</b>
 							</label>
 							<br/>
-							<label id="res2">
-								<b>2. Arahkan kursor ke keterangan gambar untuk memberi fokus.</b>
-							</label>
-							<br/><br/>
 						</div>
 					</form>
 				</div>
@@ -90,7 +92,7 @@
 			</li>
             <li><a class="tutup active" href="#">Alat<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a class="disini" href="#">Sekrup & Baut</a></li>
 					<li><a href="materi3.html">Kabel</a></li>
@@ -101,7 +103,7 @@
 			</li>
 			<li><a class="tutup" href="#">Perangkat<span class="caret kiri"></span></a>
 				<ul class="sub">
-					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
 					<li><a href="materi7.html">Motherboard</a></li>
@@ -123,7 +125,7 @@
 			</li>
 			<li><a class="tutup" href="#">Perakitan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
 					<li><a href="pasangcpu.html">CPU</a></li>
@@ -218,18 +220,65 @@
 
 				</center>
 				<br>
-				<div id="kotak">Pertanyaan:</div>
-				<div id="tp" class="isko">
-						Apakah baut dan sekrup merupakan benda yang sama?
-						<br>
-						<input name="q2" id="r1" type="radio"  /> Ya
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	Tidak
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<p id="tampil"></p>
-						<br>
+				<div id="satu">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+						Berikut ini jenis sekrup yang digunakan untuk memasang kipas CPU, yaitu ....
+							<br>
+							<input name="q2" id="r1" type="radio" value="minus" /> 
+							<img src="../gambar/sbp1p2.JPG" width="50"/>
+							<br>
+							<input name="q2" id="r2"  type="radio" value="plus" />	
+							<img src="../gambar/sbp1p1.JPG" width="50"/>
+							<br><br>
+							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
+							<p id="tampil"></p>
+							<br>
+					</div>
+				</div>
+
+				<div id="dua">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						Pada gambar di bawah ini, klik jenis baut yang digunakan untuk dudukan Motherboard!
+							<br>
+							<center>
+							<img src="../gambar/sbp2.JPG" usemap="#workmap" width="150"/>
+							</center>	
+							<map name="workmap">
+								<area id="1" shape="rect" coords="8,35,43,67"  href="#" onclick="cek21()">
+								<area id="2" shape="rect" coords="50,25,92,67"  href="#" onclick="cek22()">
+								<area id="3" shape="rect" coords="110,7,143,72"  href="#" onclick="cek23()">
+								
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+					</div>
+				</div>
+				<div id="tiga">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Pada gambar di bawah ini, klik jenis sekrup yang digunakan untuk memasang Casing!
+							<br><br>
+							<center>
+							<img src="../gambar/sbp3.JPG" usemap="#workmap2" width="150"/>
+							</center>	
+							<map name="workmap2">
+								<area id="5" shape="rect" coords="0,0,55,68" alt="5" href="#" onclick="cek31()">
+								<area id="6" shape="rect" coords="56,0,150,68" alt="6" href="#" onclick="cek32()">
+								<area id="7" shape="rect" coords="0,69,36,145" alt="7" href="#" onclick="cek33()">
+								<area id="8" shape="rect" coords="45,100,85,145" alt="8" href="#" onclick="cek34()">
+								<area id="9" shape="rect" coords="97,89,148,145" alt="8" href="#" onclick="cek35()">
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
+							<p id="tampil3"></p>
+							<br>
+					</div>
 				</div>
 				<br>
 		</div>
@@ -237,23 +286,69 @@
         <a href="materi1.html"><button class="button-left"> <- Kembali </button></a> 
 		 <a href="materi3.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
-	
+		<audio id="benar">
+			<source src="../suara/benar.mp3" type="audio/mp3">
+		</audio>
+		<audio id="salah">
+			<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
 
 	<script>
 		function sabar(){
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
+		
+		
+		function satu(){
+			document.getElementById("satu").hidden=false;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=true;
+		}
+		function dua(){
+			document.getElementById("satu").hidden=true;
+			document.getElementById("dua").hidden=false;
+			document.getElementById("tiga").hidden=true;
+		}
+		function tiga(){
+			document.getElementById("satu").hidden=true;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=false;
+		}
+
+		function empat(){
+			document.getElementById("empat").hidden=false;
+			document.getElementById("lima").hidden=true;
+			document.getElementById("enam").hidden=true;
+		}
+		function lima(){
+			document.getElementById("empat").hidden=true;
+			document.getElementById("lima").hidden=false;
+			document.getElementById("enam").hidden=true;
+		}
+		function enam(){
+			document.getElementById("empat").hidden=true;
+			document.getElementById("lima").hidden=true;
+			document.getElementById("enam").hidden=false;
+		}
+
+		//ambil suara
+        var z = document.getElementById("benar"); 
+        var y = document.getElementById("salah");
+		
 		function cek(){
 			if (document.getElementById('r1').checked) {
+				y.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 				}
 			else if (document.getElementById('r2').checked){
+				z.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
 			}
 			else {
 				document.getElementById("tampil").innerHTML=`<br>Isi Jawaban dulu`;
 			}
 		}
+		
 		//clear jawaban
 		document.getElementById("r1").addEventListener("click", myFunction);
 		document.getElementById("r2").addEventListener("click", myFunc);
@@ -266,8 +361,38 @@
 				
 		}
 
-		
-
+		function cek21(){
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek22(){
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek23(){
+				z.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+		}
+		function cek31(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek32(){
+				z.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+		}
+		function cek33(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek34(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek35(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;						
+		}
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -295,19 +420,65 @@
 				<br>	
 				`;
 				document.getElementById("g2").innerHTML = `
-				<div id="kotak">Pertanyaan:</div>
-				<div id="tp" class="isko">
-					Apakah baut dan sekrup merupakan benda yang sama?
-						<br>
-						<input name="q2" id="r1" type="radio" /> Ya
-						<br>
-						<input name="q2" id="r2"  type="radio" />	Tidak
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<br><br>
-						<p id="tampil"></p>
-						<br>
+				<div id="empat">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+						Berikut ini jenis sekrup yang digunakan untuk memasang kipas CPU, yaitu ....
+							<br>
+							<input name="q2" id="r1" type="radio" value="minus" /> 
+							<img src="../gambar/sbp1p2.JPG" width="50"/>
+							<br>
+							<input name="q2" id="r2"  type="radio" value="plus" />	
+							<img src="../gambar/sbp1p1.JPG" width="50"/>
+							<br><br>
+							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="lima()">Selanjutnya</button>
+							<p id="tampil"></p>
+							<br>
+					</div>
+				</div>
+
+				<div id="lima">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						Pada gambar di bawah ini, klik jenis baut yang digunakan untuk dudukan Motherboard!
+							<br>
+							<center>
+							<img src="../gambar/sbp2.JPG" usemap="#workmap" width="150"/>
+							</center>	
+							<map name="workmap">
+								<area id="1" shape="rect" coords="8,35,43,67"  href="#" onclick="cek21()">
+								<area id="2" shape="rect" coords="50,25,92,67"  href="#" onclick="cek22()">
+								<area id="3" shape="rect" coords="110,7,143,72"  href="#" onclick="cek23()">
+								
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="empat()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="enam()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+					</div>
+				</div>
+				<div id="enam">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Pada gambar di bawah ini, klik jenis sekrup yang digunakan untuk memasang Casing!
+							<br><br>
+							<center>
+							<img src="../gambar/sbp3.JPG" usemap="#workmap2" width="150"/>
+							</center>	
+							<map name="workmap2">
+								<area id="5" shape="rect" coords="0,0,55,68" alt="5" href="#" onclick="cek31()">
+								<area id="6" shape="rect" coords="56,0,150,68" alt="6" href="#" onclick="cek32()">
+								<area id="7" shape="rect" coords="0,69,36,145" alt="7" href="#" onclick="cek33()">
+								<area id="8" shape="rect" coords="45,100,85,145" alt="8" href="#" onclick="cek34()">
+								<area id="9" shape="rect" coords="97,89,148,145" alt="8" href="#" onclick="cek35()">
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="lima()">Sebelumnya</button>
+							<p id="tampil3"></p>
+							<br>
+					</div>
 				</div>
 				`;
 				document.getElementById("g3").innerHTML = `

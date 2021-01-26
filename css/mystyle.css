@@ -586,6 +586,12 @@
 		#tampil{
 			color: rgb(56, 37, 163);text-align: center;
 		}
+		#tampil2{
+			color: rgb(56, 37, 163);text-align: center;
+		}
+		#tampil3{
+			color: rgb(56, 37, 163);text-align: center;
+		}
 		#muncul1{
 			margin-left: 460px;
 		}
@@ -629,6 +635,38 @@
 		}
 
 		.isko{
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 30px;
+			padding-top: 10px;
+			border-style: solid;
+			border-color: rgb(145, 145, 212);
+		}
+		#kotak2 {
+			background-color:  rgb(145, 145, 212); 
+			color: white; padding: 10px;
+			
+			cursor: pointer;
+			font-family:'Lucida Sans';
+		}
+
+		.isko2{
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 30px;
+			padding-top: 10px;
+			border-style: solid;
+			border-color: rgb(145, 145, 212);
+		}
+		#kotak3 {
+			background-color:  rgb(145, 145, 212); 
+			color: white; padding: 10px;
+			
+			cursor: pointer;
+			font-family:'Lucida Sans';
+		}
+
+		.isko3{
 			width: 100%;
 			padding-left: 20px;
 			padding-right: 30px;
@@ -726,3 +764,30 @@
 		  .isig .tombol:hover {
 			background-color: black;
 		  }
+
+		  input[type=baru] {
+			width: 50px;
+			
+			border: 1px solid #ccc;
+			box-sizing: box;
+		}
+
+		input[type=baru2] {
+			width: 120px;
+			
+			border: 1px solid #ccc;
+			box-sizing: box;
+		}
+		input[type=baru15] {
+			width: 70px;
+			
+			border: 1px solid #ccc;
+			box-sizing: box;
+		}
+
+		input[type=baru35] {
+			width: 300px;
+			
+			border: 1px solid #ccc;
+			box-sizing: box;
+		}

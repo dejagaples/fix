@@ -29,6 +29,12 @@
 	document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
 	}, false);
+	window.onload = function awal(){
+				document.getElementById("dua").hidden = true;
+				document.getElementById("tiga").hidden = true;
+				document.getElementById("lima").hidden = true;
+				document.getElementById("enam").hidden = true;
+	};
 </script>
 </head>
 
@@ -97,7 +103,7 @@
 			</li>
             <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
 					<li><a  href="materi3.html">Kabel</a></li>
@@ -108,7 +114,7 @@
 			</li>
 			<li><a class="tutup active" href="#">Perangkat<span class="caret kiri"></span></a>
 				<ul class="sub">
-					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a  href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
 					<li><a href="materi7.html">Motherboard</a></li>
@@ -130,7 +136,7 @@
 			</li>
 			<li><a class="tutup" href="#">Perakitan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
 					<li><a href="pasangcpu.html">CPU</a></li>
@@ -210,22 +216,69 @@
 			  <br>
 			  
 			  
-			  <div id="kotak">Pertanyaan:</div>
-	<div id="tp" class="isko">
-		VGA merupakan singkatan dari ....
-				<br>
-				<input name="q2" id="r1" type="radio"  /> 
-				Video Graphic Accelerator
-				<br>
-				<input name="q2" id="r2"  type="radio"  />	
-				Video Graphic Array
-				<br><br>
-				<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-				<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-				<br>
-				<p id="tampil"></p>
-				<br>
-		</div>
+			 
+			<div id="satu">
+				<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+				<div id="tp" class="isko">
+						Apakah mungkin sebuah komputer dijalankan tanpa VGA card?
+						<br>
+						<input name="q2" id="r1" type="radio"  /> 
+						Ya
+						<br>
+						<input name="q2" id="r2"  type="radio"  />	
+						Tidak
+						<br>
+						<br>
+						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+						<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
+						<br>
+						<p id="tampil"></p>
+						<br>
+				</div>
+			</div>
+		
+			<div id="dua">
+				<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+				<div id="tp2" class="isko">
+						Pada VGA card terdapat processor yang disebut ....
+						<br>
+						<input name="q2" id="r4" type="radio"  /> 
+						CPU
+						<br>
+						<input name="q2" id="r5"  type="radio"  />	
+						GPU
+						<br>
+						<input name="q2" id="r6" type="radio"  /> 
+						PSU
+						<br>
+						<input name="q2" id="r7" type="radio"  /> 
+						HSF
+						<br>
+						<br>
+						<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+						<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
+						<p id="tampil2"></p>
+						<br>
+						
+				</div>
+			</div>
+			<div id="tiga">
+				<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+				<div id="tp3" class="isko">
+						<b><i>
+								Isilah kotak kosong berikut dengan jawaban yang benar!
+								</i></b>
+								<br><br> 
+								VGA merupakan singkatan dari Video Graphic <input type="baru15" id="array" onkeyup="kosong()">.
+						<br><br>
+					<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
+					<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+					<p id="tampil3"></p>
+					<br>
+						
+				</div>
+			</div>
 		<br>
 		</div>
 		<div id="bas2" class="next">
@@ -233,6 +286,12 @@
 				<a href="materi13.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
+		<audio id="benar">
+				<source src="../suara/benar.mp3" type="audio/mp3">
+			</audio>
+			<audio id="salah">
+				<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
 	  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
 		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
@@ -247,16 +306,52 @@
 		 	function sabar(){
 				new duDialog('Maaf', 'Materi Anda Belum Selesai !');
 			}
-			function cek(){
-			if (document.getElementById('r1').checked) {
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-				}
-			else if (document.getElementById('r2').checked){
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
-				
+
+			//nav
+			function satu(){
+			document.getElementById("satu").hidden=false;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=true;
 			}
+			function dua(){
+				document.getElementById("satu").hidden=true;
+				document.getElementById("dua").hidden=false;
+				document.getElementById("tiga").hidden=true;
+			}
+			function tiga(){
+				document.getElementById("satu").hidden=true;
+				document.getElementById("dua").hidden=true;
+				document.getElementById("tiga").hidden=false;
+			}
+
+			function empat(){
+				document.getElementById("empat").hidden=false;
+				document.getElementById("lima").hidden=true;
+				document.getElementById("enam").hidden=true;
+			}
+			function lima(){
+				document.getElementById("empat").hidden=true;
+				document.getElementById("lima").hidden=false;
+				document.getElementById("enam").hidden=true;
+			}
+			function enam(){
+				document.getElementById("empat").hidden=true;
+				document.getElementById("lima").hidden=true;
+				document.getElementById("enam").hidden=false;
+			}
+
+			//ambil suara
+			var z = document.getElementById("benar"); 
+			var y = document.getElementById("salah"); 
+
+			function cek(){
+			if (document.getElementById('r2').checked) {
+				z.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				}
 			else {
-				document.getElementById("tampil").innerHTML=`<br>Isi Jawaban dulu`;
+				y.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 			}
 		}
 		
@@ -272,7 +367,61 @@
 				
 		}
 
-		
+			document.getElementById("r4").addEventListener("click", r2);
+			document.getElementById("r5").addEventListener("click", r2);
+			document.getElementById("r6").addEventListener("click", r2);
+			document.getElementById("r7").addEventListener("click", r2);
+			function r2() {
+					document.getElementById("tampil2").innerHTML="";
+					
+			}
+
+			function cek2(){
+			if (document.getElementById('r5').checked) {
+				z.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				}
+			else {
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				}
+			}
+
+			function kosong(){
+				var ubah = document.getElementById("array");
+				ubah.value = ubah.value.toLowerCase();
+				if (ubah.value!=0){
+				document.getElementById("tampil3").innerHTML="";
+				}
+							
+			}
+
+			function cek3(){
+				var c= document.getElementById("array").value;
+				
+
+				if(c == "array"){
+					z.play();
+					document.getElementById("tampil3").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-check-square"
+					style="color: rgb(20, 220, 103);"></i> Benar
+					</center>
+					`;
+				}
+				else{
+					y.play();
+					document.getElementById("tampil3").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-times-circle"
+					style="color: crimson;"></i> Salah
+					</center>
+					`;
+					
+				}
+			}
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -297,22 +446,68 @@
 				
 				document.getElementById("g9").innerHTML = `
 				<br>
-				<div id="kotak">Pertanyaan:</div>
-	<div id="tp" class="isko">
-		VGA merupakan singkatan dari ....
-				<br>
-				<input name="q2" id="r1" type="radio"  /> 
-				Video Graphic Accelerator
-				<br>
-				<input name="q2" id="r2"  type="radio"  />	
-				Video Graphic Array
-				<br><br>
-				<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-				<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-				<br>
-				<p id="tampil"></p>
-				<br>
-		</div>
+				<div id="empat">
+				<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+				<div id="tp" class="isko">
+						Apakah mungkin sebuah komputer dijalankan tanpa VGA card?
+						<br>
+						<input name="q2" id="r1" type="radio"  /> 
+						Ya
+						<br>
+						<input name="q2" id="r2"  type="radio"  />	
+						Tidak
+						<br>
+						<br>
+						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+						<button class="button-pertanyaan" onclick="lima()">Selanjutnya</button>
+						<br>
+						<p id="tampil"></p>
+						<br>
+				</div>
+				</div>
+			
+				<div id="lima">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+							Pada VGA card terdapat processor yang disebut ....
+							<br>
+							<input name="q2" id="r4" type="radio"  /> 
+							CPU
+							<br>
+							<input name="q2" id="r5"  type="radio"  />	
+							GPU
+							<br>
+							<input name="q2" id="r6" type="radio"  /> 
+							PSU
+							<br>
+							<input name="q2" id="r7" type="radio"  /> 
+							HSF
+							<br>
+							<br>
+							<button class="button-pertanyaan" onclick="empat()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="enam()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+							
+					</div>
+				</div>
+				<div id="enam">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+							<b><i>
+									Isilah kotak kosong berikut dengan jawaban yang benar!
+									</i></b>
+									<br><br> 
+									VGA merupakan singkatan dari Video Graphic <input type="baru15" id="array" onkeyup="kosong()">.
+							<br><br>
+						<button class="button-pertanyaan" onclick="lima()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+						<p id="tampil3"></p>
+						<br>
+							
+					</div>
+				</div>
 				`;
 				document.getElementById("g10").innerHTML = `
 				<br>

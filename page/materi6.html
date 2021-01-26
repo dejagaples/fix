@@ -29,6 +29,12 @@
 	document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
 	}, false);
+	window.onload = function awal(){
+				document.getElementById("dua").hidden = true;
+				document.getElementById("tiga").hidden = true;
+				document.getElementById("lima").hidden = true;
+				document.getElementById("enam").hidden = true;
+	};
 </script>
 </head>
 
@@ -97,7 +103,7 @@
 			</li>
             <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
 					<li><a  href="materi3.html">Kabel</a></li>
@@ -108,7 +114,7 @@
 			</li>
 			<li><a class="tutup active" href="#">Perangkat<span class="caret kiri"></span></a>
 				<ul class="sub">
-					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a  href="materi5.html">Casing</a></li>
 					<li><a class="disini" href="#">Power Supply</a></li>
 					<li><a href="materi7.html">Motherboard</a></li>
@@ -130,7 +136,7 @@
 			</li>
 			<li><a class="tutup" href="#">Perakitan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
 					<li><a href="pasangcpu.html">CPU</a></li>
@@ -185,6 +191,7 @@
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
+					Power supply termasuk ke dalam kategori perangkat proses pada komputer.
 					Fungsi Power Supply untuk komputer dapat diibaratkan sebagai jantungnya komputer.  
 					Jika jantung yang ada pada tubuh manusia berfungsi memompa darah ke seluruh tubuh,
 					maka power supply berfungsi memompa arus listrik ke perangkat-perangkat komputer. Ada 2 tipe dasar 
@@ -230,18 +237,58 @@
 						</tr>
 			  </table>
 			  <br>
-			  <div id="kotak">Pertanyaan:</div>
-			<div id="tp" class="isko">
-					Arus listrik yang dialirkan oleh Power Supply ke perangkat lain bertipe ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> DC
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	AC
+			  
+				<div id="satu">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+							<b><i>
+						Isilah kotak kosong berikut dengan jawaban yang benar!
+						</i></b>
+						<br><br> 
+						Power supply bertugas mengubah tegangan <input type="baru" id="ac" onkeyup="kosong()"> menjadi <input type="baru" id="dc" onkeyup="kosong()">
+						agar hardware komputer dapat beroperasi.
+							<br><br>
+							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
+							<br>
+							<p id="tampil"></p>
+							<br>
+					</div>
+				</div>
+			
+				<div id="dua">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						<b><i>
+						Isilah kotak kosong berikut dengan jawaban yang benar!
+						</i></b>
 						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<p id="tampil"></p>
+						Tipe Power Supply yang memiliki konektor berjumlah 20/24 pin adalah  <input type="baru" id="atx" onkeyup="kosong2()"> .
+						<br><br>
+							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+								
+							
+					</div>
+				</div>
+				<div id="tiga">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Power supply termasuk kategori perangkat ... komputer.
+							<br>
+							<input name="q2" id="r1" type="radio"  /> Input <br>
+							<input name="q2" id="r2" type="radio"  /> Proses <br>
+							<input name="q2" id="r3" type="radio"  /> Output <br>
 						<br>
+						<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+						<p id="tampil3"></p>
+						<br>
+							
+					</div>
 				</div>
 			<br>	
 		</div>
@@ -249,7 +296,14 @@
 				<a href="materi5.html"><button class="button-left"> <- Kembali </button></a> 
 				<a href="materi7.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
-	  
+		
+		<audio id="benar">
+				<source src="../suara/benar.mp3" type="audio/mp3">
+			</audio>
+			<audio id="salah">
+				<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
+
 	  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
 		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
@@ -264,30 +318,142 @@
 		 	function sabar(){
 				new duDialog('Maaf', 'Materi Anda Belum Selesai !');
 			}
-			function cek(){
-			if (document.getElementById('r1').checked) {
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
-				}
-			else if (document.getElementById('r2').checked){
+
+			//nav
+			function satu(){
+			document.getElementById("satu").hidden=false;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=true;
+		}
+		function dua(){
+			document.getElementById("satu").hidden=true;
+			document.getElementById("dua").hidden=false;
+			document.getElementById("tiga").hidden=true;
+		}
+		function tiga(){
+			document.getElementById("satu").hidden=true;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=false;
+		}
+
+		function empat(){
+			document.getElementById("empat").hidden=false;
+			document.getElementById("lima").hidden=true;
+			document.getElementById("enam").hidden=true;
+		}
+		function lima(){
+			document.getElementById("empat").hidden=true;
+			document.getElementById("lima").hidden=false;
+			document.getElementById("enam").hidden=true;
+		}
+		function enam(){
+			document.getElementById("empat").hidden=true;
+			document.getElementById("lima").hidden=true;
+			document.getElementById("enam").hidden=false;
+		}
+
+			//ambil suara
+			var z = document.getElementById("benar"); 
+			var y = document.getElementById("salah"); 
+
+			function kosong(){
+				var ubah1 = document.getElementById("ac");
+				var ubah2 = document.getElementById("dc");
 				
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				ubah1.value = ubah1.value.toUpperCase();
+				ubah2.value = ubah2.value.toUpperCase();
+				
+				if ((ubah1.value!=0)||(ubah2.value!=0)){
+					document.getElementById("tampil").innerHTML="";
+				}			
 			}
+
+			function kosong2(){
+				var ubah3 = document.getElementById("atx");
+				ubah3.value = ubah3.value.toUpperCase();
+				if (ubah3.value!=0){
+				document.getElementById("tampil2").innerHTML="";
+				}
+							
+			}
+
+
+			function cek(){
+				var a= document.getElementById("ac").value;
+				var b= document.getElementById("dc").value;
+
+				if( (a == "AC") && (b == "DC")){
+					z.play();
+					document.getElementById("tampil").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-check-square"
+					style="color: rgb(20, 220, 103);"></i> Benar
+					</center>
+					`;
+				}
+				else{
+					y.play();
+					document.getElementById("tampil").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-times-circle"
+					style="color: crimson;"></i> Salah
+					</center>
+					`;
+					
+				}
+			}
+
+			function cek2(){
+				var c= document.getElementById("atx").value;
+				
+
+				if( c == "ATX"){
+					z.play();
+					document.getElementById("tampil2").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-check-square"
+					style="color: rgb(20, 220, 103);"></i> Benar
+					</center>
+					`;
+				}
+				else{
+					y.play();
+					document.getElementById("tampil2").innerHTML=`
+					<center>
+					<br>
+					<i class="fas fa-times-circle"
+					style="color: crimson;"></i> Salah
+					</center>
+					`;
+					
+				}
+			}
+
+			//clear jawaban
+			document.getElementById("r1").addEventListener("click", r1);
+			document.getElementById("r2").addEventListener("click", r1);
+			document.getElementById("r3").addEventListener("click", r1);
+			function r1() {
+					document.getElementById("tampil3").innerHTML="";
+					
+			}
+
+			function cek3(){
+			if (document.getElementById('r2').checked) {
+				z.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				}
 			else {
-				document.getElementById("tampil").innerHTML=`<br>Isi Jawaban dulu`;
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 			}
+
 		}
 		
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunction);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
+		
 
 		
 
@@ -341,18 +507,57 @@
 				`;
 				
 				document.getElementById("g9").innerHTML = `
-				<div id="kotak">Pertanyaan:</div>
-			<div id="tp" class="isko">
-					Arus listrik yang dialirkan oleh Power Supply ke perangkat lain bertipe ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> DC
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	AC
+				<div id="empat">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+							<b><i>
+						Isilah kotak kosong berikut dengan jawaban yang benar!
+						</i></b>
+						<br><br> 
+						Power supply bertugas mengubah tegangan <input type="baru" id="ac" onkeyup="kosong()"> menjadi <input type="baru" id="dc" onkeyup="kosong()">
+						agar hardware komputer dapat beroperasi.
+							<br><br>
+							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="lima()">Selanjutnya</button>
+							<br>
+							<p id="tampil"></p>
+							<br>
+					</div>
+				</div>
+			
+				<div id="lima">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						<b><i>
+						Isilah kotak kosong berikut dengan jawaban yang benar!
+						</i></b>
 						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<p id="tampil"></p>
+						Tipe Power Supply yang memiliki konektor berjumlah 20/24 pin adalah  <input type="baru" id="atx" onkeyup="kosong2()"> .
+						<br><br>
+							<button class="button-pertanyaan" onclick="empat()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="enam()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+								
+							
+					</div>
+				</div>
+				<div id="enam">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Power supply termasuk kategori perangkat ... komputer.
+							<br>
+							<input name="q2" id="r1" type="radio"  /> Input <br>
+							<input name="q2" id="r2" type="radio"  /> Proses <br>
+							<input name="q2" id="r3" type="radio"  /> Output <br>
 						<br>
+						<button class="button-pertanyaan" onclick="lima()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+						<p id="tampil3"></p>
+						<br>
+							
+					</div>
 				</div>
 				`;
 				document.getElementById("g10").innerHTML = `

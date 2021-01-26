@@ -29,6 +29,12 @@
 	document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
 	}, false);
+	window.onload = function awal(){
+				document.getElementById("dua").hidden = true;
+				document.getElementById("tiga").hidden = true;
+				document.getElementById("lima").hidden = true;
+				document.getElementById("enam").hidden = true;
+	};
 </script>
 </head>
 
@@ -97,7 +103,7 @@
 			</li>
             <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
 					<li><a  href="materi3.html">Kabel</a></li>
@@ -108,7 +114,7 @@
 			</li>
 			<li><a class="tutup active" href="#">Perangkat<span class="caret kiri"></span></a>
 				<ul class="sub">
-					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a  href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
 					<li><a href="materi7.html">Motherboard</a></li>
@@ -130,7 +136,7 @@
 			</li>
 			<li><a class="tutup" href="#">Perakitan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
 					<li><a href="pasangcpu.html">CPU</a></li>
@@ -218,27 +224,76 @@
 				</center>
 			  <br>
 			  
-			  <div id="kotak">Pertanyaan:</div>
-			  <div id="tp" class="isko">
-				  Di antara unit berikut yang bukan merupakan bagian utama CPU adalah ....
-					  <br>
-					  <input type="checkbox" id="a1" > <span >ALU</span><br>
-					  <input type="checkbox" id="a2" > <span >IC</span><br>
-					  <input type="checkbox" id="a3" > <span >MU</span><br>
-					  <br>
-					<button class="button-pertanyaan" onclick="check()">Cek Jawaban</button>
-					<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-					<br>
-					<p id="tampil"></p>
-					<br><br>
+			  
+			  <div id="satu">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+							Perhatikan gambar di bawah ini, klik gambar yang menunjukkan CPU !
+							<br><br>
+							<center>
+							<img src="../gambar/cpus1.JPG" usemap="#workmap" width="300"/>
+							</center>	
+							<map name="workmap">
+								<area id="1" shape="rect" coords="0,0,95,83"  href="#" onclick="cek11()">
+								<area id="2" shape="rect" coords="110,0,205,83"  href="#" onclick="cek12()">
+								<area id="3" shape="rect" coords="215,0,300,83"  href="#" onclick="cek13()">
+								
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="dua()" style="float: right;">Selanjutnya</button>
+							<br>
+							<p id="tampil"></p>
+							<br>
 					</div>
-			  </div>	
+				</div>
+			
+				<div id="dua">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						Di antara unit berikut yang termasuk bagian utama dalam CPU adalah ....
+							<br>
+							<input type="checkbox" id="a1" > <span >ALU</span><br>
+							<input type="checkbox" id="a2" > <span >IC</span><br>
+							<input type="checkbox" id="a3" > <span >MU</span><br>
+							<br>
+							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+								
+							
+					</div>
+				</div>
+				<div id="tiga">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Unit CPU yang bertugas melakukan perhitungan aritmatika adalah ....
+							<br>
+							<input name="q3" id="r4" type="radio"  /> ALU <br>
+							<input name="q3" id="r5" type="radio"  /> CU <br>
+							<input name="q3" id="r6" type="radio"  /> MU <br>
+						<br>
+						<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+						<p id="tampil3"></p>
+						<br>
+							
+					</div>
+				</div>
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi7.html"><button class="button-left"> <- Kembali </button></a> 
 				<a href="materi9.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
-	  
+		
+		<audio id="benar">
+				<source src="../suara/benar.mp3" type="audio/mp3">
+			</audio>
+			<audio id="salah">
+				<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
+
 	  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
 		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
@@ -253,39 +308,105 @@
 		 	function sabar(){
 				new duDialog('Maaf', 'Materi Anda Belum Selesai !');
 			}
-			function check() {
+
+			//nav
+			function satu(){
+			document.getElementById("satu").hidden=false;
+			document.getElementById("dua").hidden=true;
+			document.getElementById("tiga").hidden=true;
+			}
+			function dua(){
+				document.getElementById("satu").hidden=true;
+				document.getElementById("dua").hidden=false;
+				document.getElementById("tiga").hidden=true;
+			}
+			function tiga(){
+				document.getElementById("satu").hidden=true;
+				document.getElementById("dua").hidden=true;
+				document.getElementById("tiga").hidden=false;
+			}
+
+			function empat(){
+				document.getElementById("empat").hidden=false;
+				document.getElementById("lima").hidden=true;
+				document.getElementById("enam").hidden=true;
+			}
+			function lima(){
+				document.getElementById("empat").hidden=true;
+				document.getElementById("lima").hidden=false;
+				document.getElementById("enam").hidden=true;
+			}
+			function enam(){
+				document.getElementById("empat").hidden=true;
+				document.getElementById("lima").hidden=true;
+				document.getElementById("enam").hidden=false;
+			}
+
+			function cek11(){
+				y.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+			}
+			function cek12(){
+				y.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+			}
+			function cek13(){
+				z.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+			}
+
+			function cek2() {
 				if ((document.getElementById("a1").checked == true)&&(document.getElementById("a3").checked == true)&&(document.getElementById("a2").checked == false)){
-					document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+					z.play();
+					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
 				}
 				else {
-					document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+					y.play();
+					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 				}
 			}
 
-		function ulang(){
-			document.getElementById("a1").checked=false;
-			document.getElementById("a2").checked=false;
-			document.getElementById("a3").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
+			//ambil suara
+			var z = document.getElementById("benar"); 
+			var y = document.getElementById("salah"); 
 
 		//clear jawaban
 		document.getElementById("a1").addEventListener("click", myFunction);
 		document.getElementById("a2").addEventListener("click", myFunc);
 		document.getElementById("a3").addEventListener("click", myFun);
 		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
+				document.getElementById("tampil2").innerHTML="";
 				
 		}
 		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
+				document.getElementById("tampil2").innerHTML="";
 				
 		}
 		function myFun() {
-				document.getElementById("tampil").innerHTML="";
+				document.getElementById("tampil2").innerHTML="";
 				
 		}
 		
+			document.getElementById("r4").addEventListener("click", r2);
+			document.getElementById("r5").addEventListener("click", r2);
+			document.getElementById("r6").addEventListener("click", r2);
+			
+			function r2() {
+					document.getElementById("tampil3").innerHTML="";
+					
+			}
+
+			
+			function cek3(){
+			if (document.getElementById('r4').checked) {
+				z.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				}
+			else {
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				}
+			}
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -318,21 +439,62 @@
 				`;
 				
 				document.getElementById("g9").innerHTML = `
-				<div id="kotak">Pertanyaan:</div>
-			  <div id="tp" class="isko">
-				  Di antara unit berikut yang bukan merupakan bagian utama CPU adalah ....
-					  <br>
-					  <input type="checkbox" id="a1" > <span >ALU</span><br>
-					  <input type="checkbox" id="a2" > <span >IC</span><br>
-					  <input type="checkbox" id="a3" > <span >MU</span><br>
-					  <br>
-					<button class="button-pertanyaan" onclick="check()">Cek Jawaban</button>
-					<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-					<br>
-					<p id="tampil"></p>
-					<br><br>
+				<div id="empat">
+					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+					<div id="tp" class="isko">
+							Perhatikan gambar di bawah ini, klik gambar yang menunjukkan CPU !
+							<br><br>
+							<center>
+							<img src="../gambar/cpus1.JPG" usemap="#workmap" width="300"/>
+							</center>	
+							<map name="workmap">
+								<area id="1" shape="rect" coords="0,0,95,83"  href="#" onclick="cek11()">
+								<area id="2" shape="rect" coords="110,0,205,83"  href="#" onclick="cek12()">
+								<area id="3" shape="rect" coords="215,0,300,83"  href="#" onclick="cek13()">
+								
+							</map>
+							<br>
+							<button class="button-pertanyaan" onclick="lima()" style="float: right;">Selanjutnya</button>
+							<br>
+							<p id="tampil"></p>
+							<br>
 					</div>
-			  </div>
+				</div>
+			
+				<div id="lima">
+					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+					<div id="tp2" class="isko">
+						Di antara unit berikut yang termasuk bagian utama dalam CPU adalah ....
+							<br>
+							<input type="checkbox" id="a1" > <span >ALU</span><br>
+							<input type="checkbox" id="a2" > <span >IC</span><br>
+							<input type="checkbox" id="a3" > <span >MU</span><br>
+							<br>
+							<button class="button-pertanyaan" onclick="empat()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+							<button class="button-pertanyaan" onclick="enam()">Selanjutnya</button>
+							<p id="tampil2"></p>
+							<br>
+								
+							
+					</div>
+				</div>
+				<div id="enam">
+					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+					<div id="tp3" class="isko">
+						Unit CPU yang bertugas melakukan perhitungan aritmatika adalah ....
+							<br>
+							<input name="q3" id="r4" type="radio"  /> ALU <br>
+							<input name="q3" id="r5" type="radio"  /> CU <br>
+							<input name="q3" id="r6" type="radio"  /> MU <br>
+						<br>
+						<button class="button-pertanyaan" onclick="lima()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+						<p id="tampil3"></p>
+						<br>
+							
+					</div>
+				</div>
 				`;
 				document.getElementById("g10").innerHTML = `
 				<br>

@@ -21,11 +21,33 @@
 	document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
 	}, false);
+	window.onload = function awal(){
+				document.getElementById("dua").hidden = true;
+				document.getElementById("empat").hidden = true;
+	};
 </script>
 </head>
 
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- fb conf -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyChAe-cuQmBWxWR78i4k2D6BsdYXnAHsQM",
+				authDomain: "rakitosapp.firebaseapp.com",
+				databaseURL: "https://rakitosapp.firebaseio.com",
+				projectId: "rakitosapp",
+				storageBucket: "rakitosapp.appspot.com",
+				messagingSenderId: "233269109527",
+				appId: "1:233269109527:web:9dcd43b83581fb3c330d52"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			
+			
+	</script>
 	<!-- Navbar -->
 	<nav class="navbar navbar-default" style="border-radius: 0;">
 	  <div class="container-fluid">
@@ -125,7 +147,7 @@
 			</li>
             <li><a class="tutup " href="#">Alat<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a  href="p1.html">Pengertian</a></li>
+					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
 					<li><a  href="materi3.html">Kabel</a></li>
@@ -136,7 +158,7 @@
 			</li>
 			<li><a class="tutup " href="#">Perangkat<span class="caret kiri"></span></a>
 				<ul class="sub">
-					<li><a href="p2.html">Pengertian</a></li>
+					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a  href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
 					<li><a href="materi7.html">Motherboard</a></li>
@@ -158,7 +180,7 @@
 			</li>
 			<li><a class="tutup active" href="#">Perakitan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="p3.html">Pengertian</a></li>
+					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a  href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
 					<li><a href="pasangcpu.html">CPU</a></li>
@@ -257,19 +279,53 @@
 				</center>
 				
 			  <br>
-			  <div id="kotak">Pertanyaan:</div>
-			<div id="tp" class="isko">
-					Cara membuka kunci clip saat ingin melepas Heatsink adalah dengan ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> Memutar ke arah kanan
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	Memutar ke arah kiri
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<p id="tampil"></p>
-						<br>
-				</div>
+			  
+				<div id="satu">
+						<div id="kotak">Pertanyaan: ( 1 dari 2 )</div>
+						<div id="tp" class="isko">
+								Cara membuka kunci clip saat ingin melepas Heatsink adalah dengan ....
+								<br>
+								<input name="q2" id="r1" type="radio"  /> Memutar ke arah kanan
+								<br>
+								<input name="q2" id="r2"  type="radio"  />	Memutar ke arah kiri
+								<br><br>
+								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+								<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
+								<br>
+								<p id="tampil"></p>
+								<br>
+						</div>
+					</div>
+				
+					<div id="dua">
+						<div id="kotak2">Pertanyaan: ( 2 dari 2 )</div>
+						<div id="tp2" class="isko">
+							<b>
+								Tugas kelompok ! <br></b>
+								<p style="text-align: justify;">Buatlah video singkat tentang cara memasang Heatsink pada Motherboard.
+								Tambahkan perkenalan diri di awal video dan lokasi pembuatannya.
+								Upload video tersebut ke Youtube kemudian salin linknya!</p>
+								
+								Kelompok : <br>
+								<input type="baru35" id="kel" >
+								<br><br>
+								Anggota : (misal. Reza, Ahmad Rafi, Baim, Rizki) <br>
+								<input type="baru35" id="nama" > 
+								<br><br>
+								Lokasi : (misal. Lab Sekolah) <br>
+								<input type="baru35" id="lok" > 
+								<br><br>
+								Link video youtube: (paste di sini) <br>
+								<input type="baru35" id="yt"> 
+								<br>
+								<br>
+								<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+								<button class="button-pertanyaan" onclick="kirim()">Kirim</button>
+								<p id="tampil2"></p>
+								<br>
+								
+						</div>
+					</div>
 			<br>	
 		</div>
 		<div id="bas2" class="next">
@@ -277,6 +333,13 @@
 				<a href="pasangram.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
+
+		<audio id="benar">
+				<source src="../suara/benar.mp3" type="audio/mp3">
+			</audio>
+			<audio id="salah">
+				<source src="../suara/salah.mp3" type="audio/mpeg">
+		</audio>
 	  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
 		<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
@@ -291,11 +354,78 @@
 		 	function sabar(){
 				new duDialog('Maaf', 'Materi Anda Belum Selesai !');
 			}
+
+			//ambil suara
+			var z = document.getElementById("benar"); 
+			var y = document.getElementById("salah"); 
+
+			function kirim(){
+					
+					kel = document.getElementById("kel").value;
+					nama = document.getElementById("nama").value;
+					lokasi = document.getElementById("lok").value;
+					linkyt = document.getElementById("yt").value;
+					kel_2 = document.getElementById("kel2");
+					nama_2 = document.getElementById("nama25");
+					lokasi_2 = document.getElementById("lok2");
+					linkyt_2 = document.getElementById("yt2");
+
+					if(nama != "") {	
+						var data = {
+							kelompok: kel,
+							anggota: nama,
+							tempat: lokasi,
+							link: linkyt
+
+						}						
+						var database = firebase.database();
+						database.ref("pasang_hs").push(data);
+						z.play();
+						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;		
+					}
+
+					if(nama_2 != "") {
+						
+						var data = {
+							kelompok: kel_2.value,
+							anggota: nama_2.value,
+							tempat: lokasi_2.value,
+							link: linkyt_2.value
+
+						}						
+						var database = firebase.database();
+						database.ref("pasang_hs").push(data);
+						z.play();
+						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;
+					}
+			}
+
+			//nav
+			function satu(){
+				document.getElementById("satu").hidden=false;
+				document.getElementById("dua").hidden=true;
+			}
+			function dua(){
+				document.getElementById("satu").hidden=true;
+				document.getElementById("dua").hidden=false;
+			}
+			function tiga(){
+				document.getElementById("tiga").hidden=false;
+				document.getElementById("empat").hidden=true;
+			}
+
+			function empat(){
+				document.getElementById("tiga").hidden=true;
+				document.getElementById("empat").hidden=false;
+			}
+
 			function cek(){
 			if (document.getElementById('r1').checked) {
+				y.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 				}
 			else if (document.getElementById('r2').checked){
+				z.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
 				
 			}
@@ -356,19 +486,52 @@
 				`;
 				
 				document.getElementById("g9").innerHTML = `
-				<div id="kotak">Pertanyaan:</div>
-			<div id="tp" class="isko">
-				Cara membuka kunci clip saat ingin melepas Heatsink adalah dengan ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> Memutar ke arah kanan
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	Memutar ke arah kiri
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="ulang()">Ulang</button>
-						<p id="tampil"></p>
-						<br>
-				</div>
+				<div id="tiga">
+						<div id="kotak">Pertanyaan: ( 1 dari 2 )</div>
+						<div id="tp" class="isko">
+								Cara membuka kunci clip saat ingin melepas Heatsink adalah dengan ....
+								<br>
+								<input name="q2" id="r1" type="radio"  /> Memutar ke arah kanan
+								<br>
+								<input name="q2" id="r2"  type="radio"  />	Memutar ke arah kiri
+								<br><br>
+								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+								<button class="button-pertanyaan" onclick="empat()">Selanjutnya</button>
+								<br>
+								<p id="tampil"></p>
+								<br>
+						</div>
+					</div>
+				
+					<div id="empat">
+						<div id="kotak2">Pertanyaan: ( 2 dari 2 )</div>
+						<div id="tp2" class="isko">
+							<b>
+								Tugas kelompok ! <br></b>
+								<p style="text-align: justify;">Buatlah video singkat tentang cara memasang Heatsink pada Motherboard.
+								Tambahkan perkenalan diri di awal video dan lokasi pembuatannya.
+								Upload video tersebut ke Youtube kemudian salin linknya!</p>
+								
+								Kelompok : <br>
+								<input type="baru35" id="kel2" >
+								<br><br>
+								Anggota : (misal. Reza, Ahmad Rafi, Baim, Rizki) <br>
+								<input type="baru35" id="nama25" > 
+								<br><br>
+								Lokasi : (misal. Lab Sekolah) <br>
+								<input type="baru35" id="lok2" > 
+								<br><br>
+								Link video youtube: (paste di sini) <br>
+								<input type="baru35" id="yt2"> 
+								<br>
+								<br>
+								<button class="button-pertanyaan" onclick="tiga()">Sebelumnya</button>
+								<button class="button-pertanyaan" onclick="kirim()">Kirim</button>
+								<p id="tampil2"></p>
+								<br>
+								
+						</div>
+					</div>
 				`;
 				document.getElementById("g10").innerHTML = `
 				<br>
