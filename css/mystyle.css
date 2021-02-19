@@ -791,3 +791,71 @@
 			border: 1px solid #ccc;
 			box-sizing: box;
 		}
+
+		input[type=text1] {
+			width: 200px;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: box;
+		}
+		
+		#div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9 {
+			float: left;
+			width: 250px;
+			height: 250px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			text-align: center;
+			}
+		#tampung, #tampung2{
+			clear:both;
+			width: 790px;
+			height: 300px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			text-align: center;
+		}
+		#tampung3 {
+			clear:both;
+			width: 890px;
+			height: 360px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			text-align: center;
+		}
+		#fp{
+			float: left;
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			background-color: chocolate;
+			text-align: center;
+		}
+		#fp0{
+			float: left;
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			background-color: black;
+			text-align: center;
+		}
+		#fp2{
+			clear: right;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			background-color: chocolate;
+			text-align: center;
+		}
+		

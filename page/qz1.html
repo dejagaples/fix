@@ -16,26 +16,23 @@
   <link rel="stylesheet" href="../css/sweetalert2.min.css">
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
   <title>RAKITOS - Kuis 1</title>
+  <style>
+	  p{
+		  text-align: justify;
+	  }
+  </style>
   <script language="JavaScript">
 	document.addEventListener("contextmenu", function(e){
 		e.preventDefault();
 	}, false);
-
+	
 	window.onload = function awal(){
 				document.getElementById("input").hidden = true;
-				document.getElementById("soal").hidden = true;
-				document.getElementById("soal1").hidden = true;
-				document.getElementById("soal2").hidden = true;
-				document.getElementById("soal3").hidden = true;
-				document.getElementById("soal4").hidden = true;
-				document.getElementById("soal5").hidden = true;
 				rootRef.on('value',function(snapshot){
 					pw = snapshot.child('kuis1').val();
 					console.log(pw);
 					
 				});
-	
-
 	};
   </script>
   
@@ -119,16 +116,18 @@
 		Hasil dari kuis akan dilaporkan ke Guru bersangkutan. Semoga kalian mendapatkan hasil yang terbaik.
 
 	  </p>
-
-
 	  
 			<br>
 			<ul style="list-style: none;">
-				<li><b>PETUNJUK SOAL : </b>  </li>
-				<li>1. Isikan nama lengkap kalian setelah menekan tombol "Siap".</li>
-				<li>2. Waktu mengerjakan adalah 10 menit.</li>
-				<li>3. Kerjakan soal yang mudah terlebih dahulu.</li>
-				<li>4. Jangan lupa berdoa sebelum mengerjakan.</li>
+			<li><b>PETUNJUK SOAL : </b>  </li>
+			</ul>
+			<ul style="list-style: decimal;">
+				<li>Isikan nama lengkap kalian setelah menekan tombol "Siap".</li>
+				<li>Jumlah soal ada 10 (6 butir pilihan ganda dan 4 butir checkbox).</li>
+				<li>Waktu mengerjakan adalah 50 menit.</li>
+				<li>Tanyakan kepada guru jika ada yang kurang jelas</li>
+				<li>Kerjakan soal yang mudah terlebih dahulu.</li>
+				<li>Jangan lupa berdoa sebelum mengerjakan.</li>
 			</ul>			
 			
 		<center>	<button class="button-simul"onclick="mulai()">Siap</button></center>
@@ -152,308 +151,38 @@
 		<br>
 		<button class="button-simul" onclick="input()">Mulai</button></center>
 	  </div>
-	  <div id="soal">
-		<br>
-		<span>No. </span>
-	  <button style="margin:5px" onclick="nav1()">1</button>
-	  <button style="margin:5px" onclick="nav2()">2</button>
-	  <button style="margin:5px" onclick="nav3()">3</button>
-	  <button style="margin:5px" onclick="nav4()">4</button>
-	  <button style="margin:5px" onclick="nav5()">5</button>
-	  
-	  
-	  <span style="font-weight: bold; float: right;" id="stopwatch">10 : 00</span>
-	  
-	  <br>
-	  <br>
-	  <div id="nomor">
-		  <div id="soal1">
-			<!-- Soal -->	
-			<div class="banner-section" id="img-container"></div>
-			<p id="demo">1. Perbedaan sekrup dan baut :</p>
-			<!-- Jawaban -->  
-			<form name="form">
-				<button type="button" onclick="pilihan1()" class="button-kuis">A. </button>
-				<span id="a"style="margin-left:5px;">baut diputar dengan obeng, sedangkan sekrup tidak</span><br>
-				<button type="button" onclick="pilihan2()" class="button-kuis">B. </button>
-				<span id="b" style="margin-left:5px;">baut lebih banyak daripada sekrup</span><br>
-				<button type="button" onclick="pilihan3()" class="button-kuis">C. </button>
-				<span id="c" style="margin-left:5px;">sekrup lebih banyak daripada baut</span><br>
-				<button type="button" onclick="pilihan4()" class="button-kuis">D. </button>
-				<span id="d" style="margin-left:5px;">sekrup diputar dengan obeng, sedangkan baut tidak</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
-				<br>
-			</form>
-		  </div>
-		  <div id="soal2">
-			 <!-- Soal -->	
-			<div class="banner-section" id="img-container"></div>
-			<p id="demo">2. Kabel yang berfungsi menghubungkan listrik ke power supply adalah kabel ....</p>
-			<!-- Jawaban -->  
-			<form name="form2">
-				<button type="button" onclick="pilihan5()" class="button-kuis">A. </button>
-				<span id="e"style="margin-left:5px;">VGA</span><br>
-				<button type="button" onclick="pilihan6()" class="button-kuis">B. </button>
-				<span id="f" style="margin-left:5px;">ATA</span><br>
-				<button type="button" onclick="pilihan7()" class="button-kuis">C. </button>
-				<span id="g" style="margin-left:5px;">SATA</span><br>
-				<button type="button" onclick="pilihan8()" class="button-kuis">D. </button>
-				<span id="h" style="margin-left:5px;">power</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
-				<br>
-			</form>
-		  </div>
-		  <div id="soal3">
-			<!-- Soal -->	
-			<div class="banner-section" id="img-container"></div>
-			<p id="demo">3. Cara yang benar menentukan kabel positif dan negatif pada kabel Front Panel, kecuali ....</p>
-			<!-- Jawaban -->  
-			<form name="form3">
-				<button type="button" onclick="pilihan9()" class="button-kuis">A. </button>
-				<span id="i"style="margin-left:5px;">Jika ada kabel warna putih, maka putih adalah negatif (-).</span><br>
-				<button type="button" onclick="pilihan10()" class="button-kuis">B. </button>
-				<span id="j" style="margin-left:5px;">Jika tidak ada kabel warna putih namun ada kabel warna hitam, maka kabel warna hitam negatif</span><br>
-				<button type="button" onclick="pilihan11()" class="button-kuis">C. </button>
-				<span id="k" style="margin-left:5px;">Jika ada kabel merah, berarti merah negatif(-).</span><br>
-				<button type="button" onclick="pilihan12()" class="button-kuis">D. </button>
-				<span id="l" style="margin-left:5px;">Jika tidak ada kabel warna putih dan hitam, maka kabel warna merah positif (+)</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
-				<br>
-			</form>
-		  </div>
-		  <div id="soal4">
-			<!-- Soal -->	
-			<div class="banner-section" id="img-container"></div>
-			<br>
-			<img src="../gambar/qz1.JPG" width="30%" />
-			<br>
-			<br>
-			<p id="demo">4. Pasangan kabel Front Panel yang seharusnya ada di nomor 1 dan 3 adalah ....</p>
-			 <form name="form4">
-				<button type="button" onclick="pilihan13()" class="button-kuis">A. </button>
-				<span id="m"style="margin-left:5px;">Power LED</span><br>
-				<button type="button" onclick="pilihan14()" class="button-kuis">B. </button>
-				<span id="n" style="margin-left:5px;">HDD LED</span><br>
-				<button type="button" onclick="pilihan15()" class="button-kuis">C. </button>
-				<span id="o" style="margin-left:5px;">Power SW</span><br>
-				<button type="button" onclick="pilihan16()" class="button-kuis">D. </button>
-				<span id="p" style="margin-left:5px;">Reset SW</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" name="pilihan4" size="5" style="cursor: not-allowed;" disabled>
-				<br>
-			</form>
-		  </div>
-		  <div id="soal5">
-			<!-- Soal -->	
-			<div class="banner-section" id="img-container"></div>
-			<p id="demo">5. Di antara fungsi jumper adalah sebagai berikut, kecuali ....</p>
-			 <form name="form5">
-				<button type="button" onclick="pilihan17()" class="button-kuis">A. </button>
-				<span id="q"style="margin-left:5px;">menentukan status Slave dan Master pada Harddisk</span><br>
-				<button type="button" onclick="pilihan18()" class="button-kuis">B. </button>
-				<span id="r" style="margin-left:5px;">alternatif ketika kabel front audio tidak berfungsi</span><br>
-				<button type="button" onclick="pilihan19()" class="button-kuis">C. </button>
-				<span id="s" style="margin-left:5px;">mengatur CPU</span><br>
-				<button type="button" onclick="pilihan20()" class="button-kuis">D. </button>
-				<span id="t" style="margin-left:5px;">mengaktifkan fungsi USB</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" name="pilihan5" size="5" style="cursor: not-allowed;" disabled>
-				<br>
-			</form>
-		  </div>
-		  <br>
-		  <br>
-		  <center><button onclick="cek()" class="button-selesai">Selesai</button></center>
-	  </div>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-
-
-
-	  <br>
 	</div>
 	<script>
-		function sabar(){
-			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
-		}
 		function sabar1(){
 			new duDialog ('Maaf', 'Saat kuis tidak boleh mencontek !');
 		}
 		function sabarinput(){
-			
 			new duDialog('Sabar', 'Isikan Nama Terlebih Dahulu', duDialog.OK_CANCEL, { okText: 'OK',
-  callbacks: {
-    okClick: function(){
-      location.href="qz1.html"
-    },
-	cancelClick:function(){
-      location.href="qz1.html"
-    }
-  }
-});
+				callbacks: {
+					okClick: function(){
+					location.href="qz1.html"
+					},
+					cancelClick:function(){
+					location.href="qz1.html"
+					}
+				}
+			});
 		}
 
 		function tokensalah(){
 				new duDialog('Token Salah', 'Tanyakan kepada Guru', duDialog.OK_CANCEL, { okText: 'OK',
-  callbacks: {
-    okClick: function(){
-      location.href="qz1.html"
-    },
-	cancelClick:function(){
-      location.href="qz1.html"
-    }
-  }
-});
+				callbacks: {
+					okClick: function(){
+					location.href="qz1.html"
+					},
+					cancelClick:function(){
+					location.href="qz1.html"
+					}
+				}
+			});
 		}
 
-		function startTimer(duration, display) {
-    			var timer = duration, minutes, seconds;
-    			setInterval(function () {
-        		minutes = parseInt(timer / 60, 10);
-        		seconds = parseInt(timer % 60, 10);
-				minutes = minutes < 10 ? "0" + minutes : minutes;
-        		seconds = seconds < 10 ? "0" + seconds : seconds;
-				display.textContent = minutes + " : " + seconds;
-					if (--timer == 0) {
-						var nilai=0;
-						var no1="S";
-						var no2="S";
-						var no3="S";
-						var no4="S";
-						var no5="S";
-						var d = new Date();
-						var n = d.getHours() + " " + d.getMinutes();
-						var m = d.getDate() + " " + (d.getMonth()+1) + " " + d.getFullYear();
-            
-						if(form.pilihan.value=='D. sekrup diputar dengan obeng, sedangkan baut tidak'){
-							nilai=nilai+20;
-							no1="B";
-						}
-						if (form2.pilihan2.value=='D. power'){
-							nilai=nilai+20;
-							no2="B";
-						}
-
-						if (form3.pilihan3.value=='C. Jika ada kabel merah, berarti merah negatif(-).'){
-							nilai=nilai+20;
-							no3="B";
-						}
-
-						if (form4.pilihan4.value=='B. HDD LED'){
-							nilai=nilai+20;
-							no4="B";
-						}
-
-						if (form5.pilihan5.value=='C. mengatur CPU'){
-							nilai=nilai+20;
-							no5="B";
-						}
-
-						
-						//to storage
-						var f = nilai.toFixed(0);
-						localStorage.setItem("nilai", f);
-						localStorage.setItem("no1", no1);
-						localStorage.setItem("no2", no2);
-						localStorage.setItem("no3", no3);
-						localStorage.setItem("no4", no4);
-						localStorage.setItem("no5", no5);
-						localStorage.setItem("waktu", n);
-						localStorage.setItem("tanggal", m);
-						
-						//push to firebase
-						nama_1 = localStorage.getItem("nama1");
-						kelas = localStorage.getItem("kelas");
-						no_1 = localStorage.getItem("no1");
-						no_2 = localStorage.getItem("no2");
-						no_3 = localStorage.getItem("no3");
-						no_4 = localStorage.getItem("no4");
-						no_5 = localStorage.getItem("no5");
-						waktu_ = localStorage.getItem("waktu");
-						tanggal_ = localStorage.getItem("tanggal");
-						
-						var data = {
-							nama: nama_1,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-							waktu: waktu_,
-							tanggal: tanggal_
-
-						}
-
-						nama_2 = localStorage.getItem("nama2");
-						nama_3 = localStorage.getItem("nama3");
-						nama_4 = localStorage.getItem("nama4");
-						
-						
-
-						var database = firebase.database();
-						database.ref("kuis_1").push(data);
-						if(nama_2 != "") {
-							var data2 = {
-							nama: nama_2,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-							waktu: waktu_,
-							tanggal: tanggal_
-							}
-							database.ref("kuis_1").push(data2);	
-						}
-						if(nama_3 != "") {
-							var data3 = {
-							nama: nama_3,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-							waktu: waktu_,
-							tanggal: tanggal_
-							}	
-							database.ref("kuis_1").push(data3);
-						}
-						if(nama_4 != "") {
-							var data4 = {
-							nama: nama_4,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-							waktu: waktu_,
-							tanggal: tanggal_
-							}	
-							database.ref("kuis_1").push(data4);
-						}
-						location.href="updf1.html";
-					}
-    			}, 1000);
-			}
-
+		
 		function input(){
 				var nama1=document.getElementById("nama1");
 				var hmm= localStorage.getItem("nama1");
@@ -466,14 +195,7 @@
 				}
 				else{
 					localStorage.setItem("nama1", nama1.value);
-					document.getElementById("intro").hidden=true;
-					document.getElementById("soal").hidden=false;
-					document.getElementById("input").hidden=true;
-					document.getElementById("soal1").hidden=false;
-					document.getElementById("soal2").hidden=true;
-					document.getElementById("soal3").hidden=true;
-					document.getElementById("soal4").hidden=true;
-					document.getElementById("soal5").hidden=true;
+					location.href="sqz1.html";
 
 				}
 				var kelas = document.getElementById("kelas");
@@ -484,265 +206,16 @@
 				localStorage.setItem("nama3", nama3.value);
 				var nama4 = document.getElementById("nama4");
 				localStorage.setItem("nama4", nama4.value);
-				var tenMinutes = 60 * 10;
-				display = document.querySelector('#stopwatch');
-				startTimer(tenMinutes, display);
+
 
 			}
 
-		//ambil jawaban
-		function pilihan1(){
-            form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;
-        }  
-        function pilihan2(){
-            form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;
-        }
-        function pilihan3(){
-			form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;
-        }
-        function pilihan4(){
-			form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;
-        }
-		function pilihan5(){
-            form2.pilihan2.value= "A. "+ document.getElementById("e").innerHTML;
-        }  
-        function pilihan6(){
-            form2.pilihan2.value= "B. "+ document.getElementById("f").innerHTML;
-        }
-        function pilihan7(){
-			form2.pilihan2.value= "C. "+ document.getElementById("g").innerHTML;
-        }
-        function pilihan8(){
-			form2.pilihan2.value= "D. "+ document.getElementById("h").innerHTML;
-        }
-		function pilihan9(){
-            form3.pilihan3.value= "A. "+ document.getElementById("i").innerHTML;
-        }  
-        function pilihan10(){
-            form3.pilihan3.value= "B. "+ document.getElementById("j").innerHTML;
-        }
-        function pilihan11(){
-			form3.pilihan3.value= "C. "+ document.getElementById("k").innerHTML;
-        }
-        function pilihan12(){
-			form3.pilihan3.value= "D. "+ document.getElementById("l").innerHTML;
-        }
-		function pilihan13(){
-            form4.pilihan4.value= "A. "+ document.getElementById("m").innerHTML;
-        }  
-        function pilihan14(){
-            form4.pilihan4.value= "B. "+ document.getElementById("n").innerHTML;
-        }
-        function pilihan15(){
-			form4.pilihan4.value= "C. "+ document.getElementById("o").innerHTML;
-        }
-        function pilihan16(){
-			form4.pilihan4.value= "D. "+ document.getElementById("p").innerHTML;
-        }
-		function pilihan17(){
-            form5.pilihan5.value= "A. "+ document.getElementById("q").innerHTML;
-        }  
-        function pilihan18(){
-            form5.pilihan5.value= "B. "+ document.getElementById("r").innerHTML;
-        }
-        function pilihan19(){
-			form5.pilihan5.value= "C. "+ document.getElementById("s").innerHTML;
-        }
-        function pilihan20(){
-			form5.pilihan5.value= "D. "+ document.getElementById("t").innerHTML;
-        }
-
-		//Cek jawaban
-		function cek(){
-			var nilai=0;
-			var no1="S";
-			var no2="S";
-			var no3="S";
-			var no4="S";
-			var no5="S";
-			var d = new Date();
-			var n = d.getHours() + ":" + d.getMinutes();
-			var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
-            if(form.pilihan.value=='D. sekrup diputar dengan obeng, sedangkan baut tidak'){
-				nilai=nilai+20;
-				no1="B";
-			}
-            if (form2.pilihan2.value=='D. power'){
-				nilai=nilai+20;
-				no2="B";
-			}
-
-			if (form3.pilihan3.value=='C. Jika ada kabel merah, berarti merah negatif(-).'){
-				nilai=nilai+20;
-				no3="B";
-			}
-
-			if (form4.pilihan4.value=='B. HDD LED'){
-				nilai=nilai+20;
-				no4="B";
-			}
-
-			if (form5.pilihan5.value=='C. mengatur CPU'){
-				nilai=nilai+20;
-				no5="B";
-			}
-
-			
-			//to storage
-			var f = nilai.toFixed(0);
-			localStorage.setItem("nilai", f);
-			localStorage.setItem("no1", no1);
-			localStorage.setItem("no2", no2);
-			localStorage.setItem("no3", no3);
-			localStorage.setItem("no4", no4);
-			localStorage.setItem("no5", no5);
-			localStorage.setItem("waktu", n);
-			localStorage.setItem("tanggal", m);
-
-			//confirm and move
-			swal({
-				title: "Apakah kamu yakin?",
-				text: "Jika kamu sudah menjawab semua soal klik OK",
-				icon: "warning",
-				showCancelButton: true,
-				confirmButtonColor: '#4CAF50',
-				cancelButtonColor: '#d33',
-				confirmButtonText: 'OK'
-				}).then(function() {
-					nama_1 = localStorage.getItem("nama1");
-					kelas = localStorage.getItem("kelas");
-					no_1 = localStorage.getItem("no1");
-					no_2 = localStorage.getItem("no2");
-					no_3 = localStorage.getItem("no3");
-					no_4 = localStorage.getItem("no4");
-					no_5 = localStorage.getItem("no5");
-					waktu_ = localStorage.getItem("waktu");
-					tanggal_ = localStorage.getItem("tanggal");
-					
-					var data = {
-						nama: nama_1,
-						kelas: kelas,
-						nilai: f,
-						no1: no_1,
-						no2: no_2,
-						no3: no_3,
-						no4: no_4,
-						no5: no_5,
-						waktu: waktu_,
-						tanggal: tanggal_
-
-					}
-
-					nama_2 = localStorage.getItem("nama2");
-					nama_3 = localStorage.getItem("nama3");
-					nama_4 = localStorage.getItem("nama4");
-					
-					
-
-					var database = firebase.database();
-					database.ref("kuis_1").push(data);
-					if(nama_2 != "") {
-						var data2 = {
-						nama: nama_2,
-						kelas: kelas,
-						nilai: f,
-						no1: no_1,
-						no2: no_2,
-						no3: no_3,
-						no4: no_4,
-						no5: no_5,
-						waktu: waktu_,
-						tanggal: tanggal_
-						}
-						database.ref("kuis_1").push(data2);	
-					}
-					if(nama_3 != "") {
-						var data3 = {
-						nama: nama_3,
-						kelas: kelas,
-						nilai: f,
-						no1: no_1,
-						no2: no_2,
-						no3: no_3,
-						no4: no_4,
-						no5: no_5,
-						waktu: waktu_,
-						tanggal: tanggal_
-						}	
-						database.ref("kuis_1").push(data3);
-					}
-					if(nama_4 != "") {
-						var data4 = {
-						nama: nama_4,
-						kelas: kelas,
-						nilai: f,
-						no1: no_1,
-						no2: no_2,
-						no3: no_3,
-						no4: no_4,
-						no5: no_5,
-						waktu: waktu_,
-						tanggal: tanggal_
-						}	
-						database.ref("kuis_1").push(data4);
-					}
-					window.location="updf1.html";
-				});
-
-
-			
-		}
-
+		
 		function mulai(){
 				document.getElementById("intro").hidden=true;
-				document.getElementById("soal").hidden=true;
 				document.getElementById("input").hidden=false;
-				document.getElementById("soal1").hidden=true;
-				document.getElementById("soal2").hidden=true;
-				document.getElementById("soal3").hidden=true;
-				document.getElementById("soal4").hidden=true;
-				document.getElementById("soal5").hidden=true;
 		}
 		
-		function nav1(){
-				document.getElementById("soal1").hidden=false;
-				document.getElementById("soal2").hidden=true;
-				document.getElementById("soal3").hidden=true;
-				document.getElementById("soal4").hidden=true;
-				document.getElementById("soal5").hidden=true;
-			}
-
-			function nav2(){
-				document.getElementById("soal1").hidden=true;
-				document.getElementById("soal2").hidden=false;
-				document.getElementById("soal3").hidden=true;
-				document.getElementById("soal4").hidden=true;
-				document.getElementById("soal5").hidden=true;
-			}
-
-			function nav3(){
-				document.getElementById("soal1").hidden=true;
-				document.getElementById("soal2").hidden=true;
-				document.getElementById("soal3").hidden=false;
-				document.getElementById("soal4").hidden=true;
-				document.getElementById("soal5").hidden=true;
-			}
-
-			function nav4(){
-				document.getElementById("soal1").hidden=true;
-				document.getElementById("soal2").hidden=true;
-				document.getElementById("soal3").hidden=true;
-				document.getElementById("soal4").hidden=false;
-				document.getElementById("soal5").hidden=true;
-			}
-
-			function nav5(){
-				document.getElementById("soal1").hidden=true;
-				document.getElementById("soal2").hidden=true;
-				document.getElementById("soal3").hidden=true;
-				document.getElementById("soal4").hidden=true;
-				document.getElementById("soal5").hidden=false;
-			}
 			
 			function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -760,6 +233,7 @@
 				document.getElementById("nama4").style.marginLeft= "0";
 				document.getElementById("token").style.width= "70%";
 				document.getElementById("token").style.marginLeft= "0";
+				
 			} else {
 				document.getElementById("utama").style.paddingLeft= "50px";
 				document.getElementById("utama").style.paddingRight= "50px";
@@ -775,6 +249,7 @@
 				document.getElementById("nama4").style.marginLeft= "";
 				document.getElementById("token").style.width= "";
 				document.getElementById("token").style.marginLeft= "";
+				
 				}
 			}
 

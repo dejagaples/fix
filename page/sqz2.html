@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+  <meta charset="utf-8">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font.css" rel="stylesheet" type="text/css">
+  <script src="../js/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/duDialog.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+  <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+  <script src="../js/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="../css/sweetalert2.min.css">
+  <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Kuis 2</title>
+  <style>
+      p{
+          text-align: justify;
+      }
+      
+  </style>
+  <script language="JavaScript">
+	document.addEventListener("contextmenu", function(e){
+		e.preventDefault();
+	}, false);
+
+	window.onload = function awal(){
+        		document.getElementById("soal2").hidden = true;
+				document.getElementById("soal3").hidden = true;
+				document.getElementById("soal4").hidden = true;
+				document.getElementById("soal5").hidden = true;
+                document.getElementById("soal6").hidden = true;
+                document.getElementById("soal7").hidden = true;
+                document.getElementById("soal8").hidden = true;
+                document.getElementById("soal9").hidden = true;
+                document.getElementById("soal10").hidden = true;
+				startTimer(tenMinutes, display);
+
+	};
+  </script>
+  
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- fb conf -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyChAe-cuQmBWxWR78i4k2D6BsdYXnAHsQM",
+				authDomain: "rakitosapp.firebaseapp.com",
+				databaseURL: "https://rakitosapp.firebaseio.com",
+				projectId: "rakitosapp",
+				storageBucket: "rakitosapp.appspot.com",
+				messagingSenderId: "233269109527",
+				appId: "1:233269109527:web:9dcd43b83581fb3c330d52"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			
+			
+	</script>
+	
+	<!-- Navbar -->
+	<nav class="navbar navbar-default" style="border-radius: 0;">
+	  <div class="container-fluid">
+		<!-- Navbar Atas Kiri -->  
+		<div class="navbar-header">
+		  <img src="../gambar/Logo.png"  width="50" height="50" >
+		  <span style="color:white;font-weight: bold;" >RAKITOS</span>
+		</div>
+		<!-- Navbar Atas Kanan -->
+		<div class="collapse navbar-collapse" id="myNavbar">
+	  	<ul class="nav navbar-nav navbar-right">
+			<li><a href="../index.html" >BERANDA</a></li>
+			<li><a class="dropdown-toggle" data-toggle="dropdown" href="#myPage">BELAJAR</a></li>
+			<li><a href="#" onclick="sabar1()">TENTANG</a></li>
+			<li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
+		</ul>
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+			</div>
+				<div class="modal-body">
+					<form>
+						<div class="container">
+							<label >
+								<b>1. Bacalah soal dengan teliti.</b>
+							</label>
+							<br/>
+							<label >
+								<b>2. Sebelum klik "Selesai", cek semua jawaban soal kembali.</b>
+							</label>
+							<br/><br/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- Konten -->
+	<div id="utama">
+	  <div id="soal">
+		<br>
+		<span style="font-weight: bold; float: right;" id="stopwatch">50 : 00</span>
+		
+		<div id="navi">
+		<span>No. </span>
+	  <button style="margin:5px" onclick="nav1()">1</button>
+	  <button style="margin:5px" onclick="nav2()">2</button>
+	  <button style="margin:5px" onclick="nav3()">3</button>
+	  <button style="margin:5px" onclick="nav4()">4</button>
+      <button style="margin:5px" onclick="nav5()">5</button>
+      <button style="margin:5px" onclick="nav6()">6</button>
+	  <button style="margin:5px" onclick="nav7()">7</button>
+	  <button style="margin:5px" onclick="nav8()">8</button>
+	  <button style="margin:5px" onclick="nav9()">9</button>
+      <button style="margin:5px" onclick="nav10()">10</button>
+    </div>
+	  
+	  
+	  <br>
+	  <br>
+	  <div id="nomor">
+		  <div id="soal1">
+			<!-- Soal -->	
+            <p id="demo">1. Perhatikan gambar berikut!</p>
+			<br>
+			<img src="../gambar/qz2s1.JPG" id="s1" >
+			<br>
+			<p>Fungsi dari perangkat keras a) dan b) tersebut secara berturut-turut adalah ….</p>
+			<!-- Jawaban -->  
+			<form name="form">
+				<button type="button" onclick="p1a()" class="button-kuis">A. </button>
+				<span id="a" style="margin-left:5px;">memproses perintah dan sebagai sistem komunikasi</span><br>
+				<button type="button" onclick="p1b()" class="button-kuis">B. </button>
+				<span id="b" style="margin-left:5px;">sebagai sistem komunikasi dan memproses perintah</span><br>
+				<button type="button" onclick="p1c()" class="button-kuis">C. </button>
+				<span id="c" style="margin-left:5px;">melindungi hardware lainnya dan sebagai sistem komunikasi</span><br>
+				<button type="button" onclick="p1d()" class="button-kuis">D. </button>
+				<span id="d" style="margin-left:5px;">melindungi hardware lainnya dan memproses perintah</span><br>
+				<button type="button" onclick="p1e()" class="button-kuis">E. </button>
+				<span id="e" style="margin-left:5px;">sebagai sistem komunikasi dan melindungi hardware lainnya</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
+				<br>
+            </form>
+            <br>
+            <center>
+            <button onclick="nav2()" >Soal Selanjutnya -></button>
+            </center>
+		  </div>
+		  <div id="soal2">
+            <!-- Soal -->
+            <p id="demo">2. Perhatikan gambar berikut!</p>
+			<img src="../gambar/qz2s2.JPG" id="s2" >
+			<br><br>
+			<p>
+                    Pernyataan yang benar tentang perangkat 1) dan 2) tersebut yaitu ….
+            </p>
+			<!-- Jawaban -->  
+			<form name="form2">
+				<button type="button" onclick="p2a()" class="button-kuis">A. </button>
+				<span id="2a"style="margin-left:5px;">1 adalah Harddisk, merupakan penyimpanan sementara, bersifat volatile</span><br>
+				<button type="button" onclick="p2b()" class="button-kuis">B. </button>
+				<span id="2b" style="margin-left:5px;">2 adalah Harddisk, merupakan penyimpanan sekunder, bersifat volatile</span><br>
+				<button type="button" onclick="p2c()" class="button-kuis">C. </button>
+				<span id="2c" style="margin-left:5px;">1 adalah RAM, merupakan penyimpanan sementara, bersifat non volatile</span><br>
+				<button type="button" onclick="p2d()" class="button-kuis">D. </button>
+				<span id="2d" style="margin-left:5px;">2 adalah RAM, merupakan penyimpanan primer, bersifat volatile</span><br>
+				<button type="button" onclick="p2e()" class="button-kuis">E. </button>
+				<span id="2e" style="margin-left:5px;">1 adalah RAM, merupakan penyimpanan sementara, bersifat volatile</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke2" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav1()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav3()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal3">
+            <!-- Soal -->
+            <p id="demo">3. Perangkat keras yang termasuk dalam kategori perangkat input adalah ....</p>
+			<!-- Jawaban -->  
+			<form name="form3">
+				<button type="button" onclick="p3a()" class="button-kuis">A. </button>
+				<span id="3a"style="margin-left:5px;">mouse, keyboard, monitor</span><br>
+				<button type="button" onclick="p3b()" class="button-kuis">B. </button>
+				<span id="3b" style="margin-left:5px;">mouse, monitor, printer</span><br>
+				<button type="button" onclick="p3c()" class="button-kuis">C. </button>
+				<span id="3c" style="margin-left:5px;">CPU, RAM, speaker</span><br>
+				<button type="button" onclick="p3d()" class="button-kuis">D. </button>
+				<span id="3d" style="margin-left:5px;">keyboard, mouse, scanner</span><br>
+				<button type="button" onclick="p3e()" class="button-kuis">E. </button>
+				<span id="3e" style="margin-left:5px;">keyboard, mouse, power supply</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke3" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav2()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav4()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal4">
+            <!-- Soal -->
+            <p id="demo">4. Perhatikan gambar berikut!</p>
+			<img src="../gambar/qz2s4.JPG" id="s4" >
+			<br>
+			<p>
+                    Di antara perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat proses
+komputer adalah ….
+            </p>
+			<!-- Jawaban -->  
+			<form name="form4">
+				<button type="button" onclick="p4a()" class="button-kuis">A. </button>
+				<span id="4a"style="margin-left:5px;">1, 2, dan 3</span><br>
+				<button type="button" onclick="p4b()" class="button-kuis">B. </button>
+				<span id="4b" style="margin-left:5px;">3, 4, dan 5</span><br>
+				<button type="button" onclick="p4c()" class="button-kuis">C. </button>
+				<span id="4c" style="margin-left:5px;">1, 2,dan 5</span><br>
+				<button type="button" onclick="p4d()" class="button-kuis">D. </button>
+				<span id="4d" style="margin-left:5px;">2, 3, dan 5</span><br>
+				<button type="button" onclick="p4e()" class="button-kuis">E. </button>
+				<span id="4e" style="margin-left:5px;">1, 3, dan 5</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke4" name="pilihan4" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav3()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav5()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal5">
+                <!-- Soal -->
+            <p id="demo">5. Perhatikan gambar berikut!</p>
+			<img src="../gambar/qz2s5.JPG" id="s5" >
+			<br>
+            <p id="demo">Perangkat yang berfungsi untuk menyerap panas pada CPU adalah ….</p>
+			<!-- Jawaban -->  
+			<form name="form5">
+				<button type="button" onclick="p5a()" class="button-kuis">A. </button>
+				<span id="5a"style="margin-left:5px;">1 dan 2</span><br>
+				<button type="button" onclick="p5b()" class="button-kuis">B. </button>
+				<span id="5b" style="margin-left:5px;">2 dan 3</span><br>
+				<button type="button" onclick="p5c()" class="button-kuis">C. </button>
+				<span id="5c" style="margin-left:5px;">3 dan 4</span><br>
+				<button type="button" onclick="p5d()" class="button-kuis">D. </button>
+				<span id="5d" style="margin-left:5px;">1 dan 4</span><br>
+				<button type="button" onclick="p5e()" class="button-kuis">E. </button>
+				<span id="5e" style="margin-left:5px;">1 dan 3</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke5" name="pilihan5" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav4()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav6()" >Soal Selanjutnya -></button>
+            </center>
+          </div>      
+          <div id="soal6">
+                <!-- Soal -->
+            <p>6. Berikut tahapan yang benar dari proses keluarnya suara pada komputer yaitu ….</p>
+			<!-- Jawaban -->  
+			<form name="form6">
+				<button type="button" onclick="p6a()" class="button-kuis">A. </button>
+				<span id="6a"style="margin-left:5px;">Software – Sound Card – Kabel Front Audio – Speaker</span><br>
+				<button type="button" onclick="p6b()" class="button-kuis">B. </button>
+				<span id="6b" style="margin-left:5px;">Sound Card – Sofware – Kabel Front Audio – Speaker</span><br>
+				<button type="button" onclick="p6c()" class="button-kuis">C. </button>
+				<span id="6c" style="margin-left:5px;">Sound Card – Kabel Front Audio – Speaker – Sofware</span><br>
+				<button type="button" onclick="p6d()" class="button-kuis">D. </button>
+				<span id="6d" style="margin-left:5px;">Sofware – Kabel Front Audio – Speaker – Sound Card</span><br>
+				<button type="button" onclick="p6e()" class="button-kuis">E. </button>
+				<span id="6e" style="margin-left:5px;">Speaker – Sound Card – Kabel Front Audio – Sofware</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke6" name="pilihan6" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav5()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav7()" >Soal Selanjutnya -></button>
+            </center>    
+            </div>
+            <div id="soal7">
+                <!-- Soal -->
+                <p id="demo">7. Perhatikan gambar berikut!</p>
+			<img src="../gambar/qz2s7.JPG" id="s7" >
+			<br>
+                <p>
+                    Pak Guru ingin menyimpan dokumen keuangan OSIS di dalam sebuah CD. Anda diminta
+                    melakukan burning secara mandiri di laboratorium. Data tersebut akan ditambah per
+                    bulannya dengan data terbaru. Anda harus memastikan perangkat yang akan digunakan.
+                    Dari gambar tersebut, perangkat yang akan digunakan yaitu ….
+                </p>
+			
+			<!-- Jawaban -->  
+			<form name="form7">
+                    <button type="button" onclick="p7a()" class="button-kuis">A. </button>
+                    <span id="7a"style="margin-left:5px;">1 dan 2</span><br>
+                    <button type="button" onclick="p7b()" class="button-kuis">B. </button>
+                    <span id="7b" style="margin-left:5px;">1 dan 4</span><br>
+                    <button type="button" onclick="p7c()" class="button-kuis">C. </button>
+                    <span id="7c" style="margin-left:5px;">2 dan 3</span><br>
+                    <button type="button" onclick="p7d()" class="button-kuis">D. </button>
+                    <span id="7d" style="margin-left:5px;">3 dan 4</span><br>
+                    <button type="button" onclick="p7e()" class="button-kuis">E. </button>
+                    <span id="7e" style="margin-left:5px;">2 dan 3</span><br>
+                    <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                    <input type="text" id="oke7" name="pilihan7" size="5" style="cursor: not-allowed;" disabled>
+                    <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav6()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav8()" >Soal Selanjutnya -></button>
+            </center> 
+            </div>
+            <div id="soal8">
+                    <!-- Soal -->
+                <p>8. Berikut penjelasan yang benar tentang Power Supply, kecuali ....</p>
+                    <!-- Jawaban -->  
+                    <form name="form8">
+                            <button type="button" onclick="p8a()" class="button-kuis">A. </button>
+                            <span id="8a"style="margin-left:5px;">berfungsi memompa listrik ke perangkat komputer</span><br>
+                            <button type="button" onclick="p8b()" class="button-kuis">B. </button>
+                            <span id="8b" style="margin-left:5px;">mengubah arus AC menjadi DC</span><br>
+                            <button type="button" onclick="p8c()" class="button-kuis">C. </button>
+                            <span id="8c" style="margin-left:5px;">mengubah arus DC menjadi AC</span><br>
+                            <button type="button" onclick="p8d()" class="button-kuis">D. </button>
+                            <span id="8d" style="margin-left:5px;">memiliki 2 tipe yaitu AT dan ATX</span><br>
+                            <button type="button" onclick="p8e()" class="button-kuis">E. </button>
+                            <span id="8e" style="margin-left:5px;">tipe AT merupakan tipe yang lebih lama</span><br>
+                            <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                            <input type="text" id="oke8" name="pilihan8" size="5" style="cursor: not-allowed;" disabled>
+                            <br>
+                    </form>
+                        
+                <br>
+                <center>
+                        <button onclick="nav7()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav9()" >Soal Selanjutnya -></button>
+                </center>
+            </div>
+            <div id="soal9">
+                           <!-- Soal -->
+                <p>9. Perhatikan gambar berikut!</p>
+                <img src="../gambar/qz2s9.JPG" id="s9" >
+                <br>
+                <!-- Jawaban -->  
+                <p>Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat output
+                        komputer adalah ….</p>
+                        <form name="form9">
+                                <button type="button" onclick="p9a()" class="button-kuis">A. </button>
+                                <span id="9a"style="margin-left:5px;">1, 2, dan 5</span><br>
+                                <button type="button" onclick="p9b()" class="button-kuis">B. </button>
+                                <span id="9b" style="margin-left:5px;">2, 4, dan 5</span><br>
+                                <button type="button" onclick="p9c()" class="button-kuis">C. </button>
+                                <span id="9c" style="margin-left:5px;">2, 3, dan 4</span><br>
+                                <button type="button" onclick="p9d()" class="button-kuis">D. </button>
+                                <span id="9d" style="margin-left:5px;">2, 3, dan 5</span><br>
+                                <button type="button" onclick="p9e()" class="button-kuis">E. </button>
+                                <span id="9e" style="margin-left:5px;">1, 3, dan 5</span><br>
+                                <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                                <input type="text" id="oke9" name="pilihan9" size="5" style="cursor: not-allowed;" disabled>
+                                <br>
+                        </form>
+                <br>
+                <center>
+                        <button onclick="nav8()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav10()" >Soal Selanjutnya -></button>
+                </center>
+            </div>
+            <div id="soal10">
+                              <!-- Soal -->
+                <p>10. Perhatikan gambar berikut!</p>
+                <img src="../gambar/qz2s10.JPG" id="s10" >
+                <br><br>
+                <!-- Jawaban -->  
+                <p>Pada perangkat tersebut terdapat processor yang disebut ....</p>
+				<form name="form10">
+					<button type="button" onclick="p10a()" class="button-kuis">A. </button>
+					<span id="10a"style="margin-left:5px;">CPU</span><br>
+					<button type="button" onclick="p10b()" class="button-kuis">B. </button>
+					<span id="10b" style="margin-left:5px;">GPU</span><br>
+					<button type="button" onclick="p10c()" class="button-kuis">C. </button>
+					<span id="10c" style="margin-left:5px;">CU</span><br>
+					<button type="button" onclick="p10d()" class="button-kuis">D. </button>
+					<span id="10d" style="margin-left:5px;">HSF</span><br>
+					<button type="button" onclick="p10e()" class="button-kuis">E. </button>
+					<span id="10e" style="margin-left:5px;">ALU</span><br>
+					<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+					<input type="text" id="oke10" name="pilihan10" size="5" style="cursor: not-allowed;" disabled>
+					<br>
+				</form>
+                <br>
+                <center>
+                        <button onclick="nav9()" ><- Soal Sebelumnya</button>
+                        
+                </center>
+            </div>
+        </div>
+		  <br>
+          <center>
+                
+                <br>
+            <button onclick="cek()" class="button-selesai">Selesai</button>
+             
+        
+            </center>
+	  </div>
+	  <br>
+	  <br>
+
+
+
+	  <br>
+    </div>
+    </div>
+	<script src="../js/load2.js"></script>  	
+
+</body>
+
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/font.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/duDialog.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/duDialog.css">
+	<link href="../css/mystyle.css" rel="stylesheet" type="text/css">
+	<script src="../js/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="../css/sweetalert2.min.css">
+	<link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
+  <title>RAKITOS - Latihan</title>
+  <style>
+	  	@media only screen and (max-width: 1080px) {
+			#div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9 {
+			float: left;
+			width: 200px;
+			height: 200px;
+			}
+			#tampung, #tampung2{
+			clear:both;
+			width: 640px;
+			height: 250px;
+			
+			}
+		}
+		p{
+			text-align: justify;
+		}
+  </style>
+  <script>
+	  	document.addEventListener("contextmenu", function(e){
+			e.preventDefault();
+		}, false);
+
+	  	//drag drop properties
+		function allowDrop(ev) {
+		ev.preventDefault();
+		}
+		
+		function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+		}
+		
+		function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+		
+		}
+		
+		
+		//hide soal awal
+		window.onload = function awal(){
+				document.getElementById("soal2").hidden = true;
+				document.getElementById("soal3").hidden = true;
+				document.getElementById("soal4").hidden = true;
+                document.getElementById("soal5").hidden = true;
+                document.getElementById("soal6").hidden = true;
+				document.getElementById("soal7").hidden = true;
+				document.getElementById("soal8").hidden = true;
+				document.getElementById("soal9").hidden = true;
+                document.getElementById("soal10").hidden = true;
+                document.getElementById("soal11").hidden = true;
+				document.getElementById("soal12").hidden = true;
+				document.getElementById("soal13").hidden = true;
+				document.getElementById("soal14").hidden = true;
+                document.getElementById("soal15").hidden = true;
+                startTimer(tenMinutes, display);
+				
+	  	};
+	</script>
+</head>
+
+<!-- Body -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!-- fb conf -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyChAe-cuQmBWxWR78i4k2D6BsdYXnAHsQM",
+				authDomain: "rakitosapp.firebaseapp.com",
+				databaseURL: "https://rakitosapp.firebaseio.com",
+				projectId: "rakitosapp",
+				storageBucket: "rakitosapp.appspot.com",
+				messagingSenderId: "233269109527",
+				appId: "1:233269109527:web:9dcd43b83581fb3c330d52"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			
+	</script>
+
+	<!-- navbar -->
+    <nav class="navbar navbar-default" style="border-radius: 0;">
+		<div class="container-fluid">
+		  <!-- Navbar Atas Kiri -->  
+		  <div class="navbar-header">
+			<img src="../gambar/Logo.png"  width="50" height="50" >
+			<span style="color:white;font-weight: bold;" >RAKITOS</span>
+		  </div>
+			  <!-- Navbar Atas Kanan -->
+		  <div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+			  <li><a href="../index.html" >BERANDA</a></li>
+			  <li><a class="dropdown-toggle" data-toggle="dropdown" href="#myPage">BELAJAR</a></li>
+			  <li><a href="#" onclick="sabar()">TENTANG</a></li>
+				  <li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
+		  </ul>
+		  </div>
+		</div>
+	</nav>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="petunjuk" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+					<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">PETUNJUK</h4>
+				</div>
+					<div class="modal-body">
+					<form>
+						<div class="container">
+								<label >
+										<b>1. Bacalah soal dengan teliti.</b>
+									</label>
+									<br/>
+									<label >
+										<b>2. Sebelum klik "Selesai", cek jawaban semua soal kembali.</b>
+									</label>
+								<br/>
+								<label >
+										<b>3. Setelah selesai, jangan lupa menyimpan file PDF nya.</b>
+									</label> 
+									 
+									<br/>
+									<label >
+											<b>4. Kumpulkan file PDF tersebut kepada Bapak/Ibu Guru.</b>
+										</label> 
+								<br/><br>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Konten -->
+	<div id="utama">
+		  <div id="soal">
+            <br>
+            <span style="font-weight: bold; float: right;" id="stopwatch">90 : 00</span>  
+        <div id="navi">
+		  	<span>No. </span>
+			<button style="margin:5px" onclick="nav1()">1</button>
+			<button style="margin:5px" onclick="nav2()">2</button>
+			<button style="margin:5px" onclick="nav3()">3</button>
+			<button style="margin:5px" onclick="nav4()">4</button>
+            <button style="margin:5px" onclick="nav5()">5</button>
+            <button style="margin:5px" onclick="nav6()">6</button>
+			<button style="margin:5px" onclick="nav7()">7</button>
+			<button style="margin:5px" onclick="nav8()">8</button>
+			<button style="margin:5px" onclick="nav9()">9</button>
+            <button style="margin:5px" onclick="nav10()">10</button>
+            <button style="margin:5px" onclick="nav11()">11</button>
+			<button style="margin:5px" onclick="nav12()">12</button>
+			<button style="margin:5px" onclick="nav13()">13</button>
+			<button style="margin:5px" onclick="nav14()">14</button>
+			<button style="margin:5px" onclick="nav15()">15</button>
+        </div>
+			
+			
+			
+			<br>
+			<br>
+			<div id="nomor">
+                <div id="soal1">
+			<!-- Soal -->	
+            <p id="demo">1. Perhatikan gambar berikut!</p>
+			<br>
+			<img src="../gambar/sps1.JPG" id="s1" >
+			<br>
+			<p>Saat merakit komputer di laboratorium, Pak Guru meminta Anda mengambil kabel yang
+                    berfungsi untuk menghubungkan Motherboard dengan perangkat penyimpanan. Kabel
+                    yang harus diambil adalah nomor ….</p>
+			<!-- Jawaban -->  
+			<form name="form">
+				<button type="button" onclick="p1a()" class="button-kuis">A. </button>
+				<span id="a" style="margin-left:5px;">1</span><br>
+				<button type="button" onclick="p1b()" class="button-kuis">B. </button>
+				<span id="b" style="margin-left:5px;">3</span><br>
+				<button type="button" onclick="p1c()" class="button-kuis">C. </button>
+				<span id="c" style="margin-left:5px;">2 dan 3</span><br>
+				<button type="button" onclick="p1d()" class="button-kuis">D. </button>
+				<span id="d" style="margin-left:5px;">3 dan 4</span><br>
+				<button type="button" onclick="p1e()" class="button-kuis">E. </button>
+				<span id="e" style="margin-left:5px;">1 dan 4</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
+				<br>
+            </form>
+            <br>
+            <center>
+            <button onclick="nav2()" >Soal Selanjutnya -></button>
+            </center>
+		  </div>
+		  <div id="soal2">
+            <!-- Soal -->
+            <p id="demo">2. Perhatikan gambar berikut!</p>
+			<img src="../gambar/jumper.jpg" id="s2" >
+			
+			<p>
+                    Alat tersebut mempunyai beberapa fungsi, kecuali ….
+            </p>
+			<!-- Jawaban -->  
+			<form name="form2">
+				<button type="button" onclick="p2a()" class="button-kuis">A. </button>
+				<span id="2a"style="margin-left:5px;">alternatif ketika kabel front audio tidak berfungsi</span><br>
+				<button type="button" onclick="p2b()" class="button-kuis">B. </button>
+				<span id="2b" style="margin-left:5px;">menentukan status Slave dan Master pada Harddisk</span><br>
+				<button type="button" onclick="p2c()" class="button-kuis">C. </button>
+				<span id="2c" style="margin-left:5px;">mengatur CPU</span><br>
+				<button type="button" onclick="p2d()" class="button-kuis">D. </button>
+				<span id="2d" style="margin-left:5px;">mereset setingan CMOS</span><br>
+				<button type="button" onclick="p2e()" class="button-kuis">E. </button>
+				<span id="2e" style="margin-left:5px;">setting RAM</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke2" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav1()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav3()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal3">
+            <!-- Soal -->
+            <p id="demo">3. Perhatikan gambar berikut!</p>
+			<img src="../gambar/sps3.JPG" id="s3" >
+            <p id="demo">Dari gambar tersebut, yang tidak termasuk alat perakitan komputer adalah nomor ….</p>
+			<!-- Jawaban -->  
+			<form name="form3">
+				<button type="button" onclick="p3a()" class="button-kuis">A. </button>
+				<span id="3a"style="margin-left:5px;">1 dan 2</span><br>
+				<button type="button" onclick="p3b()" class="button-kuis">B. </button>
+				<span id="3b" style="margin-left:5px;">1 dan 3</span><br>
+				<button type="button" onclick="p3c()" class="button-kuis">C. </button>
+				<span id="3c" style="margin-left:5px;">2 dan 3</span><br>
+				<button type="button" onclick="p3d()" class="button-kuis">D. </button>
+				<span id="3d" style="margin-left:5px;">2 dan 4</span><br>
+				<button type="button" onclick="p3e()" class="button-kuis">E. </button>
+				<span id="3e" style="margin-left:5px;">1 dan 4</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke3" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav2()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav4()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal4">
+            <!-- Soal -->
+            <p id="demo">4. Perhatikan gambar berikut!</p>
+			<img src="../gambar/sps4.JPG" id="s4" >
+			<br>
+			<p>
+                    Dari gambar tersebut, yang termasuk perangkat keras komputer adalah nomor ….
+            </p>
+			<!-- Jawaban -->  
+			<form name="form4">
+				<button type="button" onclick="p4a()" class="button-kuis">A. </button>
+				<span id="4a"style="margin-left:5px;">1, 2, dan 3</span><br>
+				<button type="button" onclick="p4b()" class="button-kuis">B. </button>
+				<span id="4b" style="margin-left:5px;">2, 3, dan 4</span><br>
+				<button type="button" onclick="p4c()" class="button-kuis">C. </button>
+				<span id="4c" style="margin-left:5px;">1, 3, dan 4</span><br>
+				<button type="button" onclick="p4d()" class="button-kuis">D. </button>
+				<span id="4d" style="margin-left:5px;">1, 2 dan 4</span><br>
+				<button type="button" onclick="p4e()" class="button-kuis">E. </button>
+				<span id="4e" style="margin-left:5px;">3 dan 4</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke4" name="pilihan4" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav3()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav5()" >Soal Selanjutnya -></button>
+            </center>
+          </div>
+          <div id="soal5">
+                <!-- Soal -->
+            <p id="demo">5. Perhatikan gambar berikut!</p>
+			<img src="../gambar/sps5.JPG" id="s5" >
+			<br>
+            <p id="demo">Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat input
+                    komputer adalah nomor ….</p>
+			<!-- Jawaban -->  
+			<form name="form5">
+				<button type="button" onclick="p5a()" class="button-kuis">A. </button>
+				<span id="5a"style="margin-left:5px;">1, 2, dan 3</span><br>
+				<button type="button" onclick="p5b()" class="button-kuis">B. </button>
+				<span id="5b" style="margin-left:5px;">2, 3, dan 4</span><br>
+				<button type="button" onclick="p5c()" class="button-kuis">C. </button>
+				<span id="5c" style="margin-left:5px;">3, 4, dan 5</span><br>
+				<button type="button" onclick="p5d()" class="button-kuis">D. </button>
+				<span id="5d" style="margin-left:5px;">1, 2, dan 5</span><br>
+				<button type="button" onclick="p5e()" class="button-kuis">E. </button>
+				<span id="5e" style="margin-left:5px;">2, 3, dan 5</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke5" name="pilihan5" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav4()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav6()" >Soal Selanjutnya -></button>
+            </center>
+          </div>      
+          <div id="soal6">
+            <!-- Soal -->
+            <p id="demo">6. Perhatikan gambar berikut!</p>
+			<img src="../gambar/sps6.JPG" id="s6" >
+			<br>
+            <p>Di antara perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat proses
+                    komputer adalah nomor ….</p>
+			<!-- Jawaban -->  
+			<form name="form6">
+				<button type="button" onclick="p6a()" class="button-kuis">A. </button>
+				<span id="6a"style="margin-left:5px;">1, 2, dan 3</span><br>
+				<button type="button" onclick="p6b()" class="button-kuis">B. </button>
+				<span id="6b" style="margin-left:5px;">3, 4, dan 5</span><br>
+				<button type="button" onclick="p6c()" class="button-kuis">C. </button>
+				<span id="6c" style="margin-left:5px;">1, 2,dan 5</span><br>
+				<button type="button" onclick="p6d()" class="button-kuis">D. </button>
+				<span id="6d" style="margin-left:5px;">2, 3, dan 5</span><br>
+				<button type="button" onclick="p6e()" class="button-kuis">E. </button>
+				<span id="6e" style="margin-left:5px;">1,3, dan 5</span><br>
+				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+				<input type="text" id="oke6" name="pilihan6" size="5" style="cursor: not-allowed;" disabled>
+                <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav5()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav7()" >Soal Selanjutnya -></button>
+            </center>    
+            </div>
+            <div id="soal7">
+                <!-- Soal -->
+                <p id="demo">7. Perhatikan gambar berikut!</p>
+			<img src="../gambar/sps7.JPG" id="s7" >
+			<br>
+                <p>
+                        Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat output
+                        komputer adalah nomor ….
+                </p>
+			
+			<!-- Jawaban -->  
+			<form name="form7">
+                    <button type="button" onclick="p7a()" class="button-kuis">A. </button>
+                    <span id="7a"style="margin-left:5px;">1, 2, dan 5</span><br>
+                    <button type="button" onclick="p7b()" class="button-kuis">B. </button>
+                    <span id="7b" style="margin-left:5px;">2, 4, dan 5</span><br>
+                    <button type="button" onclick="p7c()" class="button-kuis">C. </button>
+                    <span id="7c" style="margin-left:5px;">2, 3, dan 4</span><br>
+                    <button type="button" onclick="p7d()" class="button-kuis">D. </button>
+                    <span id="7d" style="margin-left:5px;">2, 3, dan 5</span><br>
+                    <button type="button" onclick="p7e()" class="button-kuis">E. </button>
+                    <span id="7e" style="margin-left:5px;">1, 3, dan 5</span><br>
+                    <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                    <input type="text" id="oke7" name="pilihan7" size="5" style="cursor: not-allowed;" disabled>
+                    <br>
+            </form>
+            <br>
+            <center>
+                    <button onclick="nav6()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav8()" >Soal Selanjutnya -></button>
+            </center> 
+            </div>
+            <div id="soal8">
+                    <!-- Soal -->
+                <p id="demo">8.  Perhatikan gambar berikut!</p>
+			     <img src="../gambar/sps8.JPG" id="s8" >
+			     <br>
+                <p>Gambar tersebut menunjukkan proses kegiatan …</p>
+                    <!-- Jawaban -->  
+                    <form name="form8">
+                            <button type="button" onclick="p8a()" class="button-kuis">A. </button>
+                            <span id="8a"style="margin-left:5px;">memasang power supply</span><br>
+                            <button type="button" onclick="p8b()" class="button-kuis">B. </button>
+                            <span id="8b" style="margin-left:5px;">memasang Harddisk</span><br>
+                            <button type="button" onclick="p8c()" class="button-kuis">C. </button>
+                            <span id="8c" style="margin-left:5px;">memasang Optical Disc Drive</span><br>
+                            <button type="button" onclick="p8d()" class="button-kuis">D. </button>
+                            <span id="8d" style="margin-left:5px;">memasang RAM</span><br>
+                            <button type="button" onclick="p8e()" class="button-kuis">E. </button>
+                            <span id="8e" style="margin-left:5px;">memasang CPU</span><br>
+                            <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                            <input type="text" id="oke8" name="pilihan8" size="5" style="cursor: not-allowed;" disabled>
+                            <br>
+                    </form>
+                        
+                <br>
+                <center>
+                        <button onclick="nav7()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav9()" >Soal Selanjutnya -></button>
+                </center>
+            </div>
+            <div id="soal9">
+                           <!-- Soal -->
+                <p>9. Perhatikan gambar berikut!</p>
+                <img src="../gambar/sps9.JPG" id="s9" >
+                <br>
+                <!-- Jawaban -->  
+                <p>Perangkat yang letak pemasangannya berada pada Motherboard diantaranya
+                        adalah ….</p>
+                        <form name="form9">
+                                <button type="button" onclick="p9a()" class="button-kuis">A. </button>
+                                <span id="9a"style="margin-left:5px;">1, 2, dan 3</span><br>
+                                <button type="button" onclick="p9b()" class="button-kuis">B. </button>
+                                <span id="9b" style="margin-left:5px;">2, 3, dan 4</span><br>
+                                <button type="button" onclick="p9c()" class="button-kuis">C. </button>
+                                <span id="9c" style="margin-left:5px;">3, 4, dan 5</span><br>
+                                <button type="button" onclick="p9d()" class="button-kuis">D. </button>
+                                <span id="9d" style="margin-left:5px;">1, 3, dan 5</span><br>
+                                <button type="button" onclick="p9e()" class="button-kuis">E. </button>
+                                <span id="9e" style="margin-left:5px;">1, 4, dan 5</span><br>
+                                <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+                                <input type="text" id="oke9" name="pilihan9" size="5" style="cursor: not-allowed;" disabled>
+                                <br>
+                        </form>
+                <br>
+                <center>
+                        <button onclick="nav8()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav10()" >Soal Selanjutnya -></button>
+                </center>
+            </div>
+            <div id="soal10">
+                              <!-- Soal -->
+                <p>10. Perhatikan gambar berikut!</p>
+                <img src="../gambar/sps10.JPG" id="s10" >
+                <br>
+                <!-- Jawaban -->  
+                <p>Urutan pemasangan kabel tersebut saat perakitan komputer sesuai materi yang telah
+                        dipelajari yaitu ....</p>
+				<form name="form10">
+					<button type="button" onclick="p10a()" class="button-kuis">A. </button>
+					<span id="10a"style="margin-left:5px;">1 - 2 - 3</span><br>
+					<button type="button" onclick="p10b()" class="button-kuis">B. </button>
+					<span id="10b" style="margin-left:5px;">1 - 3 - 2</span><br>
+					<button type="button" onclick="p10c()" class="button-kuis">C. </button>
+					<span id="10c" style="margin-left:5px;">2 - 3 - 1</span><br>
+					<button type="button" onclick="p10d()" class="button-kuis">D. </button>
+					<span id="10d" style="margin-left:5px;">2 - 1 - 3</span><br>
+					<button type="button" onclick="p10e()" class="button-kuis">E. </button>
+					<span id="10e" style="margin-left:5px;">3 - 1 - 2</span><br>
+					<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+					<input type="text" id="oke10" name="pilihan10" size="5" style="cursor: not-allowed;" disabled>
+					<br>
+				</form>
+                <br>
+                <center>
+                        <button onclick="nav9()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav11()" >Soal Selanjutnya -></button>
+                        
+                </center>
+            </div>
+        <div id="soal11">
+		<p>
+			11. Drag and drop gambar di bawah ini agar perangkat masuk ke dalam kategori yang sesuai !
+		</p>
+						
+
+		
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p style="text-align: center;">Perangkat Input</p>
+			
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p style="text-align: center;">Perangkat Proses</p>
+		</div>
+		<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p style="text-align: center;">Perangkat Output</p>
+		</div>
+		
+		<div id="tampung" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
+				<img src="../gambar/ramsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag1" >
+				<img src="../gambar/msoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag2" >
+				<img src="../gambar/ssoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag3" >
+        </div>
+        <br>
+        <center>
+                <button onclick="nav10()" ><- Soal Sebelumnya</button>
+                <button onclick="nav12()" >Soal Selanjutnya -></button>
+                
+        </center>
+	</div>
+	<div id="soal12">
+		<p>
+			12. Tentukan tahapan perakitan komputer sesuai materi yang telah diajarkan !
+		</p>
+						
+			<br>
+			<label style="margin-left: 30px;">Tahap </label>
+			<br>
+			<label style="margin-left: 30px;"> 1. </label>
+			<select id="mySelect" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;margin-right: 9px;"">7. </label>
+			<select id="mySelect7" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<br>
+			<label style="margin-left: 30px;">2. </label>
+			<select id="mySelect2" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;margin-right: 9px;">8. </label>
+			<select id="mySelect8" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<br>
+			<label style="margin-left: 30px;">3. </label>
+			<select id="mySelect3" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;margin-right: 9px;"">9. </label>
+			<select id="mySelect9" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<br>
+			<label style="margin-left: 30px;">4. </label>
+			<select id="mySelect4" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;">10. </label>
+			<select id="mySelect10" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<br>
+			<label style="margin-left: 30px;">5. </label>
+			<select id="mySelect5" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;">11. </label>
+			<select id="mySelect11" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<br>
+			<label style="margin-left: 30px;">6. </label>
+			<select id="mySelect6" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+			</select>
+			<label style="margin-left: 20px;">12. </label>
+			<select id="mySelect12" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+            </select>	  
+            <br><br>
+            <center>
+                    <button onclick="nav11()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav13()" >Soal Selanjutnya -></button>
+                    
+            </center>
+	</div>
+	<div id="soal13">
+			<p>
+				13. Drag and drop gambar di bawah ini agar sesuai dengan nama perangkatnya !
+			</p>
+			<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Casing</p>
+				
+			</div>
+			<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Mainboard</p>
+			</div>
+			<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Prosesor</p>
+			</div>
+			<div id="tampung2" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
+					<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
+					<img src="../gambar/evmobo.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag4" >
+					<img src="../gambar/evcpu1.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag5" >
+					<img src="../gambar/evcase.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag6" >
+            </div>
+            <br>
+            <center>
+                    <button onclick="nav12()" ><- Soal Sebelumnya</button>
+                    <button onclick="nav14()" >Soal Selanjutnya -></button>
+                    
+            </center>
+		</div>
+		
+		<div id="soal14">
+				<p>
+					14. Pada sebuah Kabel Front Panel terdapat kabel berwarna merah dan hitam, sedangkan warna putih tidak ada.
+					Tentukan penyusunan yang tepat !
+				</p>
+				<br>
+				
+				<div id="tampung3">
+					<div id="fp">
+							<select id="powerledplus" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option style="color:black">POWER LED </option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="powerledmin" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="powerswplus" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="powerswmin" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp0"> <p style="color: cornsilk;margin-top: 50px;">Pin Kosong</p></div>
+					<div id="fp2"></div>
+					<div id="fp">
+							<select id="hddledplus" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="hddledmin" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="resetswmin" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							<select id="resetswplus" style="margin-top: 50px;text-align-last:center;" >
+									<option>-- Pilih --</option>
+									<option style="color:red">RESET SW</option>
+									<option style="color:black">HDD LED </option>
+									<option style="color:green">POWER LED</option>
+									<option style="color:black">RESET SW </option>
+									<option style="color:blue">POWER SW</option>
+									<option style="color:orangered">HDD LED</option>
+									<option id="s" style="color:black">POWER LED</option>
+									<option style="color:black">POWER SW </option>
+							  </select>
+					</div>
+					<div id="fp">
+							
+                    </div>
+                    
+            
+                </div>
+                <center>
+                        <br>
+                        <button onclick="nav13()" ><- Soal Sebelumnya</button>
+                        <button onclick="nav15()" >Soal Selanjutnya -></button>
+                        
+                </center>
+		</div>
+				<div id="soal15">
+						<p>
+						15. Drag and drop gambar di bawah ini agar perangkat masuk katerori yang sesuai !
+						</p>
+										
+	
+						
+						<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<p style="text-align: center;">Perangkat Input</p>
+							
+						</div>
+						<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<p style="text-align: center;">Perangkat Proses</p>
+						</div>
+						<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+							<p style="text-align: center;">Perangkat Output</p>
+						</div>
+						
+						<div id="tampung2" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
+								<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
+								<img src="../gambar/hddsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag7" >
+								<img src="../gambar/evprint.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag8" >
+								<img src="../gambar/evscan.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag9" >
+                        </div>
+                        <br>
+            <center>
+                    <button onclick="nav14()" ><- Soal Sebelumnya</button>
+                    
+                    
+            </center>
+				</div>
+		</div>
+				
+					<br>
+					<center><button onclick="cek()" class="button-selesai">Selesai</button></center>
+					<br>
+			</div>
+										
+	  </div>
+
+	
+	  
+
+
+	  
+	  </div>
+	<script src="../js/loadp.js"></script> 
+
+</body>
+</html>  
