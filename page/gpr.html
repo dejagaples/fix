@@ -19,24 +19,11 @@
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <title>RAKITOS - Guru</title>
-  <script>
-		
-		window.onload = function awal(){
-		rootRef.on('value',function(snapshot){
-			document.getElementById("kuis1").innerHTML=snapshot.child('kuis1').val();
-			document.getElementById("kuis2").innerHTML=snapshot.child('kuis2').val();
-			document.getElementById("kuis3").innerHTML=snapshot.child('kuis3').val();
-			document.getElementById("latihan").innerHTML=snapshot.child('latihan').val();
-		});
-		
-				
-	  	};
-	</script>
   <style>
       #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 60%;
 }
 
 #customers td, #customers th {
@@ -97,13 +84,10 @@
 					<form>
 						<div class="container">
 							<label >
-								<b>1. Menu Token pada Sidebar berfungsi untuk mengganti kode tugas/ujian. </b>
+								<b>1. Tabel menunjukkan video siswa saat praktik </b>
 							</label>
-							<br/>
-							<label>
-								<b>2. Menu Nilai Siswa berfungsi untuk melihat semua nilai siswa. </b>
-							</label>
-							<br/><br/>
+                            <br>
+                            <br/>
 						</div>
 					</form>
 				</div>
@@ -113,36 +97,34 @@
 
 	<!--/.sidebar-->
 	<div id="menu-wrap">
-		<ul id="menu" class="nav">
+		<ul id="menu" class="nav" >
 				<li id="brnd" onclick="go()"><a  href="#">Beranda</a></li>
-				<li><a class="tutup active" href="#">Token</a></li>
-				<li><a class="tutup " href="#">Nilai Siswa<span class="caret kiri" ></span></a>
+				<li><a class="tutup" href="#" onclick="guru()">Token</a></li>
+				<li><a class="tutup" href="#">Nilai Siswa<span class="caret kiri" ></span></a>
 					<ul class="sub">
-						<li><a href="guru1.html">Kuis 1</a></li>
+						<li><a  href="#">Kuis 1</a></li>
 						<li><a href="guru2.html">Kuis 2</a></li>
 						<li><a href="guru3.html">Kuis 3</a></li>
 						<li><a href="guru4.html">Latihan</a></li>
 					</ul>
 				</li>
-				<li><a class="tutup " href="#">Video Siswa<span class="caret kiri" ></span></a>
+				<li><a class="tutup active" href="#">Video Siswa<span class="caret kiri" ></span></a>
 					<ul class="sub">
-						<li><a href="glc.html">Melepas Case</a></li>
-						<li><a href="gpps.html">Power Supply</a></li>
-						<li><a href="gpcpu.html">CPU</a></li>
-						<li><a href="gph.html">Heatsink</a></li>
-						<li><a href="gpr.html">RAM</a></li>
+						<li><a  href="glc.html">Melepas Case</a></li>
+						<li><a  href="gpps.html">Power Supply</a></li>
+						<li><a  href="gpcpu.html">CPU</a></li>
+						<li><a  href="gph.html">Heatsink</a></li>
+						<li><a class="disini" href="gpr.html">RAM</a></li>
 						<li><a href="gpm.html">Motherboard</a></li>
 						<li><a href="gpv.html">VGA Card</a></li>
 						<li><a href="gphdd.html">Harddisk</a></li>
 						<li><a href="gpo.html">Optical Disc Drive</a></li>
 						<li><a href="gpki.html">Kabel Internal</a></li>
 						<li><a href="gpcase.html">Memasang Case</a></li>
-						<li><a href="gpke.html">Kabel Eksternal</a></li>
+						<li><a  href="gpke.html">Kabel Eksternal</a></li>
 
 					</ul>
 				</li>
-				
-				
 		</ul>
 	</div>
 	<script src="../js/nav.js"></script>
@@ -163,48 +145,40 @@
 			};
 			// Initialize Firebase
 			firebase.initializeApp(firebaseConfig);
-			var rootRef = firebase.database().ref().child('token');
+			
 	</script>
 
 		<!-- Konten -->
 		<div class="judul">
-		<h3 >Token Ujian</h3>
+		<h3>Praktik - Memasang RAM</h3>
         <hr style="height:1px;border-width:1;background-color:lightgray">
         <center>
 				
 		<table id="customers">
-            <tr >
-                <th>Kegiatan</th>
-                <th>Token</th>
-                <th>Aksi</th>
-            </tr>
-            <tr>
-                <td>Kuis 1</td>
-                <td id="kuis1"></td>
-                <td><center><button class="button-pertanyaan" id="ganti1">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Kuis 2</td>
-                <td id="kuis2"></td>
-                <td><center><button class="button-pertanyaan" id="ganti2">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Kuis 3</td>
-                <td id="kuis3"></td>
-                <td><center><button class="button-pertanyaan" id="ganti3">Ganti</button></center></td>
-            </tr>
-            <tr>
-                <td>Latihan</td>
-                <td id="latihan"></td>
-                <td><center><button class="button-pertanyaan" id="ganti4">Ganti</button></center></td>
-            </tr>
+			<thead>
+				<tr >
+					<th>Kelompok</th>
+					<th>Anggota</th>
+					<th>Lokasi Praktik</th>
+					<th>URL Youtube</th>
+					
+					
+				</tr>
+			</thead>
+			<tbody id="table_body">
+			</tbody>
         </table>
-    </center>
-		 
+	
+	
+	<script src="../js/indexr.js"></script>
          <br>
-         <br>
-         <br>
-		
+		 <br>
+		 <button class="button-pertanyaan download">Download</button>
+		 <br>
+		 <br>
+		 <br>
+		</center>
+
 		<div id="g10"></div>
 		</div>
 			
@@ -215,43 +189,18 @@
 		function sabar(){
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
-
-		function gv(){
-			location.href="guruv.html";
-		}
 		
-		$('#ganti1').click(function(){
-			var person = prompt("Masukkan token baru", document.getElementById("kuis1").innerHTML);
-			if (person != null) {
-				rootRef.update({
-					kuis1:person,
-				});
-			}
-		});
-		$('#ganti2').click(function(){
-			var person1 = prompt("Masukkan token baru", document.getElementById("kuis2").innerHTML);
-			if (person1 != null) {
-				rootRef.update({
-					kuis2:person1,
-				});
-			}
-		});
-		$('#ganti3').click(function(){
-			var person2 = prompt("Masukkan token baru", document.getElementById("kuis3").innerHTML);
-			if (person2 != null) {
-				rootRef.update({
-					kuis3:person2,
-				});
-			}
-		});
-		$('#ganti4').click(function(){
-			var person3 = prompt("Masukkan token baru", document.getElementById("latihan").innerHTML);
-			if (person3 != null) {
-				rootRef.update({
-					latihan:person3,
-				});
-			}
-		});
+		let download = document.querySelector('.download');
+			download.addEventListener('click', function () {
+			var data_type = 'data:application/vnd.ms-excel';
+			var table_div = document.getElementById('customers');
+			var table_html = table_div.outerHTML.replace(/ /g, '%20');
+
+			var a = document.createElement('a');
+			a.href = data_type + ', ' + table_html;
+			a.download = 'video_pasangram_' + Math.floor((Math.random() * 9999999) + 1000000) + '.xls';
+			a.click();
+		})
 		
 		function responsif(x) {
 			if (x.matches) { // If media query matches
@@ -264,8 +213,8 @@
 				document.getElementById("g10").innerHTML = `
 				<br>
 				<div id="bas2" class="next" style="margin:5px;">
-				<a href="../index.html"><button class="button-left-hp"> <- Beranda </button></a> 
-				<a href="guru1.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				<a href="guru.html"><button class="button-left-hp"> <- Sebelumnya </button></a> 
+				<a href="guru2.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
 				</div>
 				<br>
 				`;
@@ -309,11 +258,17 @@
 			location.href="../index.html";
 		}
 		
+        function guru(){
+			location.href="guru.html";
+		}
 		
-    		
+		function gv(){
+			location.href="guruv.html";
+		}
+    	
 	</script>
 
 	
 	
 </body>
-</html>
+</html>  

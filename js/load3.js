@@ -21,8 +21,8 @@ function startTimer(duration, display) {
                 var no4="S";
                 var no5="S";
                 var d = new Date();
-                var n = d.getHours() + " " + d.getMinutes();
-                var m = d.getDate() + " " + (d.getMonth()+1) + " " + d.getFullYear();
+                var n = d.getHours() + ":" + d.getMinutes();
+                var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
                 if(form.pilihan.value=='E. 1, 4, dan 5'){
                     nilai=nilai+20;
@@ -231,8 +231,8 @@ function cek(){
                 var no4="S";
                 var no5="S";
                 var d = new Date();
-                var n = d.getHours() + " " + d.getMinutes();
-                var m = d.getDate() + " " + (d.getMonth()+1) + " " + d.getFullYear();
+                var n = d.getHours() + ":" + d.getMinutes();
+            var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
                 if(form.pilihan.value=='E. 1, 4, dan 5'){
                     nilai=nilai+20;

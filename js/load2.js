@@ -26,8 +26,8 @@ function startTimer(duration, display) {
                 var no9="S";
                 var no10="S";
                 var d = new Date();
-                var n = d.getHours() + " " + d.getMinutes();
-                var m = d.getDate() + " " + (d.getMonth()+1) + " " + d.getFullYear();
+                var n = d.getHours() + ":" + d.getMinutes();
+                var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
                 if(form.pilihan.value=='D. melindungi hardware lainnya dan memproses perintah'){
                     nilai=nilai+10;
@@ -369,8 +369,8 @@ function cek(){
                 var no9="S";
                 var no10="S";
                 var d = new Date();
-                var n = d.getHours() + " " + d.getMinutes();
-                var m = d.getDate() + " " + (d.getMonth()+1) + " " + d.getFullYear();
+                var n = d.getHours() + ":" + d.getMinutes();
+                var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
                 if(form.pilihan.value=='D. melindungi hardware lainnya dan memproses perintah'){
                     nilai=nilai+10;
