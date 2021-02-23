@@ -7,5 +7,17 @@ rootRef.on("child_added", snap => {
     var link = snap.child("link").val();
     
 
-$("#table_body").append("<tr><td>"+ kelompok+"</td><td>"+anggota+"</td><td>"+tempat+"</td><td>"+link+"</td></tr>");
+$("#table_body").append(`
+    <tr>
+        <td>${kelompok}</td>
+        <td>${anggota}</td>
+        <td>${tempat}</td>
+        <td>
+            <center>
+            <a href="${link}" target="_blank">
+                <button class="button-pertanyaan">Lihat</button>
+            </a>
+            </center>
+        </td>
+    </tr>`);
 });
