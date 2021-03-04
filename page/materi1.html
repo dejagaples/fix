@@ -23,11 +23,12 @@
 		}, false);
 
 		window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
-				document.getElementById("lima").hidden = true;
-				document.getElementById("enam").hidden = true;
+				document.getElementById("lima").hidden=true;
+				document.getElementById("enam").hidden=true;
+				
+				
 		};
+		
   </script>
   
 </head>
@@ -74,11 +75,15 @@
 							</label>
 							<br/>
 							<label >
-								<b>2. Klik <code>Gambar</code> untuk menuju ke gambar yang dimaksud. </b>
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
 							</label>
 							<br/>
 							<label >
-								<b>3. Klik ikon  <i class="fas fa-external-link-alt"> </i>  untuk memperbesar model 3D .</b>
+									<b>3. Klik ikon  <i class="fas fa-external-link-alt"> </i>  untuk memperbesar model 3D . </b>
+							</label>
+							<br/>
+							<label >
+									<b>4. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
 							</label>
 							<br/>
 						</div>
@@ -182,7 +187,12 @@
 				Obeng merupakan alat untuk mengencangkan dan mengendorkan sekrup. Jenis 
 				obeng yang sering digunakan untuk perakitan komputer adalah obeng plus (+) atau obeng kembang yang berukuran 2mm - 6mm. 
 				Adapun bentuk obengnya dapat dilihat pada <code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+				<span id="h1">(Klik tombol untuk menampilkan)</span>
+				<div id="btn1"> 
+				<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+				</div>
 			</p>
+			
 				<div id="g1" class="text-center"> </div>
 			<p>
 				
@@ -190,87 +200,35 @@
 				Sebagai contoh, 2 x 75 berarti mata plus lancip 2mm dengan panjang gagang 75 mm. 
 				Meskipun hanya obeng plus yang sering digunakan, tidak salahnya peserta didik mengenal jenis-jenis mata obeng lain seperti
 				pada <code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+				<span id="h2">(Klik tombol untuk menampilkan)</span>
+				<div id="btn2"> 
+						<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+				</div>
 			</p>
+			
 			<div id="g0" > </div>
 			<div id="g2" > </div>
 			<div id="g3" > </div>
 		</div>
 		<div id="bas" class="kon2">
 				<center>
-				<iframe id="1gb" src="../embed/obeng.html" width="100%" height="300" frameborder="0" allowfullscreen> </iframe>
-				<em><code>Gambar 1</code>. Model 3 dimensi Obeng Plus</em>
-				<br><br>
-				<img id="2gb" class="hover03 column" src="../gambar/jenisobeng.jpg" width="80%">
-				<br>
-				<em><code>Gambar 2</code>. Jenis Mata Obeng</em>
-				</center>
-				<br>
-				<div id="satu">
-					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-					<div id="tp" class="isko">
-						Berikut jenis mata obeng yang paling sering digunakan dalam perakitan komputer, yaitu ....
-							<br>
-							<input name="q2" id="r1" type="radio" value="minus" /> 
-							<img src="../gambar/obengpil1.JPG" width="8%"/>
-							<br>
-							<input name="q2" id="r2"  type="radio" value="plus" />	
-							<img src="../gambar/obengpil2.JPG" width="8%"/>
-							<br><br>
-							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-							<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-							<p id="tampil"></p>
-							<br>
-					</div>
-				</div>
+				<div id="first" style="margin-top: 150px;">
+						<i class="fas fa-lock" style="font-size: 20px;"></i>
+					<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+						<br>
+						<<
+					</p>
 
-				<div id="dua">
-					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-					<div id="tp2" class="isko">
-						Pada gambar di bawah ini, tentukan jenis mata obeng plus dengan cara mengklik pada gambar!
-							<br>
-							<center>
-							<img src="../gambar/obengsoal2.JPG" usemap="#workmap" width="300"/>
-							</center>	
-							<map name="workmap">
-								<area id="1" shape="rect" coords="22,10,60,130" alt="minus" href="#" onclick="cek21()">
-								<area id="2" shape="rect" coords="97,10,135,130" alt="plus" href="#" onclick="cek22()">
-								<area id="3" shape="rect" coords="170,10,208,130" alt="allen" href="#" onclick="cek23()">
-								<area id="4" shape="rect" coords="237,10,275,130" alt="robertson" href="#" onclick="cek24()">
-								
-							</map>
-							<br>
-							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-							<p id="tampil2"></p>
-							<br>
-					</div>
+				</div>	
+				<div id="gambar">
+				
 				</div>
-				<div id="tiga">
-					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-					<div id="tp3" class="isko">
-						Pada gambar di bawah ini, tentukan jenis mata obeng <b>Phillips</b> dengan cara mengklik pada gambar!
-							<br>
-							<center>
-							<img src="../gambar/obengsoal3.JPG" usemap="#workmap2" width="300"/>
-							</center>	
-							<map name="workmap2">
-								<area id="5" shape="rect" coords="14,8,45,112" alt="5" href="#" onclick="cek31()">
-								<area id="6" shape="rect" coords="70,8,102,112" alt="6" href="#" onclick="cek32()">
-								<area id="7" shape="rect" coords="124,8,156,112" alt="7" href="#" onclick="cek33()">
-								<area id="8" shape="rect" coords="186,8,220,112" alt="8" href="#" onclick="cek34()">
-								<area id="9" shape="rect" coords="247,8,280,112" alt="8" href="#" onclick="cek35()">
-							</map>
-							<br>
-							<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-							<p id="tampil3"></p>
-							<br>
-					</div>
-				</div>
-				<br>
+				</center>
+				
 		</div>
 		<div id="bas2" class="next">
         <a href="p1.html"><button class="button-left"> <- Kembali </button></a> 
-		 <a href="materi2.html"><button class="button-right"> Selanjutnya -> </button></a>
+		 <a href="materi1soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		<audio id="benar">
 			<source src="../suara/benar.mp3" type="audio/mp3">
@@ -320,81 +278,13 @@
         var z = document.getElementById("benar"); 
         var y = document.getElementById("salah"); 
 
-		function cek(){
-			if (document.getElementById('r1').checked) {
-				y.play();
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-				}
-			else if (document.getElementById('r2').checked){
-				z.play();
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
-			}
-			else {
-				document.getElementById("tampil").innerHTML=`<br>Isi Jawaban dulu`;
-			}
-		}
-
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunction);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-
-
-		function cek21(){
-				y.play();
-				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek22(){
-				z.play();
-				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
-		}
-		function cek23(){
-				y.play();
-				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek24(){
-				y.play();
-				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-
-		function cek31(){
-				y.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek32(){
-				y.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek33(){
-				y.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek34(){
-				y.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
-		}
-		function cek35(){
-				z.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;		
-		}
-
-
-
 		
-
-
-			
-		
-
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -507,6 +397,10 @@
 				document.getElementById("g3").innerHTML = "";
 				document.getElementById("g0").innerHTML = "";
 				document.getElementById("bas2").style.display="block";
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
 				}
 			}
 
@@ -526,15 +420,99 @@
 			}
 		}
 
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
 		
 		function go(){
 			location.href="../index.html";
 		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/obeng.html" width="100%" height="300" frameborder="0" allowfullscreen> </iframe>
+				<em><code>Gambar 1</code>. Model 3 dimensi Obeng Plus</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="2gb" class="hover03 column" src="../gambar/jenisobeng.jpg" width="80%">
+				<br>
+				<em><code>Gambar 2</code>. Jenis Mata Obeng</em>
+			`;
+			
+			
+		}
+
+		function cek(){
+			if (document.getElementById('r1').checked) {
+				y.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				}
+			else if (document.getElementById('r2').checked){
+				z.play();
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+			}
+			else {
+				document.getElementById("tampil").innerHTML=`<br>Isi Jawaban dulu`;
+			}
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", myFunction);
+		document.getElementById("r2").addEventListener("click", myFunc);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+
+
+		function cek21(){
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek22(){
+				z.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+		}
+		function cek23(){
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek24(){
+				y.play();
+				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+
+		function cek31(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek32(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek33(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek34(){
+				y.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+		}
+		function cek35(){
+				z.play();
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;		
+		}
+
+		
     		
 	</script>
 

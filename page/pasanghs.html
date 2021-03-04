@@ -22,7 +22,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
 				document.getElementById("empat").hidden = true;
 	};
 </script>
@@ -84,6 +83,14 @@
 						<div class="container">
 								<label >
 								<b>1. Bacalah dengan teliti langkah demi langkahnya.</b>
+							</label>
+							<br>
+							<label >
+									<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+							</label>
+							<br>
+							<label>
+									<b>3. Jika menggunakan Smartphone, klik <code>Gambar</code> dan <code style="color: blue;">Video</code> untuk pintasan. </b>
 							</label>
 							<br/><br/>
 						</div>
@@ -252,9 +259,21 @@
 			
 			<p>
 					Agar lebih mudah dipahami, mari coba  <code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Animasi 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+						<br>
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					<br>
+					</div>
 					<span id="g1" class="text-center"> </span>
 					Adapun untuk demonstrasi yang lebih bagus dapat dilihat pada
 					<code><a href="#1tb" style="text-decoration:none;color:blue;">Video 1</a></code> berikut.
+					<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+						<br>
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					<br>
+					</div>
 					<span id="g2" > </span>
 			</p>
 			
@@ -264,73 +283,23 @@
 		</div>
 		<div id="bas" class="kon2">
 				<center>
-					<a href="../con2/pasanghs/index.html" target="_blank">
-					<div id="1gb" class="isig">
-							<img src="../gambar/hddrakit1.png" alt="error" style="width:100%">
-							
-							<button class="tombol"><i class="fas fa-play"></i></button>
-					</div></a>
-					<em><code>Animasi 1</code>. Memasang Heatsink</em>
-					<br>
-					<br>
-					<iframe id="1tb" width="100%" height="250" src="https://www.youtube.com/embed/kbcBDW_bs5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<br>
-					<em><code  style="text-decoration:none;color:blue;">Video 1</code>. Memasang Heatsink</em>	
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
+		
+						</div>	
+						<div id="gambar">
+						
+						</div>
 				</center>
 				
-			  <br>
-			  
-				<div id="satu">
-						<div id="kotak">Pertanyaan: ( 1 dari 2 )</div>
-						<div id="tp" class="isko">
-								Cara membuka kunci clip saat ingin melepas Heatsink adalah dengan ....
-								<br>
-								<input name="q2" id="r1" type="radio"  /> Memutar ke arah kanan
-								<br>
-								<input name="q2" id="r2"  type="radio"  />	Memutar ke arah kiri
-								<br><br>
-								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-								<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-								<br>
-								<p id="tampil"></p>
-								<br>
-						</div>
-					</div>
-				
-					<div id="dua">
-						<div id="kotak2">Pertanyaan: ( 2 dari 2 )</div>
-						<div id="tp2" class="isko">
-							<b>
-								Tugas kelompok ! <br></b>
-								<p style="text-align: justify;">Buatlah video singkat tentang cara memasang Heatsink pada Motherboard.
-								Tambahkan perkenalan diri di awal video dan lokasi pembuatannya.
-								Upload video tersebut ke Youtube kemudian salin linknya!</p>
-								
-								Kelompok : <br>
-								<input type="baru35" id="kel" >
-								<br><br>
-								Anggota : (misal. Reza, Ahmad Rafi, Baim, Rizki) <br>
-								<input type="baru35" id="nama" > 
-								<br><br>
-								Lokasi : (misal. Lab Sekolah) <br>
-								<input type="baru35" id="lok" > 
-								<br><br>
-								Link video youtube: (paste di sini) <br>
-								<input type="baru35" id="yt"> 
-								<br>
-								<br>
-								<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-								<button class="button-pertanyaan" onclick="kirim()">Kirim</button>
-								<p id="tampil2"></p>
-								<br>
-								
-						</div>
-					</div>
-			<br>	
 		</div>
 		<div id="bas2" class="next">
 				<a href="pasangcpu.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="pasangram.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="pasanghssoal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
 
@@ -434,22 +403,16 @@
 			}
 		}
 		
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunction);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
+		
 
 		
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -543,6 +506,10 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn2").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -580,10 +547,33 @@
 			}
 		}
 		
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+			<a href="../con2/pasanghs/index.html" target="_blank">
+					<div id="1gb" class="isig">
+							<img src="../gambar/hddrakit1.png" alt="error" style="width:100%">
+							
+							<button class="tombol"><i class="fas fa-play"></i></button>
+					</div></a>
+					<em><code>Animasi 1</code>. Memasang Heatsink</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+			<iframe id="1tb" width="100%" height="250" src="https://www.youtube.com/embed/kbcBDW_bs5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br>
+					<em><code  style="text-decoration:none;color:blue;">Video 1</code>. Memasang Heatsink</em>	
+
+			`;
+			
+			
 		}
 
 		function go(){
@@ -591,6 +581,18 @@
 		}
 		function langsung(){
 			location.href="penilaian.html";
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", myFunction);
+		document.getElementById("r2").addEventListener("click", myFunc);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				
 		}
 	  </script>
 </body>

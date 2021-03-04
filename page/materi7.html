@@ -30,8 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 	};
@@ -77,10 +75,18 @@
 									<label >
 									<b>1. Bacalah penjelasan Motherboard terlebih dahulu.</b>
 								</label>
+								<br>
+								<label >
+										<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+								</label>
 								<br/>
 								<label >
-									<b>2. Klik ikon pojok kanan model 3D tersebut untuk memperbesar.</b>
-									</label>
+										<b>3. Klik ikon  <i class="fas fa-external-link-alt"> </i>  untuk memperbesar model 3D . </b>
+								</label>
+								<br/>
+								<label >
+										<b>4. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
+								</label>
 								<br/><br/>
 							</div>
 						</form>
@@ -190,6 +196,10 @@
 					Bentuknya mirip Printed Circuit Board (PCB) pada perangkat elektronik.
 					 Model 3D dari Motherboard dapat dilihat pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
@@ -197,12 +207,20 @@
         terdapat saraf untuk mengalirkan darah dari jantung, maka pada komputer terdapat motherboard yang mengalirkan listrik
         melalui sirkuitnya. Adapun jenis ukuran form factor motherboard dapat dilihat pada
 		<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+		<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 					<span id="g2" class="text-center"> </span>
 			</p>
 			<p>
 				Sebenarnya dulu juga ada tipe form factor lain yaitu BTX dan NLX, namun pengembangannya kini telah dihentikan. Selain itu, juga ada tipe yang lebih kecil hingga versi mobile. 
 				Lihat
 	<code><a href="#3gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 3</a></code> berikut.
+	<span id="h3">(Klik tombol untuk menampilkan)</span>
+					<div id="btn3"> 
+					<center><button class="button-lihat" onclick="g3tampil()">Lihat >></button></center>
+					</div>
 				<span id="g3" class="text-center"> </span>
 		</p>
 			
@@ -210,83 +228,25 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><iframe id="1gb" src="../embed/motherboard.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D Motherboard</em>
-				<br>
-				<br>
-				<img id="2gb" src="../gambar/mobo.png" width="80%" border="0" alt="error">
-				<br>
-				<em><code>Gambar 2</code>. Perbedaan ukuran form factor motherboard</em>
-				<br>
-				<br>
-				<img id="3gb" src="../gambar/mobover.jpg" width="100%" border="0" alt="error">
-				<br>
-				<em><code>Gambar 3</code>. Form factor yang lebih kecil daripad Mini-ITX</em>
-				<br>
+				<center>
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
+		
+						</div>	
+						<div id="gambar">
+						
+						</div>
 				</center>
-			  <br>
-			  
-				<div id="satu">
-						<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-						<div id="tp" class="isko">
-								<b><i>
-							Isilah kotak kosong berikut dengan jawaban yang benar!
-							</i></b>
-							<br><br> 
-							Motherboard berfungsi sebagai alat <input type="baru2" id="kom" onkeyup="kosong()" > hardware komputer.
-								<br><br>
-								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-								<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-								<br>
-								<p id="tampil"></p>
-								<br>
-						</div>
-					</div>
-				
-					<div id="dua">
-						<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-						<div id="tp2" class="isko">
-							
-									Motherboard termasuk dalam kategori perangkat ... komputer.
-									<br>
-									<input name="q2" id="r1" type="radio"  /> Input <br>
-									<input name="q2" id="r2" type="radio"  /> Proses <br>
-									<input name="q2" id="r3" type="radio"  /> Output <br>
-								<br>
-								<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-								<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-								<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-								<p id="tampil2"></p>
-								<br>
-									
-								
-						</div>
-					</div>
-					<div id="tiga">
-						<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-						<div id="tp3" class="isko">
-							Jenis form factor Main Board yang memiliki ukuran paling besar adalah ....
-								<br>
-								<input name="q3" id="r4" type="radio"  /> Mini-ITX <br>
-								<input name="q3" id="r5" type="radio"  /> Micro-ATX <br>
-								<input name="q3" id="r6" type="radio"  /> ATX <br>
-								<input name="q3" id="r7" type="radio"  /> E-ATX <br>
-							<br>
-							<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-							<p id="tampil3"></p>
-							<br>
-								
-						</div>
-					</div>
-				<br>	
-			</div>
-			
 		</div>
+			
+		</div> 
 		<div id="bas2" class="next">
 				<a href="materi6.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi8.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi7soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
 		<audio id="benar">
@@ -348,7 +308,203 @@
 			var z = document.getElementById("benar"); 
 			var y = document.getElementById("salah"); 
 
-			function kosong(){
+			
+		
+
+		
+
+		function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("h3").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
+				document.getElementById("btn3").hidden=true;
+				document.getElementById("ba").style.width="100%";
+				document.getElementById("bas").style.display="none";
+				document.getElementById("bas2").style.display="none";
+				document.getElementById("ba").style.marginLeft="10px";
+				document.getElementById("ba").style.height="100%";
+				document.getElementById("logogbr").style.display="none";
+				document.getElementById("namalogo").style.display="none";
+				document.getElementById("menuhp").style.display="block";
+				document.getElementById("brnd").style.display="block";
+				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("g1").innerHTML = `
+				
+				<center><iframe id="1gb" src="../embed/motherboard.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D Motherboard</em>
+				<br>
+				</center>   
+				`;
+				document.getElementById("g2").innerHTML = `
+				<center>
+				
+				<img id="2gb" src="../gambar/mobo.png" width="70%" border="0" alt="error">
+				<br>
+				<em><code>Gambar 2</code>. Perbedaan ukuran form factor motherboard</em>
+				<br>
+				</center>
+				`;
+				document.getElementById("g3").innerHTML = `
+				<center>
+				
+				<img id="3gb" src="../gambar/mobover.jpg" width="90%" border="0" alt="error">
+				<br>
+				<em><code>Gambar 3</code>. Form factor yang lebih kecil daripad Mini-ITX</em>
+				<br>
+				</center>
+				`;
+
+				
+				
+				document.getElementById("g9").innerHTML = `
+				<div id="empat">
+						<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
+						<div id="tp" class="isko">
+								<b><i>
+							Isilah kotak kosong berikut dengan jawaban yang benar!
+							</i></b>
+							<br><br> 
+							Motherboard berfungsi sebagai alat <input type="baru2" id="kom" onkeyup="kosong()" > hardware komputer.
+								<br><br>
+								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+								<button class="button-pertanyaan" onclick="lima()">Selanjutnya</button>
+								<br>
+								<p id="tampil"></p>
+								<br>
+						</div>
+					</div>
+				
+					<div id="lima">
+						<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
+						<div id="tp2" class="isko">
+							
+									Motherboard termasuk dalam kategori perangkat ... komputer.
+									<br>
+									<input name="q2" id="r1" type="radio"  /> Input <br>
+									<input name="q2" id="r2" type="radio"  /> Proses <br>
+									<input name="q2" id="r3" type="radio"  /> Output <br>
+								<br>
+								<button class="button-pertanyaan" onclick="empat()">Sebelumnya</button>
+								<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
+								<button class="button-pertanyaan" onclick="enam()">Selanjutnya</button>
+								<p id="tampil2"></p>
+								<br>
+									
+								
+						</div>
+					</div>
+					<div id="enam">
+						<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
+						<div id="tp3" class="isko">
+							Jenis form factor Main Board yang memiliki ukuran paling besar adalah ....
+								<br>
+								<input name="q3" id="r4" type="radio"  /> Mini-ITX <br>
+								<input name="q3" id="r5" type="radio"  /> Micro-ATX <br>
+								<input name="q3" id="r6" type="radio"  /> ATX <br>
+								<input name="q3" id="r7" type="radio"  /> E-ATX <br>
+							<br>
+							<button class="button-pertanyaan" onclick="lima()">Sebelumnya</button>
+							<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
+							<p id="tampil3"></p>
+							<br>
+								
+						</div>
+					</div>
+				`;
+				document.getElementById("g10").innerHTML = `
+				<br>
+				<div id="bas2" class="next" style="margin:5px;">
+				<a href="materi6.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi8.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				</div>
+				<br>
+				`;
+				
+			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("h3").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
+				document.getElementById("btn3").hidden=false;
+				document.getElementById("ba").style.width="39%";
+				document.getElementById("bas").style.display="block";
+				document.getElementById("bas2").style.display="block";
+				document.getElementById("ba").style.height="370px";
+				document.getElementById("menu-wrap").style.width="18%";
+				document.getElementById("menu-wrap").style.height="100px";
+				document.getElementById("menu-wrap").style.display="block";
+				document.getElementById("logogbr").style.display="";
+				document.getElementById("namalogo").style.display="";
+				document.getElementById("menuhp").style.display="none";
+				document.getElementById("brnd").style.display="none";
+				document.getElementById("g1").innerHTML = "";
+				document.getElementById("g2").innerHTML = "";
+				document.getElementById("g3").innerHTML = "";
+				document.getElementById("g9").innerHTML = "";
+				document.getElementById("g10").innerHTML = "";
+				document.getElementById("bas2").style.display="block";
+				}
+			}
+
+			var x = window.matchMedia("(max-width: 1000px)")
+			responsif(x) // Call listener function at run time
+			x.addListener(responsif) // Attach listener function on state changes
+		
+		
+
+		function hilang(){
+			var x = document.getElementById('menu-wrap');
+			if (x.style.display === 'block') {
+				x.style.display = 'none';
+				
+			} else {
+				x.style.display = 'block';
+				x.style.width = '100%';
+				x.style.marginLeft = '0';
+			}
+		}
+		
+
+		function go(){
+			location.href="../index.html";
+		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/motherboard.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D Motherboard</em>
+
+			`;
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<img id="2gb" src="../gambar/mobo.png" width="80%" border="0" alt="error">
+				<br>
+				<em><code>Gambar 2</code>. Perbedaan ukuran form factor motherboard</em>
+			`;
+		}
+		function g3tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+			<br>
+			<br>
+			<img id="3gb" src="../gambar/mobover.jpg" width="100%" border="0" alt="error">
+				<br>	<br>
+				<em><code>Gambar 3</code>. Form factor yang lebih kecil daripad Mini-ITX</em>
+			`;
+		}
+
+		function kosong(){
 				var ubah3 = document.getElementById("kom");
 				ubah3.value = ubah3.value.toLowerCase();
 				if (ubah3.value!=0){
@@ -423,158 +579,7 @@
 				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 				}
 			}
-		
-
-		
-
-		function responsif(x) {
-			if (x.matches) { // If media query matches
-				document.getElementById("ba").style.width="100%";
-				document.getElementById("bas").style.display="none";
-				document.getElementById("bas2").style.display="none";
-				document.getElementById("ba").style.marginLeft="10px";
-				document.getElementById("ba").style.height="100%";
-				document.getElementById("logogbr").style.display="none";
-				document.getElementById("namalogo").style.display="none";
-				document.getElementById("menuhp").style.display="block";
-				document.getElementById("brnd").style.display="block";
-				document.getElementById("menu-wrap").style.display="none";
-				document.getElementById("g1").innerHTML = `
-				<br><br>
-				<center><iframe id="1gb" src="../embed/motherboard.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D Motherboard</em>
-				<br>
-				</center>   
-				`;
-				document.getElementById("g2").innerHTML = `
-				<center>
-				<br>
-				<img id="2gb" src="../gambar/mobo.png" width="50%" border="0" alt="error">
-				<br>
-				<em><code>Gambar 2</code>. Perbedaan ukuran form factor motherboard</em>
-				<br>
-				</center>
-				`;
-				document.getElementById("g3").innerHTML = `
-				<center>
-				<br>
-				<img id="3gb" src="../gambar/mobover.jpg" width="80%" border="0" alt="error">
-				<br>
-				<em><code>Gambar 3</code>. Form factor yang lebih kecil daripad Mini-ITX</em>
-				<br>
-				</center>
-				`;
-
-				
-				
-				document.getElementById("g9").innerHTML = `
-				<div id="satu">
-						<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-						<div id="tp" class="isko">
-								<b><i>
-							Isilah kotak kosong berikut dengan jawaban yang benar!
-							</i></b>
-							<br><br> 
-							Motherboard berfungsi sebagai alat <input type="baru2" id="kom" onkeyup="kosong()" > hardware komputer.
-								<br><br>
-								<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-								<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-								<br>
-								<p id="tampil"></p>
-								<br>
-						</div>
-					</div>
-				
-					<div id="dua">
-						<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-						<div id="tp2" class="isko">
-							
-									Motherboard termasuk dalam kategori perangkat ... komputer.
-									<br>
-									<input name="q2" id="r1" type="radio"  /> Input <br>
-									<input name="q2" id="r2" type="radio"  /> Proses <br>
-									<input name="q2" id="r3" type="radio"  /> Output <br>
-								<br>
-								<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-								<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-								<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-								<p id="tampil2"></p>
-								<br>
-									
-								
-						</div>
-					</div>
-					<div id="tiga">
-						<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-						<div id="tp3" class="isko">
-							Jenis form factor Main Board yang memiliki ukuran paling besar adalah ....
-								<br>
-								<input name="q3" id="r4" type="radio"  /> Mini-ITX <br>
-								<input name="q3" id="r5" type="radio"  /> Micro-ATX <br>
-								<input name="q3" id="r6" type="radio"  /> ATX <br>
-								<input name="q3" id="r7" type="radio"  /> E-ATX <br>
-							<br>
-							<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-							<p id="tampil3"></p>
-							<br>
-								
-						</div>
-					</div>
-				`;
-				document.getElementById("g10").innerHTML = `
-				<br>
-				<div id="bas2" class="next" style="margin:5px;">
-				<a href="materi6.html"><button class="button-left-hp"> <- Kembali </button></a> 
-				<a href="materi8.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
-				</div>
-				<br>
-				`;
-				
-			} else {
-				document.getElementById("ba").style.width="39%";
-				document.getElementById("bas").style.display="block";
-				document.getElementById("bas2").style.display="block";
-				document.getElementById("ba").style.height="370px";
-				document.getElementById("menu-wrap").style.width="18%";
-				document.getElementById("menu-wrap").style.height="100px";
-				document.getElementById("menu-wrap").style.display="block";
-				document.getElementById("logogbr").style.display="";
-				document.getElementById("namalogo").style.display="";
-				document.getElementById("menuhp").style.display="none";
-				document.getElementById("brnd").style.display="none";
-				document.getElementById("g1").innerHTML = "";
-				document.getElementById("g2").innerHTML = "";
-				document.getElementById("g3").innerHTML = "";
-				document.getElementById("g9").innerHTML = "";
-				document.getElementById("g10").innerHTML = "";
-				document.getElementById("bas2").style.display="block";
-				}
-			}
-
-			var x = window.matchMedia("(max-width: 1000px)")
-			responsif(x) // Call listener function at run time
-			x.addListener(responsif) // Attach listener function on state changes
-		
-		
-
-		function hilang(){
-			var x = document.getElementById('menu-wrap');
-			if (x.style.display === 'block') {
-				x.style.display = 'none';
-				
-			} else {
-				x.style.display = 'block';
-				x.style.width = '100%';
-				x.style.marginLeft = '0';
-			}
-		}
-		
-
-		function go(){
-			location.href="../index.html";
-		}
+			
 	  </script>
 </body>
 </html>

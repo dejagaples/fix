@@ -30,8 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 	};
@@ -74,13 +72,21 @@
 					<div class="modal-body">
 					<form>
 						<div class="container">
-								<label >
+							<label >
 								<b>1. Bacalah penjelasan heatsink terlebih dahulu.</b>
 							</label>
 							<br/>
 							<label >
-								<b>2. Klik ikon pojok kanan pada model 3D untuk memperbesar.</b>
-								</label>
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+							</label>
+							<br/>
+							<label >
+									<b>3. Klik ikon  <i class="fas fa-external-link-alt"> </i>  untuk memperbesar model 3D . </b>
+							</label>
+							<br/>
+							<label >
+									<b>4. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
+							</label>
 							<br/><br/>
 						</div>
 					</form>
@@ -191,6 +197,10 @@
           Letaknya berada di atas CPU pada Motherboard.
 					 Model 3D dari Heatsink dapat dilihat pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
@@ -198,6 +208,10 @@
             (atau cuma disebut <b>Fan</b>) biasanya terletak didekat case komputer. Fungsinya yaitu mengganti udara yang telah
             diproses Heatsink, sehingga terjadi pertukaran udara dalam dan luar case. Lihat
 			<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+			<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 			<span id="g2" class="text-center"> </span>
 		</p>
 			
@@ -209,96 +223,24 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><iframe id="1gb" src="../embed/hs.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D Heatsink</em>
-				<br><br>
-				<br>
-				<img id="2gb" src="../gambar/heatsink.JPG" width="100%" border="0" alt="error">
-				<br><br>
-				<em><code>Gambar 2</code>. Heatsink dan Fan</em>
-				<br>
+				<center>
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
+		
+						</div>	
+						<div id="gambar">
+						
+						</div>
 				</center>
-			  <br>
-			  
-			  
-		
-		<div id="satu">
-				<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-				<div id="tp" class="isko">
-						Fungsi heatsink yang benar adalah ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> 
-						Mengganti udara luar dan dalam Case
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	
-						Mencegah overheat di dalam Case
-						<br>
-						<input name="q2" id="r3" type="radio"  /> 
-						Mendinginkan CPU
-						<br>
-						<input name="q2" id="r4" type="radio"  /> 
-						Menarik suhu panas pada CPU
-						<br>
-						<br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-						<br>
-						<p id="tampil"></p>
-						<br>
-				</div>
-			</div>
-		
-			<div id="dua">
-				<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-				<div id="tp2" class="isko">
-						Letak heatsink biasanya berada di ....
-						<br>
-						<input name="q2" id="r5" type="radio"  /> 
-						dalam Case
-						<br>
-						<input name="q2" id="r6"  type="radio"  />	
-						luar Case
-						<br>
-						<input name="q2" id="r7" type="radio"  /> 
-						atas CPU
-						<br>
-						<input name="q2" id="r8" type="radio"  /> 
-						samping CPU
-						<br>
-						<br>
-						<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-						<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-						<p id="tampil2"></p>
-						<br>
-						
-				</div>
-			</div>
-			<div id="tiga">
-				<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-				<div id="tp3" class="isko">
-						
-							Perhatikan gambar berikut, mana saja kah yang termasuk heatsink!
-							<br>
-							<input type="checkbox" id="a1" > <img src="../gambar/hsd1.jpg" width="20%"/>
-							<input type="checkbox" id="a2" > <img src="../gambar/hsd2.jpg" width="20%"/><br>
-							<input type="checkbox" id="a3" > <img src="../gambar/hsd3.jpeg" width="20%"/>
-							<input type="checkbox" id="a4" > <img src="../gambar/hsd4.jpg" width="20%"/><br>
-								
-						<br>
-					<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-					<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-					<p id="tampil3"></p>
-					<br>
-						
-				</div>
-			</div>
-		<br>
+			 
 		</div>
 		<div id="bas2" class="next">
 				<a href="odd.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi12.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi11soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
 
@@ -373,16 +315,7 @@
 			}
 		}
 		
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunc);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		document.getElementById("r3").addEventListener("click", myFunc);
-		document.getElementById("r4").addEventListener("click", myFunc);
 		
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
 
 		function cek2(){
 			if (document.getElementById('r7').checked) {
@@ -395,16 +328,7 @@
 			}
 		}
 		
-		//clear jawaban
-		document.getElementById("r5").addEventListener("click", myFun);
-		document.getElementById("r6").addEventListener("click", myFun);
-		document.getElementById("r7").addEventListener("click", myFun);
-		document.getElementById("r8").addEventListener("click", myFun);
 		
-		function myFun() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
 
 
 		function cek3() {
@@ -418,20 +342,14 @@
 				}
 			}
 		
-		//clear jawaban
-		document.getElementById("a1").addEventListener("click", myF);
-		document.getElementById("a2").addEventListener("click", myF);
-		document.getElementById("a3").addEventListener("click", myF);
-		document.getElementById("a4").addEventListener("click", myF);
 		
-
-		function myF() {
-				document.getElementById("tampil3").innerHTML="";
-				
-		}
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -443,18 +361,18 @@
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
 				document.getElementById("g1").innerHTML = `
-				<br><br>
+				
 				<center><iframe id="1gb" src="../embed/hs.html" width="100%" height="300" style="border-color:grey" > </iframe>
 				<br>
 				<em><code>Gambar 1</code>. Model 3D Heatsink</em>
-				<br><br>
+				
 				</center>   
 				`;
 				document.getElementById("g2").innerHTML = `
 				<center>
 					<br>
 					<img id="2gb" src="../gambar/heatsink.JPG" width="100%" border="0" alt="error">
-				<br><br>
+				<br>
 				<em><code>Gambar 2</code>. Heatsink dan Fan</em>
 				</center>
 				`;
@@ -543,6 +461,10 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -579,14 +501,67 @@
 			}
 		}
 		
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
+		
 		
 		function go(){
 			location.href="../index.html";
+		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/hs.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D Heatsink</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+				<img id="2gb" src="../gambar/heatsink.JPG" width="100%" border="0" alt="error">
+				<br><br>
+				<em><code>Gambar 2</code>. Heatsink dan Fan</em>
+			`;
+			
+			
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", myFunc);
+		document.getElementById("r2").addEventListener("click", myFunc);
+		document.getElementById("r3").addEventListener("click", myFunc);
+		document.getElementById("r4").addEventListener("click", myFunc);
+		
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+
+
+		document.getElementById("r5").addEventListener("click", myFun);
+		document.getElementById("r6").addEventListener("click", myFun);
+		document.getElementById("r7").addEventListener("click", myFun);
+		document.getElementById("r8").addEventListener("click", myFun);
+		
+		function myFun() {
+				document.getElementById("tampil2").innerHTML="";
+				
+		}
+
+
+		document.getElementById("a1").addEventListener("click", myF);
+		document.getElementById("a2").addEventListener("click", myF);
+		document.getElementById("a3").addEventListener("click", myF);
+		document.getElementById("a4").addEventListener("click", myF);
+		
+
+		function myF() {
+				document.getElementById("tampil3").innerHTML="";
+				
 		}
 	  </script>
 </body>

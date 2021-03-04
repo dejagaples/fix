@@ -30,8 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 	};
@@ -79,7 +77,11 @@
 								</label>
 								<br/>
 								<label >
-									<b>2. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
+										<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+									</label>
+									<br>
+								<label >
+									<b>3. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
 									</label>
 								<br/><br/>
 							</div>
@@ -189,6 +191,10 @@
 		  tersimpan di RAM akan hilang saat komputer dimatikan (volatile).
 					 Model 3D dari RAM dapat dilihat pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
@@ -196,16 +202,20 @@
 			dimasukkan ke tas, melainkan hanya buku yang perlu saja. Maka dari itu, fungsi RAM menyimpan
 			data aplikasi yang saat ini digunakan. Tujuannya untuk kecepatan akses.
 			Semakin besar memori RAM maka semakin banyak ruang penyimpanan sementara, dan kecepatan akses semakin bertambah.
+			<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 			<span id="g2" class="text-center"> </span>
 		</p>
 		<p>
 				Beberapa jenis RAM diantaranya DRAM, SRAM, 
 				RDRAM, EDORAM, SDRAM/DIMM, SO-DIMM, Flash RAM, LPDDR, dll. Namun yang lebih sering digunakan saat ini
 				adalah DDR SDRAM (untuk PC), DDR SO-DIMM RAM (untuk laptop/notebook), dan LPDDR (untuk smartphone). 
-				
+				<span id="ss">
 			Lihat 
 		<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> tersebut.
-					
+			</span>
 			</p>
 			
 			
@@ -213,77 +223,29 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><iframe id="1gb" src="../embed/ram.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D RAM</em>
-				<br>
-				<br>
-				<img id="2gb" src="../gambar/jenram.jpg" width="100%" border="0" alt="error">
-				<br><br>
-				<em><code>Gambar 2</code>. SD-RAM/DIMM, SO-DIMM, dan LPDDR</em>
-				<br>
+				<center>
+					<div id="first" style="margin-top: 150px;">
+						<i class="fas fa-lock" style="font-size: 20px;"></i>
+					<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+						<br>
+						<<
+					</p>
+
+				</div>	
+				<div id="gambar">
+				
+				</div>
 				</center>
-			  <br>
+			
 			  
 			  
 			  
-			<div id="satu">
-				<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-				<div id="tp" class="isko">
-						<b><i>
-					Isilah kotak kosong berikut dengan jawaban yang benar!
-					</i></b>
-					<br><br> 
-					RAM berfungsi sebagai tempat penyimpanan data <input type="baru2" id="s1" onkeyup="kosong()" > .
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-						<br>
-						<p id="tampil"></p>
-						<br>
-				</div>
-			</div>
-		
-			<div id="dua">
-				<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-				<div id="tp2" class="isko">
-						Jenis RAM yang sering digunakan untuk komputer desktop adalah ....
-						<br>
-						<input name="q3" id="r4" type="radio"  /> DRAM <br>
-						<input name="q3" id="r5" type="radio"  /> SRAM <br>
-						<input name="q3" id="r6" type="radio"  /> RDRAM <br>
-						<input name="q3" id="r7" type="radio"  /> SDRAM <br>
-						<br>
-						<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-						<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-						<p id="tampil2"></p>
-						<br>
-							
-						
-				</div>
-			</div>
-			<div id="tiga">
-				<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-				<div id="tp3" class="isko">
-						<b><i>
-								Isilah kotak kosong berikut dengan jawaban yang benar!
-								</i></b>
-								<br><br> 
-					Data yang tersimpan pada RAM akan hilang saat komputer dimatikan, yakni bersifat <input type="baru2" id="s3" onkeyup="kosong3()" > .
-						<br><br>
-					<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-					<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-					<p id="tampil3"></p>
-					<br>
-						
-				</div>
-			</div>
+			
 		<br>
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi8.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi10.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi9soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		
 		<audio id="benar">
@@ -417,14 +379,7 @@
 				}
 			}
 
-			document.getElementById("r4").addEventListener("click", r2);
-			document.getElementById("r5").addEventListener("click", r2);
-			document.getElementById("r6").addEventListener("click", r2);
-			document.getElementById("r7").addEventListener("click", r2);
-			function r2() {
-					document.getElementById("tampil2").innerHTML="";
-					
-			}
+			
 
 			function cek2(){
 			if (document.getElementById('r7').checked) {
@@ -442,6 +397,10 @@
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -452,8 +411,9 @@
 				document.getElementById("menuhp").style.display="block";
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("ss").style.display="none";
 				document.getElementById("g1").innerHTML = `
-				<br><br>
+				
 				<center><iframe id="1gb" src="../embed/ram.html" width="100%" height="300" style="border-color:grey" > </iframe>
 				<br>
 				<em><code>Gambar 1</code>. Model 3D RAM</em>
@@ -463,10 +423,10 @@
 				document.getElementById("g2").innerHTML = `
 				<center>
 					<br>
-				<img id="2gb" src="../gambar/jenram.jpg" width="50%" border="0" alt="error">
+				<img id="2gb" src="../gambar/jenram.jpg" width="90%" border="0" alt="error">
 				<br><br>
 				<em><code>Gambar 2</code>. SD-RAM/DIMM, SO-DIMM, dan LPDDR</em>
-				<br><br>
+				
 				</center>
 				`;
 				
@@ -535,6 +495,10 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -551,6 +515,7 @@
 				document.getElementById("g9").innerHTML = "";
 				document.getElementById("g10").innerHTML = "";
 				document.getElementById("bas2").style.display="block";
+				document.getElementById("ss").style.display="";
 				}
 			}
 
@@ -571,15 +536,46 @@
 			}
 		}
 		
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
+		
 		
 		function go(){
 			location.href="../index.html";
 		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/ram.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D RAM</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+			<img id="2gb" src="../gambar/jenram.jpg" width="100%" border="0" alt="error">
+				<br><br>
+				<em><code>Gambar 2</code>. SD-RAM/DIMM, SO-DIMM, dan LPDDR</em>
+			`;
+			
+			
+		}
+
+		//cleae
+		document.getElementById("r4").addEventListener("click", r2);
+			document.getElementById("r5").addEventListener("click", r2);
+			document.getElementById("r6").addEventListener("click", r2);
+			document.getElementById("r7").addEventListener("click", r2);
+			function r2() {
+					document.getElementById("tampil2").innerHTML="";
+					
+			}
+		
+
 	  </script>
 </body>
 </html>

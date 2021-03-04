@@ -30,7 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
 				document.getElementById("empat").hidden = true;
 	};
 </script>
@@ -75,6 +74,10 @@
 								<label >
 								<b>1. Bacalah penjelasan Monitor dengan tenang secara berurutan.</b>
 							</label>
+							<br>
+							<label >
+									<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+								</label>
 							<br/><br/>
 						</div>
 					</form>
@@ -197,9 +200,18 @@
 					dan
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code>
 					berikut. 
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					<br></div>
 					<span id="g1" class="text-center"> </span>
 				Adapun perbedaan keempat jenis monitor tersebut dapat dilihat pada
 				<code><a href="#tabel1" style="text-decoration:none;color:blue;">Tabel 1</a></code> berikut.
+				<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+						<br>
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 			<span id="g2" class="text-center"> </span>
 		</p>
 			
@@ -208,103 +220,25 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><img id="1gb" src="../gambar/crtlcd.png" width=70%>
-				<br>
-				<em><code>Gambar 1</code>. Monitor CRT dan Monitor LCD</em>
-				<br><br>
-				<br>
-				<img id="1gb" src="../gambar/ledplasma.png" width=70%>
-				<br><br>
-				<em><code>Gambar 2</code>. Monitor LED dan Monitor Plasma</em>
-				<br><br>
-				<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
+				<center>
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
+		
+						</div>	
+						<div id="gambar">
+						
+						</div>
 				</center>
-			  
-			  
-			  <table class="table table-striped">
-				<tr class="thead-dark">
-					<th>Monitor</th>
-					<th style="text-align:center;">Metode</th>
-					<th style="text-align:center;">Fisik</th>
-					<th style="text-align:center;">Deskripsi</th>
-				</tr>
-				<tr >
-					<td >CRT</td>
-					<td >tabung sinar katoda</td>
-					<td >seperti tv tabung</td>
-					<td >merupakan jenis yang lebih lama</td>
-				</tr>
-				<tr>
-					<td >LCD</td>
-					<td >cairan kristal</td>
-					<td >flat (pipih)</td>
-					<td >resolusi lebih tinggi dari CRT</td>
-				</tr>
-				<tr>
-					<td >LED</td>
-					<td >emisi cahaya</td>
-					<td >lebih ramping daripada LCD</td>
-					<td >konsumsi listrik lebih hemat dari LCD, namun lebih mahal.</td>
-				</tr>
-				<tr>
-					<td >Plasma</td>
-					<td >gas neon atau xenon</td>
-					<td >pipih namun sangat lebar</td>
-					<td >merupakan kombinasi CRT dan LCD</td>
-				</tr>
-	  </table>
-
-	 
-	  <div id="satu">
-		<div id="kotak">Pertanyaan: ( 1 dari 2 )</div>
-		<div id="tp" class="isko">
-			Jenis monitor yang populer digunakan komputer sekarang antara lain ....
-			<br>
-			<input type="checkbox" id="a1" > <span >Monitor CRT</span><br>
-			<input type="checkbox" id="a2" > <span >Monitor LED</span><br>
-			<input type="checkbox" id="a3" > <span >Monitor LCD</span><br>
-			<br>
-				<button class="button-pertanyaan" onclick="check()">Cek Jawaban</button>
-				<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-				<br>
-				<p id="tampil"></p>
-				<br>
 		</div>
-	</div>
-
-	<div id="dua">
-		<div id="kotak2">Pertanyaan: ( 2 dari 2 )</div>
-		<div id="tp2" class="isko">
-
-					Jenis monitor yang menggunakan metode emisi cahaya adalah monitor ....
-					<br>
-				<input name="q2" id="r1" type="radio"  /> 
-				CRT
-				<br>
-				<input name="q2" id="r2"  type="radio"  />	
-				LCD
-				<br>
-				<input name="q2" id="r3"  type="radio"  />	
-				LED
-				<br>
-				<input name="q2" id="r4"  type="radio"  />	
-				Plasma
-				<br>
-				<br>
-				<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-				<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-				<p id="tampil2"></p>
-				<br>
-				
-		</div>
-	</div>
-	  <br>
-</div>
 		
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi14.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi16.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi15soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
 		<audio id="benar">
@@ -362,29 +296,7 @@
 			}
 		}
 
-		//clear jawaban
-		document.getElementById("a1").addEventListener("click", myFunction);
-		document.getElementById("a2").addEventListener("click", myFunc);
-		document.getElementById("a3").addEventListener("click", myFun);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
 		
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-		
-		}
-		function myFun() {
-				document.getElementById("tampil").innerHTML="";
-		}
-		document.getElementById("r1").addEventListener("click", my);
-		document.getElementById("r2").addEventListener("click", my);
-		document.getElementById("r3").addEventListener("click", my);
-		document.getElementById("r4").addEventListener("click", my);
-		function my() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
 
 
 		function cek2(){
@@ -397,10 +309,16 @@
 				document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 			}
 		}
+
+		
 		
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -412,22 +330,21 @@
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
 				document.getElementById("g1").innerHTML = `
-				<br><br>
-				<center><img id="1gb" src="../gambar/crtlcd.png" width=70%>
+				
+				<center><img id="1gb" src="../gambar/crtlcd.png" width=90%>
 				<br>
 				<em><code>Gambar 1</code>. Monitor CRT dan Monitor LCD</em>
-				<br><br>
 				<br>
-				<img id="1gb" src="../gambar/ledplasma.png" width=70%>
-				<br><br>
+				<img id="1gb" src="../gambar/ledplasma.png" width=90%>
+				<br>
 				<em><code>Gambar 2</code>. Monitor LED dan Monitor Plasma</em>
 				<br><br>
 				</center>   
 				`;
 				document.getElementById("g2").innerHTML = `
 				<center>
-					<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
 					<br>
+					<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
 					<br>
 					<table class="table table-striped">
 				<tr class="thead-dark">
@@ -520,6 +437,10 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -559,6 +480,91 @@
 		
 		function go(){
 			location.href="../index.html";
+		}
+
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<img id="1gb" src="../gambar/crtlcd.png" width=70%>
+				<br>
+				<em><code>Gambar 1</code>. Monitor CRT dan Monitor LCD</em>
+				<br><br>
+				<br>
+				<img id="1gb" src="../gambar/ledplasma.png" width=70%>
+				<br><br>
+				<em><code>Gambar 2</code>. Monitor LED dan Monitor Plasma</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<em><code id="tabel1" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan jenis monitor</em>
+
+
+<table class="table table-striped">
+				<tr class="thead-dark">
+					<th>Monitor</th>
+					<th style="text-align:center;">Metode</th>
+					<th style="text-align:center;">Fisik</th>
+					<th style="text-align:center;">Deskripsi</th>
+				</tr>
+				<tr >
+					<td >CRT</td>
+					<td >tabung sinar katoda</td>
+					<td >seperti tv tabung</td>
+					<td >merupakan jenis yang lebih lama</td>
+				</tr>
+				<tr>
+					<td >LCD</td>
+					<td >cairan kristal</td>
+					<td >flat (pipih)</td>
+					<td >resolusi lebih tinggi dari CRT</td>
+				</tr>
+				<tr>
+					<td >LED</td>
+					<td >emisi cahaya</td>
+					<td >lebih ramping daripada LCD</td>
+					<td >konsumsi listrik lebih hemat dari LCD, namun lebih mahal.</td>
+				</tr>
+				<tr>
+					<td >Plasma</td>
+					<td >gas neon atau xenon</td>
+					<td >pipih namun sangat lebar</td>
+					<td >merupakan kombinasi CRT dan LCD</td>
+				</tr>
+	  </table>
+			`;
+			
+			
+		}
+
+
+		//clear jawaban
+		document.getElementById("a1").addEventListener("click", myFunction);
+		document.getElementById("a2").addEventListener("click", myFunc);
+		document.getElementById("a3").addEventListener("click", myFun);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+		
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+		
+		}
+		function myFun() {
+				document.getElementById("tampil").innerHTML="";
+		}
+		document.getElementById("r1").addEventListener("click", my);
+		document.getElementById("r2").addEventListener("click", my);
+		document.getElementById("r3").addEventListener("click", my);
+		document.getElementById("r4").addEventListener("click", my);
+		function my() {
+				document.getElementById("tampil2").innerHTML="";
+				
 		}
 	  </script>
 </body>

@@ -23,8 +23,6 @@
 			e.preventDefault();
 		}, false);
 		window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 		};
@@ -72,13 +70,18 @@
 								<b>1. Bacalah penjelasan jumper terlebih dahulu.</b>
 							</label>
 							<br/>
-							<label>
-								<b>2. Klik tulisan berwarna untuk fokus ke gambar/tabel.</b>
+							<label >
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
 							</label>
 							<br/>
 							<label>
 								<b>3. Arahkan kursor ke gambar untuk memperbesar.</b>
 							</label>
+							<br>
+							<label >
+									<b>4. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
+							</label>
+
 							<br/><br/>
 						</div>
 					</form>
@@ -185,6 +188,10 @@
 					Jumper pada komputer adalah penghubung (konektor) sirkuit elektronik. Fungsinya untuk menghubungkan 
 					atau memutus suatu sirkuit/aliran listrik. Bentuk jumper sangat kecil, seperti pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+				<div id="btn1"> 
+				<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+				</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<h5><br>1. Jumper CMOS</h5>
@@ -194,8 +201,12 @@
 			ketika boot. Pengaturan ini dikenal dengan BIOS (Basic Input Output System). Jumper ini terletak dekat 
 			baterai CMOS. Lihat 
 			<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+			<span id="h2">(Klik tombol untuk menampilkan)</span>
+				<div id="btn2"> 
+				<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+			</div>
 			<span id="g2" > </span>
-					Biasanya dekat baterai CMOS terdapat 3 pin. Fungsi jumper pada pin :
+					Biasanya dekat baterai CMOS terdapat 3 pin. Fungsi jumper pada pin:
 					<ul>
 						<li>
 							Jika pin 1-2 dihubungkan, maka CMOS akan menyimpan setiap settingan yang disimpan melalui BIOS. 
@@ -213,6 +224,10 @@
 					Jumper audio adalah jumper untuk mengaktifkan suara jika tidak ada kabel front audio. Pengguna tinggal 
 			menghubungkan pin 5-6 dan 9-10. Lihat 
 			<code><a href="#3gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 3</a></code> berikut.
+			<span id="h3">(Klik tombol untuk menampilkan)</span>
+				<div id="btn3"> 
+				<center><button class="button-lihat" onclick="g3tampil()">Lihat >></button></center>
+				</div>
 					<span id="g3" > </span>
 					
 			</p>
@@ -221,8 +236,11 @@
 					Jumper ini digunakan untuk mengaktifkan fungsi USB. Terdapat 3 pin untuk setting jumper ini.
 					Lihat
 					<code><a href="#4gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 4</a></code> berikut.
+					<span id="h4">(Klik tombol untuk menampilkan)</span>
+				<div id="btn4"> 
+				<center><button class="button-lihat" onclick="g4tampil()">Lihat >></button></center>
+				</div>
 					<span id="g4" > </span>
-					<br>
 					Cara menggunakan jumper ini:
 			<ul>
 					<li>Jika tidak ada jumper pada semua pin, maka USB tidak berfungsi. </li>
@@ -236,6 +254,10 @@
 					Biasanya terdapat pin di sekitar slot RAM pada Motherboard yang memiliki 2 jenis slot memory. Maka 
 					untuk memilih salah satu slot diperlukan jumper ini. Mari lihat 
 					<code><a href="#5gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 5</a></code> berikut.					
+					<span id="h5">(Klik tombol untuk menampilkan)</span>
+				<div id="btn5"> 
+				<center><button class="button-lihat" onclick="g5tampil()">Lihat >></button></center>
+				</div>
 					<span id="g5" > </span>
 					
 			</p>
@@ -244,7 +266,11 @@
 					Berguna untuk menentukan status Master (utama) atau Slave (sekunder) saat melakukan penggabungan 
 			Harddisk dengan Harddisk atau Harddisk dengan ODD pada satu kabel ATA.
 			Mari lihat <code><a href="#6gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 6</a></code> berikut.
-					<span id="g6" > </span><br>
+			<span id="h6">(Klik tombol untuk menampilkan)</span>
+				<div id="btn6"> 
+				<center><button class="button-lihat" onclick="g6tampil()">Lihat >></button></center>
+				</div>
+					<span id="g6" > </span>
 					Jika status sama-sama Master, maka keduanya tidak akan terdeteksi oleh Motherboard. Pada Motherboard 
 			tertentu, status Slave pada harddisk tunggal juga tidak akan terdeteksi.
 	
@@ -254,113 +280,25 @@
 		</div>
 		<div id="bas" class="kon2">
 				<center>
-						<img id ="1gb" src="../gambar/jumper.jpg" width="50%" 
-						onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="error">
+					<div id="first" style="margin-top: 150px;">
+					<i class="fas fa-lock" style="font-size: 20px;"></i>
+					<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
 						<br>
-						<em><code>Gambar 1</code>. Jumper</em>
-						<br><br><br>
-						<img id="2gb" class="hover03 column" src="../gambar/jumpercmos.jpg" width="50%"
-	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
-						<em><code>Gambar 2</code>. Jumper CMOS</em>
-						<br><br>
-						<img id="3gb" class="hover03 column" src="../gambar/jumperaudio.jpg" width="50%"
-	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br>
-						<em><code>Gambar 3</code>. Jumper Audio</em>
-						<br><br><br>
-						<img id="4gb" class="hover03 column" src="../gambar/jumperusb.jpg" width="50%"
-	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br>
-						<em><code>Gambar 4</code>. Jumper USB</em>
-						<br><br>
-						<img id="5gb" class="hover03 column" src="../gambar/jumperram.jpg" width="50%"
-	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br>
-						<em><code>Gambar 5</code>. Jumper RAM</em>
-						<br><br>
-						<img id="6gb" class="hover03 column" src="../gambar/jumpersata.jpg" width="50%"
-	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
-						<em><code>Gambar 6</code>. Jumper ATA</em>
+						<<
+					</p>
+
+				</div>	
+				<div id="gambar">
+				
+				</div>
 
 				</center>
-				<br>
-				<div id="satu">
-					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-					<div id="tp" class="isko">
-						Pada gambar berikut ini, klik gambar yang menunjukkan penggunaan jumper pada USB power!
-							<br><br>
-							<center>
-							<img src="../gambar/jumpersoal11.JPG" usemap="#workmap2" width="300"/>
-							</center>	
-							<map name="workmap2">
-								<area id="5" shape="rect" coords="0,3,90,52" href="#" onclick="cek11()">
-								<area id="6" shape="rect" coords="110,3,210,52" href="#" onclick="cek12()">
-								<area id="7" shape="rect" coords="229,3,300,52" href="#" onclick="cek13()">
-							</map>
-							<br>
-							<button class="button-pertanyaan" onclick="dua()" style="float: right;">Selanjutnya</button>
-							<br>
-							<p id="tampil3"></p>
-							<br>
-					</div>
-				</div>
-
-				<div id="dua">
-					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-					<div id="tp2" class="isko">
-						Perhatikan gambar berikut!
-						<br><br>
-						<center>
-						<img src="../gambar/jumpersoal2.JPG" width="300"/>
-						</center>
-						<br>
-						Pemasangan jumper tersebut untuk menentukan status ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> Slave <br>
-						<input name="q2" id="r2" type="radio"  /> Master Standalone <br>
-						<input name="q2" id="r3" type="radio"  /> Cable Select <br>
-						<input name="q2" id="r4" type="radio"  /> Master with Non ATA <br>
-							<br>
-							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-							<p id="tampil2"></p>
-							<br>
-								
-							
-					</div>
-				</div>
-				<div id="tiga">
-					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-					<div id="tp3" class="isko">
-						Perhatikan gambar simulasi kabel Front Audio berikut.
-						<br><br>
-						<center>
-						<img src="../gambar/jumpersoal3.JPG" width="100"/>
-						</center>
-						<br>
-						Jika kabel front audio tidak berfungsi (rusak), maka kita dapat menggunakan jumper sebagai alternatif dengan memasangnya pada nomor ...
-						<br>
-						<input type="checkbox" id="a1" > <span >1 - 2</span><br>
-						<input type="checkbox" id="a2" > <span >3 - 4</span><br>
-						<input type="checkbox" id="a3" > <span >5 - 6</span><br>
-						<input type="checkbox" id="a4" > <span >7 - 8</span><br>
-						<input type="checkbox" id="a5" > <span >9 - 10</span><br>
-						
-						<br>
-						<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-						<p id="tampil"></p>
-						<br>
-							
-					</div>
-				</div>				
+				
+				
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi3.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="kuis1.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi4soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		
 		<audio id="benar">
@@ -435,27 +373,7 @@
 			}
 		}
 
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", r1);
-		document.getElementById("r2").addEventListener("click", r2);
-		function r1() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
-		function r2() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
-		document.getElementById("r3").addEventListener("click", r1);
-		document.getElementById("r4").addEventListener("click", r2);
-		function r3() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
-		function r4() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
+		
 
 		function cek3() {
 			if ((document.getElementById("a3").checked == true)&&(document.getElementById("a5").checked == true)&&(document.getElementById("a1").checked == false)&&(document.getElementById("a2").checked == false)&&(document.getElementById("a4").checked == false)){
@@ -469,35 +387,22 @@
 		}
 
 		
-		//clear jawaban2
-		document.getElementById("a1").addEventListener("click", myFunction);
-		document.getElementById("a2").addEventListener("click", myFunc);
-		document.getElementById("a3").addEventListener("click", myFun);
-		document.getElementById("a4").addEventListener("click", myFu);
-		document.getElementById("a5").addEventListener("click", myF);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFun() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFu() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myF() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
+		
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("h3").style.display="none";
+				document.getElementById("h4").style.display="none";
+				document.getElementById("h5").style.display="none";
+				document.getElementById("h6").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
+				document.getElementById("btn3").hidden=true;
+				document.getElementById("btn4").hidden=true;
+				document.getElementById("btn5").hidden=true;
+				document.getElementById("btn6").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -520,9 +425,9 @@
 				document.getElementById("g2").innerHTML = `
 				<center>
 						<br>
-						<img id="2gb" class="hover03 column" src="../gambar/jumpercmos.jpg" width="50%"
+						<img id="2gb" class="hover03 column" src="../gambar/jumpercmos.jpg" width="70%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
+						<br>
 						<em><code>Gambar 2</code>. Jumper CMOS</em>
 						<br><br>
 				</center>
@@ -530,9 +435,9 @@
 				document.getElementById("g3").innerHTML = `
 				<center>
 						<br>
-						<img id="3gb" class="hover03 column" src="../gambar/jumperaudio.jpg" width="50%"
+						<img id="3gb" class="hover03 column" src="../gambar/jumperaudio.jpg" width="70%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
+						<br>
 						<em><code>Gambar 3</code>. Jumper Audio</em>
 						<br>
 				</center>
@@ -540,27 +445,28 @@
 				document.getElementById("g4").innerHTML = `
 					<center>
 						<br>
-						<img id="4gb" class="hover03 column" src="../gambar/jumperusb.jpg" width="50%"
+						<img id="4gb" class="hover03 column" src="../gambar/jumperusb.jpg" width="70%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
+						<br>
 						<em><code>Gambar 4</code>. Jumper USB</em>
 					</center>
 				`;
 				document.getElementById("g5").innerHTML = `
 						<center>
-							<img id="5gb" class="hover03 column" src="../gambar/jumperram.jpg" width="50%"
+							<img id="5gb" class="hover03 column" src="../gambar/jumperram.jpg" width="70%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
+						<br>
 						<em><code>Gambar 5</code>. Jumper RAM</em>
 						<br>
 						</center>
 				`;
 				document.getElementById("g6").innerHTML = `
 						<center>
-						<br><img id="6gb" class="hover03 column" src="../gambar/jumpersata.jpg" width="50%"
+						<br><img id="6gb" class="hover03 column" src="../gambar/jumpersata.jpg" width="80%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
-						<br><br>
+						<br>
 						<em><code>Gambar 6</code>. Jumper ATA</em>
+						<br><br>
 						</center>
 				`;
 				
@@ -647,6 +553,18 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("h3").style.display="";
+				document.getElementById("h4").style.display="";
+				document.getElementById("h5").style.display="";
+				document.getElementById("h6").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
+				document.getElementById("btn3").hidden=false;
+				document.getElementById("btn4").hidden=false;
+				document.getElementById("btn5").hidden=false;
+				document.getElementById("btn6").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -692,6 +610,103 @@
 			location.href="../index.html";
 		}
 		
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id ="1gb" src="../gambar/jumper.jpg" width="50%" 
+						onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<em><code>Gambar 1</code>. Jumper</em>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="2gb" class="hover03 column" src="../gambar/jumpercmos.jpg" width="50%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br><br>
+						<em><code>Gambar 2</code>. Jumper CMOS</em>
+			`;
+			
+			
+		}
+
+		function g3tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="3gb" class="hover03 column" src="../gambar/jumperaudio.jpg" width="50%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br><br>
+						<em><code>Gambar 3</code>. Jumper Audio</em>
+			`;
+			
+			
+		}
+
+		function g4tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="4gb" class="hover03 column" src="../gambar/jumperusb.jpg" width="50%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<em><code>Gambar 4</code>. Jumper USB</em>
+			`;
+			
+			
+		}
+
+		function g5tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="5gb" class="hover03 column" src="../gambar/jumperram.jpg" width="50%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<em><code>Gambar 5</code>. Jumper RAM</em>
+			`;
+			
+			
+		}
+
+		function g6tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br><br>
+			<img id="6gb" class="hover03 column" src="../gambar/jumpersata.jpg" width="50%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br><br>
+						<em><code>Gambar 6</code>. Jumper ATA</em>
+			`;
+			
+			
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", res);
+		document.getElementById("r2").addEventListener("click", res);
+		document.getElementById("r3").addEventListener("click", res);
+		document.getElementById("r4").addEventListener("click", res);
+		function res() {
+				document.getElementById("tampil2").innerHTML="";
+				
+		}
+		
+		document.getElementById("a1").addEventListener("click", myF);
+		document.getElementById("a2").addEventListener("click", myF);
+		document.getElementById("a3").addEventListener("click", myF);
+		document.getElementById("a4").addEventListener("click", myF);
+		document.getElementById("a5").addEventListener("click", myF);
+		function myF() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
     		
 	</script>
 

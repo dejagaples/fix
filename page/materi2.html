@@ -22,8 +22,6 @@
 			e.preventDefault();
 		}, false);
 		window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 		};
@@ -70,6 +68,17 @@
 							<label >
 								<b>1. Bacalah penjelasan sekrup dan baut terlebih dahulu.</b>
 							</label>
+							<br>
+							<label >
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+
+								<br>							
+							</label>
+							<br/>
+							<label >
+									<b>3. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
+							</label>
+							<br/>
 							<br/>
 						</div>
 					</form>
@@ -174,9 +183,13 @@
 					sisi lengkungnya. Fungsi sekrup dan baut adalah sebagai pengikat untuk menahan 2 objek bersamaan. Beberapa jenis 
 					yang digunakan untuk perakitan komputer dapat dilihat pada 
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> dan
-					<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+					<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut. <span id="h1">(Klik tombol untuk menampilkan)</span>
+				<div id="btn1"> 
+				<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+				<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+				</div>
 			</p>
-				<br><div id="g1" class="text-center"> </div>
+				<div id="g1" class="text-center"> </div>
 				<p style="margin-left: 40px;"> Keterangan gambar:</p>
 				<ul style="list-style:decimal; font-size: 1.5rem ;"> 
 				  <li >
@@ -210,81 +223,24 @@
 		</div>
 		<div id="bas" class="kon2">
 				<center>
-						<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="100%">
-						<br>
-						<em><code>Gambar 1</code>. Sekrup dan Baut untuk perakitan komputer</em>
-						<br><br>
-						<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="100%">
-						<br>
-						<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
+		
+						</div>
+						<div id="gambar"></div>
+						
 
 				</center>
 				<br>
-				<div id="satu">
-					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-					<div id="tp" class="isko">
-						Berikut ini jenis sekrup yang digunakan untuk memasang kipas CPU, yaitu ....
-							<br>
-							<input name="q2" id="r1" type="radio" value="minus" /> 
-							<img src="../gambar/sbp1p2.JPG" width="50"/>
-							<br>
-							<input name="q2" id="r2"  type="radio" value="plus" />	
-							<img src="../gambar/sbp1p1.JPG" width="50"/>
-							<br><br>
-							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-							<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-							<p id="tampil"></p>
-							<br>
-					</div>
-				</div>
-
-				<div id="dua">
-					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-					<div id="tp2" class="isko">
-						Pada gambar di bawah ini, klik jenis baut yang digunakan untuk dudukan Motherboard!
-							<br>
-							<center>
-							<img src="../gambar/sbp2.JPG" usemap="#workmap" width="150"/>
-							</center>	
-							<map name="workmap">
-								<area id="1" shape="rect" coords="8,35,43,67"  href="#" onclick="cek21()">
-								<area id="2" shape="rect" coords="50,25,92,67"  href="#" onclick="cek22()">
-								<area id="3" shape="rect" coords="110,7,143,72"  href="#" onclick="cek23()">
-								
-							</map>
-							<br>
-							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-							<p id="tampil2"></p>
-							<br>
-					</div>
-				</div>
-				<div id="tiga">
-					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-					<div id="tp3" class="isko">
-						Pada gambar di bawah ini, klik jenis sekrup yang digunakan untuk memasang Casing!
-							<br><br>
-							<center>
-							<img src="../gambar/sbp3.JPG" usemap="#workmap2" width="150"/>
-							</center>	
-							<map name="workmap2">
-								<area id="5" shape="rect" coords="0,0,55,68" alt="5" href="#" onclick="cek31()">
-								<area id="6" shape="rect" coords="56,0,150,68" alt="6" href="#" onclick="cek32()">
-								<area id="7" shape="rect" coords="0,69,36,145" alt="7" href="#" onclick="cek33()">
-								<area id="8" shape="rect" coords="45,100,85,145" alt="8" href="#" onclick="cek34()">
-								<area id="9" shape="rect" coords="97,89,148,145" alt="8" href="#" onclick="cek35()">
-							</map>
-							<br>
-							<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-							<p id="tampil3"></p>
-							<br>
-					</div>
-				</div>
-				<br>
+				
 		</div>
 		<div id="bas2" class="next">
         <a href="materi1.html"><button class="button-left"> <- Kembali </button></a> 
-		 <a href="materi3.html"><button class="button-right"> Selanjutnya -> </button></a>
+		 <a href="materi2soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		<audio id="benar">
 			<source src="../suara/benar.mp3" type="audio/mp3">
@@ -349,17 +305,7 @@
 			}
 		}
 		
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunction);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
+		
 
 		function cek21(){
 				y.play();
@@ -396,6 +342,8 @@
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("btn1").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -408,11 +356,11 @@
 				document.getElementById("menu-wrap").style.display="none";
 				document.getElementById("g1").innerHTML = `
 				<center>
-						<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="50%">
+						<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="80%">
 						<br>
 						<em><code>Gambar 1</code>. Sekrup dan Baut untuk perakitan komputer</em>
-						<br><br>
-						<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="50%">
+						<br>
+						<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="80%">
 						<br>
 						<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>
 
@@ -490,6 +438,8 @@
 				<br>
 				`;
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("btn1").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -524,14 +474,39 @@
 			}
 		}
 		
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
 		
 		function go(){
 			location.href="../index.html";
+		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+					<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="100%">
+					<br>
+					<em><code>Gambar 1</code>. Sekrup dan Baut untuk perakitan komputer</em>
+			`;
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+					<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="100%">
+					<br>
+					<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>	
+			`;
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", myFunction);
+		document.getElementById("r2").addEventListener("click", myFunc);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				
 		}
 	</script>
 

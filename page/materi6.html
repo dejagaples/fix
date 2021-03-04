@@ -30,8 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 	};
@@ -79,7 +77,11 @@
 								</label>
 								<br/>
 								<label >
-								<b>2. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+								</label>
+								<br>
+								<label >
+								<b>3. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
 									</label>
 								<br/><br/>
 							</div>
@@ -188,6 +190,10 @@
 		arus bolak-balik (AC). Power Supply akan mengubah tegangan AC tersebut menjadi DC (arus searah) karena hardware 
 		komputer beroperasi dengan arus DC. Model 3D dari power supply dapat dilihat pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
@@ -197,12 +203,20 @@
 					maka power supply berfungsi memompa arus listrik ke perangkat-perangkat komputer. Ada 2 tipe dasar 
 					untuk Power Supply yaitu AT dan ATX. Adapun perbedaannya dapat	dilihat pada
 					<code><a href="#1tb" style="text-decoration:none;color:blue;">Tabel 1</a></code> berikut.
+					<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 					<span id="g2" > </span>
 			</p>
 			<p>
 					Selain tipe power supply tersebut, dari segi desain kabel konektornya power supply juga dibedakan menjadi tiga, yaitu modular, semi-modular, dan non modular
 					seperti pada 
 					<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+					<span id="h3">(Klik tombol untuk menampilkan)</span>
+					<div id="btn3"> 
+					<center><button class="button-lihat" onclick="g3tampil()">Lihat >></button></center>
+					</div>
 					<span id="g3" > </span>
 			</p>
 			
@@ -210,101 +224,25 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><iframe id="1gb" src="../embed/powersupply.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D Power Supply</em>
-				<br>
-				<br>
-				<em><code id="1tb" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan Power Supply AT dan ATX</em>	
-				<br>
+				<center>
+				<div id="first" style="margin-top: 150px;">
+						<i class="fas fa-lock" style="font-size: 20px;"></i>
+					<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+						<br>
+						<<
+					</p>
+
+				</div>	
+				<div id="gambar">
+				
+				</div>
 				</center>
-				<br>
-				<table class="table table-striped">
-						<tr class="thead-dark">
-							<th style="text-align:center;">Power Supply AT</th>
-							<th style="text-align:center;">Power Supply ATX</th>
-						</tr>
-						<tr >
-							<td>Merupakan model yang lebih lama.</td>
-							<td>Merupakan model yang lebih baru.</td>
-						</tr>
-						<tr>
-							<td>Power supply AT digunakan untuk motherboard AT.</td>
-							<td>Power supply ATX digunakan untuk motherboard ATX</td>
-						</tr>
-						<tr>
-							<td>Memiliki 2 konektor motherboard model 6-pin.</td>
-							<td>Hanya memiliki 1 konektor listrik 20/24-pin.</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-						</tr>
-			  </table>
-			  <br>
-			  <center>
-				<img id="2gb" src="../gambar/images.jpeg" width="100%" border="0" alt="error">
-				<br><br>
-				<em><code>Gambar 2</code>. Desain Kabel Konektor Power Supply</em>
-				<br><br>
-			</center>
-				<div id="satu">
-					<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-					<div id="tp" class="isko">
-							<b><i>
-						Isilah kotak kosong berikut dengan jawaban yang benar!
-						</i></b>
-						<br><br> 
-						Power supply bertugas mengubah tegangan <input type="baru" id="ac" onkeyup="kosong()"> menjadi <input type="baru" id="dc" onkeyup="kosong()">
-						agar hardware komputer dapat beroperasi.
-							<br><br>
-							<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-							<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-							<br>
-							<p id="tampil"></p>
-							<br>
-					</div>
-				</div>
-			
-				<div id="dua">
-					<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-					<div id="tp2" class="isko">
-						<b><i>
-						Isilah kotak kosong berikut dengan jawaban yang benar!
-						</i></b>
-						<br><br>
-						Tipe Power Supply yang memiliki konektor berjumlah 20/24 pin adalah  <input type="baru" id="atx" onkeyup="kosong2()"> .
-						<br><br>
-							<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-							<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-							<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-							<p id="tampil2"></p>
-							<br>
-								
-							
-					</div>
-				</div>
-				<div id="tiga">
-					<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-					<div id="tp3" class="isko">
-						Power supply termasuk kategori perangkat ... komputer.
-							<br>
-							<input name="q2" id="r1" type="radio"  /> Input <br>
-							<input name="q2" id="r2" type="radio"  /> Proses <br>
-							<input name="q2" id="r3" type="radio"  /> Output <br>
-						<br>
-						<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-						<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-						<p id="tampil3"></p>
-						<br>
-							
-					</div>
-				</div>
-			<br>	
+
+					
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi5.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi7.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="materi6soal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		
 		<audio id="benar">
@@ -442,14 +380,7 @@
 				}
 			}
 
-			//clear jawaban
-			document.getElementById("r1").addEventListener("click", r1);
-			document.getElementById("r2").addEventListener("click", r1);
-			document.getElementById("r3").addEventListener("click", r1);
-			function r1() {
-					document.getElementById("tampil3").innerHTML="";
-					
-			}
+			
 
 			function cek3(){
 			if (document.getElementById('r2').checked) {
@@ -469,6 +400,12 @@
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
+				document.getElementById("h3").style.display="none";
+				document.getElementById("btn3").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -480,7 +417,7 @@
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
 				document.getElementById("g1").innerHTML = `
-				<br><br>
+				
 				<center>
 						<center><iframe id="1gb" src="../embed/powersupply.html" width="100%" height="300" style="border-color:grey" > </iframe>
 						<br>
@@ -488,8 +425,7 @@
 				</center>   
 				`;
 				document.getElementById("g2").innerHTML = `
-				<br>
-				<br>
+				
 				<em><code id="1tb" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan Power Supply AT dan ATX</em>	
 				<br>
 				<table class="table table-striped">
@@ -589,6 +525,12 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
+				document.getElementById("h3").style.display="";
+				document.getElementById("btn3").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -635,6 +577,72 @@
 		function go(){
 			location.href="../index.html";
 		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/powersupply.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D Power Supply</em>
+				<br>
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+			<em><code id="1tb" style="text-decoration:none;color:blue;">Tabel 1</code>. Perbedaan Power Supply AT dan ATX</em>	
+				<br>
+				
+				<br>
+				<table class="table table-striped">
+						<tr class="thead-dark">
+							<th style="text-align:center;">Power Supply AT</th>
+							<th style="text-align:center;">Power Supply ATX</th>
+						</tr>
+						<tr >
+							<td>Merupakan model yang lebih lama.</td>
+							<td>Merupakan model yang lebih baru.</td>
+						</tr>
+						<tr>
+							<td>Power supply AT digunakan untuk motherboard AT.</td>
+							<td>Power supply ATX digunakan untuk motherboard ATX</td>
+						</tr>
+						<tr>
+							<td>Memiliki 2 konektor motherboard model 6-pin.</td>
+							<td>Hanya memiliki 1 konektor listrik 20/24-pin.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+			  </table>
+			`;
+		}
+
+		function g3tampil() {
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<img id="2gb" src="../gambar/images.jpeg" width="100%" border="0" alt="error">
+				<br><br>
+				<em><code>Gambar 2</code>. Desain Kabel Konektor Power Supply</em>
+			`;
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", r1);
+			document.getElementById("r2").addEventListener("click", r1);
+			document.getElementById("r3").addEventListener("click", r1);
+			function r1() {
+					document.getElementById("tampil3").innerHTML="";
+					
+			}
+			
+			
+		
 	  </script>
 </body>
 </html>

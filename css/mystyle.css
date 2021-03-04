@@ -859,3 +859,112 @@
 			text-align: center;
 		}
 		
+		.button-lihat {
+			background-color: rgb(84, 132, 177);
+			color: white;
+			padding: 5px 5px;
+			margin-top: 10;
+			margin-bottom: 10px;
+			border: none;
+			cursor: pointer;
+			width: 100px;
+			font-size:13px;
+			font-family: monospace;
+
+		}
+
+		#kotak1 {
+			background-color:  rgb(145, 145, 212); 
+			color: white; padding: 10px;
+			
+			cursor: pointer;
+			font-family:'Lucida Sans';
+			
+		}
+
+		.isko1{
+			
+			
+			
+			padding-left: 20px;
+			padding-right: 30px;
+			padding-top: 10px;
+			border-style: solid;
+			border-color: rgb(145, 145, 212);
+		}
+
+		.button-lihat:hover {
+			transform: scale(1.1);
+			background-color: rgb(53, 111, 165);
+		}
+
+		#menu-wrap2 ul, #menu-wrap ul li {
+			padding:0;
+			margin:0;
+		}
+		
+		
+		
+		
+		#menu-wrap2 {
+			
+			position: fixed;
+			top: 50px;
+			bottom: 0;
+			left: 0;
+			background-color: #6d6da7;
+			margin: 0;
+			width:18%;
+			overflow:auto;
+			font-family:monospace;
+			
+		}
+
+		#menu2 > li > a {
+			display: block;
+			padding-left:30px;
+			height: 50px;
+			font-size: 17px;
+			line-height: 2em;
+			color: #fff;
+		}
+		#menu2 > li > a.tutup::after {
+			position: absolute;
+			right: 30px;
+			margin-top: 2px;
+			font-family: "FontAwesome";
+		}
+
+		.sub2 {
+			display: none;
+		}
+		.sub2 a {
+			color: #fff;
+			position: relative;
+			display: block;
+			margin-left: 50px;
+			width: 212px;
+			text-indent: 0px;
+			line-height: 39px;
+			font-size: 15px;
+		}
+		#menu2 ul .disini {
+			color: #fff;
+			border-left:white 2px solid;
+			padding-left: 5px;
+		}
+		#menu2 .active {
+			background-color: #a1b6be;
+			color: black;
+		}
+		#menu2 li ul li a:hover {
+			color: #fff;
+		}
+		#menu2 > li > a:hover {
+			display: block;
+			padding-left:30px;
+			height: 50px;
+			font-size: 17px;
+			line-height: 2em;
+			color: black;
+		}

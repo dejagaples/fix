@@ -30,8 +30,6 @@
 		e.preventDefault();
 	}, false);
 	window.onload = function awal(){
-				document.getElementById("dua").hidden = true;
-				document.getElementById("tiga").hidden = true;
 				document.getElementById("lima").hidden = true;
 				document.getElementById("enam").hidden = true;
 	};
@@ -79,7 +77,11 @@
 							</label>
 							<br/>
 							<label >
-								<b>2. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
+									<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+								</label>
+								<br>
+							<label >
+								<b>3. Cobalah putar model 3D tersebut untuk melihat dari segala arah.</b>
 								</label>
 							<br/><br/>
 						</div>
@@ -187,6 +189,10 @@
 				Beberapa ODD hanya dapat membaca data saja, namun teknologi saat ini sudah mampu menulis data.
 					 Model 3D dari Optical Disc Drive dapat dilihat pada
 					<code><a href="#1gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 1</a></code> berikut.
+					<span id="h1">(Klik tombol untuk menampilkan)</span>
+					<div id="btn1"> 
+					<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+					</div>
 					<span id="g1" class="text-center"> </span>
 			</p>
 			<p>
@@ -195,6 +201,10 @@
 				ODD yang akan digunakan. Dan juga jangan lupa mengecek optical disc yang digunakan (baik CD atau DVD) harus RW
 				agar bisa ditulis ulang lebih dari sekali). Mari lihat
 			<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut.
+			<span id="h2">(Klik tombol untuk menampilkan)</span>
+					<div id="btn2"> 
+					<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+					</div>
 			<span id="g2" class="text-center"> </span>
 		</p>
 			
@@ -203,80 +213,24 @@
 			<div id="g10"></div>
 		</div>
 		<div id="bas" class="kon2">
-				<center><iframe id="1gb" src="../embed/odd.html" width="100%" height="300" style="border-color:grey" > </iframe>
-				<br>
-				<em><code>Gambar 1</code>. Model 3D Optical Disc Drive</em>
-				<br><br>
-				<br>
-				<img id="2gb" src="../gambar/od.JPG" width="100%" border="0" alt="error">
-				<br><br>
-				<em><code>Gambar 2</code>. CD-R dan CD-RW</em>
-				<br>
-				</center>
-			  <br>
-			  
-
-			<div id="satu">
-				<div id="kotak">Pertanyaan: ( 1 dari 3 )</div>
-				<div id="tp" class="isko">
-						Berikut yang merupakan Optical Disc adalah ....
-						<br>
-						<input name="q2" id="r1" type="radio"  /> 
-						<img src="../gambar/odd.jfif" width="20%"/>
-						<br>
-						<input name="q2" id="r2"  type="radio"  />	
-						<img src="../gambar/cdr.jfif" width="20%"/>
-						<br><br>
-						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-						<br>
-						<p id="tampil"></p>
-						<br>
-				</div>
-			</div>
+				<center>
+						<div id="first" style="margin-top: 150px;">
+								<i class="fas fa-lock" style="font-size: 20px;"></i>
+							<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+								<br>
+								<<
+							</p>
 		
-			<div id="dua">
-				<div id="kotak2">Pertanyaan: ( 2 dari 3 )</div>
-				<div id="tp2" class="isko">
-						Berikut merupakan perangkat yang digunakan untuk membaca dan menulis data diantaranya ....
-						<br>
-							<input type="checkbox" id="a1" > <span >CD-ROM</span><br>
-							<input type="checkbox" id="a2" > <span >CD-R</span><br>
-							<input type="checkbox" id="a3" > <span >CD-RW</span><br>
-							<input type="checkbox" id="a4" > <span >DVD-ROM</span><br>
-							<input type="checkbox" id="a5" > <span >DVD-Writer</span><br>
-							<br>
-						<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-						<button class="button-pertanyaan" onclick="cek2()">Cek Jawaban</button>
-						<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-						<p id="tampil2"></p>
-						<br>
+						</div>	
+						<div id="gambar">
 						
-				</div>
-			</div>
-			<div id="tiga">
-				<div id="kotak">Pertanyaan: ( 3 dari 3 )</div>
-				<div id="tp3" class="isko">
-						<b><i>
-								Isilah kotak kosong berikut dengan jawaban yang benar!
-								</i></b>
-								<br><br> 
-								Optical Disc Drive merupakan perangkat yang menggunakan <input type="baru2" id="s1" onkeyup="kosong()" > 
-								untuk membaca/menulis data.
-								
-						<br><br>
-					<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-					<button class="button-pertanyaan" onclick="cek3()">Cek Jawaban</button>
-					<p id="tampil3"></p>
-					<br>
-						
-				</div>
-			</div>
-		<br>
+						</div>
+				</center>
+			
 		</div>
 		<div id="bas2" class="next">
 				<a href="materi10.html"><button class="button-left"> <- Kembali </button></a> 
-				<a href="materi11.html"><button class="button-right"> Selanjutnya -> </button></a>
+				<a href="oddsoal.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 	  
 		<audio id="benar">
@@ -340,9 +294,11 @@
 
 			function cek(){
 			if (document.getElementById('r1').checked) {
+				y.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
 				}
 			else if (document.getElementById('r2').checked){
+				z.play();
 				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
 				
 			}
@@ -351,17 +307,7 @@
 			}
 		}
 		
-		//clear jawaban
-		document.getElementById("r1").addEventListener("click", myFunction);
-		document.getElementById("r2").addEventListener("click", myFunc);
-		function myFunction() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
-		function myFunc() {
-				document.getElementById("tampil").innerHTML="";
-				
-		}
+		
 
 		function cek2() {
 				if ((document.getElementById("a1").checked == false)&&(document.getElementById("a2").checked == false)&&(document.getElementById("a3").checked == true)&&(document.getElementById("a4").checked == false)&&(document.getElementById("a5").checked == true)){
@@ -374,17 +320,7 @@
 				}
 			}
 
-		//clear jawaban
-		document.getElementById("a1").addEventListener("click", myF);
-		document.getElementById("a2").addEventListener("click", myF);
-		document.getElementById("a3").addEventListener("click", myF);
-		document.getElementById("a4").addEventListener("click", myF);
-		document.getElementById("a5").addEventListener("click", myF);
-
-		function myF() {
-				document.getElementById("tampil2").innerHTML="";
-				
-		}
+		
 
 		function kosong(){
 				var ubah = document.getElementById("s1");
@@ -424,6 +360,10 @@
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("h2").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("btn2").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -435,18 +375,18 @@
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
 				document.getElementById("g1").innerHTML = `
-				<br><br>
+				
 				<center><iframe id="1gb" src="../embed/odd.html" width="100%" height="300" style="border-color:grey" > </iframe>
 				<br>
 				<em><code>Gambar 1</code>. Model 3D Optical Disc Drive</em>
-				<br><br>
+				
 				</center>   
 				`;
 				document.getElementById("g2").innerHTML = `
 				<center>
-					<br>
+					
 					<img id="2gb" src="../gambar/od.JPG" width="100%" border="0" alt="error">
-				<br><br>
+				<br>
 				<em><code>Gambar 2</code>. CD-R dan CD-RW</em>
 				</center>
 				`;
@@ -520,6 +460,10 @@
 				`;
 				
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("h2").style.display="";
+				document.getElementById("btn1").hidden=false;
+				document.getElementById("btn2").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -556,15 +500,71 @@
 			}
 		}
 		
-		function ulang(){
-			document.getElementById("r1").checked=false;
-			document.getElementById("r2").checked=false;
-			document.getElementById("tampil").innerHTML="";
-		}
+		
 		
 		function go(){
 			location.href="../index.html";
 		}
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<iframe id="1gb" src="../embed/odd.html" width="100%" height="300" style="border-color:grey" > </iframe>
+				<br>
+				<em><code>Gambar 1</code>. Model 3D Optical Disc Drive</em>
+
+			`;
+			
+			
+		}
+
+		function g2tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<br>
+				<img id="2gb" src="../gambar/od.JPG" width="100%" border="0" alt="error">
+				<br><br>
+				<em><code>Gambar 2</code>. CD-R dan CD-RW</em>
+			`;
+			
+			
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", myFunction);
+		document.getElementById("r2").addEventListener("click", myFunc);
+		function myFunction() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+		function myFunc() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+
+		document.getElementById("a1").addEventListener("click", myF);
+		document.getElementById("a2").addEventListener("click", myF);
+		document.getElementById("a3").addEventListener("click", myF);
+		document.getElementById("a4").addEventListener("click", myF);
+		document.getElementById("a5").addEventListener("click", myF);
+
+		function myF() {
+				document.getElementById("tampil2").innerHTML="";
+				
+		}
+
+		//clear jawaban
+		document.getElementById("r1").addEventListener("click", r1);
+		document.getElementById("r2").addEventListener("click", r2);
+		function r1() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+		function r2() {
+				document.getElementById("tampil").innerHTML="";
+				
+		}
+
 	  </script>
 </body>
 </html>

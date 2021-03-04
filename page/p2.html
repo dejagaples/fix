@@ -64,6 +64,10 @@
 								<label >
 									<b>1. Bacalah dengan pelan secara berurutan. </b>
 								</label>
+								<br>
+							<label >
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
+							</label>
 								<br/>
 								<br/>
 							</div>
@@ -172,6 +176,10 @@
 				pada materi ini.
 				<span id="g1"> </span>
 				Adapun perangkat yang akan dipelajari dapat dilihat pada <code>Gambar 1</code> berikut.
+				<span id="h1">(Klik tombol untuk menampilkan)</span>
+				<div id="btn1"> 
+						<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+				</div>
 				<span id="g2"> </span>		
 			</p>
 				<br>
@@ -179,18 +187,17 @@
 			
 		</div>
 		<div id="bas" class="kon2">
-				<div id="kotak">Prasyarat:</div>
-				<div id="tp" class="isko">
-						Sudah mempelajari materi Alat.
-						<br><br>
-				</div>
-				<br>
 				<center>
-				<img src="../gambar/p2.jpg" width="80%">
-					<br><br>
-					<em><code>Gambar 1</code>. Materi yang akan dipelajari</em>
-					<br>
-				</center>
+						<div id="first" style="margin-top: 150px;">
+							<i class="fas fa-lock" style="font-size: 20px;"></i>
+						<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+							<br>
+							<<
+						</p>
+						</div>
+						</center>
+				<div id="gambar"></div>
+				
 		</div>
 		<div id="bas2" class="next">
         <a href="materi4.html"><button class="button-left"> <- Kembali </button></a> 
@@ -207,6 +214,8 @@
 
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("btn1").hidden=true;
 				document.getElementById("ba").style.width="100%";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
@@ -229,7 +238,7 @@
 				document.getElementById("g2").innerHTML = `
 				<center>
 				<br>
-				<img src="../gambar/p2.jpg" width="80%">
+				<img src="../gambar/p2.jpg" width="90%">
 					<br><br>
 					<em><code>Gambar 1</code>. Materi yang akan dipelajari</em>
 					<br>
@@ -244,6 +253,8 @@
 				<br>
 				`
 			} else {
+				document.getElementById("h1").style.display="";
+				document.getElementById("btn1").hidden=false;
 				document.getElementById("ba").style.width="39%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
@@ -280,6 +291,26 @@
 
 		function go(){
 			location.href="../index.html";
+		}
+
+
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+				<div id="kotak">Prasyarat:</div>
+				<div id="tp" class="isko">
+						Sudah mempelajari materi Alat.
+						<br><br>
+				</div>
+				<br>
+				<center>
+				<img src="../gambar/p2.jpg" width="80%">
+					<br><br>
+					<em><code>Gambar 1</code>. Materi yang akan dipelajari</em>
+					<br>
+				</center>
+			`;
+			
 		}
 		
 		
