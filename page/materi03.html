@@ -192,7 +192,7 @@
 				<br>
 				<div id="bas2" class="next" style="margin:5px;">
 				<a href="materi02.html"><button class="button-left-hp"> <- Kembali </button></a> 
-				<a href="p1.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				<a href="#"><button class="button-right-hp"> Selanjutnya -> </button></a>
 				</div>
 				<br>
 				`;
@@ -237,6 +237,14 @@
 		}
 
 		document.querySelector(".button-right").addEventListener('click', function(){
+  			swal("Selamat!", "Kamu telah menyelesaikan tahap Pengenalan", "success")
+			  .then(function() {
+				window.location="p1.html";
+				});
+	
+		});
+
+		document.querySelector(".button-right-hp").addEventListener('click', function(){
   			swal("Selamat!", "Kamu telah menyelesaikan tahap Pengenalan", "success")
 			  .then(function() {
 				window.location="p1.html";
