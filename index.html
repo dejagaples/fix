@@ -23,7 +23,12 @@
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!-- Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<div id="peng" style="text-align: center;"> 
+		<br>
+		<h2><img src="gambar/intro.jpg" width="5%" alt="">&nbsp;&nbsp;PERAKITAN KOMPUTER</h2>
+		<br>
+	</div>
+	<nav class="navbar navbar-default" style="border-radius: 0;">
 	  <div class="container-fluid">
 		<div class="navbar-header">
 		  <img src="gambar/Logo.png"  width="50" height="50" >
@@ -33,13 +38,7 @@
 		  <ul class="nav navbar-nav navbar-right">
 			<li><a href="#myPage">BERANDA</a></li>
 			<li>
-				<a href="#">BELAJAR<span class="caret"></span></a>
-				<ul>
-					<li><a href="#" >PENGENALAN</a></li>
-					<li><a href="#" onclick="sabar()" >ALAT</a></li>
-					<li><a href="#" onclick="sabar()" >PERANGKAT</a></li>
-					<li><a href="#" onclick="sabar()" >PERAKITAN</a></li> 
-				</ul>
+				<a href="page/materi0.html">BELAJAR</a>
 			</li>
 			<li><a href="page/tentang.html">TENTANG</a></li>
 			<li ><a href="#" data-toggle="modal" data-target="#petunjuk" >PETUNJUK</a></li>
@@ -133,6 +132,7 @@
 			}
 			function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("peng").hidden=true;
 				document.getElementById("gbr").style.backgroundColor="rgb(236, 233, 233)";
 				document.getElementById("gbr").style.backgroundImage="";
 				document.getElementById("warna").style.backgroundColor="";
@@ -148,6 +148,7 @@
 				document.getElementById("warna2").style.border="";
 				document.getElementById("warna2").style.borderColor="";
 			} else {
+				document.getElementById("peng").hidden=false;
 				document.getElementById("gbr").style.backgroundImage="url(gambar/gbrberanda2.png)";
 				document.getElementById("gbr").style.backgroundRepeat="no-repeat";
 				document.getElementById("gbr").style.backgroundSize="100%";
