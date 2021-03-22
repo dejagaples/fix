@@ -184,7 +184,7 @@
 			<div id="nomor">
                 <div id="soal1">
 			<!-- Soal -->	
-            <p id="demo">1. Perhatikan gambar berikut!</p>
+			<p id="demo">1. Perhatikan gambar berikut!</p>
 			<br>
 			<img src="../gambar/sps1.JPG" id="s1" >
 			<br>
@@ -478,29 +478,99 @@
                 </center>
             </div>
         <div id="soal11">
-		<p>
-			11. Drag and drop gambar di bawah ini agar perangkat masuk ke dalam kategori yang sesuai !
-		</p>
-						
-
-		
-		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<p style="text-align: center;">Perangkat Input</p>
-			
+		<div id="kom">
+			<p>
+				11. Drag and drop gambar di bawah ini agar perangkat masuk ke dalam kategori yang sesuai !
+			</p>
+			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Perangkat Input</p>
+			</div>
+			<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Perangkat Proses</p>
+			</div>
+			<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p style="text-align: center;">Perangkat Output</p>
+			</div>
+			<div id="tampung" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
+					<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
+					<img src="../gambar/ramsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag1" >
+					<img src="../gambar/msoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag2" >
+					<img src="../gambar/ssoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag3" >
+			</div>
 		</div>
-		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<p style="text-align: center;">Perangkat Proses</p>
+		<div id="hpya">
+				<p>11. Perhatikan gambar berikut!
+					<br>
+					<img src="../gambar/soal11.JPG" width="90%" alt="">
+					<br>
+					Tentukan nama dan kategori perangkat tersebut sesuai dengan konsep input, proses, dan
+					output pada tabel yang disediakan!
+				</p>
+				<table class="table table-striped">
+					<tr style="text-align: center;">
+						<td>Perangkat</td>
+						<td>Nama</td>
+						<td>Kategori</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">(a)</td>
+						<td>
+								<select id="mySelect11_a1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Mouse</option>
+										<option>RAM</option>
+										<option>Speaker</option>
+								</select>
+						</td>
+						<td>
+								<select id="mySelect11_a2" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Input</option>
+										<option>Proses</option>
+										<option>Output</option>
+								</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">(b)</td>
+						<td>
+								<select id="mySelect11_b1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Mouse</option>
+										<option>RAM</option>
+										<option>Speaker</option>
+								</select>
+						</td>
+						<td>
+								<select id="mySelect11_b2" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Input</option>
+										<option>Proses</option>
+										<option>Output</option>
+								</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">(c)</td>
+						<td>
+								<select id="mySelect11_c1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Mouse</option>
+										<option>RAM</option>
+										<option>Speaker</option>
+								</select>
+						</td>
+						<td>
+								<select id="mySelect11_c2" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Input</option>
+										<option>Proses</option>
+										<option>Output</option>
+								</select>
+						</td>
+					</tr>
+				</table>
 		</div>
-		<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<p style="text-align: center;">Perangkat Output</p>
-		</div>
-		
-		<div id="tampung" style="clear: both;"ondrop="drop(event)" ondragover="allowDrop(event)">
-				<p style="text-align: center;" draggable="false">Klik, tahan, dan arahkan gambar.</p>
-				<img src="../gambar/ramsoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag1" >
-				<img src="../gambar/msoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag2" >
-				<img src="../gambar/ssoal.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag3" >
-        </div>
         <br>
         <center>
                 <button onclick="nav10()" ><- Soal Sebelumnya</button>
@@ -598,6 +668,23 @@
 				  <option>Pasang RAM</option>
 				  <option>Pasang ODD</option>
 			</select>
+			<br>
+			<label style="margin-left: 30px;">6. </label>
+				<select id="mySelect6" style="margin-left: 20px;text-align-last:center;">
+				  <option>-- Pilih --</option>
+				  <option>Pasang Heatsink Fan</option>
+				  <option>Pasang VGA Card</option>
+				  <option>Pasang Kabel Internal</option>
+				  <option>Pasang Power Supply</option>
+				  <option>Lepas Case</option>
+				  <option>Pasang Harddisk Drive</option>
+				  <option>Pasang CPU</option>
+				  <option>Pasang Case</option>
+				  <option>Pasang Kabel Eksternal</option>
+				  <option>Pasang Motherboard</option>
+				  <option>Pasang RAM</option>
+				  <option>Pasang ODD</option>
+				</select>
 			<br>
 			<label style="margin-left: 30px;">7. </label>
 			<select id="mySelect7" style="margin-left: 20px;text-align-last:center;">
@@ -708,6 +795,7 @@
             </center>
 	</div>
 	<div id="soal13">
+		<div id="kom2">
 			<p>
 				13. Drag and drop gambar di bawah ini agar sesuai dengan nama perangkatnya !
 			</p>
@@ -728,14 +816,65 @@
 					<img src="../gambar/evcase.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag6" >
             </div>
             <br>
-            <center>
-                    <button onclick="nav12()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav14()" >Soal Selanjutnya -></button>
-                    
-            </center>
+        </div>
+		<div id="hpya2">
+				<p>13. Perhatikan gambar berikut!
+					<br>
+					<img src="../gambar/soal13.JPG" width="100%" alt="">
+					<br>
+					Tentukan perangkat apakah a, b, dan c tersebut!
+				</p>
+				<table class="table table-striped">
+					<tr style="text-align: center;">
+						<td>Perangkat</td>
+						<td>Nama</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">(a)</td>
+						<td>
+								<select id="mySelect13_a1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Prosesor</option>
+										<option>Mainboard</option>
+										<option>Casing</option>
+								</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">(b)</td>
+						<td>
+								<select id="mySelect13_b1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Prosesor</option>
+										<option>Mainboard</option>
+										<option>Casing</option>
+								</select>
+						</td>
+						
+					</tr>
+					<tr>
+						<td style="text-align: center;">(c)</td>
+						<td>
+								<select id="mySelect13_c1" style="margin-left: 20px;text-align-last:center;">
+										<option>-- Pilih --</option>
+										<option>Prosesor</option>
+										<option>Mainboard</option>
+										<option>Casing</option>
+								</select>
+						</td>
+						
+					</tr>
+				</table>
+				<br>
 		</div>
-		
+		<center>
+				<button onclick="nav12()" ><- Soal Sebelumnya</button>
+				<button onclick="nav14()" >Soal Selanjutnya -></button>
+				
+		</center>
+	</div>
 		<div id="soal14">
+			<div id="kom14">
 				<p>
 					14. Pada sebuah Kabel Front Panel terdapat kabel berwarna merah dan hitam, sedangkan warna putih tidak ada.
 					Tentukan penyusunan yang tepat !
@@ -854,7 +993,156 @@
                     </div>
                     
             
-                </div>
+				</div>
+			</div>
+			<div id="hpya14">
+					<p>14. Perhatikan gambar simulasi kabel Front Panel berikut!
+							<br><br>
+							<center>
+							<img src="../gambar/qz1.JPG" width="80%" alt="">
+							</center>
+							<br>
+							Tentukan letak pemasangan yang benar termasuk positif/negatifnya!
+						</p>
+						<table class="table table-striped">
+								<tr style="text-align: center;">
+									<td>Nomor</td>
+									<td>Kabel</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">1</td>
+									<td>
+											<select id="hddledplus2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>RESET SW (+)</option>
+													<option>RESET SW (-)</option>
+													<option >HDD LED (+) </option>
+													<option >HDD LED (-)</option>
+													<option >POWER LED (+)</option>
+													<option >POWER LED (-)</option>
+													<option >POWER SW (+)</option>
+													<option >POWER SW (-)</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">2</td>
+									<td>
+											<select id="powerledplus2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>RESET SW (+)</option>
+													<option>RESET SW (-)</option>
+													<option >HDD LED (+) </option>
+													<option >HDD LED (-)</option>
+													<option >POWER LED (+)</option>
+													<option >POWER LED (-)</option>
+													<option >POWER SW (+)</option>
+													<option >POWER SW (-)</option>
+											</select>
+									</td>
+									
+								</tr>
+								<tr>
+									<td style="text-align: center;">3</td>
+									<td>
+											<select id="hddledmin2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>RESET SW (+)</option>
+													<option>RESET SW (-)</option>
+													<option >HDD LED (+) </option>
+													<option >HDD LED (-)</option>
+													<option >POWER LED (+)</option>
+													<option >POWER LED (-)</option>
+													<option >POWER SW (+)</option>
+													<option >POWER SW (-)</option>
+											</select>
+									</td>
+									
+								</tr>
+								<tr>
+										<td style="text-align: center;">4</td>
+										<td>
+												<select id="powerledmin2" style="margin-left: 20px;text-align-last:center;">
+														<option>-- Pilih --</option>
+														<option>RESET SW (+)</option>
+														<option>RESET SW (-)</option>
+														<option >HDD LED (+) </option>
+														<option >HDD LED (-)</option>
+														<option >POWER LED (+)</option>
+														<option >POWER LED (-)</option>
+														<option >POWER SW (+)</option>
+														<option >POWER SW (-)</option>
+												</select>
+										</td>
+										
+									</tr>
+								<tr>
+									<td style="text-align: center;">5</td>
+									<td>
+											<select id="resetswmin2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>RESET SW (+)</option>
+													<option>RESET SW (-)</option>
+													<option >HDD LED (+) </option>
+													<option >HDD LED (-)</option>
+													<option >POWER LED (+)</option>
+													<option >POWER LED (-)</option>
+													<option >POWER SW (+)</option>
+													<option >POWER SW (-)</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+										<td style="text-align: center;">6</td>
+										<td>
+												<select id="powerswplus2" style="margin-left: 20px;text-align-last:center;">
+														<option>-- Pilih --</option>
+														<option>RESET SW (+)</option>
+														<option>RESET SW (-)</option>
+														<option >HDD LED (+) </option>
+														<option >HDD LED (-)</option>
+														<option >POWER LED (+)</option>
+														<option >POWER LED (-)</option>
+														<option >POWER SW (+)</option>
+														<option >POWER SW (-)</option>
+												</select>
+										</td>
+									</tr>
+									<tr>
+											<td style="text-align: center;">7</td>
+											<td>
+													<select id="resetswplus2" style="margin-left: 20px;text-align-last:center;">
+															<option>-- Pilih --</option>
+															<option>RESET SW (+)</option>
+															<option>RESET SW (-)</option>
+															<option >HDD LED (+) </option>
+															<option >HDD LED (-)</option>
+															<option >POWER LED (+)</option>
+															<option >POWER LED (-)</option>
+															<option >POWER SW (+)</option>
+															<option >POWER SW (-)</option>
+													</select>
+											</td>
+										</tr>
+										<tr>
+												<td style="text-align: center;">8</td>
+												<td>
+														<select id="powerswmin2" style="margin-left: 20px;text-align-last:center;">
+																<option>-- Pilih --</option>
+																<option>RESET SW (+)</option>
+																<option>RESET SW (-)</option>
+																<option >HDD LED (+) </option>
+																<option >HDD LED (-)</option>
+																<option >POWER LED (+)</option>
+																<option >POWER LED (-)</option>
+																<option >POWER SW (+)</option>
+																<option >POWER SW (-)</option>
+														</select>
+												</td>
+											</tr>
+							</table>
+							<br>
+			</div>
                 <center>
                         <br>
                         <button onclick="nav13()" ><- Soal Sebelumnya</button>
@@ -863,6 +1151,7 @@
                 </center>
 		</div>
 				<div id="soal15">
+					<div id="kom3">
 						<p>
 						15. Drag and drop gambar di bawah ini agar perangkat masuk katerori yang sesuai !
 						</p>
@@ -886,7 +1175,82 @@
 								<img src="../gambar/evprint.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag8" >
 								<img src="../gambar/evscan.jpg" draggable="true" style="cursor: grab;" ondragstart="drag(event)" id="drag9" >
                         </div>
-                        <br>
+						<br>
+					</div>
+					<div id="hpya3">
+							<p>15. Perhatikan gambar berikut!
+								<br>
+								<img src="../gambar/soal15.JPG" width="100%" alt="">
+								<br>
+								Tentukan perangkat apakah a, b, dan c tersebut!
+							</p>
+							<table class="table table-striped">
+								<tr style="text-align: center;">
+									<td>Perangkat</td>
+									<td>Nama</td>
+									<td>Kategori</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">(a)</td>
+									<td>
+											<select id="mySelect15_a1" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Printer</option>
+													<option>Scanner</option>
+													<option>Harddisk</option>
+											</select>
+									</td>
+									<td>
+											<select id="mySelect15_a2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Input</option>
+													<option>Proses</option>
+													<option>Output</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">(b)</td>
+									<td>
+											<select id="mySelect15_b1" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Printer</option>
+													<option>Scanner</option>
+													<option>Harddisk</option>
+											</select>
+									</td>
+									<td>
+											<select id="mySelect15_b2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Input</option>
+													<option>Proses</option>
+													<option>Output</option>
+											</select>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">(c)</td>
+									<td>
+											<select id="mySelect15_c1" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Printer</option>
+													<option>Scanner</option>
+													<option>Harddisk</option>
+											</select>
+									</td>
+									<td>
+											<select id="mySelect15_c2" style="margin-left: 20px;text-align-last:center;">
+													<option>-- Pilih --</option>
+													<option>Input</option>
+													<option>Proses</option>
+													<option>Output</option>
+											</select>
+									</td>
+								</tr>
+							</table>
+							<br>
+					</div>
+
             <center>
                     <button onclick="nav14()" ><- Soal Sebelumnya</button>
                     

@@ -90,6 +90,42 @@ function startTimer(duration, display) {
                 nilai=nilai+6;
                 no1=no1+6;
             }
+            s11a1 = document.getElementById("mySelect11_a1");
+            s11a2 = document.getElementById("mySelect11_a2");
+            s11b1 = document.getElementById("mySelect11_b1");
+            s11b2 = document.getElementById("mySelect11_b2");
+            s11c1 = document.getElementById("mySelect11_c1");
+            s11c2 = document.getElementById("mySelect11_c2");
+            i11a1 = s11a1.selectedIndex;
+            i11a2 = s11a2.selectedIndex;
+            i11b1 = s11b1.selectedIndex;
+            i11b2 = s11b2.selectedIndex;
+            i11c1 = s11c1.selectedIndex;
+            i11c2 = s11c2.selectedIndex;
+            if (s11a1.options[i11a1].text=="RAM"){
+                nilai=nilai+1;
+                no11=no11+1;
+            } 
+            if (s11a2.options[i11a2].text=="Proses"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11b1.options[i11b1].text=="Mouse"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11b2.options[i11b2].text=="Input"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11c1.options[i11c1].text=="Speaker"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11c2.options[i11c2].text=="Output"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
 
             //soal 12
             var x = document.getElementById("mySelect");
@@ -172,6 +208,24 @@ function startTimer(duration, display) {
                 nilai=nilai+6;
                 no3=no3+6;
             }
+            s13a1 = document.getElementById("mySelect13_a1");
+            s13b1 = document.getElementById("mySelect13_b1");
+            s13c1 = document.getElementById("mySelect13_c1");
+            var i13a1 = s13a1.selectedIndex;
+            var i13b1 = s13b1.selectedIndex;
+            var i13c1 = s13c1.selectedIndex;
+            if (s13a1.options[i13a1].text=="Mainboard"){
+                nilai=nilai+2;
+                no13=no13+2;
+            } 
+            if (s13b1.options[i13b1].text=="Prosesor"){
+                nilai=nilai+2;
+                no13=no13+2;
+            }
+            if (s13c1.options[i13c1].text=="Casing"){
+                nilai=nilai+2;
+                no13=no13+2;
+            }
 
             //soal 14
             if(document.getElementById("powerledplus").selectedIndex == "3"){
@@ -209,12 +263,72 @@ function startTimer(duration, display) {
                 nilai=nilai+1.25;
                 no4=no4+1.25;
             }
+            //hp
+            if(document.getElementById("powerledplus2").selectedIndex == "5"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("powerledmin2").selectedIndex == "6"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+                
+            }
+            if(document.getElementById("powerswplus2").selectedIndex == "7"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("powerswmin2").selectedIndex == "8"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            
+            if(document.getElementById("hddledplus2").selectedIndex == "3"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("hddledmin2").selectedIndex == "4"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            
+            if(document.getElementById("resetswmin2").selectedIndex == "2"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("resetswplus2").selectedIndex == "1"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
 
             //soal 15
             if (($('#div7').find('#drag9').length == 1) && ($('#div8').find('#drag7').length == 1) && ($('#div7').find('#drag9').length == 1))
             {
                 nilai=nilai+6;
                 no5=no5+6;
+            }
+            if (s15a1.options[i15a1].text=="Harddisk"){
+                nilai=nilai+1;
+                no15=no15+1;
+            } 
+            if (s15a2.options[i15a2].text=="Proses"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15b1.options[i15b1].text=="Printer"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15b2.options[i15b2].text=="Output"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15c1.options[i15c1].text=="Scanner"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15c2.options[i15c2].text=="Input"){
+                nilai=nilai+1;
+                no15=no15+1;
             }
 
             //to storage
@@ -451,6 +565,44 @@ function cek(){
                 nilai=nilai+6;
                 no11=no11+6;
             }
+            s11a1 = document.getElementById("mySelect11_a1");
+            s11a2 = document.getElementById("mySelect11_a2");
+            s11b1 = document.getElementById("mySelect11_b1");
+            s11b2 = document.getElementById("mySelect11_b2");
+            s11c1 = document.getElementById("mySelect11_c1");
+            s11c2 = document.getElementById("mySelect11_c2");
+            i11a1 = s11a1.selectedIndex;
+            i11a2 = s11a2.selectedIndex;
+            i11b1 = s11b1.selectedIndex;
+            i11b2 = s11b2.selectedIndex;
+            i11c1 = s11c1.selectedIndex;
+            i11c2 = s11c2.selectedIndex;
+            if (s11a1.options[i11a1].text=="RAM"){
+                nilai=nilai+1;
+                no11=no11+1;
+            } 
+            if (s11a2.options[i11a2].text=="Proses"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11b1.options[i11b1].text=="Mouse"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11b2.options[i11b2].text=="Input"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11c1.options[i11c1].text=="Speaker"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+            if (s11c2.options[i11c2].text=="Output"){
+                nilai=nilai+1;
+                no11=no11+1;
+            }
+
+            
 
             //soal 12
             var x = document.getElementById("mySelect");
@@ -533,7 +685,25 @@ function cek(){
                 nilai=nilai+6;
                 no13=no13+6;
             }
-
+            s13a1 = document.getElementById("mySelect13_a1");
+            s13b1 = document.getElementById("mySelect13_b1");
+            s13c1 = document.getElementById("mySelect13_c1");
+            var i13a1 = s13a1.selectedIndex;
+            var i13b1 = s13b1.selectedIndex;
+            var i13c1 = s13c1.selectedIndex;
+            if (s13a1.options[i13a1].text=="Mainboard"){
+                nilai=nilai+2;
+                no13=no13+2;
+            } 
+            if (s13b1.options[i13b1].text=="Prosesor"){
+                nilai=nilai+2;
+                no13=no13+2;
+            }
+            if (s13c1.options[i13c1].text=="Casing"){
+                nilai=nilai+2;
+                no13=no13+2;
+            }
+            
             //soal 14
             if(document.getElementById("powerledplus").selectedIndex == "3"){
                 nilai=nilai+1.25;
@@ -570,12 +740,85 @@ function cek(){
                 nilai=nilai+1.25;
                 no14=no14+1.25;
             }
+            //hp
+            if(document.getElementById("powerledplus2").selectedIndex == "5"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("powerledmin2").selectedIndex == "6"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+                
+            }
+            if(document.getElementById("powerswplus2").selectedIndex == "7"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("powerswmin2").selectedIndex == "8"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            
+            if(document.getElementById("hddledplus2").selectedIndex == "3"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("hddledmin2").selectedIndex == "4"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            
+            if(document.getElementById("resetswmin2").selectedIndex == "2"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            if(document.getElementById("resetswplus2").selectedIndex == "1"){
+                nilai=nilai+1.25;
+                no14=no14+1.25;
+            }
+            
 
             //soal 15
             if (($('#div7').find('#drag9').length == 1) && ($('#div8').find('#drag7').length == 1) && ($('#div7').find('#drag9').length == 1))
             {
                 nilai=nilai+6;
                 no15=no15+6;
+            }
+            s15a1 = document.getElementById("mySelect15_a1");
+            s15a2 = document.getElementById("mySelect15_a2");
+            s15b1 = document.getElementById("mySelect15_b1");
+            s15b2 = document.getElementById("mySelect15_b2");
+            s15c1 = document.getElementById("mySelect15_c1");
+            s15c2 = document.getElementById("mySelect15_c2");
+            i15a1 = s15a1.selectedIndex;
+            i15a2 = s15a2.selectedIndex;
+            i15b1 = s15b1.selectedIndex;
+            i15b2 = s15b2.selectedIndex;
+            i15c1 = s15c1.selectedIndex;
+            i15c2 = s15c2.selectedIndex;
+            if (s15a1.options[i15a1].text=="Harddisk"){
+                nilai=nilai+1;
+                no15=no15+1;
+            } 
+            if (s15a2.options[i15a2].text=="Proses"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15b1.options[i15b1].text=="Printer"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15b2.options[i15b2].text=="Output"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15c1.options[i15c1].text=="Scanner"){
+                nilai=nilai+1;
+                no15=no15+1;
+            }
+            if (s15c2.options[i15c2].text=="Input"){
+                nilai=nilai+1;
+                no15=no15+1;
             }
 
     //to storage
@@ -1189,11 +1432,15 @@ document.getElementById("soal15").hidden=false;
 }
 
 
-function responsif(x) {
-if (x.matches) { // If media query matches
+function responsif(r) {
+if (r.matches) { // If media query matches
     document.getElementById("utama").style.paddingLeft= "10px";
     document.getElementById("utama").style.paddingRight= "10px";
     document.getElementById("navi").hidden=true;
+    document.getElementById("kom").hidden=true;
+    document.getElementById("kom2").hidden=true;
+    document.getElementById("kom3").hidden=true;
+    document.getElementById("kom14").hidden=true;
     document.getElementById("s1").width= "350";
     document.getElementById("oke").style.width= "200px";
     document.getElementById("s2").width= "200";
@@ -1237,6 +1484,10 @@ if (x.matches) { // If media query matches
     
     
 } else {
+    document.getElementById("hpya").hidden=true;
+    document.getElementById("hpya2").hidden=true;
+    document.getElementById("hpya3").hidden=true;
+    document.getElementById("hpya14").hidden=true;
     document.getElementById("utama").style.paddingLeft= "50px";
     document.getElementById("utama").style.paddingRight= "50px";
     document.getElementById("s1").width= "500";
@@ -1284,9 +1535,9 @@ if (x.matches) { // If media query matches
     }
 }
 
-var x = window.matchMedia("(max-width: 1000px)");
-responsif(x); // Call listener function at run time
-x.addListener(responsif); // Attach listener function on state changes
+var r = window.matchMedia("(max-width: 1000px)");
+responsif(r); // Call listener function at run time
+r.addListener(responsif); // Attach listener function on state changes
 
 
 
