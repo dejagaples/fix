@@ -14,6 +14,8 @@
   <link href="../css/fontawesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" src="../css/all.css">
   <script src="../js/all.js"></script>
+  <script src="../js/sweetalert2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/sweetalert2.min.css">
   <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
   <title>RAKITOS - Pasang CPU</title>
@@ -105,7 +107,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
-						<center><img src="../gambar/cpu1.jpg" width="100%">	</center>
+						<center><img src="../gambar/cpu1new.jpg" width="60%">	</center>
 				</div>
 			</div>
 		</div>
@@ -114,7 +116,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
-						<center><img src="../gambar/cpu2.jpg" width="100%">	</center>
+						<center><img src="../gambar/cpu2.jpg" width="60%">	</center>
 				</div>
 			</div>
 		</div>
@@ -230,15 +232,15 @@
 		<ul style="list-style:decimal;">
 			<li>
 				Buka tuas pengait pada socket prosesor.
-				<a href="#" data-toggle="modal" data-target="#lihat1" > Lihat </a> 
+				<a href="#" data-toggle="modal" data-target="#lihat1" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a>  
 			</li>
 			<li>
 					Buka pelat beban.
-					<a href="#" data-toggle="modal" data-target="#lihat2" > Lihat </a> 
+					<a href="#" data-toggle="modal" data-target="#lihat2" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a> 
 			</li>	
 			<li>
 						Pasang CPU dengan melihat tanda segitiga di salah satu ujung CPU.
-						<a href="#" data-toggle="modal" data-target="#lihat3" > Lihat </a> 
+						<a href="#" data-toggle="modal" data-target="#lihat3" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a> 
 					</li>
 					<li>
 						Tutup kembali pelat beban.
@@ -319,28 +321,11 @@
 
 			function kirim(){
 					
-					kel = document.getElementById("kel").value;
-					nama = document.getElementById("nama").value;
-					lokasi = document.getElementById("lok").value;
-					linkyt = document.getElementById("yt").value;
+					
 					kel_2 = document.getElementById("kel2");
 					nama_2 = document.getElementById("nama25");
 					lokasi_2 = document.getElementById("lok2");
 					linkyt_2 = document.getElementById("yt2");
-
-					if(nama != "") {	
-						var data = {
-							kelompok: kel,
-							anggota: nama,
-							tempat: lokasi,
-							link: linkyt
-
-						}						
-						var database = firebase.database();
-						database.ref("pasang_cpu").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;		
-					}
 
 					if(nama_2 != "") {
 						
@@ -353,8 +338,7 @@
 						}						
 						var database = firebase.database();
 						database.ref("pasang_cpu").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;
+						swal("Terkirim!", "Data telah terkirim ke Guru bersangkutan", "success");
 					}
 			}
 

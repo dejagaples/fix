@@ -109,6 +109,7 @@ function startTimer(duration, display) {
                 no_10 = localStorage.getItem("no10");
                 waktu_ = localStorage.getItem("waktu");
                 tanggal_ = localStorage.getItem("tanggal");
+                mulai_= localStorage.getItem("mulai");
                 
                 var data = {
                     nama: nama_1,
@@ -125,7 +126,8 @@ function startTimer(duration, display) {
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -153,7 +155,8 @@ function startTimer(duration, display) {
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("kuis_2").push(data2);	
                 }
@@ -193,7 +196,8 @@ function startTimer(duration, display) {
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_2").push(data4);
                 }
@@ -462,6 +466,7 @@ function cek(){
                 no_10 = localStorage.getItem("no10");
                 waktu_ = localStorage.getItem("waktu");
                 tanggal_ = localStorage.getItem("tanggal");
+                mulai_= localStorage.getItem("mulai");
                 
                 var data = {
                     nama: nama_1,
@@ -478,7 +483,8 @@ function cek(){
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -506,7 +512,8 @@ function cek(){
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("kuis_2").push(data2);	
                 }
@@ -526,7 +533,8 @@ function cek(){
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_2").push(data3);
                 }
@@ -546,7 +554,8 @@ function cek(){
                     no9: no_9,
                     no10: no_10,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_2").push(data4);
                 }

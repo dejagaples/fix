@@ -257,10 +257,7 @@
 					nama = document.getElementById("nama").value;
 					lokasi = document.getElementById("lok").value;
 					linkyt = document.getElementById("yt").value;
-					kel_2 = document.getElementById("kel2");
-					nama_2 = document.getElementById("nama25");
-					lokasi_2 = document.getElementById("lok2");
-					linkyt_2 = document.getElementById("yt2");
+				
 
 					if(nama != "") {	
 						var data = {
@@ -272,24 +269,10 @@
 						}						
 						var database = firebase.database();
 						database.ref("pasang_kabeleks").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;		
+						swal("Terkirim!", "Data telah terkirim ke Guru bersangkutan", "success");
 					}
 
-					if(nama_2 != "") {
-						
-						var data = {
-							kelompok: kel_2.value,
-							anggota: nama_2.value,
-							tempat: lokasi_2.value,
-							link: linkyt_2.value
-
-						}						
-						var database = firebase.database();
-						database.ref("pasang_kabeleks").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;
-					}
+				
 			}
 
             function cek(){

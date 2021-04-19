@@ -284,28 +284,13 @@
 
 			function kirim(){
 					
-					kel = document.getElementById("kel").value;
-					nama = document.getElementById("nama").value;
-					lokasi = document.getElementById("lok").value;
-					linkyt = document.getElementById("yt").value;
+					
 					kel_2 = document.getElementById("kel2");
 					nama_2 = document.getElementById("nama25");
 					lokasi_2 = document.getElementById("lok2");
 					linkyt_2 = document.getElementById("yt2");
 
-					if(nama != "") {	
-						var data = {
-							kelompok: kel,
-							anggota: nama,
-							tempat: lokasi,
-							link: linkyt
-
-						}						
-						var database = firebase.database();
-						database.ref("pasang_kabeleks").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;		
-					}
+					
 
 					if(nama_2 != "") {
 						
@@ -318,8 +303,7 @@
 						}						
 						var database = firebase.database();
 						database.ref("pasang_kabeleks").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;
+						swal("Terkirim!", "Data telah terkirim ke Guru bersangkutan", "success");
 					}
 			}
 

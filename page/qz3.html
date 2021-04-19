@@ -150,6 +150,7 @@
 		<br>
 		<br>
 		<button class="button-simul" onclick="input()">Mulai</button></center>
+		<br>
 	  </div>
 	  
 	</div>
@@ -187,6 +188,8 @@
 				var nama1=document.getElementById("nama1");
 				var hmm= localStorage.getItem("nama1");
 				var token = document.getElementById("token");
+				var dm = new Date();
+				var nm = dm.getHours() + ":" + dm.getMinutes();
 				if(nama1.value ==""){
 					sabarinput();
 				}
@@ -195,6 +198,7 @@
 				}
 				else{
 					localStorage.setItem("nama1", nama1.value);
+					localStorage.setItem("mulai", nm);
 					location.href="sqz3.html";
 
 				}

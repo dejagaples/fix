@@ -109,6 +109,7 @@ function sabar1(){
 						no_10 = localStorage.getItem("no10");
 						waktu_ = localStorage.getItem("waktu");
 						tanggal_ = localStorage.getItem("tanggal");
+						mulai_= localStorage.getItem("mulai");
 						
 						var data = {
 							nama: nama_1,
@@ -125,7 +126,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 
 						}
 
@@ -153,7 +155,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}
 							database.ref("kuis_1").push(data2);	
 						}
@@ -173,7 +176,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}	
 							database.ref("kuis_1").push(data3);
 						}
@@ -193,7 +197,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}	
 							database.ref("kuis_1").push(data4);
 						}
@@ -462,6 +467,7 @@ function sabar1(){
 						no_10 = localStorage.getItem("no10");
 						waktu_ = localStorage.getItem("waktu");
 						tanggal_ = localStorage.getItem("tanggal");
+						mulai_= localStorage.getItem("mulai");
 						
 						var data = {
 							nama: nama_1,
@@ -478,7 +484,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 
 						}
 
@@ -506,7 +513,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}
 							database.ref("kuis_1").push(data2);	
 						}
@@ -526,7 +534,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}	
 							database.ref("kuis_1").push(data3);
 						}
@@ -546,7 +555,8 @@ function sabar1(){
 							no9: no_9,
 							no10: no_10,
 							waktu: waktu_,
-							tanggal: tanggal_
+							tanggal: tanggal_,
+							mulai: mulai_
 							}	
 							database.ref("kuis_1").push(data4);
                         }

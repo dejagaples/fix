@@ -373,6 +373,7 @@ function startTimer(duration, display) {
             
             waktu_ = localStorage.getItem("waktu");
             tanggal_ = localStorage.getItem("tanggal");
+            mulai_= localStorage.getItem("mulai");
 
                 var data = {
                     nama: nama_1,
@@ -394,7 +395,8 @@ function startTimer(duration, display) {
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -427,7 +429,8 @@ function startTimer(duration, display) {
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("latihan").push(data2);	
                 }
@@ -452,7 +455,8 @@ function startTimer(duration, display) {
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("latihan").push(data3);
                 }
@@ -477,7 +481,8 @@ function startTimer(duration, display) {
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("latihan").push(data4);
                 }
@@ -875,6 +880,7 @@ function cek(){
             
             waktu_ = localStorage.getItem("waktu");
             tanggal_ = localStorage.getItem("tanggal");
+            mulai_= localStorage.getItem("mulai");
 
                 var data = {
                     nama: nama_1,
@@ -896,7 +902,8 @@ function cek(){
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -929,7 +936,8 @@ function cek(){
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("latihan").push(data2);	
                 }
@@ -954,7 +962,8 @@ function cek(){
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("latihan").push(data3);
                 }
@@ -979,7 +988,8 @@ function cek(){
                     no14: no_14,
                     no15: no_15,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("latihan").push(data4);
                 }

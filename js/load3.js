@@ -71,6 +71,7 @@ function startTimer(duration, display) {
                 no_5 = localStorage.getItem("no5");
                 waktu_ = localStorage.getItem("waktu");
                 tanggal_ = localStorage.getItem("tanggal");
+                mulai_= localStorage.getItem("mulai");
                 
                 var data = {
                     nama: nama_1,
@@ -82,7 +83,8 @@ function startTimer(duration, display) {
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -105,7 +107,8 @@ function startTimer(duration, display) {
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("kuis_3").push(data2);	
                 }
@@ -120,7 +123,8 @@ function startTimer(duration, display) {
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_3").push(data3);
                 }
@@ -135,7 +139,8 @@ function startTimer(duration, display) {
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_3").push(data4);
                 }
@@ -289,6 +294,7 @@ function cek(){
                 no_5 = localStorage.getItem("no5");
                 waktu_ = localStorage.getItem("waktu");
                 tanggal_ = localStorage.getItem("tanggal");
+                mulai_= localStorage.getItem("mulai");
                 
                 var data = {
                     nama: nama_1,
@@ -300,7 +306,8 @@ function cek(){
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
 
                 }
 
@@ -323,7 +330,8 @@ function cek(){
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }
                     database.ref("kuis_3").push(data2);	
                 }
@@ -338,7 +346,8 @@ function cek(){
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_3").push(data3);
                 }
@@ -353,7 +362,8 @@ function cek(){
                     no4: no_4,
                     no5: no_5,
                     waktu: waktu_,
-                    tanggal: tanggal_
+                    tanggal: tanggal_,
+                    mulai: mulai_
                     }	
                     database.ref("kuis_3").push(data4);
                 }

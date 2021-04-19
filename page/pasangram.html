@@ -14,6 +14,8 @@
   <link href="../css/fontawesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" src="../css/all.css">
   <script src="../js/all.js"></script>
+  <script src="../js/sweetalert2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/sweetalert2.min.css">
   <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
   <title>RAKITOS - Pasang RAM</title>
@@ -105,7 +107,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
-							<center><img src="../gambar/ramlihat1.JPG" width="100%">	</center>
+							<center><img src="../gambar/ramlihat1.JPG" width="80%">	</center>
 					</div>
 				</div>
 			</div>
@@ -115,7 +117,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
-							<center><img src="../gambar/ramlihat2.JPG" width="100%">	</center>
+							<center><img src="../gambar/ramlihat2.JPG" width="65%">	</center>
 					</div>
 				</div>
 			</div>
@@ -125,7 +127,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
-							<center><img src="../gambar/ramlihat3.JPG" width="100%">	</center>
+							<center><img src="../gambar/ramlihat3.JPG" width="65%">	</center>
 					</div>
 				</div>
 			</div>
@@ -230,15 +232,16 @@
 					Langkah-langkah pemasangan RAM antara lain sebagai berikut.
 		<ul style="list-style:decimal;">
 				<li>
-						Buka pengunci RAM pada sisi slot yang tersedia. <a href="#" data-toggle="modal" data-target="#lihat0" > Lihat </a> 
+						Buka pengunci RAM pada sisi slot yang tersedia. 
+						<a href="#" data-toggle="modal" data-target="#lihat0" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a> 
 					</li>
 					<li>
 						Posisikan RAM pada slot tersebut dengan melihat celah kaki RAM. 
-						<a href="#" data-toggle="modal" data-target="#lihat1" > Lihat </a> 
+						<a href="#" data-toggle="modal" data-target="#lihat1" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a> 
 					</li>
 					<li>
 						Pasang RAM dengan menekan sisi atas secara merata dengan menggunakan jempol hingga berbunyi klik. 
-						<a href="#" data-toggle="modal" data-target="#lihat2" > Lihat </a> 
+						<a href="#" data-toggle="modal" data-target="#lihat2" > <button class="button-v"> Lihat <i class="fas fa-arrow-up"></i></button></a> 
 					</li>
 					<li>
 						Jika sudah, biasanya pengunci RAM otomatis terkunci. Namun jika belum, kunci kedua sisi secara bersamaan.
@@ -323,28 +326,11 @@
 
 			function kirim(){
 					
-					kel = document.getElementById("kel").value;
-					nama = document.getElementById("nama").value;
-					lokasi = document.getElementById("lok").value;
-					linkyt = document.getElementById("yt").value;
+					
 					kel_2 = document.getElementById("kel2");
 					nama_2 = document.getElementById("nama25");
 					lokasi_2 = document.getElementById("lok2");
 					linkyt_2 = document.getElementById("yt2");
-
-					if(nama != "") {	
-						var data = {
-							kelompok: kel,
-							anggota: nama,
-							tempat: lokasi,
-							link: linkyt
-
-						}						
-						var database = firebase.database();
-						database.ref("pasang_ram").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;		
-					}
 
 					if(nama_2 != "") {
 						
@@ -357,8 +343,7 @@
 						}						
 						var database = firebase.database();
 						database.ref("pasang_ram").push(data);
-						z.play();
-						document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Terkirim`;
+						swal("Terkirim!", "Data telah terkirim ke Guru bersangkutan", "success");
 					}
 			}
 
