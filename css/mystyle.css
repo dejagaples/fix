@@ -265,9 +265,10 @@
 			font-size: 15px;
 		}
 		#menu ul .disini {
-			color: #fff;
+			color: white;
 			border-left:white 2px solid;
 			padding-left: 5px;
+			background-color: #9090bb;
 		}
 		#menu .active {
 			background-color: #a1b6be;
@@ -950,9 +951,10 @@
 			font-size: 15px;
 		}
 		#menu2 ul .disini {
-			color: #fff;
+			color: white;
 			border-left:white 2px solid;
 			padding-left: 5px;
+			background-color: #9090bb;
 		}
 		#menu2 .active {
 			background-color: #a1b6be;
