@@ -141,6 +141,7 @@
 
 					</ul>
 				</li>
+				<li><a class="tutup" href="guru5.html" onclick="filter()">Filter Nilai</a></li>
 				
 				
 		</ul>
@@ -216,9 +217,11 @@
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
 
-		function gv(){
-			location.href="guruv.html";
+		function filter(){
+			location.href="guru5.html";
 		}
+
+		
 		
 		$('#ganti1').click(function(){
 			var person = prompt("Masukkan token baru", document.getElementById("kuis1").innerHTML);

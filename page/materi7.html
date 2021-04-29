@@ -169,7 +169,7 @@
 		<h3 >Motherboard <div class="goo edit">proses</div> </h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
 		</div>
-		<div id="ba" class="kon">
+		<div id="ba" class="konnew">
 			<div id="kotak" style="padding-left:20px;"onclick="tj()">Tujuan Pembelajaran</div>
 			<div id="tp" class="isko" > 
 				<ul>
@@ -227,7 +227,7 @@
 			<div id="g9"></div>
 			<div id="g10"></div>
 		</div>
-		<div id="bas" class="kon2">
+		<div id="bas" class="kon2new">
 				<center>
 						<div id="first" style="margin-top: 150px;">
 								<i class="fas fa-lock" style="font-size: 20px;"></i>
@@ -244,10 +244,25 @@
 		</div>
 			
 		</div> 
-		<div id="bas2" class="next">
-				<a href="materi6.html"><button class="button-left"> <- Kembali </button></a> 
+
+		<center>
+        <div id="bas2" class="nextnew">
+            <ul style="float: left;padding-left:0;">
+				<a href="materi6soal.html"><button class="button-left"> <- Kembali </button></a> 
+            </ul>
+
+			<a href="#">
+			<button class="button-tengah"><u>1</u></button>
+			</a>
+			<a href="materi7soal.html">
+			<button class="button-tengah">2</button>
+			</a>
+    
+            <ul style="float: right;">
 				<a href="materi7soal.html"><button class="button-right"> Selanjutnya -> </button></a>
-		</div>
+            </ul>
+        </div>
+		</center>
 	  
 		<audio id="benar">
 				<source src="../suara/benar.mp3" type="audio/mp3">
@@ -321,7 +336,9 @@
 				document.getElementById("btn1").hidden=true;
 				document.getElementById("btn2").hidden=true;
 				document.getElementById("btn3").hidden=true;
-				document.getElementById("ba").style.width="100%";
+				document.getElementById("ba").style.width="";
+				document.getElementById("ba").style.borderBottom="0";
+				document.getElementById("ba").style.position="";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
 				document.getElementById("ba").style.marginLeft="10px";
@@ -431,10 +448,12 @@
 				document.getElementById("btn1").hidden=false;
 				document.getElementById("btn2").hidden=false;
 				document.getElementById("btn3").hidden=false;
-				document.getElementById("ba").style.width="39%";
+				document.getElementById("ba").style.width="37.5%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
-				document.getElementById("ba").style.height="370px";
+				document.getElementById("ba").style.height="65%";
+				document.getElementById("ba").style.left="20%";
+				document.getElementById("ba").style.position="fixed";
 				document.getElementById("menu-wrap").style.width="18%";
 				document.getElementById("menu-wrap").style.height="100px";
 				document.getElementById("menu-wrap").style.display="block";

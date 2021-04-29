@@ -167,7 +167,7 @@
 		<h3 >Obeng  </h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
 		</div>
-		<div id="ba" class="kon">
+		<div id="ba" class="konnew">
 			<div id="kotak" style="padding-left:20px;"onclick="tj()">Tujuan Pembelajaran</div>
 			<div id="tp" class="isko" >
 				<ul><li>Siswa mampu memilih obeng untuk perakitan komputer</li></ul>
@@ -210,7 +210,7 @@
 			<div id="g2" > </div>
 			<div id="g3" > </div>
 		</div>
-		<div id="bas" class="kon2">
+		<div id="bas" class="kon2new">
 				<center>
 				<div id="first" style="margin-top: 150px;">
 						<i class="fas fa-lock" style="font-size: 20px;"></i>
@@ -226,10 +226,29 @@
 				</center>
 				
 		</div>
-		<div id="bas2" class="next">
-        <a href="p1.html"><button class="button-left"> <- Kembali </button></a> 
-		 <a href="materi1soal.html"><button class="button-right"> Selanjutnya -> </button></a>
-		</div>
+
+		<center>
+        <div id="bas2" class="nextnew">
+            <ul style="float: left;padding-left:0;">
+				<a href="p1.html"><button class="button-left"> <- Kembali </button></a> 
+            </ul>
+
+			<a href="#">
+			<button class="button-tengah"><u>1</u></button>
+			</a>
+			<a href="materi1soal.html">
+			<button class="button-tengah">2</button>
+			</a>
+    
+            <ul style="float: right;">
+				<a href="materi1soal.html"><button class="button-right"> Selanjutnya -> </button></a>
+            </ul>
+        </div>
+        </center>
+		
+        
+		 
+		
 		<audio id="benar">
 			<source src="../suara/benar.mp3" type="audio/mp3">
 		</audio>
@@ -285,9 +304,10 @@
 				document.getElementById("h2").style.display="none";
 				document.getElementById("btn1").hidden=true;
 				document.getElementById("btn2").hidden=true;
-				document.getElementById("ba").style.width="100%";
+				document.getElementById("ba").style.width="";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
+				document.getElementById("ba").style.borderBottom="0";
 				document.getElementById("ba").style.marginLeft="10px";
 				document.getElementById("ba").style.height="100%";
 				document.getElementById("logogbr").style.display="none";
@@ -295,6 +315,7 @@
 				document.getElementById("menuhp").style.display="block";
 				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("ba").style.position="";
 				document.getElementById("g1").innerHTML = `
 				<center>
 				<iframe src="../embed/obeng.html" width="100%" height="300" frameborder="0" allowfullscreen> </iframe>
@@ -381,10 +402,11 @@
 				<br>
 				`;
 			} else {
-				document.getElementById("ba").style.width="39%";
+				document.getElementById("ba").style.width="37.5%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
-				document.getElementById("ba").style.height="370px";
+				document.getElementById("ba").style.height="65%";
+				document.getElementById("ba").style.left="20%";
 				document.getElementById("menu-wrap").style.width="18%";
 				document.getElementById("menu-wrap").style.height="100px";
 				document.getElementById("menu-wrap").style.display="block";
@@ -401,6 +423,7 @@
 				document.getElementById("h2").style.display="";
 				document.getElementById("btn1").hidden=false;
 				document.getElementById("btn2").hidden=false;
+				document.getElementById("ba").style.position="fixed";
 				}
 			}
 

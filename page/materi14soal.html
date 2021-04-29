@@ -33,7 +33,7 @@
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!-- Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top" style="border-radius: 0;">
+	<nav class="navbar navbar-default" style="border-radius: 0;">
 	  <div class="container-fluid">
 		<!-- Navbar Atas Kiri -->  
 		<div class="navbar-header">
@@ -82,11 +82,11 @@
 	</div>
 
 	<!--/.sidebar-->
-	<div id="menu-wrap2">
-		<ul id="menu2" class="nav">
+	<div id="menu-wrap">
+		<ul id="menu" class="nav">
 			
             <li><a class="tutup" href="#"><i class="fas fa-question-circle"></i>&nbsp; Pengenalan<span class="caret kiri" ></span></a>
-				<ul class="sub2">
+				<ul class="sub">
 					<li><a  href="materi0.html">Kompetensi Dasar</a></li>
 					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
 					<li><a href="materi02.html">Peta Konsep</a></li>
@@ -94,7 +94,7 @@
 				</ul>
 			</li>
             <li><a class="tutup" href="#"><i class="fas fa-tools"></i>&nbsp; Alat<span class="caret kiri" ></span></a>
-				<ul class="sub2">
+				<ul class="sub">
 					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
@@ -105,7 +105,7 @@
 				</ul>
 			</li>
 			<li><a class="tutup active" href="#"><i class="fas fa-hdd"></i>&nbsp; Perangkat<span class="caret kiri"></span></a>
-				<ul class="sub2" style="display: block;">
+				<ul class="sub" style="display: block;">
 					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a  href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
@@ -127,7 +127,7 @@
 				</ul>
 			</li>
 			<li><a class="tutup" href="#"><i class="fas fa-desktop"></i>&nbsp; Perakitan<span class="caret kiri" ></span></a>
-				<ul class="sub2">
+				<ul class="sub">
 					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
@@ -151,12 +151,10 @@
 	<script src="../js/nav.js"></script>
 	
 		<!-- Konten -->
-		<div id="band" style="padding-left: 70px; margin-top: 22px; margin-right: 10px;" >
-				<div class="judul" style="margin-left:165px;">
-					<br>
+		<div class="judul">
 		<h3 >LAN Card  </h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
-		<div id="satu">
+		<div id="satu" style="margin-left: 19%;">
                 <div id="kotak">Pertanyaan: ( 1 dari 2 )</div>
                 <div id="tp" class="isko">
                         Konektor yang biasa digunakan untuk LAN adalah konektor ....
@@ -176,7 +174,7 @@
                 </div>
             </div>
         
-            <div id="dua">
+            <div id="dua" style="margin-left: 19%;">
                 <div id="kotak2">Pertanyaan: ( 2 dari 2 )</div>
                 <div id="tp2" class="isko">
         
@@ -201,16 +199,31 @@
                         <br>
                         
                 </div>
-            </div>
-		 <span id="g1">
-        <hr style="height:1px;border-width:1;background-color:lightgray">
-		<a href="materi14.html"><button class="button-left"> <- Kembali </button></a> 
-		<a href="materi15.html"><button class="button-right"> Selanjutnya -> </button></a>
-		</span>
+			</div>
+			
+			<center>
+					<div class="nextnew">
+						<hr style="height:1px;border-width:1;background-color:lightgray">
+						<ul style="float: left;padding-left:0;">
+							<a href="materi14.html"><button class="button-left"> <- Kembali </button></a> 
+						</ul>
+		
+						<a href="materi14.html">
+						<button class="button-tengah">1</button>
+						</a>
+						<a href="#">
+						<button class="button-tengah"><u>2</u></button>
+						</a>
+		
+						<ul style="float: right;">
+							<a href="materi15.html"><button class="button-right"> Selanjutnya -> </button></a>
+						</ul>
+					</div>
+			</center> 
 		<br><br>
 		<div id="g10"></div>
 		</div>
-		</div>
+		
         
         <audio id="benar">
                 <source src="../suara/benar.mp3" type="audio/mp3">
@@ -303,6 +316,43 @@
 			document.getElementById("tiga").hidden=false;
 		}
 
+		function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("logogbr").style.display="none";
+				document.getElementById("namalogo").style.display="none";
+				document.getElementById("menuhp").style.display="block";
+				document.getElementById("brnd").style.display="block";
+				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("g1").style.display = "none";
+				document.getElementById("g10").innerHTML = `
+				<br>
+				<div id="bas2" class="next" style="margin:5px;">
+				<a href="../index.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi01.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				</div>
+				<br>
+				`;
+				
+				
+				
+			} else {
+				document.getElementById("menu-wrap").style.width="18%";
+				document.getElementById("menu-wrap").style.height="100px";
+				document.getElementById("menu-wrap").style.display="block";
+				document.getElementById("logogbr").style.display="";
+				document.getElementById("namalogo").style.display="";
+				document.getElementById("menuhp").style.display="none";
+				document.getElementById("brnd").style.display="none";
+				document.getElementById("g1").style.display = "block";
+				document.getElementById("g10").innerHTML = "";
+				
+			}
+
+			}
+
+			var x = window.matchMedia("(max-width: 1000px)")
+			responsif(x) // Call listener function at run time
+			x.addListener(responsif) // Attach listener function on state changes
        
 
 		

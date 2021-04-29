@@ -104,7 +104,7 @@
 				<li id="brnd" onclick="go()"><a  href="#">Beranda</a></li>
 				<li><a class="tutup" href="#" onclick="guru()">Token</a></li>
 				<li><a class="tutup active" href="#">Nilai Siswa<span class="caret kiri" ></span></a>
-					<ul class="sub">
+					<ul class="sub" style="display: block;">
 						<li><a class="disini" href="#">Kuis 1</a></li>
 						<li><a href="guru2.html">Kuis 2</a></li>
 						<li><a href="guru3.html">Kuis 3</a></li>
@@ -128,6 +128,7 @@
 
 					</ul>
 				</li>
+				<li><a class="tutup" href="guru5.html" onclick="filter()">Filter Nilai</a></li>
 		</ul>
 	</div>
 	<script src="../js/nav.js"></script>
@@ -203,6 +204,10 @@
 	<script>
 		function sabar(){
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
+		}
+
+		function filter(){
+			location.href="guru5.html";
 		}
 		
 		let download = document.querySelector('.download');

@@ -151,7 +151,7 @@
 		<h3 >Pengenalan Perangkat  </h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
 		</div>
-		<div id="ba" class="kon">
+		<div id="ba" class="konnew">
 			<div id="kotak" style="padding-left:20px;"onclick="tj()">Tujuan Pembelajaran</div>
 			<div id="tp" class="isko" >
 				<ul><li>Siswa mampu menjelaskan perangkat keras perakitan komputer beserta fungsinya</li></ul>
@@ -186,7 +186,7 @@
 				<div id="g3"></div>
 			
 		</div>
-		<div id="bas" class="kon2">
+		<div id="bas" class="kon2new">
 				<center>
 						<div id="first" style="margin-top: 150px;">
 							<i class="fas fa-lock" style="font-size: 20px;"></i>
@@ -199,9 +199,11 @@
 				<div id="gambar"></div>
 				
 		</div>
-		<div id="bas2" class="next">
-        <a href="materi4.html"><button class="button-left"> <- Kembali </button></a> 
-		<a href="materi5.html"><button class="button-right"> Selanjutnya -> </button></a>
+		<div id="bas2" class="nextnew">
+			<br> 
+			
+			<a href="materi4.html"><button class="button-left"> <- Kembali </button></a> 
+		 <a href="materi5.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		
 
@@ -216,9 +218,10 @@
 			if (x.matches) { // If media query matches
 				document.getElementById("h1").style.display="none";
 				document.getElementById("btn1").hidden=true;
-				document.getElementById("ba").style.width="100%";
+				document.getElementById("ba").style.width="";
 				document.getElementById("bas").style.display="none";
 				document.getElementById("bas2").style.display="none";
+				document.getElementById("ba").style.borderBottom="0";
 				document.getElementById("ba").style.marginLeft="10px";
 				document.getElementById("ba").style.height="100%";
 				document.getElementById("brnd").style.display="block";
@@ -226,6 +229,7 @@
 				document.getElementById("namalogo").style.display="none";
 				document.getElementById("menuhp").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("ba").style.position="";
 				document.getElementById("g1").innerHTML = `
 				<br><br>
 				<div id="kotak">Prasyarat:</div>
@@ -255,10 +259,11 @@
 			} else {
 				document.getElementById("h1").style.display="";
 				document.getElementById("btn1").hidden=false;
-				document.getElementById("ba").style.width="39%";
+				document.getElementById("ba").style.width="37.5%";
 				document.getElementById("bas").style.display="block";
 				document.getElementById("bas2").style.display="block";
-				document.getElementById("ba").style.height="370px";
+				document.getElementById("ba").style.height="65%";
+				document.getElementById("ba").style.left="20%";
 				document.getElementById("menu-wrap").style.width="18%";
 				document.getElementById("menu-wrap").style.height="100px";
 				document.getElementById("menu-wrap").style.display="block";
@@ -270,6 +275,7 @@
 				document.getElementById("g2").innerHTML = ""
 				document.getElementById("g3").innerHTML = ""
 				document.getElementById("bas2").style.display="block";
+				document.getElementById("ba").style.position="fixed";
 				}
 			}
 

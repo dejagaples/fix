@@ -21,14 +21,14 @@
   <title>RAKITOS - Guru</title>
   <style>
       #customers {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helv  etica, sans-serif;
   border-collapse: collapse;
   width: 60%;
 }
 
 #customers td, #customers th {
   border: 1px solid #ddd;
-  padding: 5px;
+  padding: 8px;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -43,7 +43,6 @@
   color: white;
 
 }
-
   </style>
   
 </head>
@@ -85,21 +84,16 @@
 					<form>
 						<div class="container">
 							<label >
-								<b>1. Tabel menunjukkan nilai siswa pada kegiatan Latihan </b>
+								<b>1. Pilih kelas. </b>
 							</label>
 							<br>
 							<label >
-									<b>2. Skor maksimal 12 untuk soal nomor 12. </b>
+									<b>2. Pilih jenis penugasan. </b>
 							</label>
 							<br>
 							<label >
-									<b>3. Skor maksimal 10 untuk soal nomor 14. </b>
-							</label>
-							<br>
-							<label >
-									<b>4. Skor 6 untuk jawaban benar pada soal lainnya. </b>
-							</label>
-							<br/><br/>
+									<b>3. Klik Cari. </b>
+							</label><br/>
 						</div>
 					</form>
 				</div>
@@ -112,8 +106,8 @@
 		<ul id="menu" class="nav" >
 				<li id="brnd" onclick="go()"><a  href="#">Beranda</a></li>
 				<li><a class="tutup" href="#" onclick="guru()">Token</a></li>
-				<li><a class="tutup active" href="#">Nilai Siswa<span class="caret kiri" ></span></a>
-					<ul class="sub" style="display: block;">
+				<li><a class="tutup" href="#">Nilai Siswa<span class="caret kiri" ></span></a>
+					<ul class="sub">
 						<li><a  href="guru1.html">Kuis 1</a></li>
 						<li><a href="guru2.html">Kuis 2</a></li>
 						<li><a href="guru3.html">Kuis 3</a></li>
@@ -137,7 +131,7 @@
 
 					</ul>
 				</li>
-				<li><a class="tutup" href="guru5.html" onclick="filter()">Filter Nilai</a></li>
+				<li><a class="tutup active" href="guru5.html">Filter Nilai</a></li>
 		</ul>
 	</div>
 	<script src="../js/nav.js"></script>
@@ -163,9 +157,26 @@
 
 		<!-- Konten -->
 		<div class="judul">
-		<h3>Latihan</h3>
+		<h3>Filter Nilai</h3>
         <hr style="height:1px;border-width:1;background-color:lightgray">
         <center>
+                Cari berdasarkan:
+                &nbsp;&nbsp;
+                <select id="kelas">
+                        <option>--Pilih Kelas --</option>
+                        <option value="A">X A Multimedia</option>
+                        <option value="B">X B Multimedia</option>
+                </select>
+                &nbsp;&nbsp;
+                <select id="kuis">
+                        <option >-Pilih Penugasan-</option>
+                        <option value="kuis_1">KUIS 1</option>
+                        <option value="kuis_2">KUIS 2</option>
+                        <option value="kuis_3">KUIS 3</option>
+                        <option value="latihan">LATIHAN</option>
+                </select>
+                &nbsp;&nbsp;
+                <button class="button-pertanyaan" onclick="readlah()">Cari</button>
 				<button class="button-pertanyaan download">Download</button>
 				<br>
 				<br>		
@@ -174,32 +185,15 @@
 				<tr >
 					<th>Nama</th>
 					<th>Kelas</th>
-					<th>Tanggal</th>
-					<th>Waktu Mulai</th>
-					<th>Waktu Selesai</th>
-					<th>S1</th>
-					<th>S2</th>
-					<th>S3</th>
-					<th>S4</th>
-					<th>S5</th>
-					<th>S6</th>
-					<th>S7</th>
-					<th>S8</th>
-					<th>S9</th>
-					<th>S10</th>
-					<th>S11</th>
-					<th>S12</th>
-					<th>S13</th>
-					<th>S14</th>
-					<th>S15</th>
-					<th>Nilai</th>
+                    <th>Tanggal</th>
+                    <th>Nilai</th>
 				</tr>
 			</thead>
 			<tbody id="table_body">
 			</tbody>
         </table>
 	
-	<script src="../js/index4.js"></script>
+	
          <br>
          <br>
          
@@ -213,13 +207,77 @@
 		
 
 	<script>
+        
+        let tmp = document.getElementById('table_body');
+        let carikuis="";
+        let carikelas="";
+        
+function readlah() {
+    tmp.innerHTML = "";
+    if(document.getElementById("kelas").selectedIndex == "1"){
+        carikelas="X A Multimedia";
+    }
+    else if(document.getElementById("kelas").selectedIndex == "2"){
+        carikelas="X B Multimedia";
+    }
+    else{
+        alert('Tentukan kelas');
+    }
+
+    if(document.getElementById("kuis").selectedIndex == "1"){
+        carikuis="kuis_1";
+    }
+    else if(document.getElementById("kuis").selectedIndex == "2"){
+        carikuis="kuis_2";
+    }
+    else if(document.getElementById("kuis").selectedIndex == "3"){
+        carikuis="kuis_3";
+    }
+    else if(document.getElementById("kuis").selectedIndex == "4"){
+        carikuis="latihan";
+    }
+    else{
+        alert('Tentukan penugasan');
+    }
+
+    if ((carikuis != "") && (carikelas != "")) {
+    var task = firebase.database().ref().child(carikuis);
+        
+        task.orderByChild("nama").on("child_added", function (data) {
+            var taskvalue = data.val();
+
+            if (carikelas == taskvalue.kelas) {
+                
+                tmp.innerHTML += `<tr>
+                            <td>${taskvalue.nama}</td>
+                            <td>${taskvalue.kelas}</td>
+                            <td>${taskvalue.tanggal}</td>
+                            <td>${taskvalue.nilai}</td>
+                        </tr>`;
+
+            }
+        });
+    } 
+    else {
+        alert('Tentukan filter pencarian');
+    }
+
+
+      
+
+}
+
+
+
+
+
+
+
+
 		function sabar(){
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
 		
-		function filter(){
-			location.href="guru5.html";
-		}
 		let download = document.querySelector('.download');
 			download.addEventListener('click', function () {
 			var data_type = 'data:application/vnd.ms-excel';

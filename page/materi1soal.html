@@ -22,7 +22,7 @@
 		document.addEventListener("contextmenu", function(e){
 			e.preventDefault();
 		}, false);
-        window.onload = function awal(){
+		window.onload = function awal(){
 				document.getElementById("dua").hidden=true;
 				document.getElementById("tiga").hidden=true;
 				
@@ -35,13 +35,13 @@
 <!-- Body -->
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!-- Navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top" style="border-radius: 0;">
+	<nav class="navbar navbar-default" style="border-radius: 0;">
 	  <div class="container-fluid">
 		<!-- Navbar Atas Kiri -->  
 		<div class="navbar-header">
 			<img id="logogbr" src="../gambar/Logo.png"  width="50" height="50" >
 			<span id="namalogo" style="color:white;font-weight: bold;" >RAKITOS</span>
-			
+			<i id="menuhp" class="fa fa-bars" aria-hidden="true" style="color: cornsilk;font-size: 30px; margin: 5px;" onclick="hilang()"></i>
 		</div>
 		<!-- Navbar Atas Kanan -->
 	    <div class="collapse navbar-collapse" id="myNavbar">
@@ -84,19 +84,19 @@
 	</div>
 
 	<!--/.sidebar-->
-	<div id="menu-wrap2">
-		<ul id="menu2" class="nav">
-			
-            <li><a class="tutup " href="#"><i class="far fa-question-circle"></i> &nbsp;Pengenalan<span class="caret kiri" ></span></a>
-				<ul class="sub2">
-					<li><a  href="materi0.html">Kompetensi Dasar</a></li>
+	<div id="menu-wrap">
+		<ul id="menu" class="nav">
+			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a class="tutup" href="#"><i class="far fa-question-circle"></i>&nbsp;Pengenalan<span class="caret kiri" ></span></a>
+				<ul class="sub" >
+					<li><a href="materi0.html">Kompetensi Dasar</a></li>
 					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
 					<li><a href="materi02.html">Peta Konsep</a></li>
 					<li><a href="materi03.html">Pengertian</a></li>
 				</ul>
 			</li>
             <li><a class="tutup active" href="#"><i class="fas fa-tools"></i>&nbsp; Alat<span class="caret kiri" ></span></a>
-				<ul class="sub2" style="display: block;">
+				<ul class="sub" style="display: block;">
 					<li><a  href="p1.html">Pengenalan</a></li>
 					<li><a class="disini" href="#">Obeng</a></li>
 					<li><a  href="materi2.html">Sekrup & Baut</a></li>
@@ -107,7 +107,7 @@
 				</ul>
 			</li>
 			<li><a class="tutup" href="#"><i class="fas fa-hdd"></i>&nbsp; Perangkat<span class="caret kiri"></span></a>
-				<ul class="sub2">
+				<ul class="sub">
 					<li><a href="p2.html">Pengenalan</a></li>
 					<li><a href="materi5.html">Casing</a></li>
 					<li><a href="materi6.html">Power Supply</a></li>
@@ -129,7 +129,7 @@
 				</ul>
 			</li>
 			<li><a class="tutup" href="#"><i class="fas fa-desktop"></i>&nbsp; Perakitan<span class="caret kiri" ></span></a>
-				<ul class="sub2">
+				<ul class="sub">
 					<li><a href="p3.html">Pengenalan</a></li>
 					<li><a href="lepascs.html">Case (Buka)</a></li>
 					<li><a href="pasangps.html">Power Supply</a></li>
@@ -153,92 +153,102 @@
 	<script src="../js/nav.js"></script>
 	
 		<!-- Konten -->
-		<div id="band" style="padding-left: 70px; margin-top: 22px; margin-right: 10px;" >
-				<div class="judul" style="margin-left:165px;">
-					<br>
-		<h3 >Obeng  </h3>
-		<hr style="height:1px;border-width:1;background-color:lightgray">
-		<div id="satu">
-                <div id="kotak1">Pertanyaan: ( 1 dari 3 )</div>
-                <div  class="isko1">
-                    Berikut jenis mata obeng yang paling sering digunakan dalam perakitan komputer, yaitu ....
-                        <br>
-                        <input name="q2" id="r1" type="radio" value="minus" /> 
-                        <img src="../gambar/obengpil1.JPG" width="4%"/>
-                        <br>
-                        <input name="q2" id="r2"  type="radio" value="plus" />	
-                        <img src="../gambar/obengpil2.JPG" width="4%"/>
-                        <br><br>
-                        <button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
-                        <button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
-                        <p id="tampil"></p>
-                        <br>
-                </div>
-        </div>
+		<div class="judul">
+			<h3 >Obeng  </h3>
+			<hr style="height:1px;border-width:1;background-color:lightgray">
+			<div id="satu" style="margin-left: 19%;">
+				<div id="kotak1">Pertanyaan: ( 1 dari 3 )</div>
+				<div  class="isko1">
+					Berikut jenis mata obeng yang paling sering digunakan dalam perakitan komputer, yaitu ....
+						<br>
+						<input name="q2" id="r1" type="radio" value="minus" /> 
+						<img src="../gambar/obengpil1.JPG" width="4%"/>
+						<br>
+						<input name="q2" id="r2"  type="radio" value="plus" />	
+						<img src="../gambar/obengpil2.JPG" width="4%"/>
+						<br><br>
+						<button class="button-pertanyaan" onclick="cek()">Cek Jawaban</button>
+						<button class="button-pertanyaan" onclick="dua()">Selanjutnya</button>
+						<p id="tampil"></p>
+						<br>
+				</div>
+		</div>
 
-            <div id="dua">
-                <div id="kotak1">Pertanyaan: ( 2 dari 3 )</div>
-                <div id="tp2" class="isko1">
-                    Pada gambar di bawah ini, tentukan jenis mata obeng plus dengan cara mengklik pada gambar!
-                        <br>
-                        <center>
-                        <img src="../gambar/obengsoal2.JPG" usemap="#workmap" width="300"/>
-                        </center>	
-                        <map name="workmap">
-                            <area id="1" shape="rect" coords="22,10,60,130" alt="minus" href="#" onclick="cek21()">
-                            <area id="2" shape="rect" coords="97,10,135,130" alt="plus" href="#" onclick="cek22()">
-                            <area id="3" shape="rect" coords="170,10,208,130" alt="allen" href="#" onclick="cek23()">
-                            <area id="4" shape="rect" coords="237,10,275,130" alt="robertson" href="#" onclick="cek24()">
-                            
-                        </map>
-                        
-                        <button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
-                        <button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
-                        <p id="tampil2"></p>
-                        <br>
-                </div>
-                <br>
-            </div>
-            <div id="tiga">
-                <div id="kotak1">Pertanyaan: ( 3 dari 3 )</div>
-                <div id="tp3" class="isko1">
-                    Pada gambar di bawah ini, tentukan jenis mata obeng <b>Phillips</b> dengan cara mengklik pada gambar!
-                        <br>
-                        <center>
-                        <img src="../gambar/obengsoal3.JPG" usemap="#workmap2" width="300"/>
-                        </center>	
-                        <map name="workmap2">
-                            <area id="5" shape="rect" coords="14,8,45,112" alt="5" href="#" onclick="cek31()">
-                            <area id="6" shape="rect" coords="70,8,102,112" alt="6" href="#" onclick="cek32()">
-                            <area id="7" shape="rect" coords="124,8,156,112" alt="7" href="#" onclick="cek33()">
-                            <area id="8" shape="rect" coords="186,8,220,112" alt="8" href="#" onclick="cek34()">
-                            <area id="9" shape="rect" coords="247,8,280,112" alt="8" href="#" onclick="cek35()">
-                        </map>
-                        <br>
-                        <button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
-                        <p id="tampil3"></p>
-                        <br>
-                </div>
-                <br>
-                
-            </div>
-		 <span id="g1">
-        <hr style="height:1px;border-width:1;background-color:lightgray">
-		<a href="materi1.html"><button class="button-left"> <- Kembali </button></a> 
-		<a href="materi2.html"><button class="button-right"> Selanjutnya -> </button></a>
-		</span>
-		<br><br>
-		<div id="g10"></div>
+			<div id="dua" style="margin-left: 19%;">
+				<div id="kotak1">Pertanyaan: ( 2 dari 3 )</div>
+				<div id="tp2" class="isko1">
+					Pada gambar di bawah ini, tentukan jenis mata obeng plus dengan cara mengklik pada gambar!
+						<br>
+						<center>
+						<img src="../gambar/obengsoal2.JPG" usemap="#workmap" width="300"/>
+						</center>	
+						<map name="workmap">
+							<area id="1" shape="rect" coords="22,10,60,130" alt="minus" href="#" onclick="cek21()">
+							<area id="2" shape="rect" coords="97,10,135,130" alt="plus" href="#" onclick="cek22()">
+							<area id="3" shape="rect" coords="170,10,208,130" alt="allen" href="#" onclick="cek23()">
+							<area id="4" shape="rect" coords="237,10,275,130" alt="robertson" href="#" onclick="cek24()">
+							
+						</map>
+						
+						<button class="button-pertanyaan" onclick="satu()">Sebelumnya</button>
+						<button class="button-pertanyaan" onclick="tiga()">Selanjutnya</button>
+						<p id="tampil2"></p>
+						<br>
+				</div>
+				<br>
+			</div>
+			<div id="tiga" style="margin-left: 19%;" >
+				<div id="kotak1">Pertanyaan: ( 3 dari 3 )</div>
+				<div id="tp3" class="isko1">
+					Pada gambar di bawah ini, tentukan jenis mata obeng <b>Phillips</b> dengan cara mengklik pada gambar!
+						<br>
+						<center>
+						<img src="../gambar/obengsoal3.JPG" usemap="#workmap2" width="300"/>
+						</center>	
+						<map name="workmap2">
+							<area id="5" shape="rect" coords="14,8,45,112" alt="5" href="#" onclick="cek31()">
+							<area id="6" shape="rect" coords="70,8,102,112" alt="6" href="#" onclick="cek32()">
+							<area id="7" shape="rect" coords="124,8,156,112" alt="7" href="#" onclick="cek33()">
+							<area id="8" shape="rect" coords="186,8,220,112" alt="8" href="#" onclick="cek34()">
+							<area id="9" shape="rect" coords="247,8,280,112" alt="8" href="#" onclick="cek35()">
+						</map>
+						<br>
+						<button class="button-pertanyaan" onclick="dua()">Sebelumnya</button>
+						<p id="tampil3"></p>
+						<br>
+				</div>
+				<br>
+			</div>
+			<!-- next -->
+			<center>
+			<div class="nextnew">
+				<hr style="height:1px;border-width:1;background-color:lightgray">
+				<ul style="float: left;padding-left:0;">
+					<a href="materi1.html"><button class="button-left"> <- Kembali </button></a> 
+				</ul>
+
+				<a href="materi1.html">
+				<button class="button-tengah">1</button>
+				</a>
+				<a href="#">
+				<button class="button-tengah"><u>2</u></button>
+				</a>
+
+				<ul style="float: right;">
+					<a href="materi2.html"><button class="button-right"> Selanjutnya -> </button></a>
+				</ul>
+			</div>
+			</center>
+			
+
 		</div>
-		</div>
-        
-        <audio id="benar">
+			
+		<audio id="benar">
                 <source src="../suara/benar.mp3" type="audio/mp3">
             </audio>
             <audio id="salah">
                 <source src="../suara/salah.mp3" type="audio/mpeg">
             </audio>
-		
 		
 
 	<script>
@@ -349,8 +359,50 @@
 				z.play();
 				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;		
 		}	
+		
+		
+		function responsif(x) {
+			if (x.matches) { // If media query matches
+				document.getElementById("logogbr").style.display="none";
+				document.getElementById("namalogo").style.display="none";
+				document.getElementById("menuhp").style.display="block";
+				document.getElementById("brnd").style.display="block";
+				document.getElementById("menu-wrap").style.display="none";
+				document.getElementById("g1").style.display = "none";
+				document.getElementById("g10").innerHTML = `
+				<br>
+				<div id="bas2" class="next" style="margin:5px;">
+				<a href="../index.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi01.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				</div>
+				<br>
+				`;
+				
+				
+				
+			} else {
+				document.getElementById("menu-wrap").style.width="18%";
+				document.getElementById("menu-wrap").style.height="100px";
+				document.getElementById("menu-wrap").style.display="block";
+				document.getElementById("logogbr").style.display="";
+				document.getElementById("namalogo").style.display="";
+				document.getElementById("menuhp").style.display="none";
+				document.getElementById("brnd").style.display="none";
+				document.getElementById("g1").style.display = "block";
+				document.getElementById("g10").innerHTML = "";
+				
+			}
+
+			}
+
+			var x = window.matchMedia("(max-width: 1000px)")
+			responsif(x) // Call listener function at run time
+			x.addListener(responsif) // Attach listener function on state changes
+		
+		
 
 		
+    		
 	</script>
 
 	

@@ -11,13 +11,12 @@
   <script src="../js/bootstrap.min.js"></script>
   <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
   <script src="../js/duDialog.js"></script>
-  <script src="../js/kabel.js"></script>
   <link href="../css/fontawesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" src="../css/all.css">
   <script src="../js/all.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/duDialog.css">
   <link rel="shortcut icon" href="../gambar/logo.ico" type="image/x-icon">
-  <title>RAKITOS - Indikator dan Tujuan</title>
+  <title>RAKITOS - Alat</title>
   <script language="JavaScript">
 		document.addEventListener("contextmenu", function(e){
 			e.preventDefault();
@@ -58,12 +57,16 @@
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
 				  <h4 class="modal-title">PETUNJUK</h4>
-				</div>
+			</div>
 				<div class="modal-body">
 					<form>
 						<div class="container">
 							<label >
 								<b>1. Bacalah dengan pelan secara berurutan. </b>
+							</label>
+							<br>
+							<label >
+								<b>2. Jika menggunakan PC, klik <code style="color: blue;">Lihat >></code> untuk menampilkan ilustrasi. </b>
 							</label>
 							<br/><br/>
 						</div>
@@ -73,23 +76,23 @@
 		</div>
 	</div>
 
-	<!--/.sidebar-->
+	<!-- Sidebar-->
 	<div id="menu-wrap">
 		<ul id="menu" class="nav">
 			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
-            <li><a class="tutup active" href="#"><i class="far fa-question-circle"></i>&nbsp;Pengenalan<span class="caret kiri" ></span></a>
-				<ul class="sub" style="display: block;">
+			<li><a class="tutup" href="#"><i class="far fa-question-circle"></i> &nbsp;Pengenalan<span class="caret kiri" ></span></a>
+				<ul class="sub">
 					<li><a href="materi0.html">Kompetensi Dasar</a></li>
-					<li><a class="disini" href="#">Indikator dan Tujuan</a></li>
+					<li><a href="materi01.html">Indikator & Tujuan</a></li>
 					<li><a href="materi02.html">Peta Konsep</a></li>
 					<li><a href="materi03.html">Pengertian</a></li>
 				</ul>
 			</li>
-            <li><a class="tutup" href="#"><i class="fas fa-tools"></i>&nbsp; Alat<span class="caret kiri" ></span></a>
-				<ul class="sub">
-					<li><a  href="p1.html">Pengenalan</a></li>
+			<li><a class="tutup active" href="#"><i class="fas fa-tools"></i>&nbsp; Alat<span class="caret kiri" ></span></a>
+				<ul class="sub" style="display: block;">
+					<li><a class="disini" href="#">Pengenalan</a></li>
 					<li><a  href="materi1.html">Obeng</a></li>
-					<li><a  href="materi2.html">Sekrup & Baut</a></li>
+					<li><a href="materi2.html">Sekrup & Baut</a></li>
 					<li><a href="materi3.html">Kabel</a></li>
 					<li><a href="materi4.html">Jumper</a></li>
 					<li><a href="kuis1.html">Berlatih</a></li>
@@ -137,40 +140,83 @@
 					<li><a href="qz3.html">Kuis</a></li>
 				</ul>
 			</li>
-			<li><a class="tutup" href="#" onclick="sabar()"><i class="fas fa-book"></i> &nbsp; Latihan</a></li>
+			<li><a class="tutup" href="#" onclick="sabar()"><i class="fas fa-book"></i> &nbsp;Latihan</a></li>
 		</ul>
 	</div>
-	<script src="../js/nav.js"></script>
+	<script src="../js/nav.js">	</script>
 	
 		<!-- Konten -->
 		<div class="judul">
-		<h3 >Indikator dan Tujuan  </h3>
+		<h3 >Pengenalan Alat  </h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
-		<p style="text-align: justify;;">
-			<b>Indikator</b>
-        <br>
-        3.2.1 Menjelaskan alat-alat untuk perakitan komputer <br>
-        3.2.2	Menjelaskan perangkat keras perakitan komputer beserta fungsinya<br>
-        4.2.1	Melakukan perakitan komputer
-        <br><br>
-        <b>Tujuan Pembelajaran</b><br>
-        1. Siswa mampu menjelaskan alat-alat untuk perakitan komputer <br>
-        2.	Siswa mampu menjelaskan perangkat keras perakitan komputer beserta fungsinya <br>
-        3.	Siswa mampu melakukan perakitan komputer
-		 </p>
-		 <br>
-		 <br>
-		 <br>
-		<div id="g1" class="nextnew">
-			<br> 
-			<hr style="height:1px;border-width:1;background-color:lightgray">
-			<a href="materi0.html"><button class="button-left"> <- Kembali </button></a> 
-			<a href="materi02.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
-		</span>
-		<div id="g10"></div>
-		</div>
+		<div id="ba" class="konnew">
+			<div id="kotak" style="padding-left:20px;"onclick="tj()">Tujuan Pembelajaran</div>
+			<div id="tp" class="isko" >
+				<ul><li>Siswa mampu menjelaskan alat-alat untuk perakitan komputer</li></ul>
+			</div>
+			<br>
+				<script>
+				function tj() {
+					var x = document.getElementById("tp");
+					if (x.style.display === "none") {
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+					}
+				}
+				</script>
+			<p>  
+					
+				Alat merupakan perkakas untuk membantu proses perakitan komputer.
+				Sebelum membahas lebih jauh, sebaiknya peserta didik mengetahui prasyarat yang diperlukan 
+				pada materi ini.
+				<span id="g1"> </span>
+				Adapun alat-alat yang akan dipelajari dapat dilihat pada <code>Gambar 1</code> berikut.
+				<span id="h1">(Klik tombol untuk menampilkan)</span>
+				<div id="btn1"> 
+						<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
+				</div>
+				<span id="g2"> </span>		
+			</p>
+				<br>
+				<div id="g3"></div>
 			
+		</div>
+		<div id="bas" class="kon2new">
+			<center>
+			<div id="first" style="margin-top: 150px;">
+				<i class="fas fa-lock" style="font-size: 20px;"></i>
+			<p style="font-size: 20px;">Bacalah Materi Terlebih Dahulu
+				<br>
+				<<
+			</p>
+			</div>
+			</center>
+			<div id="gambar"></div>
+			
+		</div>	
+			
+				
+        </div>
+        
+		
+        <center>
+        <div id="bas2" class="nextnew">
+            <ul style="float: left;padding-left:0;">
+            <a href="materi03.html"><button class="button-left"> <- Kembali </button></a> 
+            </ul>
+
+            <button class="button-tengah"><u>1</u></button>
+            <button class="button-tengah">2</button>
+    
+            <ul style="float: right;">
+            <a href="materi1.html"><button class="button-right"> Selanjutnya -> </button></a>
+            </ul>
+        </div>
+        </center>
+
+
 		
 		
 
@@ -179,46 +225,76 @@
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
 		
-		
+
+
 		function responsif(x) {
 			if (x.matches) { // If media query matches
+				document.getElementById("h1").style.display="none";
+				document.getElementById("btn1").hidden=true;
+				document.getElementById("ba").style.width="100%";
+				document.getElementById("ba").style.left="";
+				document.getElementById("bas").style.display="none";
+				document.getElementById("bas2").style.display="none";
+				document.getElementById("ba").style.borderBottom="0";
+				document.getElementById("ba").style.marginLeft="10px";
+				document.getElementById("ba").style.height="100%";
+				document.getElementById("brnd").style.display="block";
 				document.getElementById("logogbr").style.display="none";
 				document.getElementById("namalogo").style.display="none";
 				document.getElementById("menuhp").style.display="block";
-				document.getElementById("brnd").style.display="block";
 				document.getElementById("menu-wrap").style.display="none";
-				document.getElementById("g1").style.display = "none";
-				document.getElementById("g10").innerHTML = `
+				document.getElementById("ba").style.position="";
+				document.getElementById("g1").innerHTML = `
+				<br><br>
+				<div id="kotak">Prasyarat:</div>
+				<div id="tp" class="isko">
+						Tidak ada
+						<br><br>
+				</div>
+				<br>	
+				`;
+				document.getElementById("g2").innerHTML = `
+				<center>
+				<br>
+				<img src="../gambar/p1.jpg" width="80%">
+					<br><br>
+					<em><code>Gambar 1</code>. Materi yang akan dipelajari</em>
+					<br>
+				</center>
+				`;
+				document.getElementById("g3").innerHTML = `
 				<br>
 				<div id="bas2" class="next" style="margin:5px;">
-				<a href="materi0.html"><button class="button-left-hp"> <- Kembali </button></a> 
-				<a href="materi02.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
+				<a href="materi03.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi1.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
 				</div>
 				<br>
 				`;
-				
-				
-				
 			} else {
+				document.getElementById("ba").style.width="37.5%";
+				document.getElementById("bas").style.display="block";
+				document.getElementById("bas2").style.display="block";
+                document.getElementById("ba").style.height="65%";
+				document.getElementById("ba").style.left="20%";
 				document.getElementById("menu-wrap").style.width="18%";
 				document.getElementById("menu-wrap").style.height="100px";
 				document.getElementById("menu-wrap").style.display="block";
 				document.getElementById("logogbr").style.display="";
+				document.getElementById("brnd").style.display="none";
 				document.getElementById("namalogo").style.display="";
 				document.getElementById("menuhp").style.display="none";
-				document.getElementById("brnd").style.display="none";
-				document.getElementById("g1").style.display = "block";
-				document.getElementById("g10").innerHTML = "";
-				
-			}
-
+				document.getElementById("g1").innerHTML = "";
+				document.getElementById("g2").innerHTML = "";
+				document.getElementById("g3").innerHTML = "";
+				document.getElementById("ba").style.position="fixed";
+                
+                
+				}
 			}
 
 			var x = window.matchMedia("(max-width: 1000px)")
 			responsif(x) // Call listener function at run time
 			x.addListener(responsif) // Attach listener function on state changes
-		
-		
 
 		function hilang(){
 			var x = document.getElementById('menu-wrap');
@@ -231,9 +307,28 @@
 				x.style.marginLeft = '0';
 			}
 		}
-		
+
 		function go(){
 			location.href="../index.html";
+		}
+		
+		function g1tampil(){
+			document.getElementById("first").hidden=true;
+			document.getElementById("gambar").innerHTML=`
+			<div id="kotak">Prasyarat:</div>
+				<div id="tp" class="isko">
+						Tidak ada
+						<br><br>
+				</div>
+				<br>
+				<center>
+				<img src="../gambar/p1.jpg" width="50%">
+					<br><br>
+					<em><code>Gambar 1</code>. Materi yang akan dipelajari</em>
+					<br>
+				</center>
+			`;
+			
 		}
 		
     		

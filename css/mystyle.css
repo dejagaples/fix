@@ -996,3 +996,63 @@
 			transform: scale(1.05);
 
 		}
+
+		.nextnew {
+			
+			position: fixed;
+			width: 78%;
+			left:20%;
+			right: 2%;
+			bottom: 15px;
+			
+		}
+
+		.konnew{
+			float:left;
+			padding-right:15px;
+			margin-top:0px;
+			padding-left:5px;
+			padding-top:0px;
+			overflow-y: scroll;
+			text-align: justify;
+			margin-bottom: 50px;
+			border-right: 3px solid rgb(116, 116, 116);
+			border-bottom-style: inset;
+			border-bottom-color: lightgray;
+			border-bottom-width: 1px;
+		}
+		
+		.kon2new{
+			position: fixed;
+			right: 0;
+			width:39%;
+			height: 65%;
+			margin-right:20px;
+			margin-bottom:10px;
+			margin-left:20px;
+			padding-left:20px;
+			overflow-y: scroll;
+			padding-right:20px;
+			border-bottom-style: inset;
+			border-bottom-color: lightgray;
+			border-bottom-width: 1px;
+			
+		}
+
+		
+		  
+		  .button-tengah{
+			  margin-top: 5px;
+			  border-radius:2px;
+			  color: white;
+			border: none;
+			cursor: pointer;
+			background-color: rgb(87, 77, 155);
+			font-size:15px;
+			font-family: monospace;
+			width:35px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		  }
+
+		  
