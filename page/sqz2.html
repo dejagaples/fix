@@ -115,27 +115,55 @@
 	<!-- Konten -->
 	<div id="utama">
 	  <div id="soal">
-		<br>
-		<span style="font-weight: bold; float: right;" id="stopwatch">50 : 00</span>
-		
-		<div id="navi">
-		<span>No. </span>
-	  <button style="margin:5px" onclick="nav1()">1</button>
-	  <button style="margin:5px" onclick="nav2()">2</button>
-	  <button style="margin:5px" onclick="nav3()">3</button>
-	  <button style="margin:5px" onclick="nav4()">4</button>
-      <button style="margin:5px" onclick="nav5()">5</button>
-      <button style="margin:5px" onclick="nav6()">6</button>
-	  <button style="margin:5px" onclick="nav7()">7</button>
-	  <button style="margin:5px" onclick="nav8()">8</button>
-	  <button style="margin:5px" onclick="nav9()">9</button>
-      <button style="margin:5px" onclick="nav10()">10</button>
-    </div>
+		<center>
+        <div style="border-bottom: 5px solid grey;padding-bottom: 20px;">
+			<br>
+			<ul style="float: right; margin-right: 20px;">Sisa waktu 
+				<br>
+				<span style="font-weight: bold;border: 3px solid rgb(141, 141, 243);padding: 5px;
+				border-radius: 5px;
+				" id="stopwatch">30 : 00</span>
+			</ul>
+			<ul style="float:left">
+				Data
+				<br>
+				Pengguna
+			</ul>
+			Nomor soal
+			<br>
+			<span id="no"> <b>1</b> </span>
+
+
+			
+        </div>
+		</center>
 	  
 	  
-	  <br>
 	  <br>
 	  <div id="nomor">
+			<div class="row">
+					<div id="navi" class="col-sm-2" style="border-right: 5px solid grey; height:130vh">
+						<center>
+							<img src="../gambar/user.jpg" alt="error" width="70%"  style="margin-top: 30px;">
+							<br>
+							<span id="namee"></span>
+							<br><br>
+							</span>
+						</center>
+						
+								<button id="k1" class="kecil" style="margin:5px" onclick="nav1()" >1</button>
+								<button id="k2" class="kecil" style="margin:5px" onclick="nav2()">2</button>
+								<button id="k3" class="kecil"style="margin:5px" onclick="nav3()">3</button>
+								<button id="k4" class="kecil"style="margin:5px" onclick="nav4()">4</button>
+								<button id="k5" class="kecil"style="margin:5px" onclick="nav5()">5</button>
+								<button id="k6" class="kecil"style="margin:5px" onclick="nav6()">6</button>
+								<button id="k7" class="kecil"style="margin:5px" onclick="nav7()">7</button>
+								<button id="k8" class="kecil"style="margin:5px" onclick="nav8()">8</button>
+								<button id="k9" class="kecil"style="margin:5px" onclick="nav9()">9</button>
+								<button id="k10" class="kecil"style="margin:5px" onclick="nav10()">10</button>
+					</div>
+
+		<div class="col-sm-10">			
 		  <div id="soal1">
 			<!-- Soal -->	
             <p id="demo">1. Perhatikan gambar berikut!</p>
@@ -146,22 +174,22 @@
 			<!-- Jawaban -->  
 			<form name="form">
 				<button type="button" onclick="p1a()" class="button-kuis">A. </button>
-				<span id="a" style="margin-left:5px;">memproses perintah dan sebagai sistem komunikasi</span><br>
+				<span id="a" style="margin-left:5px;">Memproses perintah dan sebagai sistem komunikasi</span><br>
 				<button type="button" onclick="p1b()" class="button-kuis">B. </button>
-				<span id="b" style="margin-left:5px;">sebagai sistem komunikasi dan memproses perintah</span><br>
+				<span id="b" style="margin-left:5px;">Sebagai sistem komunikasi dan memproses perintah</span><br>
 				<button type="button" onclick="p1c()" class="button-kuis">C. </button>
-				<span id="c" style="margin-left:5px;">melindungi hardware lainnya dan sebagai sistem komunikasi</span><br>
+				<span id="c" style="margin-left:5px;">Melindungi hardware lainnya dan sebagai sistem komunikasi</span><br>
 				<button type="button" onclick="p1d()" class="button-kuis">D. </button>
-				<span id="d" style="margin-left:5px;">melindungi hardware lainnya dan memproses perintah</span><br>
+				<span id="d" style="margin-left:5px;">Melindungi hardware lainnya dan memproses perintah</span><br>
 				<button type="button" onclick="p1e()" class="button-kuis">E. </button>
-				<span id="e" style="margin-left:5px;">sebagai sistem komunikasi dan melindungi hardware lainnya</span><br>
+				<span id="e" style="margin-left:5px;">Sebagai sistem komunikasi dan melindungi hardware lainnya</span><br>
 				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
 				<input type="text" id="oke" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
 				<br>
             </form>
             <br>
             <center>
-            <button onclick="nav2()" >Soal Selanjutnya -></button>
+            <button class="besar"onclick="nav2()" >Soal Selanjutnya -></button>
             </center>
 		  </div>
 		  <div id="soal2">
@@ -190,8 +218,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav1()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav3()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav1()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav3()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal3">
@@ -200,23 +228,23 @@
 			<!-- Jawaban -->  
 			<form name="form3">
 				<button type="button" onclick="p3a()" class="button-kuis">A. </button>
-				<span id="3a"style="margin-left:5px;">mouse, keyboard, monitor</span><br>
+				<span id="3a"style="margin-left:5px;">Mouse, keyboard, monitor</span><br>
 				<button type="button" onclick="p3b()" class="button-kuis">B. </button>
-				<span id="3b" style="margin-left:5px;">mouse, monitor, printer</span><br>
+				<span id="3b" style="margin-left:5px;">Mouse, monitor, printer</span><br>
 				<button type="button" onclick="p3c()" class="button-kuis">C. </button>
 				<span id="3c" style="margin-left:5px;">CPU, RAM, speaker</span><br>
 				<button type="button" onclick="p3d()" class="button-kuis">D. </button>
-				<span id="3d" style="margin-left:5px;">keyboard, mouse, scanner</span><br>
+				<span id="3d" style="margin-left:5px;">Keyboard, mouse, scanner</span><br>
 				<button type="button" onclick="p3e()" class="button-kuis">E. </button>
-				<span id="3e" style="margin-left:5px;">keyboard, mouse, power supply</span><br>
+				<span id="3e" style="margin-left:5px;">Keyboard, mouse, power supply</span><br>
 				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
 				<input type="text" id="oke3" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
                 <br>
             </form>
             <br>
             <center>
-                    <button onclick="nav2()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav4()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav2()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav4()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal4">
@@ -246,8 +274,8 @@ komputer adalah ….
             </form>
             <br>
             <center>
-                    <button onclick="nav3()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav5()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav3()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav5()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal5">
@@ -274,8 +302,8 @@ komputer adalah ….
             </form>
             <br>
             <center>
-                    <button onclick="nav4()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav6()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav4()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav6()" >Soal Selanjutnya -></button>
             </center>
           </div>      
           <div id="soal6">
@@ -299,8 +327,8 @@ komputer adalah ….
             </form>
             <br>
             <center>
-                    <button onclick="nav5()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav7()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav5()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav7()" >Soal Selanjutnya -></button>
             </center>    
             </div>
             <div id="soal7">
@@ -333,8 +361,8 @@ komputer adalah ….
             </form>
             <br>
             <center>
-                    <button onclick="nav6()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav8()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav6()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav8()" >Soal Selanjutnya -></button>
             </center> 
             </div>
             <div id="soal8">
@@ -343,15 +371,15 @@ komputer adalah ….
                     <!-- Jawaban -->  
                     <form name="form8">
                             <button type="button" onclick="p8a()" class="button-kuis">A. </button>
-                            <span id="8a"style="margin-left:5px;">berfungsi memompa listrik ke perangkat komputer</span><br>
+                            <span id="8a"style="margin-left:5px;">Berfungsi memompa listrik ke perangkat komputer</span><br>
                             <button type="button" onclick="p8b()" class="button-kuis">B. </button>
-                            <span id="8b" style="margin-left:5px;">mengubah arus AC menjadi DC</span><br>
+                            <span id="8b" style="margin-left:5px;">Mengubah arus AC menjadi DC</span><br>
                             <button type="button" onclick="p8c()" class="button-kuis">C. </button>
-                            <span id="8c" style="margin-left:5px;">mengubah arus DC menjadi AC</span><br>
+                            <span id="8c" style="margin-left:5px;">Mengubah arus DC menjadi AC</span><br>
                             <button type="button" onclick="p8d()" class="button-kuis">D. </button>
-                            <span id="8d" style="margin-left:5px;">memiliki 2 tipe yaitu AT dan ATX</span><br>
+                            <span id="8d" style="margin-left:5px;">Memiliki 2 tipe yaitu AT dan ATX</span><br>
                             <button type="button" onclick="p8e()" class="button-kuis">E. </button>
-                            <span id="8e" style="margin-left:5px;">tipe AT merupakan tipe yang lebih lama</span><br>
+                            <span id="8e" style="margin-left:5px;">Tipe AT merupakan tipe yang lebih lama</span><br>
                             <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
                             <input type="text" id="oke8" name="pilihan8" size="5" style="cursor: not-allowed;" disabled>
                             <br>
@@ -359,8 +387,8 @@ komputer adalah ….
                         
                 <br>
                 <center>
-                        <button onclick="nav7()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav9()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav7()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav9()" >Soal Selanjutnya -></button>
                 </center>
             </div>
             <div id="soal9">
@@ -388,8 +416,8 @@ komputer adalah ….
                         </form>
                 <br>
                 <center>
-                        <button onclick="nav8()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav10()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav8()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav10()" >Soal Selanjutnya -></button>
                 </center>
             </div>
             <div id="soal10">
@@ -416,19 +444,17 @@ komputer adalah ….
 				</form>
                 <br>
                 <center>
-                        <button onclick="nav9()" ><- Soal Sebelumnya</button>
+                        <button class="besar" onclick="nav9()" ><- Soal Sebelumnya</button>
                         
                 </center>
-            </div>
+			</div>
+			<center>
+				<br><br>
+				<button onclick="cek()" class="button-selesai">Selesai</button>
+			</center>
+			</div>
         </div>
-		  <br>
-          <center>
-                
-                <br>
-            <button onclick="cek()" class="button-selesai">Selesai</button>
-             
-        
-            </center>
+		  
 	  </div>
 	  <br>
 	  <br>

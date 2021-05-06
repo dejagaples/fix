@@ -65,7 +65,12 @@
 							<label >
 								<b>1. Bacalah dengan cepat secara sekilas. </b>
 							</label>
-							<br/><br/>
+							<br/>
+							<label >
+									<b>2. Klik gambar untuk memperbesar. </b>
+								</label>
+								<br>
+							<br/>
 						</div>
 					</form>
 				</div>
@@ -79,8 +84,7 @@
 			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
             <li><a class="tutup active" href="#"><i class="far fa-question-circle"></i>&nbsp;Pengenalan<span class="caret kiri" ></span></a>
 				<ul class="sub" style="display: block;">
-					<li><a href="materi0.html">Kompetensi Dasar</a></li>
-					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
+					<li><a href="materi0.html">Pendahuluan</a></li>
 					<li><a class="disini" href="#">Peta Konsep</a></li>
 					<li><a href="materi03.html">Pengertian</a></li>
 				</ul>
@@ -146,13 +150,29 @@
 		<div class="judul">
 		<h3 >Peta Konsep</h3>
 		<hr style="height:1px;border-width:1;background-color:lightgray">
+		<p>
+			Peta konsep berikut akan mendeskripsikan struktur materi secara keseluruhan. Mari lihat 
+			<b><code>Gambar 1</code> berikut. </b>
+		</p>
 		<center>
-			<img id="b" src="../gambar/peta3.png">
+			
+			<img id="b" src="../gambar/peta4.png" style="cursor: pointer;">
+			<br>
+			<b><code>Gambar 1</code>. Peta Konsep</b>
 		</center>
+		<!-- The Modal -->
+		<div id="myModal" class="modals">
+			<span class="closes">&times;</span>
+			<img class="modals-content" id="img01">
+			<div id="caption"><b>Peta Konsep</b></div>
+	 	 </div>
+	  
+		
+		
 		<div id="g1" class="nextnew">
 			<br> 
 			<hr style="height:1px;border-width:1;background-color:lightgray">
-			<a href="materi01.html"><button class="button-left"> <- Kembali </button></a> 
+			<a href="materi0.html"><button class="button-left"> <- Kembali </button></a> 
 			<a href="materi03.html"><button class="button-right"> Selanjutnya -> </button></a>
 		</div>
 		 
@@ -186,7 +206,7 @@
 				<br>
 				<br>
 				<div id="bas2" class="next" style="margin:5px;">
-				<a href="materi01.html"><button class="button-left-hp"> <- Kembali </button></a> 
+				<a href="materi0.html"><button class="button-left-hp"> <- Kembali </button></a> 
 				<a href="materi03.html"><button class="button-right-hp"> Selanjutnya -> </button></a>
 				</div>
 				`;
@@ -201,7 +221,7 @@
 				document.getElementById("namalogo").style.display="";
 				document.getElementById("menuhp").style.display="none";
 				document.getElementById("brnd").style.display="none";
-				document.getElementById("b").style.width="55%";
+				document.getElementById("b").style.width="45%";
 				document.getElementById("g1").style.display = "block";
 				document.getElementById("g10").innerHTML = "";
 				
@@ -231,6 +251,29 @@
 			location.href="../index.html";
 		}
 		
+
+		//adadada
+		// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("b");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closess the modal
+var span = document.getElementsByClassName("closes")[0];
+
+// When the user clicks on <span> (x), closes the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
     		
 	</script>
 

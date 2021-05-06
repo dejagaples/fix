@@ -247,48 +247,49 @@
 		
 
 	<script>
+		//ambil suara
+		var z = document.getElementById("benar"); 
+			var y = document.getElementById("salah"); 
 		function sabar(){
 			new duDialog ('Maaf', 'Materi Anda Belum Selesai !');
 		}
 		
         function cek11(){
 				y.play();
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Jawaban Masih Salah`;
 			}
 			function cek12(){
 				y.play();
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Jawaban Masih Salah`;
 			}
 			function cek13(){
 				z.play();
-				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				document.getElementById("tampil").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Selamat, Jawaban Benar`;
 			}
 
 			function cek2() {
 				if ((document.getElementById("a1").checked == true)&&(document.getElementById("a3").checked == true)&&(document.getElementById("a2").checked == false)){
 					z.play();
-					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Selamat, Jawaban Benar`;
 				}
 				else {
 					y.play();
-					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+					document.getElementById("tampil2").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Jawaban Masih Salah`;
 				}
 			}
 
-			//ambil suara
-			var z = document.getElementById("benar"); 
-			var y = document.getElementById("salah"); 
+			
 
 		
 			
 			function cek3(){
 			if (document.getElementById('r4').checked) {
 				z.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Benar`;
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-check-square" style="color: rgb(20, 220, 103);"></i> Selamat, Jawaban Benar`;
 				}
 			else {
 				y.play();
-				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Salah`;
+				document.getElementById("tampil3").innerHTML=`<br><i class="fas fa-times-circle" style="color:crimson;"></i> Jawaban Masih Salah`;
 				}
 			}
 		

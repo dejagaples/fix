@@ -115,302 +115,334 @@
 	
 	<!-- Konten -->
 	<div id="utama">
-	  <div id="soal">
-		<br>
-		<span style="font-weight: bold; float: right;" id="stopwatch">50 : 00</span>
-		
-		<div id="navi">
-		<span>No. </span>
-	  <button style="margin:5px" onclick="nav1()">1</button>
-	  <button style="margin:5px" onclick="nav2()">2</button>
-	  <button style="margin:5px" onclick="nav3()">3</button>
-	  <button style="margin:5px" onclick="nav4()">4</button>
-      <button style="margin:5px" onclick="nav5()">5</button>
-      <button style="margin:5px" onclick="nav6()">6</button>
-	  <button style="margin:5px" onclick="nav7()">7</button>
-	  <button style="margin:5px" onclick="nav8()">8</button>
-	  <button style="margin:5px" onclick="nav9()">9</button>
-      <button style="margin:5px" onclick="nav10()">10</button>
-    </div>
-	  
-	  
-	  <br>
-	  <br>
-	  <div id="nomor">
-		  <div id="soal1">
-			<!-- Soal -->	
-            <p id="demo">1. Perhatikan gambar berikut!</p>
+	  <div id="soal" >
+		<center>
+        <div style="border-bottom: 5px solid grey;padding-bottom: 20px;">
 			<br>
-			<img src="../gambar/qz1s1.JPG" id="s1" >
-			<br>
-			<p>Saat merakit komputer di laboratorium, Pak Guru meminta Anda mengambil kabel yang
-					berfungsi untuk menghubungkan Motherboard dengan perangkat penyimpanan. Kabel
-					yang harus diambil adalah nomor ....</p>
-			<!-- Jawaban -->  
-			<form name="form">
-				<button type="button" onclick="p1a()" class="button-kuis">A. </button>
-				<span id="a" style="margin-left:5px;">1</span><br>
-				<button type="button" onclick="p1b()" class="button-kuis">B. </button>
-				<span id="b" style="margin-left:5px;">3</span><br>
-				<button type="button" onclick="p1c()" class="button-kuis">C. </button>
-				<span id="c" style="margin-left:5px;">2 dan 3</span><br>
-				<button type="button" onclick="p1d()" class="button-kuis">D. </button>
-				<span id="d" style="margin-left:5px;">3 dan 4</span><br>
-				<button type="button" onclick="p1e()" class="button-kuis">E. </button>
-				<span id="e" style="margin-left:5px;">1 dan 4</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
+			<ul style="float: right; margin-right: 20px;">Sisa waktu 
 				<br>
-            </form>
-            <br>
-            <center>
-            <button onclick="nav2()" >Soal Selanjutnya -></button>
-            </center>
-		  </div>
-		  <div id="soal2">
-            <!-- Soal -->
-            <p id="demo">2. Perhatikan gambar berikut!</p>
-			<img src="../gambar/FPSOAL.JPG" id="s2" >
-			<br><br>
-			<p>
-                    Pasangan kabel Front Panel yang seharusnya dipasang pada nomor 1 dan 3 adalah ....
-            </p>
-			<!-- Jawaban -->  
-			<form name="form2">
-				<button type="button" onclick="p2a()" class="button-kuis">A. </button>
-				<span id="2a"style="margin-left:5px;">Power LED</span><br>
-				<button type="button" onclick="p2b()" class="button-kuis">B. </button>
-				<span id="2b" style="margin-left:5px;">HDD LED</span><br>
-				<button type="button" onclick="p2c()" class="button-kuis">C. </button>
-				<span id="2c" style="margin-left:5px;">Power SW</span><br>
-				<button type="button" onclick="p2d()" class="button-kuis">D. </button>
-				<span id="2d" style="margin-left:5px;">Reset SW</span><br>
-				<button type="button" onclick="p2e()" class="button-kuis">E. </button>
-				<span id="2e" style="margin-left:5px;">Mic Power</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke2" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
-                <br>
-            </form>
-            <br>
-            <center>
-                    <button onclick="nav1()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav3()" >Soal Selanjutnya -></button>
-            </center>
-          </div>
-          <div id="soal3">
-            <!-- Soal -->
-            <p id="demo">3. Perhatikan gambar berikut!</p>
+				<span style="font-weight: bold;border: 3px solid rgb(141, 141, 243);padding: 5px;
+				border-radius: 5px;
+				" id="stopwatch">30 : 00</span>
+			</ul>
+			<ul style="float:left">
+				Data
+				<br>
+				Pengguna
+			</ul>
+			Nomor soal
 			<br>
-			<img src="../gambar/jumpersoal2.JPG" id="s3" >
-			<br><br>
-			<p>
-                Pemasangan jumper tersebut untuk menentukan status ....
-            </p>
-			<!-- Jawaban -->  
-			<form name="form3">
-				<button type="button" onclick="p3a()" class="button-kuis">A. </button>
-				<span id="3a"style="margin-left:5px;">Slave</span><br>
-				<button type="button" onclick="p3b()" class="button-kuis">B. </button>
-				<span id="3b" style="margin-left:5px;">Master Standalone</span><br>
-				<button type="button" onclick="p3c()" class="button-kuis">C. </button>
-				<span id="3c" style="margin-left:5px;">Cable Select</span><br>
-				<button type="button" onclick="p3d()" class="button-kuis">D. </button>
-				<span id="3d" style="margin-left:5px;">Master with Non ATA</span><br>
-				<button type="button" onclick="p3e()" class="button-kuis">E. </button>
-				<span id="3e" style="margin-left:5px;">Slave Standalone</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke3" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
-                <br>
-            </form>
-            <br>
-            <center>
-                    <button onclick="nav2()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav4()" >Soal Selanjutnya -></button>
-            </center>
-          </div>
-          <div id="soal4">
-            <!-- Soal -->
-            <p id="demo">4. Perhatikan gambar berikut!</p>
-			<img src="../gambar/FP1.jpg" id="s4" >
-			<br>
-			<p>
-                    Pada kabel Front Panel tersebut, kabel yang bernilai negatif (-) mempunyai warna ….
-            </p>
-			<!-- Jawaban -->  
-			<form name="form4">
-				<button type="button" onclick="p4a()" class="button-kuis">A. </button>
-				<span id="4a"style="margin-left:5px;">Hijau</span><br>
-				<button type="button" onclick="p4b()" class="button-kuis">B. </button>
-				<span id="4b" style="margin-left:5px;">Hitam</span><br>
-				<button type="button" onclick="p4c()" class="button-kuis">C. </button>
-				<span id="4c" style="margin-left:5px;">Putih</span><br>
-				<button type="button" onclick="p4d()" class="button-kuis">D. </button>
-				<span id="4d" style="margin-left:5px;">Merah</span><br>
-				<button type="button" onclick="p4e()" class="button-kuis">E. </button>
-				<span id="4e" style="margin-left:5px;">Jingga</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke4" name="pilihan4" size="5" style="cursor: not-allowed;" disabled>
-                <br>
-            </form>
-            <br>
-            <center>
-                    <button onclick="nav3()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav5()" >Soal Selanjutnya -></button>
-            </center>
-          </div>
-          <div id="soal5">
-                <!-- Soal -->
-            <p id="demo">5. Cara yang benar menentukan kabel positif dan negatif pada kabel Front Panel, kecuali ....</p>
-			<!-- Jawaban -->  
-			<form name="form5">
-				<button type="button" onclick="p5a()" class="button-kuis">A. </button>
-				<span id="5a"style="margin-left:5px;">Jika ada kabel putih, maka putih adalah negatif (-).</span><br>
-				<button type="button" onclick="p5b()" class="button-kuis">B. </button>
-				<span id="5b" style="margin-left:5px;">Jika tidak ada kabel putih namun ada kabel hitam, maka kabel hitam negatif.</span><br>
-				<button type="button" onclick="p5c()" class="button-kuis">C. </button>
-				<span id="5c" style="margin-left:5px;">Jika ada kabel merah, berarti merah negatif (-).</span><br>
-				<button type="button" onclick="p5d()" class="button-kuis">D. </button>
-				<span id="5d" style="margin-left:5px;">Jika tidak ada kabel putih dan hitam, maka kabel merah positif (+).</span><br>
-				<button type="button" onclick="p5e()" class="button-kuis">E. </button>
-				<span id="5e" style="margin-left:5px;">Jika ada kabel hitam, maka hitam negatif (-) dengan syarat kabel putih tidak ada.</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke5" name="pilihan5" size="5" style="cursor: not-allowed;" disabled>
-                <br>
-            </form>
-            <br>
-            <center>
-                    <button onclick="nav4()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav6()" >Soal Selanjutnya -></button>
-            </center>
-          </div>      
-          <div id="soal6">
-                <!-- Soal -->
-            <p id="demo">6. Perhatikan gambar berikut!</p>
-			<img src="../gambar/jumper.jpg" id="s6" >
-			<p>
-                    Alat tersebut mempunyai fungsi sebagai berikut, kecuali ….
-            </p>
-			<!-- Jawaban -->  
-			<form name="form6">
-				<button type="button" onclick="p6a()" class="button-kuis">A. </button>
-				<span id="6a"style="margin-left:5px;">alternatif ketika kabel front audio tidak berfungsi</span><br>
-				<button type="button" onclick="p6b()" class="button-kuis">B. </button>
-				<span id="6b" style="margin-left:5px;">menentukan status Slave dan Master pada Harddisk</span><br>
-				<button type="button" onclick="p6c()" class="button-kuis">C. </button>
-				<span id="6c" style="margin-left:5px;">mengatur CPU</span><br>
-				<button type="button" onclick="p6d()" class="button-kuis">D. </button>
-				<span id="6d" style="margin-left:5px;">mereset setingan CMOS</span><br>
-				<button type="button" onclick="p6e()" class="button-kuis">E. </button>
-				<span id="6e" style="margin-left:5px;">setting RAM</span><br>
-				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
-				<input type="text" id="oke6" name="pilihan6" size="5" style="cursor: not-allowed;" disabled>
-                <br>
-            </form>
-            <br>
-            <center>
-                    <button onclick="nav5()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav7()" >Soal Selanjutnya -></button>
-            </center>    
-            </div>
-            <div id="soal7">
-                <!-- Soal -->
-                <p>
-                    7. Sebelum merakit komputer, disediakan kotak obeng yang berisi berbagai macam obeng.
-                    Dari daftar berikut, yang dapat digunakan untuk perakitan komputer diantaranya yaitu ....
-                </p>
-			<!-- Jawaban -->  
-			<form style="padding: 10px;">
-                    <input type="checkbox" id="7a" > <span >Obeng Slot (2mm)</span><br>
-                    <input type="checkbox" id="7b" > <span >Obeng Phillips (6.5mm)</span><br>
-                    <input type="checkbox" id="7c" > <span >Obeng Pentalobe (6mm)</span><br>
-                    <input type="checkbox" id="7d" > <span >Obeng Slot (4mm)</span><br>
-                    <input type="checkbox" id="7e" > <span >Obeng Allen (5mm)</span><br>
-                    <input type="checkbox" id="7f" > <span >Obeng Phillips (4mm)</span><br>
-                    <input type="checkbox" id="7g" > <span >Obeng Phillips (3mm)</span><br>
-                </form>
-            <br>
-            <center>
-                    <button onclick="nav6()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav8()" >Soal Selanjutnya -></button>
-            </center> 
-            </div>
-            <div id="soal8">
-                    <!-- Soal -->
-                <p>8. Perhatikan gambar berikut!</p>
-                <img src="../gambar/jumpersoal3.JPG" id="s8" >
-                <br><br>
-                <!-- Jawaban -->  
-                <p>Jika kabel front audio tidak berfungsi (rusak), maka kita dapat menggunakan jumper
-                        sebagai alternatif dengan memasangnya pada nomor ...</p>
-                        <form style="padding: 10px;">
-                        <input type="checkbox" id="8a" > <span >1 - 2 </span><br>
-                        <input type="checkbox" id="8b" > <span >3 - 4</span><br>
-                        <input type="checkbox" id="8c" > <span >5 - 6</span><br>
-                        <input type="checkbox" id="8d" > <span >7 - 8</span><br>
-                        <input type="checkbox" id="8e" > <span >9 - 10</span><br>
-                        </form>
-                <br>
-                <center>
-                        <button onclick="nav7()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav9()" >Soal Selanjutnya -></button>
-                </center>
-            </div>
-            <div id="soal9">
-                           <!-- Soal -->
-                <p>9. Perhatikan gambar berikut!</p>
-                <img src="../gambar/baut2.png" id="s9" >
-                <br>
-                <!-- Jawaban -->  
-                <p>Dari macam-macam jenis sekrup dan baut tersebut ada beberapa yang digunakan untuk
-                        Motherboard, diantaranya ….</p>
-                        <form style="padding: 10px;">
-                        <input type="checkbox" id="9a" > <span >1</span><br>
-                        <input type="checkbox" id="9b" > <span >2</span><br>
-                        <input type="checkbox" id="9c" > <span >3</span><br>
-                        <input type="checkbox" id="9d" > <span >4</span><br>
-                        <input type="checkbox" id="9e" > <span >5</span><br>
-                        <input type="checkbox" id="9f" > <span >6</span><br>
-                        <input type="checkbox" id="9g" > <span >7</span><br>
-                        <input type="checkbox" id="9h" > <span >8</span><br>
-                    </form>
-                <br>
-                <center>
-                        <button onclick="nav8()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav10()" >Soal Selanjutnya -></button>
-                </center>
-            </div>
-            <div id="soal10">
-                              <!-- Soal -->
-                <p>10. Perhatikan gambar berikut!</p>
-                <img src="../gambar/FPSOAL.JPG" id="s10" >
-                <br><br>
-                <!-- Jawaban -->  
-                <p>Kabel yang digunakan untuk nomor 2 dan 7 secara berturut-turut adalah ....</p>
-                        <form style="padding: 10px;">
-                        <input type="checkbox" id="10a" > <span >Power LED (+)</span><br>
-                        <input type="checkbox" id="10b" > <span >Power LED (-)</span><br>
-                        <input type="checkbox" id="10c" > <span >HDD LED (+)</span><br>
-                        <input type="checkbox" id="10d" > <span >HDD LED (-)</span><br>
-                        <input type="checkbox" id="10e" > <span >Power SW (+)</span><br>
-                        <input type="checkbox" id="10f" > <span >Power SW (-)</span><br>
-                        <input type="checkbox" id="10g" > <span >Reset SW (+)</span><br>
-                        <input type="checkbox" id="10h" > <span >Reset SW (-)</span><br>
-                    </form>
-                <br>
-                <center>
-                        <button onclick="nav9()" ><- Soal Sebelumnya</button>
-                        
-                </center>
-            </div>
+			<span id="no"> <b>1</b> </span>
+
+
+			
         </div>
-		  <br>
-          <center>
+		</center>  
+		
+	
+	  <br>
+	  <div class="nomor">
+		  <div class="row">
+				<div id="navi" class="col-sm-2" style="border-right: 5px solid grey; height:130vh">
+					<center>
+					<img src="../gambar/user.jpg" alt="error" width="70%"  style="margin-top: 30px;">
+					<br>
+					<span id="namee"></span>
+					<br><br>
+					
+				</span>
+ 
+
+					</center>
+					
+							<button id="k1" class="kecil" style="margin:5px" onclick="nav1()" >1</button>
+							<button id="k2" class="kecil" style="margin:5px" onclick="nav2()">2</button>
+							<button id="k3" class="kecil"style="margin:5px" onclick="nav3()">3</button>
+							<button id="k4" class="kecil"style="margin:5px" onclick="nav4()">4</button>
+							<button id="k5" class="kecil"style="margin:5px" onclick="nav5()">5</button>
+							<button id="k6" class="kecil"style="margin:5px" onclick="nav6()">6</button>
+							<button id="k7" class="kecil"style="margin:5px" onclick="nav7()">7</button>
+							<button id="k8" class="kecil"style="margin:5px" onclick="nav8()">8</button>
+							<button id="k9" class="kecil"style="margin:5px" onclick="nav9()">9</button>
+							<button id="k10" class="kecil"style="margin:5px" onclick="nav10()">10</button>
+				</div>
+				<div class="col-sm-10">
+					<div id="soal1">
+						<!-- Soal -->	
+						<p id="demo">1. Perhatikan gambar berikut!</p>
+						<br>
+						<img src="../gambar/qz1s1.JPG" id="s1" >
+						<br>
+						<p>Saat merakit komputer di laboratorium, Pak Guru meminta Anda mengambil kabel yang
+								berfungsi untuk menghubungkan Motherboard dengan perangkat penyimpanan. Kabel
+								yang harus diambil adalah nomor ....</p>
+						<!-- Jawaban -->  
+						<form name="form">
+							<button type="button" onclick="p1a()" class="button-kuis">A. </button>
+							<span id="a" style="margin-left:5px;">1</span><br>
+							<button type="button" onclick="p1b()" class="button-kuis">B. </button>
+							<span id="b" style="margin-left:5px;">3</span><br>
+							<button type="button" onclick="p1c()" class="button-kuis">C. </button>
+							<span id="c" style="margin-left:5px;">2 dan 3</span><br>
+							<button type="button" onclick="p1d()" class="button-kuis">D. </button>
+							<span id="d" style="margin-left:5px;">3 dan 4</span><br>
+							<button type="button" onclick="p1e()" class="button-kuis">E. </button>
+							<span id="e" style="margin-left:5px;">1 dan 4</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke" name="pilihan" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+						<button class="besar" onclick="nav2()" >Soal Selanjutnya -></button>
+						</center>
+					  </div>
+					  <div id="soal2">
+						<!-- Soal -->
+						<p id="demo">2. Perhatikan gambar berikut!</p>
+						<img src="../gambar/FPSOAL.JPG" id="s2" >
+						<br><br>
+						<p>
+								Pasangan kabel Front Panel yang seharusnya dipasang pada nomor 1 dan 3 adalah ....
+						</p>
+						<!-- Jawaban -->  
+						<form name="form2">
+							<button type="button" onclick="p2a()" class="button-kuis">A. </button>
+							<span id="2a"style="margin-left:5px;">Power LED</span><br>
+							<button type="button" onclick="p2b()" class="button-kuis">B. </button>
+							<span id="2b" style="margin-left:5px;">HDD LED</span><br>
+							<button type="button" onclick="p2c()" class="button-kuis">C. </button>
+							<span id="2c" style="margin-left:5px;">Power SW</span><br>
+							<button type="button" onclick="p2d()" class="button-kuis">D. </button>
+							<span id="2d" style="margin-left:5px;">Reset SW</span><br>
+							<button type="button" onclick="p2e()" class="button-kuis">E. </button>
+							<span id="2e" style="margin-left:5px;">Mic Power</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke2" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+								<button class="besar" onclick="nav1()" ><- Soal Sebelumnya</button>
+								<button class="besar" onclick="nav3()" >Soal Selanjutnya -></button>
+						</center>
+					  </div>
+					  <div id="soal3">
+						<!-- Soal -->
+						<p id="demo">3. Perhatikan gambar berikut!</p>
+						<br>
+						<img src="../gambar/jumpersoal2.JPG" id="s3" >
+						<br><br>
+						<p>
+							Pemasangan jumper tersebut untuk menentukan status ....
+						</p>
+						<!-- Jawaban -->  
+						<form name="form3">
+							<button type="button" onclick="p3a()" class="button-kuis">A. </button>
+							<span id="3a"style="margin-left:5px;">Slave</span><br>
+							<button type="button" onclick="p3b()" class="button-kuis">B. </button>
+							<span id="3b" style="margin-left:5px;">Master Standalone</span><br>
+							<button type="button" onclick="p3c()" class="button-kuis">C. </button>
+							<span id="3c" style="margin-left:5px;">Cable Select</span><br>
+							<button type="button" onclick="p3d()" class="button-kuis">D. </button>
+							<span id="3d" style="margin-left:5px;">Master with Non ATA</span><br>
+							<button type="button" onclick="p3e()" class="button-kuis">E. </button>
+							<span id="3e" style="margin-left:5px;">Slave Standalone</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke3" name="pilihan3" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+								<button class="besar"onclick="nav2()" ><- Soal Sebelumnya</button>
+								<button class="besar"onclick="nav4()" >Soal Selanjutnya -></button>
+						</center>
+					  </div>
+					  <div id="soal4">
+						<!-- Soal -->
+						<p id="demo">4. Perhatikan gambar berikut!</p>
+						<img src="../gambar/FP1.jpg" id="s4" >
+						<br>
+						<p>
+								Pada kabel Front Panel tersebut, kabel yang bernilai negatif (-) mempunyai warna ….
+						</p>
+						<!-- Jawaban -->  
+						<form name="form4">
+							<button type="button" onclick="p4a()" class="button-kuis">A. </button>
+							<span id="4a"style="margin-left:5px;">Hijau</span><br>
+							<button type="button" onclick="p4b()" class="button-kuis">B. </button>
+							<span id="4b" style="margin-left:5px;">Hitam</span><br>
+							<button type="button" onclick="p4c()" class="button-kuis">C. </button>
+							<span id="4c" style="margin-left:5px;">Putih</span><br>
+							<button type="button" onclick="p4d()" class="button-kuis">D. </button>
+							<span id="4d" style="margin-left:5px;">Merah</span><br>
+							<button type="button" onclick="p4e()" class="button-kuis">E. </button>
+							<span id="4e" style="margin-left:5px;">Jingga</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke4" name="pilihan4" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+								<button class="besar"onclick="nav3()" ><- Soal Sebelumnya</button>
+								<button class="besar"onclick="nav5()" >Soal Selanjutnya -></button>
+						</center>
+					  </div>
+					  <div id="soal5">
+							<!-- Soal -->
+						<p id="demo">5. Cara yang benar menentukan kabel positif dan negatif pada kabel Front Panel, kecuali ....</p>
+						<!-- Jawaban -->  
+						<form name="form5">
+							<button type="button" onclick="p5a()" class="button-kuis">A. </button>
+							<span id="5a"style="margin-left:5px;">Jika ada kabel putih, maka putih adalah negatif (-).</span><br>
+							<button type="button" onclick="p5b()" class="button-kuis">B. </button>
+							<span id="5b" style="margin-left:5px;">Jika tidak ada kabel putih namun ada kabel hitam, maka kabel hitam negatif.</span><br>
+							<button type="button" onclick="p5c()" class="button-kuis">C. </button>
+							<span id="5c" style="margin-left:5px;">Jika ada kabel merah, berarti merah negatif (-).</span><br>
+							<button type="button" onclick="p5d()" class="button-kuis">D. </button>
+							<span id="5d" style="margin-left:5px;">Jika tidak ada kabel putih dan hitam, maka kabel merah positif (+).</span><br>
+							<button type="button" onclick="p5e()" class="button-kuis">E. </button>
+							<span id="5e" style="margin-left:5px;">Jika ada kabel hitam, maka hitam negatif (-) dengan syarat kabel putih tidak ada.</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke5" name="pilihan5" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+								<button class="besar"onclick="nav4()" ><- Soal Sebelumnya</button>
+								<button class="besar"onclick="nav6()" >Soal Selanjutnya -></button>
+						</center>
+					  </div>      
+					  <div id="soal6">
+							<!-- Soal -->
+						<p id="demo">6. Perhatikan gambar berikut!</p>
+						<img src="../gambar/jumper.jpg" id="s6" >
+						<p>
+								Alat tersebut mempunyai fungsi sebagai berikut, kecuali ….
+						</p>
+						<!-- Jawaban -->  
+						<form name="form6">
+							<button type="button" onclick="p6a()" class="button-kuis">A. </button>
+							<span id="6a"style="margin-left:5px;">Alternatif ketika kabel front audio tidak berfungsi</span><br>
+							<button type="button" onclick="p6b()" class="button-kuis">B. </button>
+							<span id="6b" style="margin-left:5px;">Menentukan status Slave dan Master pada Harddisk</span><br>
+							<button type="button" onclick="p6c()" class="button-kuis">C. </button>
+							<span id="6c" style="margin-left:5px;">Mengatur CPU</span><br>
+							<button type="button" onclick="p6d()" class="button-kuis">D. </button>
+							<span id="6d" style="margin-left:5px;">Mereset setingan CMOS</span><br>
+							<button type="button" onclick="p6e()" class="button-kuis">E. </button>
+							<span id="6e" style="margin-left:5px;">Setting RAM</span><br>
+							<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
+							<input type="text" id="oke6" name="pilihan6" size="5" style="cursor: not-allowed;" disabled>
+							<br>
+						</form>
+						<br>
+						<center>
+								<button class="besar"onclick="nav5()" ><- Soal Sebelumnya</button>
+								<button class="besar"onclick="nav7()" >Soal Selanjutnya -></button>
+						</center>    
+						</div>
+						<div id="soal7">
+							<!-- Soal -->
+							<p>
+								7. Sebelum merakit komputer, disediakan kotak obeng yang berisi berbagai macam obeng.
+								Dari daftar berikut, yang dapat digunakan untuk perakitan komputer diantaranya yaitu ....
+							</p>
+						<!-- Jawaban -->  
+						<form style="padding: 10px;">
+								<input type="checkbox" id="7a" onclick="r7()"> <span >Obeng Slot (2mm)</span><br>
+								<input type="checkbox" id="7b" onclick="r7()"> <span >Obeng Phillips (6.5mm)</span><br>
+								<input type="checkbox" id="7c" onclick="r7()"> <span >Obeng Pentalobe (6mm)</span><br>
+								<input type="checkbox" id="7d" onclick="r7()"> <span >Obeng Slot (4mm)</span><br>
+								<input type="checkbox" id="7e" onclick="r7()"> <span >Obeng Allen (5mm)</span><br>
+								<input type="checkbox" id="7f" onclick="r7()"> <span >Obeng Phillips (4mm)</span><br>
+								<input type="checkbox" id="7g" onclick="r7()"> <span >Obeng Phillips (3mm)</span><br>
+							</form>
+						<br>
+						<center>
+								<button class="besar"onclick="nav6()" ><- Soal Sebelumnya</button>
+								<button class="besar"onclick="nav8()" >Soal Selanjutnya -></button>
+						</center> 
+						</div>
+						<div id="soal8">
+								<!-- Soal -->
+							<p>8. Perhatikan gambar berikut!</p>
+							<img src="../gambar/jumpersoal3.JPG" id="s8" >
+							<br><br>
+							<!-- Jawaban -->  
+							<p>Jika kabel front audio tidak berfungsi (rusak), maka kita dapat menggunakan jumper
+									sebagai alternatif dengan memasangnya pada nomor ...</p>
+									<form style="padding: 10px;">
+									<input type="checkbox" id="8a" onclick="r8()"> <span >1 - 2 </span><br>
+									<input type="checkbox" id="8b" onclick="r8()"> <span >3 - 4</span><br>
+									<input type="checkbox" id="8c" onclick="r8()"> <span >5 - 6</span><br>
+									<input type="checkbox" id="8d" onclick="r8()"> <span >7 - 8</span><br>
+									<input type="checkbox" id="8e" onclick="r8()"> <span >9 - 10</span><br>
+									</form>
+							<br>
+							<center>
+									<button class="besar"onclick="nav7()" ><- Soal Sebelumnya</button>
+									<button class="besar"onclick="nav9()" >Soal Selanjutnya -></button>
+							</center>
+						</div>
+						<div id="soal9">
+									   <!-- Soal -->
+							<p>9. Perhatikan gambar berikut!</p>
+							<img src="../gambar/baut2.png" id="s9" >
+							<br>
+							<!-- Jawaban -->  
+							<p>Dari macam-macam jenis sekrup dan baut tersebut ada beberapa yang digunakan untuk
+									Motherboard, diantaranya ….</p>
+									<form style="padding: 10px;">
+									<input type="checkbox" id="9a" onclick="r9()"> <span >1</span><br>
+									<input type="checkbox" id="9b" onclick="r9()"> <span >2</span><br>
+									<input type="checkbox" id="9c" onclick="r9()"> <span >3</span><br>
+									<input type="checkbox" id="9d" onclick="r9()"> <span >4</span><br>
+									<input type="checkbox" id="9e" onclick="r9()"> <span >5</span><br>
+									<input type="checkbox" id="9f" onclick="r9()"> <span >6</span><br>
+									<input type="checkbox" id="9g" onclick="r9()"> <span >7</span><br>
+									<input type="checkbox" id="9h" onclick="r9()"> <span >8</span><br>
+								</form>
+							<br>
+							<center>
+									<button class="besar"onclick="nav8()" ><- Soal Sebelumnya</button>
+									<button class="besar"onclick="nav10()" >Soal Selanjutnya -></button>
+							</center>
+						</div>
+						<div id="soal10">
+										  <!-- Soal -->
+							<p>10. Perhatikan gambar berikut!</p>
+							<img src="../gambar/FPSOAL.JPG" id="s10" >
+							<br><br>
+							<!-- Jawaban -->  
+							<p>Kabel yang digunakan untuk nomor 2 dan 7 secara berturut-turut adalah ....</p>
+									<form style="padding: 10px;">
+									<input type="checkbox" id="10a" onclick="r10()"> <span >Power LED (+)</span><br>
+									<input type="checkbox" id="10b" onclick="r10()"> <span >Power LED (-)</span><br>
+									<input type="checkbox" id="10c" onclick="r10()"> <span >HDD LED (+)</span><br>
+									<input type="checkbox" id="10d" onclick="r10()"> <span >HDD LED (-)</span><br>
+									<input type="checkbox" id="10e" onclick="r10()"> <span >Power SW (+)</span><br>
+									<input type="checkbox" id="10f" onclick="r10()"> <span >Power SW (-)</span><br>
+									<input type="checkbox" id="10g" onclick="r10()"> <span >Reset SW (+)</span><br>
+									<input type="checkbox" id="10h" onclick="r10()"> <span >Reset SW (-)</span><br>
+								</form>
+							<br>
+							<center>
+									<button class="besar"onclick="nav9()" ><- Soal Sebelumnya</button>
+									
+							</center>
+				</div>
+				<center>
                 
-                <br>
-            <button onclick="cek()" class="button-selesai">Selesai</button>
-             
-        
-            </center>
+        <br><br>
+				<button onclick="cek()" class="button-selesai">Selesai</button>
+				 
+			
+				</center>
+		  </div>
+		  
+        </div>
+          
 	  </div>
 	  <br>
 	  <br>

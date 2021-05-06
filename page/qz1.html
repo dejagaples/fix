@@ -132,19 +132,17 @@
 			
 		<center>	<button class="button-simul"onclick="mulai()">Siap</button></center>
 	  </div>
-	  <div id="input">
+	  <div id="input" style="border: 5px solid rgb(90, 90, 90);margin-top: 50px;padding: 20px; border-radius: 10px;">
 		<h3 style="text-align: center;"> ISI DATA IDENTITAS KALIAN </h3>
 		<br>
 		<center>
-		<input  type="text" id="kelas" placeholder="Kelas" >
+		<input type="text" id="nama1" placeholder="Masukkan Nama" >
 		<br>
-		<input  type="text" id="nama1" placeholder="Masukkan Nama Anggota 1" >
-		<br>
-		<input type="text" id="nama2" placeholder="Masukkan Nama Anggota 2" >
-		<br>
-		<input type="text" id="nama3" placeholder="Masukkan Nama Anggota 3" >
-		<br>
-		<input type="text" id="nama4" placeholder="Masukkan Nama Anggota 4" >
+		<input type="text" list="browsers" id="kelas" placeholder="Kelas">
+		<datalist id="browsers">
+			<option value="X A Multimedia">
+			<option value="X B Multimedia">
+		</datalist>
 		<br>
 		<input type="text" id="token" placeholder="Masukkan Token" >
 		<br>
@@ -206,17 +204,7 @@
 				}
 				var kelas = document.getElementById("kelas");
 				localStorage.setItem("kelas", kelas.value);
-				var nama2 = document.getElementById("nama2");
-				localStorage.setItem("nama2", nama2.value);
-				var nama3 = document.getElementById("nama3");
-				localStorage.setItem("nama3", nama3.value);
-				var nama4 = document.getElementById("nama4");
-				localStorage.setItem("nama4", nama4.value);
-
 				
-
-
-
 			}
 
 		
@@ -234,12 +222,6 @@
 				document.getElementById("kelas").style.marginLeft= "0";
 				document.getElementById("nama1").style.width= "70%";
 				document.getElementById("nama1").style.marginLeft= "0";
-				document.getElementById("nama2").style.width= "70%";
-				document.getElementById("nama2").style.marginLeft= "0";
-				document.getElementById("nama3").style.width= "70%";
-				document.getElementById("nama3").style.marginLeft= "0";
-				document.getElementById("nama4").style.width= "70%";
-				document.getElementById("nama4").style.marginLeft= "0";
 				document.getElementById("token").style.width= "70%";
 				document.getElementById("token").style.marginLeft= "0";
 				
@@ -250,12 +232,6 @@
 				document.getElementById("kelas").style.marginLeft= "";
 				document.getElementById("nama1").style.width= "";
 				document.getElementById("nama1").style.marginLeft= "";
-				document.getElementById("nama2").style.width= "";
-				document.getElementById("nama2").style.marginLeft= "";
-				document.getElementById("nama3").style.width= "";
-				document.getElementById("nama3").style.marginLeft= "";
-				document.getElementById("nama4").style.width= "";
-				document.getElementById("nama4").style.marginLeft= "";
 				document.getElementById("token").style.width= "";
 				document.getElementById("token").style.marginLeft= "";
 				

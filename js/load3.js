@@ -1,3 +1,49 @@
+function rubah(){
+	if (form.pilihan.value!=""){
+		document.getElementById("k1").style.backgroundColor="blue";
+		document.getElementById("k1").style.color="white";
+	}
+	if (form2.pilihan2.value!=""){
+		document.getElementById("k2").style.backgroundColor="blue";
+		document.getElementById("k2").style.color="white";
+	}
+	if (form3.pilihan3.value!=""){
+		document.getElementById("k3").style.backgroundColor="blue";
+		document.getElementById("k3").style.color="white";
+	}
+	if (form4.pilihan4.value!=""){
+		document.getElementById("k4").style.backgroundColor="blue";
+		document.getElementById("k4").style.color="white";
+	}
+	if (form5.pilihan5.value!=""){
+		document.getElementById("k5").style.backgroundColor="blue";
+		document.getElementById("k5").style.color="white";
+	}
+	if (form6.pilihan6.value!=""){
+		document.getElementById("k6").style.backgroundColor="blue";
+		document.getElementById("k6").style.color="white";
+    }
+    if (form7.pilihan7.value!=""){
+		document.getElementById("k7").style.backgroundColor="blue";
+		document.getElementById("k7").style.color="white";
+    }
+    if (form8.pilihan8.value!=""){
+		document.getElementById("k8").style.backgroundColor="blue";
+		document.getElementById("k8").style.color="white";
+    }
+    if (form9.pilihan9.value!=""){
+		document.getElementById("k9").style.backgroundColor="blue";
+		document.getElementById("k9").style.color="white";
+    }
+    if (form10.pilihan10.value!=""){
+		document.getElementById("k10").style.backgroundColor="blue";
+		document.getElementById("k10").style.color="white";
+	}
+
+	
+	
+}
+
 function sabar1(){
     new duDialog ('Maaf', 'Saat kuis tidak boleh mencontek !');
 }
@@ -28,7 +74,7 @@ function startTimer(duration, display) {
                     nilai=nilai+20;
                     no1="B";
                 }
-                if (form2.pilihan2.value=='D. mencari tahu seri Motherboard'){
+                if (form2.pilihan2.value=='D. Mencari tahu seri Motherboard'){
                     nilai=nilai+20;
                     no2="B";
                 }
@@ -43,7 +89,7 @@ function startTimer(duration, display) {
                     no4="B";
                 }
 
-                if (form5.pilihan5.value=='C. memasang Optical Disc Drive'){
+                if (form5.pilihan5.value=='C. Memasang Optical Disc Drive'){
                     nilai=nilai+20;
                     no5="B";
                 }
@@ -88,62 +134,12 @@ function startTimer(duration, display) {
 
                 }
 
-                nama_2 = localStorage.getItem("nama2");
-                nama_3 = localStorage.getItem("nama3");
-                nama_4 = localStorage.getItem("nama4");
+               
                 
                 
 
                 var database = firebase.database();
                 database.ref("kuis_3").push(data);
-                if(nama_2 != "") {
-                    var data2 = {
-                    nama: nama_2,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }
-                    database.ref("kuis_3").push(data2);	
-                }
-                if(nama_3 != "") {
-                    var data3 = {
-                    nama: nama_3,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("kuis_3").push(data3);
-                }
-                if(nama_4 != "") {
-                    var data4 = {
-                    nama: nama_4,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("kuis_3").push(data4);
-                }
                 setInterval(function(){ location.href="updf3.html"; }, 2000);
             }
         }, 1000);
@@ -152,79 +148,79 @@ function startTimer(duration, display) {
 
 //ambil jawaban
 function p1a(){
-    form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;
+    form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;rubah();
 }  
 function p1b(){
-    form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;
+    form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;rubah();
 }
 function p1c(){
-    form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;
+    form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;rubah();
 }
 function p1d(){
-    form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;
+    form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;rubah();
 }
 function p1e(){
-    form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;
+    form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;rubah();
 }
 function p2a(){
-    form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;
+    form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;rubah();
 }  
 function p2b(){
-    form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;
+    form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;rubah();
 }
 function p2c(){
-    form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;
+    form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;rubah();
 }
 function p2d(){
-    form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;
+    form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;rubah();
 }
 function p2e(){
-    form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;
+    form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;rubah();
 }
 function p3a(){
-    form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;
+    form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;rubah();
 }  
 function p3b(){
-    form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;
+    form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;rubah();
 }
 function p3c(){
-    form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;
+    form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;rubah();
 }
 function p3d(){
-    form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;
+    form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;rubah();
 }
 function p3e(){
-    form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;
+    form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;rubah();
 }    
 function p4a(){
-    form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;
+    form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;rubah();
 }  
 function p4b(){
-    form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;
+    form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;rubah();
 }
 function p4c(){
-    form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;
+    form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;rubah();
 }
 function p4d(){
-    form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;
+    form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;rubah();
 }
 function p4e(){
-    form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;
+    form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;rubah();
 }
 function p5a(){
-    form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;
+    form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;rubah();
 }  
 function p5b(){
-    form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;
+    form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;rubah();
 }
 function p5c(){
-    form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;
+    form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;rubah();
 }
 function p5d(){
-    form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;
+    form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;rubah();
 }
 function p5e(){
-    form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;
+    form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;rubah();
 }
 
 //Cek jawaban
@@ -243,7 +239,7 @@ function cek(){
                     nilai=nilai+20;
                     no1="B";
                 }
-                if (form2.pilihan2.value=='D. mencari tahu seri Motherboard'){
+                if (form2.pilihan2.value=='D. Mencari tahu seri Motherboard'){
                     nilai=nilai+20;
                     no2="B";
                 }
@@ -258,7 +254,7 @@ function cek(){
                     no4="B";
                 }
 
-                if (form5.pilihan5.value=='C. memasang Optical Disc Drive'){
+                if (form5.pilihan5.value=='C. Memasang Optical Disc Drive'){
                     nilai=nilai+20;
                     no5="B";
                 }
@@ -311,62 +307,12 @@ function cek(){
 
                 }
 
-                nama_2 = localStorage.getItem("nama2");
-                nama_3 = localStorage.getItem("nama3");
-                nama_4 = localStorage.getItem("nama4");
+                
                 
                 
 
                 var database = firebase.database();
                 database.ref("kuis_3").push(data);
-                if(nama_2 != "") {
-                    var data2 = {
-                    nama: nama_2,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }
-                    database.ref("kuis_3").push(data2);	
-                }
-                if(nama_3 != "") {
-                    var data3 = {
-                    nama: nama_3,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("kuis_3").push(data3);
-                }
-                if(nama_4 != "") {
-                    var data4 = {
-                    nama: nama_4,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("kuis_3").push(data4);
-                }
                 setInterval(function(){ location.href="updf3.html"; }, 2000);
         });
         
@@ -379,6 +325,7 @@ function nav1(){
         document.getElementById("soal3").hidden=true;
         document.getElementById("soal4").hidden=true;
         document.getElementById("soal5").hidden=true;
+        document.getElementById("no").innerHTML=`<b>1</b>`;
     }
 
     function nav2(){
@@ -387,6 +334,7 @@ function nav1(){
         document.getElementById("soal3").hidden=true;
         document.getElementById("soal4").hidden=true;
         document.getElementById("soal5").hidden=true;
+        document.getElementById("no").innerHTML=`<b>2</b>`;
         
     }
 
@@ -396,6 +344,7 @@ function nav1(){
         document.getElementById("soal3").hidden=false;
         document.getElementById("soal4").hidden=true;
         document.getElementById("soal5").hidden=true;
+        document.getElementById("no").innerHTML=`<b>3</b>`;
         
     }
 
@@ -405,6 +354,7 @@ function nav1(){
         document.getElementById("soal3").hidden=true;
         document.getElementById("soal4").hidden=false;
         document.getElementById("soal5").hidden=true;
+        document.getElementById("no").innerHTML=`<b>4</b>`;
         
     }
 
@@ -414,6 +364,7 @@ function nav1(){
         document.getElementById("soal3").hidden=true;
         document.getElementById("soal4").hidden=true;
         document.getElementById("soal5").hidden=false;
+        document.getElementById("no").innerHTML=`<b>5</b>`;
         
     }
 
@@ -455,3 +406,6 @@ function nav1(){
     var x = window.matchMedia("(max-width: 700px)");
     responsif(x); // Call listener function at run time
     x.addListener(responsif); // Attach listener function on state changes
+
+    let ambil = localStorage.getItem("nama1");
+	document.getElementById("namee").innerHTML=ambil;

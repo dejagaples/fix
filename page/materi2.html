@@ -93,8 +93,7 @@
 			<li id="brnd" onclick="go()"><a class="tutup" href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
             <li><a class="tutup" href="#"><i class="far fa-question-circle"></i> &nbsp;Pengenalan<span class="caret kiri" ></span></a>
 				<ul class="sub">
-					<li><a href="materi0.html">Kompetensi Dasar</a></li>
-					<li><a href="materi01.html">Indikator dan Tujuan</a></li>
+					<li><a href="materi0.html">Pendahuluan</a></li>
 					<li><a href="materi02.html">Peta Konsep</a></li>
 					<li><a href="materi03.html">Pengertian</a></li>
 				</ul>
@@ -186,7 +185,7 @@
 					<code><a href="#2gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 2</a></code> berikut. <span id="h1">(Klik tombol untuk menampilkan)</span>
 				<div id="btn1"> 
 				<center><button class="button-lihat" onclick="g1tampil()">Lihat >></button></center>
-				<center><button class="button-lihat" onclick="g2tampil()">Lihat >></button></center>
+				
 				</div>
 			</p>
 				<div id="g1" class="text-center"> </div>
@@ -377,13 +376,13 @@
 						
 						<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="80%">
 						<br>
-						<span style="font-size:12px"><b>Sumber:</b> Bukalapak</span>
+						<span style="font-size:12px"><b>Sumber:</b> <a href="https://www.bukalapak.com/p/komputer/aksesoris-226/aksesoris-lainnya-241/w5wjg-jual-skrup-baut-screw-komputer" target="_blank"> Bukalapak</a></span>
 						<br>
 						<em><code>Gambar 1</code>. Sekrup dan Baut untuk perakitan komputer</em>
 						<br>
 						<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="80%">
 						<br>
-						<span style="font-size:12px;text-align:right;"><b>Sumber:</b> Teraa</span>
+						<span style="font-size:12px"><b>Sumber:</b> <a href="https://teraa.net/baut-pc/" target="_blank">Teraa </a></span>
 						<br>
 						<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>
 
@@ -507,25 +506,21 @@
 		function g1tampil(){
 			document.getElementById("first").hidden=true;
 			document.getElementById("gambar").innerHTML=`
-					<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="100%">
+					<img id="1gb" class="hover03 column" src="../gambar/baut.jpg" width="70%">
 					<br>
-					<span style="font-size:12px"><b>Sumber:</b> Bukalapak</span>
+					<span style="font-size:12px"><b>Sumber:</b> <a href="https://www.bukalapak.com/p/komputer/aksesoris-226/aksesoris-lainnya-241/w5wjg-jual-skrup-baut-screw-komputer" target="_blank"> Bukalapak</a></span>
 					<br>
 					<em><code>Gambar 1</code>. Sekrup dan Baut untuk perakitan komputer</em>
+					<br><br>
+					
+					<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="70%">
+					<br>
+					<span style="font-size:12px"><b>Sumber:</b> <a href="https://teraa.net/baut-pc/" target="_blank">Teraa </a></span>
+					<br>
+					<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>
 			`;
 		}
 
-		function g2tampil(){
-			document.getElementById("first").hidden=true;
-			document.getElementById("gambar").innerHTML=`
-					
-					<img id="2gb" class="hover03 column" src="../gambar/baut2.png" width="100%">
-					<br>
-					<span style="font-size:12px"><b>Sumber:</b> Teraa</span>
-					<br>
-					<em><code>Gambar 2</code>. Sekrup dan Baut untuk perakitan komputer</em>	
-			`;
-		}
 
 		//clear jawaban
 		document.getElementById("r1").addEventListener("click", myFunction);

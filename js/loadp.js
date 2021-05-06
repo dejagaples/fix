@@ -1,9 +1,96 @@
+function rubah(){
+	if (form.pilihan.value!=""){
+		document.getElementById("k1").style.backgroundColor="blue";
+		document.getElementById("k1").style.color="white";
+	}
+	if (form2.pilihan2.value!=""){
+		document.getElementById("k2").style.backgroundColor="blue";
+		document.getElementById("k2").style.color="white";
+	}
+	if (form3.pilihan3.value!=""){
+		document.getElementById("k3").style.backgroundColor="blue";
+		document.getElementById("k3").style.color="white";
+	}
+	if (form4.pilihan4.value!=""){
+		document.getElementById("k4").style.backgroundColor="blue";
+		document.getElementById("k4").style.color="white";
+	}
+	if (form5.pilihan5.value!=""){
+		document.getElementById("k5").style.backgroundColor="blue";
+		document.getElementById("k5").style.color="white";
+	}
+	if (form6.pilihan6.value!=""){
+		document.getElementById("k6").style.backgroundColor="blue";
+		document.getElementById("k6").style.color="white";
+    }
+    if (form7.pilihan7.value!=""){
+		document.getElementById("k7").style.backgroundColor="blue";
+		document.getElementById("k7").style.color="white";
+    }
+    if (form8.pilihan8.value!=""){
+		document.getElementById("k8").style.backgroundColor="blue";
+		document.getElementById("k8").style.color="white";
+    }
+    if (form9.pilihan9.value!=""){
+		document.getElementById("k9").style.backgroundColor="blue";
+		document.getElementById("k9").style.color="white";
+    }
+    if (form10.pilihan10.value!=""){
+		document.getElementById("k10").style.backgroundColor="blue";
+		document.getElementById("k10").style.color="white";
+    }
+    
+   
+    //k12
+            q = document.getElementById("mySelect");
+            x2 = document.getElementById("mySelect2");
+            x3 = document.getElementById("mySelect3");
+            x4 = document.getElementById("mySelect4");
+            x5 = document.getElementById("mySelect5");
+            x6 = document.getElementById("mySelect6");
+            x7 = document.getElementById("mySelect7");
+            x8 = document.getElementById("mySelect8");
+            x9 = document.getElementById("mySelect9");
+            x10 = document.getElementById("mySelect10");
+            x11 = document.getElementById("mySelect11");
+            x12 = document.getElementById("mySelect12");
+            if( (q.selectedIndex != "0")&&(x2.selectedIndex != "0")&&(x3.selectedIndex != "0")&&(x4.selectedIndex != "0")&&(x5.selectedIndex != "0")&&(x6.selectedIndex != "0")&&(x7.selectedIndex != "0")&&(x8.selectedIndex != "0")&&(x9.selectedIndex != "0")&&(x10.selectedIndex != "0")&&(x11.selectedIndex != "0")&&(x12.selectedIndex != "0")){
+                document.getElementById("k12").style.backgroundColor="blue";
+                document.getElementById("k12").style.color="white";
+            }
+            else{
+                document.getElementById("k12").style.backgroundColor="";
+                document.getElementById("k12").style.color="";
+            }
+    //k14
+            zq = document.getElementById("powerledplus");
+            zx2 = document.getElementById("powerledmin");
+            zx3 = document.getElementById("powerswplus");
+            zx4 = document.getElementById("powerswmin");
+            zx5 = document.getElementById("hddledplus");
+            zx6 = document.getElementById("hddledmin");
+            zx7 = document.getElementById("resetswmin");
+            zx8 = document.getElementById("resetswplus");
+            if( (zq.selectedIndex != "0")&&(zx2.selectedIndex != "0")&&(zx3.selectedIndex != "0")&&(zx4.selectedIndex != "0")&&(zx5.selectedIndex != "0")&&(zx6.selectedIndex != "0")&&(zx7.selectedIndex != "0")&&(zx8.selectedIndex != "0")){
+                document.getElementById("k14").style.backgroundColor="blue";
+                document.getElementById("k14").style.color="white";
+            }
+            else{
+                document.getElementById("k14").style.backgroundColor="";
+                document.getElementById("k14").style.color="";
+            }
+
+
+	
+	
+}
+
 function sabar(){
     new duDialog ('Maaf', 'Kamu tidak bisa keluar sebelum menyelesaikan evaluasi');
 }
 
 //countdown
-var tenMinutes = 60 * 90;
+var tenMinutes = 60 * 30;
 display = document.querySelector('#stopwatch');
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -39,7 +126,7 @@ function startTimer(duration, display) {
         nilai=nilai+6;
         no1=6;
     }
-    if (form2.pilihan2.value=='C. mengatur CPU'){
+    if (form2.pilihan2.value=='C. Mengatur CPU'){
         nilai=nilai+6;
         no2=6;
     }
@@ -69,7 +156,7 @@ function startTimer(duration, display) {
         no7=6;
     }
 
-    if (form8.pilihan8.value=='C. memasang Optical Disc Drive'){
+    if (form8.pilihan8.value=='C. Memasang Optical Disc Drive'){
         nilai=nilai+6;
         no8=6;
     }
@@ -400,94 +487,10 @@ function startTimer(duration, display) {
 
                 }
 
-                nama_2 = localStorage.getItem("nama2");
-                nama_3 = localStorage.getItem("nama3");
-                nama_4 = localStorage.getItem("nama4");
-                
                 
 
                 var database = firebase.database();
                 database.ref("latihan").push(data);
-                if(nama_2 != "") {
-                    var data2 = {
-                    nama: nama_2,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }
-                    database.ref("latihan").push(data2);	
-                }
-                if(nama_3 != "") {
-                    var data3 = {
-                    nama: nama_3,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("latihan").push(data3);
-                }
-                if(nama_4 != "") {
-                    var data4 = {
-                    nama: nama_4,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("latihan").push(data4);
-                }
-
-
                 setInterval(function(){ location.href="updf.html"; }, 2000);
         }
     }, 1000);
@@ -519,7 +522,7 @@ function cek(){
         nilai=nilai+6;
         no1=6;
     }
-    if (form2.pilihan2.value=='C. mengatur CPU'){
+    if (form2.pilihan2.value=='C. Mengatur CPU'){
         nilai=nilai+6;
         no2=6;
     }
@@ -549,7 +552,7 @@ function cek(){
         no7=6;
     }
 
-    if (form8.pilihan8.value=='C. memasang Optical Disc Drive'){
+    if (form8.pilihan8.value=='C. Memasang Optical Disc Drive'){
         nilai=nilai+6;
         no8=6;
     }
@@ -907,94 +910,11 @@ function cek(){
 
                 }
 
-                nama_2 = localStorage.getItem("nama2");
-                nama_3 = localStorage.getItem("nama3");
-                nama_4 = localStorage.getItem("nama4");
                 
                 
 
                 var database = firebase.database();
                 database.ref("latihan").push(data);
-                if(nama_2 != "") {
-                    var data2 = {
-                    nama: nama_2,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }
-                    database.ref("latihan").push(data2);	
-                }
-                if(nama_3 != "") {
-                    var data3 = {
-                    nama: nama_3,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("latihan").push(data3);
-                }
-                if(nama_4 != "") {
-                    var data4 = {
-                    nama: nama_4,
-                    kelas: kelas,
-                    nilai: f,
-                    no1: no_1,
-                    no2: no_2,
-                    no3: no_3,
-                    no4: no_4,
-                    no5: no_5,
-                    no6: no_6,
-                    no7: no_7,
-                    no8: no_8,
-                    no9: no_9,
-                    no10: no_10,
-                    no11: no_11,
-                    no12: no_12,
-                    no13: no_13,
-                    no14: no_14,
-                    no15: no_15,
-                    waktu: waktu_,
-                    tanggal: tanggal_,
-                    mulai: mulai_
-                    }	
-                    database.ref("latihan").push(data4);
-                }
-
-
                 setInterval(function(){ location.href="updf.html"; }, 2000);
     });
     
@@ -1003,154 +923,154 @@ function cek(){
 
 //ambil jawaban
 function p1a(){
-form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;
+form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;rubah();rubah();
 }  
 function p1b(){
-form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;
+form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;rubah();
 }
 function p1c(){
-form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;
+form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;rubah();
 }
 function p1d(){
-form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;
+form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;rubah();
 }
 function p1e(){
-form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;
+form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;rubah();
 }
 function p2a(){
-form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;
+form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;rubah();
 }  
 function p2b(){
-form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;
+form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;rubah();
 }
 function p2c(){
-form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;
+form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;rubah();
 }
 function p2d(){
-form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;
+form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;rubah();
 }
 function p2e(){
-form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;
+form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;rubah();
 }
 function p3a(){
-form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;
+form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;rubah();
 }  
 function p3b(){
-form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;
+form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;rubah();
 }
 function p3c(){
-form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;
+form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;rubah();
 }
 function p3d(){
-form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;
+form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;rubah();
 }
 function p3e(){
-form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;
+form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;rubah();
 }    
 function p4a(){
-form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;
+form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;rubah();
 }  
 function p4b(){
-form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;
+form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;rubah();
 }
 function p4c(){
-form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;
+form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;rubah();
 }
 function p4d(){
-form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;
+form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;rubah();
 }
 function p4e(){
-form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;
+form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;rubah();
 }
 function p5a(){
-form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;
+form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;rubah();
 }  
 function p5b(){
-form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;
+form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;rubah();
 }
 function p5c(){
-form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;
+form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;rubah();
 }
 function p5d(){
-form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;
+form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;rubah();
 }
 function p5e(){
-form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;
+form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;rubah();
 }
 function p6a(){
-form6.pilihan6.value= "A. "+ document.getElementById("6a").innerHTML;
+form6.pilihan6.value= "A. "+ document.getElementById("6a").innerHTML;rubah();
 }  
 function p6b(){
-form6.pilihan6.value= "B. "+ document.getElementById("6b").innerHTML;
+form6.pilihan6.value= "B. "+ document.getElementById("6b").innerHTML;rubah();
 }
 function p6c(){
-form6.pilihan6.value= "C. "+ document.getElementById("6c").innerHTML;
+form6.pilihan6.value= "C. "+ document.getElementById("6c").innerHTML;rubah();
 }
 function p6d(){
-form6.pilihan6.value= "D. "+ document.getElementById("6d").innerHTML;
+form6.pilihan6.value= "D. "+ document.getElementById("6d").innerHTML;rubah();
 }
 function p6e(){
-form6.pilihan6.value= "E. "+ document.getElementById("6e").innerHTML;
+form6.pilihan6.value= "E. "+ document.getElementById("6e").innerHTML;rubah();
 }
 function p7a(){
-form7.pilihan7.value= "A. "+ document.getElementById("7a").innerHTML;
+form7.pilihan7.value= "A. "+ document.getElementById("7a").innerHTML;rubah();
 }  
 function p7b(){
-form7.pilihan7.value= "B. "+ document.getElementById("7b").innerHTML;
+form7.pilihan7.value= "B. "+ document.getElementById("7b").innerHTML;rubah();
 }
 function p7c(){
-form7.pilihan7.value= "C. "+ document.getElementById("7c").innerHTML;
+form7.pilihan7.value= "C. "+ document.getElementById("7c").innerHTML;rubah();
 }
 function p7d(){
-form7.pilihan7.value= "D. "+ document.getElementById("7d").innerHTML;
+form7.pilihan7.value= "D. "+ document.getElementById("7d").innerHTML;rubah();
 }
 function p7e(){
-form7.pilihan7.value= "E. "+ document.getElementById("7e").innerHTML;
+form7.pilihan7.value= "E. "+ document.getElementById("7e").innerHTML;rubah();
 }
 function p8a(){
-form8.pilihan8.value= "A. "+ document.getElementById("8a").innerHTML;
+form8.pilihan8.value= "A. "+ document.getElementById("8a").innerHTML;rubah();
 }  
 function p8b(){
-form8.pilihan8.value= "B. "+ document.getElementById("8b").innerHTML;
+form8.pilihan8.value= "B. "+ document.getElementById("8b").innerHTML;rubah();
 }
 function p8c(){
-form8.pilihan8.value= "C. "+ document.getElementById("8c").innerHTML;
+form8.pilihan8.value= "C. "+ document.getElementById("8c").innerHTML;rubah();
 }
 function p8d(){
-form8.pilihan8.value= "D. "+ document.getElementById("8d").innerHTML;
+form8.pilihan8.value= "D. "+ document.getElementById("8d").innerHTML;rubah();
 }
 function p8e(){
-form8.pilihan8.value= "E. "+ document.getElementById("8e").innerHTML;
+form8.pilihan8.value= "E. "+ document.getElementById("8e").innerHTML;rubah();
 }
 function p9a(){
-form9.pilihan9.value= "A. "+ document.getElementById("9a").innerHTML;
+form9.pilihan9.value= "A. "+ document.getElementById("9a").innerHTML;rubah();
 }  
 function p9b(){
-form9.pilihan9.value= "B. "+ document.getElementById("9b").innerHTML;
+form9.pilihan9.value= "B. "+ document.getElementById("9b").innerHTML;rubah();
 }
 function p9c(){
-form9.pilihan9.value= "C. "+ document.getElementById("9c").innerHTML;
+form9.pilihan9.value= "C. "+ document.getElementById("9c").innerHTML;rubah();
 }
 function p9d(){
-form9.pilihan9.value= "D. "+ document.getElementById("9d").innerHTML;
+form9.pilihan9.value= "D. "+ document.getElementById("9d").innerHTML;rubah();
 }
 function p9e(){
-form9.pilihan9.value= "E. "+ document.getElementById("9e").innerHTML;
+form9.pilihan9.value= "E. "+ document.getElementById("9e").innerHTML;rubah();
 }
 function p10a(){
-form10.pilihan10.value= "A. "+ document.getElementById("10a").innerHTML;
+form10.pilihan10.value= "A. "+ document.getElementById("10a").innerHTML;rubah();
 }  
 function p10b(){
-form10.pilihan10.value= "B. "+ document.getElementById("10b").innerHTML;
+form10.pilihan10.value= "B. "+ document.getElementById("10b").innerHTML;rubah();
 }
 function p10c(){
-form10.pilihan10.value= "C. "+ document.getElementById("10c").innerHTML;
+form10.pilihan10.value= "C. "+ document.getElementById("10c").innerHTML;rubah();
 }
 function p10d(){
-form10.pilihan10.value= "D. "+ document.getElementById("10d").innerHTML;
+form10.pilihan10.value= "D. "+ document.getElementById("10d").innerHTML;rubah();
 }
 function p10e(){
-form10.pilihan10.value= "E. "+ document.getElementById("10e").innerHTML;
+form10.pilihan10.value= "E. "+ document.getElementById("10e").innerHTML;rubah();
 }
 
 function nav1(){
@@ -1169,6 +1089,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>1</b>`;
 }
 
 function nav2(){
@@ -1187,6 +1108,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>2</b>`;
 
 }
 
@@ -1206,6 +1128,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>3</b>`;
 }
 
 function nav4(){
@@ -1224,6 +1147,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>4</b>`;
 }
 
 function nav5(){
@@ -1242,6 +1166,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>5</b>`;
 }
 
 function nav6(){
@@ -1260,6 +1185,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>6</b>`;
 }
 
 function nav7(){
@@ -1278,6 +1204,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>7</b>`;
 }
 
 function nav8(){
@@ -1296,6 +1223,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>8</b>`;
 }
 
 function nav9(){
@@ -1314,6 +1242,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>9</b>`;
 }
 function nav10(){
 document.getElementById("soal1").hidden=true;
@@ -1331,6 +1260,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>10</b>`;
 }
 
 function nav11(){
@@ -1349,6 +1279,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>11</b>`;
 }
 
 function nav12(){
@@ -1367,7 +1298,9 @@ document.getElementById("soal12").hidden=false;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>12</b>`;
 }
+
 
 function nav13(){
 document.getElementById("soal1").hidden=true;
@@ -1385,24 +1318,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=false;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=true;
-}
-
-function nav13(){
-document.getElementById("soal1").hidden=true;
-document.getElementById("soal2").hidden=true;
-document.getElementById("soal3").hidden=true;
-document.getElementById("soal4").hidden=true;
-document.getElementById("soal5").hidden=true;
-document.getElementById("soal6").hidden=true;
-document.getElementById("soal7").hidden=true;
-document.getElementById("soal8").hidden=true;
-document.getElementById("soal9").hidden=true;
-document.getElementById("soal10").hidden=true;
-document.getElementById("soal11").hidden=true;
-document.getElementById("soal12").hidden=true;
-document.getElementById("soal13").hidden=false;
-document.getElementById("soal14").hidden=true;
-document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>13</b>`;
 }
 
 function nav14(){
@@ -1421,6 +1337,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=false;
 document.getElementById("soal15").hidden=true;
+document.getElementById("no").innerHTML=`<b>14</b>`;
 }
 
 function nav15(){
@@ -1439,6 +1356,7 @@ document.getElementById("soal12").hidden=true;
 document.getElementById("soal13").hidden=true;
 document.getElementById("soal14").hidden=true;
 document.getElementById("soal15").hidden=false;
+document.getElementById("no").innerHTML=`<b>15</b>`;
 }
 
 
@@ -1549,5 +1467,7 @@ var r = window.matchMedia("(max-width: 1000px)");
 responsif(r); // Call listener function at run time
 r.addListener(responsif); // Attach listener function on state changes
 
+let ambil = localStorage.getItem("nama1");
+	document.getElementById("namee").innerHTML=ambil;
 
 

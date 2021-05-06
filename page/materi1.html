@@ -79,11 +79,7 @@
 							</label>
 							<br/>
 							<label >
-									<b>3. Klik ikon  <i class="fas fa-external-link-alt"> </i>  untuk memperbesar model 3D . </b>
-							</label>
-							<br/>
-							<label >
-									<b>4. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
+									<b>3. Jika menggunakan smartphone, klik <code>Gambar</code> untuk pintasan. </b>
 							</label>
 							<br/>
 						</div>
@@ -99,8 +95,7 @@
 				<li id="brnd" onclick="go()"><a class="tutup" href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
 				<li><a class="tutup" href="#"><i class="far fa-question-circle"></i> &nbsp;Pengenalan<span class="caret kiri" ></span></a>
 					<ul class="sub" >
-						<li><a href="materi0.html">Kompetensi Dasar</a></li>
-						<li><a href="materi01.html">Indikator & Tujuan</a></li>
+						<li><a href="materi0.html">Pendahuluan</a></li>
 						<li><a href="materi02.html">Peta Konsep</a></li>
 						<li><a href="materi03.html">Pengertian</a></li>
 					</ul>
@@ -318,15 +313,18 @@
 				document.getElementById("ba").style.position="";
 				document.getElementById("g1").innerHTML = `
 				<center>
-				<iframe src="../embed/obeng.html" width="100%" height="300" frameborder="0" allowfullscreen> </iframe>
-				<em><code>Gambar 1</code>. Model 3 dimensi Obeng Plus</em>
+					<img id="2gb" class="hover03 column" src="../gambar/obeng.jpg" width="80%">
+			<br>
+			<span style="font-size:12px"><b>Sumber:</b> <a href="https://tehnikmesin.com/2019/12/macam-macam-obeng-dan-fungsinya.html" target="_blank">Tehnikmesin.com</a>  </span>
+				<br>
+				<em><code>Gambar 1</code>. Obeng Plus</em>
 				</center>	<br>	
 				`;
 				document.getElementById("g0").innerHTML = `
 				<center>
 				<img id="2gb" class="hover03 column" src="../gambar/jenisobengnew.jpg" width="80%">
 				<br>
-				<span style="font-size:12px">Sumber: Tdm1</span>
+				<span style="font-size:12px"><b>Sumber:</b> <a href="http://tdm1.ru/1104-bity-otvertochnye-PH-SL-PZ" target="_blank"> Tdm1.ru </a></span>
 				<br>
 				<em><code>Gambar 2</code>. Jenis Mata Obeng</em>
 				</center>	
@@ -453,8 +451,11 @@
 		function g1tampil(){
 			document.getElementById("first").hidden=true;
 			document.getElementById("gambar").innerHTML=`
-			<iframe id="1gb" src="../embed/obeng.html" width="100%" height="300" frameborder="0" allowfullscreen> </iframe>
-				<em><code>Gambar 1</code>. Model 3 dimensi Obeng Plus</em>
+			<img id="2gb" class="hover03 column" src="../gambar/obeng.jpg" width="80%">
+			<br>
+			<span style="font-size:12px"><b>Sumber:</b> <a href="https://tehnikmesin.com/2019/12/macam-macam-obeng-dan-fungsinya.html" target="_blank">Tehnikmesin.com</a>  </span>
+				<br>
+				<em><code>Gambar 1</code>. Obeng Plus</em>
 			`;
 			
 			
@@ -466,7 +467,7 @@
 			<br><br>
 			<img id="2gb" class="hover03 column" src="../gambar/jenisobengnew.jpg" width="80%">
 				<br>
-				<span style="font-size:12px"><b>Sumber:</b> Tdm1</span>
+				<span style="font-size:12px"><b>Sumber:</b> <a href="http://tdm1.ru/1104-bity-otvertochnye-PH-SL-PZ" target="_blank"> Tdm1.ru </a></span>
 				<br>
 				<em><code>Gambar 2</code>. Jenis Mata Obeng</em>
 			`;

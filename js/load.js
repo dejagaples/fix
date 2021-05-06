@@ -1,9 +1,84 @@
+function rubah(){
+	if (form.pilihan.value!=""){
+		document.getElementById("k1").style.backgroundColor="blue";
+		document.getElementById("k1").style.color="white";
+	}
+	if (form2.pilihan2.value!=""){
+		document.getElementById("k2").style.backgroundColor="blue";
+		document.getElementById("k2").style.color="white";
+	}
+	if (form3.pilihan3.value!=""){
+		document.getElementById("k3").style.backgroundColor="blue";
+		document.getElementById("k3").style.color="white";
+	}
+	if (form4.pilihan4.value!=""){
+		document.getElementById("k4").style.backgroundColor="blue";
+		document.getElementById("k4").style.color="white";
+	}
+	if (form5.pilihan5.value!=""){
+		document.getElementById("k5").style.backgroundColor="blue";
+		document.getElementById("k5").style.color="white";
+	}
+	if (form6.pilihan6.value!=""){
+		document.getElementById("k6").style.backgroundColor="blue";
+		document.getElementById("k6").style.color="white";
+	}
+	
+	
+}
+
+function r7(){
+	if((document.getElementById("7a").checked == true)||(document.getElementById("7g").checked == true)||(document.getElementById("7a").checked == true)||(document.getElementById("7b").checked == true)||(document.getElementById("7c").checked == true)||(document.getElementById("7d").checked == true)||(document.getElementById("7e").checked == true)||(document.getElementById("7f").checked == true)){
+		document.getElementById("k7").style.backgroundColor="blue";
+		document.getElementById("k7").style.color="white";
+	}
+	else{
+		document.getElementById("k7").style.backgroundColor="";
+		document.getElementById("k7").style.color="";
+	}
+}
+
+function r8(){
+	if ((document.getElementById("8c").checked == true)||(document.getElementById("8e").checked == true)||(document.getElementById("8a").checked == true)||(document.getElementById("8b").checked == true)||(document.getElementById("8d").checked == true)){
+		document.getElementById("k8").style.backgroundColor="blue";
+		document.getElementById("k8").style.color="white";
+	}
+	else{
+		document.getElementById("k8").style.backgroundColor="";
+		document.getElementById("k8").style.color="";
+	}
+}
+
+function r9(){
+	if ((document.getElementById("9c").checked == true)||(document.getElementById("9d").checked == true)||(document.getElementById("9h").checked == true)||(document.getElementById("9a").checked == true)||(document.getElementById("9b").checked == true)||(document.getElementById("9e").checked == true)||(document.getElementById("9f").checked == true)||(document.getElementById("9g").checked == true)){
+		document.getElementById("k9").style.backgroundColor="blue";
+		document.getElementById("k9").style.color="white";
+	}
+	else{
+		document.getElementById("k9").style.backgroundColor="";
+		document.getElementById("k9").style.color="";
+	}
+}
+
+function r10(){
+	if ((document.getElementById("10a").checked == true)||(document.getElementById("10b").checked == true)||(document.getElementById("10c").checked == true)||(document.getElementById("10d").checked == true)||(document.getElementById("10e").checked == true)||(document.getElementById("10f").checked == true)||(document.getElementById("10g").checked == true)||(document.getElementById("10h").checked == true)){
+		document.getElementById("k10").style.backgroundColor="blue";
+		document.getElementById("k10").style.color="white";
+	}
+	else{
+		document.getElementById("k10").style.backgroundColor="";
+		document.getElementById("k10").style.color="";
+	}
+}
+
+
+
 function sabar1(){
 			new duDialog ('Maaf', 'Saat kuis tidak boleh mencontek !');
 		}
 		
 		//countdown
-        var tenMinutes = 60 * 50;
+        var tenMinutes = 60 * 30;
 		display = document.querySelector('#stopwatch');
         function startTimer(duration, display) {
     			var timer = duration, minutes, seconds;
@@ -53,7 +128,7 @@ function sabar1(){
 							no5="B";
 						}
 
-                        if (form6.pilihan6.value=='C. mengatur CPU'){
+                        if (form6.pilihan6.value=='C. Mengatur CPU'){
 							nilai=nilai+10;
 							no6="B";
 						}
@@ -130,79 +205,12 @@ function sabar1(){
 							mulai: mulai_
 
 						}
-
-						nama_2 = localStorage.getItem("nama2");
-						nama_3 = localStorage.getItem("nama3");
-						nama_4 = localStorage.getItem("nama4");
-						
 						
 
 						var database = firebase.database();
 						database.ref("kuis_1").push(data);
-						if(nama_2 != "") {
-							var data2 = {
-							nama: nama_2,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}
-							database.ref("kuis_1").push(data2);	
-						}
-						if(nama_3 != "") {
-							var data3 = {
-							nama: nama_3,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}	
-							database.ref("kuis_1").push(data3);
-						}
-						if(nama_4 != "") {
-							var data4 = {
-							nama: nama_4,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}	
-							database.ref("kuis_1").push(data4);
-						}
 						location.href="updf1.html";
+
 					}
     			}, 1000);
 			}
@@ -210,154 +218,156 @@ function sabar1(){
 		
 		//ambil jawaban
 		function p1a(){
-            form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;
+			form.pilihan.value= "A. "+ document.getElementById("a").innerHTML;
+			rubah();
         }  
         function p1b(){
-            form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;
+			form.pilihan.value= "B. "+ document.getElementById("b").innerHTML;
+			rubah();
         }
         function p1c(){
-			form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;
+			form.pilihan.value= "C. "+ document.getElementById("c").innerHTML;rubah();
         }
         function p1d(){
-			form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;
+			form.pilihan.value= "D. "+ document.getElementById("d").innerHTML;rubah();
         }
         function p1e(){
-			form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;
+			form.pilihan.value= "E. "+ document.getElementById("e").innerHTML;rubah();
         }
 		function p2a(){
-            form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;
+            form2.pilihan2.value= "A. "+ document.getElementById("2a").innerHTML;rubah();
         }  
         function p2b(){
-            form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;
+            form2.pilihan2.value= "B. "+ document.getElementById("2b").innerHTML;rubah();
         }
         function p2c(){
-			form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;
+			form2.pilihan2.value= "C. "+ document.getElementById("2c").innerHTML;rubah();
         }
         function p2d(){
-			form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;
+			form2.pilihan2.value= "D. "+ document.getElementById("2d").innerHTML;rubah();
         }
 		function p2e(){
-            form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;
+            form2.pilihan2.value= "E. "+ document.getElementById("2e").innerHTML;rubah();
         }
         function p3a(){
-            form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;
+            form3.pilihan3.value= "A. "+ document.getElementById("3a").innerHTML;rubah();
         }  
         function p3b(){
-            form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;
+            form3.pilihan3.value= "B. "+ document.getElementById("3b").innerHTML;rubah();
         }
         function p3c(){
-			form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;
+			form3.pilihan3.value= "C. "+ document.getElementById("3c").innerHTML;rubah();
         }
         function p3d(){
-			form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;
+			form3.pilihan3.value= "D. "+ document.getElementById("3d").innerHTML;rubah();
         }
 		function p3e(){
-            form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;
+            form3.pilihan3.value= "E. "+ document.getElementById("3e").innerHTML;rubah();
         }    
         function p4a(){
-            form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;
+            form4.pilihan4.value= "A. "+ document.getElementById("4a").innerHTML;rubah();
         }  
         function p4b(){
-            form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;
+            form4.pilihan4.value= "B. "+ document.getElementById("4b").innerHTML;rubah();
         }
         function p4c(){
-			form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;
+			form4.pilihan4.value= "C. "+ document.getElementById("4c").innerHTML;rubah();
         }
         function p4d(){
-			form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;
+			form4.pilihan4.value= "D. "+ document.getElementById("4d").innerHTML;rubah();
         }
 		function p4e(){
-            form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;
+            form4.pilihan4.value= "E. "+ document.getElementById("4e").innerHTML;rubah();
         }
         function p5a(){
-            form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;
+            form5.pilihan5.value= "A. "+ document.getElementById("5a").innerHTML;rubah();
         }  
         function p5b(){
-            form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;
+            form5.pilihan5.value= "B. "+ document.getElementById("5b").innerHTML;rubah();
         }
         function p5c(){
-			form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;
+			form5.pilihan5.value= "C. "+ document.getElementById("5c").innerHTML;rubah();
         }
         function p5d(){
-			form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;
+			form5.pilihan5.value= "D. "+ document.getElementById("5d").innerHTML;rubah();
         }
 		function p5e(){
-            form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;
+            form5.pilihan5.value= "E. "+ document.getElementById("5e").innerHTML;rubah();
         }
         function p6a(){
-            form6.pilihan6.value= "A. "+ document.getElementById("6a").innerHTML;
+            form6.pilihan6.value= "A. "+ document.getElementById("6a").innerHTML;rubah();
         }  
         function p6b(){
-            form6.pilihan6.value= "B. "+ document.getElementById("6b").innerHTML;
+            form6.pilihan6.value= "B. "+ document.getElementById("6b").innerHTML;rubah();
         }
         function p6c(){
-			form6.pilihan6.value= "C. "+ document.getElementById("6c").innerHTML;
+			form6.pilihan6.value= "C. "+ document.getElementById("6c").innerHTML;rubah();
         }
         function p6d(){
-			form6.pilihan6.value= "D. "+ document.getElementById("6d").innerHTML;
+			form6.pilihan6.value= "D. "+ document.getElementById("6d").innerHTML;rubah();
         }
 		function p6e(){
-            form6.pilihan6.value= "E. "+ document.getElementById("6e").innerHTML;
+            form6.pilihan6.value= "E. "+ document.getElementById("6e").innerHTML;rubah();
         }
         function p7a(){
-            form7.pilihan7.value= "A. "+ document.getElementById("7a").innerHTML;
+            form7.pilihan7.value= "A. "+ document.getElementById("7a").innerHTML;rubah();
         }  
         function p7b(){
-            form7.pilihan7.value= "B. "+ document.getElementById("7b").innerHTML;
+            form7.pilihan7.value= "B. "+ document.getElementById("7b").innerHTML;rubah();
         }
         function p7c(){
-			form7.pilihan7.value= "C. "+ document.getElementById("7c").innerHTML;
+			form7.pilihan7.value= "C. "+ document.getElementById("7c").innerHTML;rubah();
         }
         function p7d(){
-			form7.pilihan7.value= "D. "+ document.getElementById("7d").innerHTML;
+			form7.pilihan7.value= "D. "+ document.getElementById("7d").innerHTML;rubah();
         }
 		function p7e(){
-            form7.pilihan7.value= "E. "+ document.getElementById("7e").innerHTML;
+            form7.pilihan7.value= "E. "+ document.getElementById("7e").innerHTML;rubah();
         }
         function p8a(){
-            form8.pilihan8.value= "A. "+ document.getElementById("8a").innerHTML;
+            form8.pilihan8.value= "A. "+ document.getElementById("8a").innerHTML;rubah();
         }  
         function p8b(){
-            form8.pilihan8.value= "B. "+ document.getElementById("8b").innerHTML;
+            form8.pilihan8.value= "B. "+ document.getElementById("8b").innerHTML;rubah();
         }
         function p8c(){
-			form8.pilihan8.value= "C. "+ document.getElementById("8c").innerHTML;
+			form8.pilihan8.value= "C. "+ document.getElementById("8c").innerHTML;rubah();
         }
         function p8d(){
-			form8.pilihan8.value= "D. "+ document.getElementById("8d").innerHTML;
+			form8.pilihan8.value= "D. "+ document.getElementById("8d").innerHTML;rubah();
         }
 		function p8e(){
-            form8.pilihan8.value= "E. "+ document.getElementById("8e").innerHTML;
+            form8.pilihan8.value= "E. "+ document.getElementById("8e").innerHTML;rubah();
         }
         function p9a(){
-            form9.pilihan9.value= "A. "+ document.getElementById("9a").innerHTML;
+            form9.pilihan9.value= "A. "+ document.getElementById("9a").innerHTML;rubah();
         }  
         function p9b(){
-            form9.pilihan9.value= "B. "+ document.getElementById("9b").innerHTML;
+            form9.pilihan9.value= "B. "+ document.getElementById("9b").innerHTML;rubah();
         }
         function p9c(){
-			form9.pilihan9.value= "C. "+ document.getElementById("9c").innerHTML;
+			form9.pilihan9.value= "C. "+ document.getElementById("9c").innerHTML;rubah();
         }
         function p9d(){
-			form9.pilihan9.value= "D. "+ document.getElementById("9d").innerHTML;
+			form9.pilihan9.value= "D. "+ document.getElementById("9d").innerHTML;rubah();
         }
 		function p9e(){
-            form9.pilihan9.value= "E. "+ document.getElementById("9e").innerHTML;
+            form9.pilihan9.value= "E. "+ document.getElementById("9e").innerHTML;rubah();
         }
         function p10a(){
-            form10.pilihan10.value= "A. "+ document.getElementById("10a").innerHTML;
+            form10.pilihan10.value= "A. "+ document.getElementById("10a").innerHTML;rubah();
         }  
         function p10b(){
-            form10.pilihan10.value= "B. "+ document.getElementById("10b").innerHTML;
+            form10.pilihan10.value= "B. "+ document.getElementById("10b").innerHTML;rubah();
         }
         function p10c(){
-			form10.pilihan10.value= "C. "+ document.getElementById("10c").innerHTML;
+			form10.pilihan10.value= "C. "+ document.getElementById("10c").innerHTML;rubah();
         }
         function p10d(){
-			form10.pilihan10.value= "D. "+ document.getElementById("10d").innerHTML;
+			form10.pilihan10.value= "D. "+ document.getElementById("10d").innerHTML;rubah();
         }
 		function p10e(){
-            form10.pilihan10.value= "E. "+ document.getElementById("10e").innerHTML;
+            form10.pilihan10.value= "E. "+ document.getElementById("10e").innerHTML;rubah();
         }
         
 		//Cek jawaban
@@ -401,7 +411,7 @@ function sabar1(){
 							no5="B";
 						}
 
-                        if (form6.pilihan6.value=='C. mengatur CPU'){
+                        if (form6.pilihan6.value=='C. Mengatur CPU'){
 							nilai=nilai+10;
 							no6="B";
 						}
@@ -489,78 +499,11 @@ function sabar1(){
 
 						}
 
-						nama_2 = localStorage.getItem("nama2");
-						nama_3 = localStorage.getItem("nama3");
-						nama_4 = localStorage.getItem("nama4");
-						
-						
-
 						var database = firebase.database();
 						database.ref("kuis_1").push(data);
-						if(nama_2 != "") {
-							var data2 = {
-							nama: nama_2,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}
-							database.ref("kuis_1").push(data2);	
-						}
-						if(nama_3 != "") {
-							var data3 = {
-							nama: nama_3,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}	
-							database.ref("kuis_1").push(data3);
-						}
-						if(nama_4 != "") {
-							var data4 = {
-							nama: nama_4,
-							kelas: kelas,
-							nilai: f,
-							no1: no_1,
-							no2: no_2,
-							no3: no_3,
-							no4: no_4,
-							no5: no_5,
-                            no6: no_6,
-							no7: no_7,
-							no8: no_8,
-							no9: no_9,
-							no10: no_10,
-							waktu: waktu_,
-							tanggal: tanggal_,
-							mulai: mulai_
-							}	
-							database.ref("kuis_1").push(data4);
-                        }
 						location.href="updf1.html";
+
+						
                 });
 				
 		}
@@ -577,7 +520,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>1</b>`;
 			}
 
 			function nav2(){
@@ -590,7 +534,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>2</b>`;
 			}
 
 			function nav3(){
@@ -603,7 +548,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>3</b>`;
 			}
 
 			function nav4(){
@@ -616,7 +562,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>4</b>`;
 			}
 
 			function nav5(){
@@ -629,7 +576,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>5</b>`;
 			}
 
             function nav6(){
@@ -642,7 +590,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>6</b>`;
 			}
 
             function nav7(){
@@ -655,7 +604,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=false;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>7</b>`;
 			}
 
             function nav8(){
@@ -668,7 +618,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=false;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>8</b>`;
 			}
 
             function nav9(){
@@ -681,7 +632,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=false;
-                document.getElementById("soal10").hidden=true;
+				document.getElementById("soal10").hidden=true;
+				document.getElementById("no").innerHTML=`<b>9</b>`;
 			}
             function nav10(){
 				document.getElementById("soal1").hidden=true;
@@ -693,7 +645,8 @@ function sabar1(){
 				document.getElementById("soal7").hidden=true;
 				document.getElementById("soal8").hidden=true;
 				document.getElementById("soal9").hidden=true;
-                document.getElementById("soal10").hidden=false;
+				document.getElementById("soal10").hidden=false;
+				document.getElementById("no").innerHTML=`<b>10</b>`;
 			}
 
 			
@@ -715,7 +668,8 @@ function sabar1(){
                 document.getElementById("oke6").style.width= "200px";
                 document.getElementById("s8").width= "100";
                 document.getElementById("s9").width= "250";
-                document.getElementById("s10").width= "300";
+				document.getElementById("s10").width= "300";
+				document.getElementById("s10").width= "300";
 
 			} else {
 				document.getElementById("utama").style.paddingLeft= "50px";
@@ -741,3 +695,6 @@ function sabar1(){
 			var x = window.matchMedia("(max-width: 700px)");
 			responsif(x); // Call listener function at run time
 			x.addListener(responsif); // Attach listener function on state changes
+
+			let ambil = localStorage.getItem("nama1");
+			document.getElementById("namee").innerHTML=ambil;

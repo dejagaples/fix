@@ -30,45 +30,11 @@
         window.onload= function awal(){
             var nama1 = localStorage.getItem("nama1");
             document.getElementById("isinama1").innerHTML = nama1;
-            var nama2 = localStorage.getItem("nama2");
-            document.getElementById("isinama2").innerHTML = nama2;
-            var nama3 = localStorage.getItem("nama3");
-            document.getElementById("isinama3").innerHTML = nama3;
-            var nama4 = localStorage.getItem("nama4");
-            document.getElementById("isinama4").innerHTML = nama4;
             var kelas1 = localStorage.getItem("kelas");
-            var kelas2 = localStorage.getItem("kelas");
-            var kelas3 = localStorage.getItem("kelas");
-            var kelas4 = localStorage.getItem("kelas");
             document.getElementById("isikelas1").innerHTML = kelas1;
-            document.getElementById("isikelas2").innerHTML = kelas2;
-            document.getElementById("isikelas3").innerHTML = kelas3;
-            document.getElementById("isikelas4").innerHTML = kelas4;
-            var kelompok1 = localStorage.getItem("kelompok");
-            var kelompok2 = localStorage.getItem("kelompok");
-            var kelompok3 = localStorage.getItem("kelompok");
-            var kelompok4 = localStorage.getItem("kelompok");
-            document.getElementById("isikelompok1").innerHTML = kelompok1;
-            document.getElementById("isikelompok2").innerHTML = kelompok2;
-            document.getElementById("isikelompok3").innerHTML = kelompok3;
-            document.getElementById("isikelompok4").innerHTML = kelompok4;
             var nilai1 = localStorage.getItem("nilai");
-            var nilai2 = localStorage.getItem("nilai");
-            var nilai3 = localStorage.getItem("nilai");
-            var nilai4 = localStorage.getItem("nilai");
             document.getElementById("isinilai1").innerHTML = nilai1;
-            document.getElementById("isinilai2").innerHTML = nilai2;
-            document.getElementById("isinilai3").innerHTML = nilai3;
-            document.getElementById("isinilai4").innerHTML = nilai4;
-            if (document.getElementById("isinama2").innerHTML==""){
-                document.getElementById("tr2").style.display="none";
-            }
-            if (document.getElementById("isinama3").innerHTML==""){
-                document.getElementById("tr3").style.display="none";
-            }
-            if (document.getElementById("isinama4").innerHTML==""){
-                document.getElementById("tr4").style.display="none";
-            }
+            
             
             
 }
@@ -91,32 +57,12 @@
                 <tr>  
                     <th>Nama</th>  
                     <th>Kelas</th>
-                    <th>Kelompok</th>  
-                    <th>Nilai</th>  
+                   <th>Nilai</th>  
                 </tr>  
                 <tr>  
                     <td id="isinama1"></td>  
                     <td id="isikelas1"></td>  
-                    <td id="isikelompok1"></td>  
                     <td id="isinilai1"></td>  
-                </tr>  
-                <tr id="tr2">  
-                    <td id="isinama2"></td>  
-                    <td id="isikelas2"></td>  
-                    <td id="isikelompok2"></td>
-                    <td id="isinilai2"></td>  
-                </tr>  
-                <tr id="tr3">  
-                    <td id="isinama3"></td>  
-                    <td id="isikelas3"></td>  
-                    <td id="isikelompok3"></td>  
-                    <td id="isinilai3"></td>  
-                </tr>  
-                <tr id="tr4">  
-                    <td id="isinama4"></td>
-                    <td id="isikelas4"></td>  
-                    <td id="isikelompok4"></td>  
-                    <td id="isinilai4"></td>  
                 </tr>  
                 
             </tbody>  

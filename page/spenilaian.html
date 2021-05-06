@@ -45,6 +45,8 @@
 		
 		function drag(ev) {
 		ev.dataTransfer.setData("text", ev.target.id);
+			
+			
 		}
 		
 		function drop(ev) {
@@ -52,6 +54,33 @@
 		var data = ev.dataTransfer.getData("text");
 		ev.target.appendChild(document.getElementById(data));
 		
+		//k111315
+		if (($('#div2').find('#drag1').length == 01) || ($('#div1').find('#drag2').length == 1) || ($('#div3').find('#drag3').length == 1)){
+				document.getElementById("k11").style.backgroundColor="blue";
+				document.getElementById("k11").style.color="white";
+			}
+			else{
+				document.getElementById("k11").style.backgroundColor="";
+				document.getElementById("k11").style.color="";
+			}
+			if (($('#div4').find('#drag6').length == 1) || ($('#div5').find('#drag4').length == 1) || ($('#div6').find('#drag5').length == 1))
+            {
+                document.getElementById("k13").style.backgroundColor="blue";
+				document.getElementById("k13").style.color="white";
+			}
+			else{
+				document.getElementById("k13").style.backgroundColor="";
+				document.getElementById("k13").style.color="";
+			}
+			if (($('#div7').find('#drag9').length == 1) || ($('#div8').find('#drag7').length == 1) || ($('#div7').find('#drag9').length == 1))
+            {
+                document.getElementById("k15").style.backgroundColor="blue";
+				document.getElementById("k15").style.color="white";
+			}
+			else{
+				document.getElementById("k15").style.backgroundColor="";
+				document.getElementById("k15").style.color="";
+			}
 		}
 		
 		
@@ -156,33 +185,62 @@
 	<!-- Konten -->
 	<div id="utama">
 		  <div id="soal">
-            <br>
-            <span style="font-weight: bold; float: right;" id="stopwatch">90 : 00</span>  
-        <div id="navi">
-		  	<span>No. </span>
-			<button style="margin:5px" onclick="nav1()">1</button>
-			<button style="margin:5px" onclick="nav2()">2</button>
-			<button style="margin:5px" onclick="nav3()">3</button>
-			<button style="margin:5px" onclick="nav4()">4</button>
-            <button style="margin:5px" onclick="nav5()">5</button>
-            <button style="margin:5px" onclick="nav6()">6</button>
-			<button style="margin:5px" onclick="nav7()">7</button>
-			<button style="margin:5px" onclick="nav8()">8</button>
-			<button style="margin:5px" onclick="nav9()">9</button>
-            <button style="margin:5px" onclick="nav10()">10</button>
-            <button style="margin:5px" onclick="nav11()">11</button>
-			<button style="margin:5px" onclick="nav12()">12</button>
-			<button style="margin:5px" onclick="nav13()">13</button>
-			<button style="margin:5px" onclick="nav14()">14</button>
-			<button style="margin:5px" onclick="nav15()">15</button>
-        </div>
-			
-			
-			
+            <center>
+        <div style="border-bottom: 5px solid grey;padding-bottom: 20px;">
 			<br>
+			<ul style="float: right; margin-right: 20px;">Sisa waktu 
+				<br>
+				<span style="font-weight: bold;border: 3px solid rgb(141, 141, 243);padding: 5px;
+				border-radius: 5px;
+				" id="stopwatch">30 : 00</span>
+			</ul>
+			<ul style="float:left">
+				Data
+				<br>
+				Pengguna
+			</ul>
+			Nomor soal
+			<br>
+			<span id="no"> <b>1</b> </span>
+
+
+			
+        </div>
+		</center>
 			<br>
 			<div id="nomor">
-                <div id="soal1">
+				<div class="row">
+					<div id="navi" class="col-sm-2" style="border-right: 5px solid grey; height:130vh">
+						<center>
+							<img src="../gambar/user.jpg" alt="error" width="70%"  style="margin-top: 30px;">
+							<br>
+							<span id="namee"></span>
+							<br><br>
+							</span>
+						</center>
+						
+								<button id="k1" class="kecil" style="margin:5px" onclick="nav1()" >1</button>
+								<button id="k2" class="kecil" style="margin:5px" onclick="nav2()">2</button>
+								<button id="k3" class="kecil"style="margin:5px" onclick="nav3()">3</button>
+								<button id="k4" class="kecil"style="margin:5px" onclick="nav4()">4</button>
+								<button id="k5" class="kecil"style="margin:5px" onclick="nav5()">5</button>
+								<button id="k6" class="kecil"style="margin:5px" onclick="nav6()">6</button>
+								<button id="k7" class="kecil"style="margin:5px" onclick="nav7()">7</button>
+								<button id="k8" class="kecil"style="margin:5px" onclick="nav8()">8</button>
+								<button id="k9" class="kecil"style="margin:5px" onclick="nav9()">9</button>
+								<button id="k10" class="kecil"style="margin:5px" onclick="nav10()">10</button>
+								<button id="k11" class="kecil" style="margin:5px" onclick="nav11()" >11</button>
+								<button id="k12" class="kecil" style="margin:5px" onclick="nav12()">12</button>
+								<button id="k13" class="kecil"style="margin:5px" onclick="nav13()">13</button>
+								<button id="k14" class="kecil"style="margin:5px" onclick="nav14()">14</button>
+								<button id="k15" class="kecil"style="margin:5px" onclick="nav15()">15</button>
+					</div>
+				
+				
+				
+				
+		<div class="col-sm-10">	
+				<div id="soal1">
 			<!-- Soal -->	
 			<p id="demo">1. Perhatikan gambar berikut!</p>
 			<br>
@@ -209,7 +267,7 @@
             </form>
             <br>
             <center>
-            <button onclick="nav2()" >Soal Selanjutnya -></button>
+            <button class="besar"onclick="nav2()" >Soal Selanjutnya -></button>
             </center>
 		  </div>
 		  <div id="soal2">
@@ -223,23 +281,23 @@
 			<!-- Jawaban -->  
 			<form name="form2">
 				<button type="button" onclick="p2a()" class="button-kuis">A. </button>
-				<span id="2a"style="margin-left:5px;">alternatif ketika kabel front audio tidak berfungsi</span><br>
+				<span id="2a"style="margin-left:5px;">Alternatif ketika kabel front audio tidak berfungsi</span><br>
 				<button type="button" onclick="p2b()" class="button-kuis">B. </button>
-				<span id="2b" style="margin-left:5px;">menentukan status Slave dan Master pada Harddisk</span><br>
+				<span id="2b" style="margin-left:5px;">Menentukan status Slave dan Master pada Harddisk</span><br>
 				<button type="button" onclick="p2c()" class="button-kuis">C. </button>
-				<span id="2c" style="margin-left:5px;">mengatur CPU</span><br>
+				<span id="2c" style="margin-left:5px;">Mengatur CPU</span><br>
 				<button type="button" onclick="p2d()" class="button-kuis">D. </button>
-				<span id="2d" style="margin-left:5px;">mereset setingan CMOS</span><br>
+				<span id="2d" style="margin-left:5px;">Mereset setingan CMOS</span><br>
 				<button type="button" onclick="p2e()" class="button-kuis">E. </button>
-				<span id="2e" style="margin-left:5px;">setting RAM</span><br>
+				<span id="2e" style="margin-left:5px;">Setting RAM</span><br>
 				<label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
 				<input type="text" id="oke2" name="pilihan2" size="5" style="cursor: not-allowed;" disabled>
                 <br>
             </form>
             <br>
             <center>
-                    <button onclick="nav1()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav3()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav1()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav3()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal3">
@@ -265,8 +323,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav2()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav4()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav2()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav4()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal4">
@@ -295,8 +353,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav3()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav5()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav3()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav5()" >Soal Selanjutnya -></button>
             </center>
           </div>
           <div id="soal5">
@@ -324,8 +382,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav4()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav6()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav4()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav6()" >Soal Selanjutnya -></button>
             </center>
           </div>      
           <div id="soal6">
@@ -353,8 +411,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav5()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav7()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav5()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav7()" >Soal Selanjutnya -></button>
             </center>    
             </div>
             <div id="soal7">
@@ -385,8 +443,8 @@
             </form>
             <br>
             <center>
-                    <button onclick="nav6()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav8()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav6()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav8()" >Soal Selanjutnya -></button>
             </center> 
             </div>
             <div id="soal8">
@@ -398,15 +456,15 @@
                     <!-- Jawaban -->  
                     <form name="form8">
                             <button type="button" onclick="p8a()" class="button-kuis">A. </button>
-                            <span id="8a"style="margin-left:5px;">memasang power supply</span><br>
+                            <span id="8a"style="margin-left:5px;">Memasang power supply</span><br>
                             <button type="button" onclick="p8b()" class="button-kuis">B. </button>
-                            <span id="8b" style="margin-left:5px;">memasang Harddisk</span><br>
+                            <span id="8b" style="margin-left:5px;">Memasang Harddisk</span><br>
                             <button type="button" onclick="p8c()" class="button-kuis">C. </button>
-                            <span id="8c" style="margin-left:5px;">memasang Optical Disc Drive</span><br>
+                            <span id="8c" style="margin-left:5px;">Memasang Optical Disc Drive</span><br>
                             <button type="button" onclick="p8d()" class="button-kuis">D. </button>
-                            <span id="8d" style="margin-left:5px;">memasang RAM</span><br>
+                            <span id="8d" style="margin-left:5px;">Memasang RAM</span><br>
                             <button type="button" onclick="p8e()" class="button-kuis">E. </button>
-                            <span id="8e" style="margin-left:5px;">memasang CPU</span><br>
+                            <span id="8e" style="margin-left:5px;">Memasang CPU</span><br>
                             <label style="margin-left: 10px; margin-right: 5px;">Jawaban anda :</label>
                             <input type="text" id="oke8" name="pilihan8" size="5" style="cursor: not-allowed;" disabled>
                             <br>
@@ -414,8 +472,8 @@
                         
                 <br>
                 <center>
-                        <button onclick="nav7()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav9()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav7()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav9()" >Soal Selanjutnya -></button>
                 </center>
             </div>
             <div id="soal9">
@@ -443,8 +501,8 @@
                         </form>
                 <br>
                 <center>
-                        <button onclick="nav8()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav10()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav8()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav10()" >Soal Selanjutnya -></button>
                 </center>
             </div>
             <div id="soal10">
@@ -472,8 +530,8 @@
 				</form>
                 <br>
                 <center>
-                        <button onclick="nav9()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav11()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav9()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav11()" >Soal Selanjutnya -></button>
                         
                 </center>
             </div>
@@ -573,8 +631,8 @@
 		</div>
         <br>
         <center>
-                <button onclick="nav10()" ><- Soal Sebelumnya</button>
-                <button onclick="nav12()" >Soal Selanjutnya -></button>
+                <button class="besar"onclick="nav10()" ><- Soal Sebelumnya</button>
+                <button class="besar"onclick="nav12()" >Soal Selanjutnya -></button>
                 
         </center>
 	</div>
@@ -585,7 +643,7 @@
 			<label style="margin-left: 30px;">Tahap </label>
 			<br>
 			<label style="margin-left: 30px;"> 1. </label>
-			<select id="mySelect" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect" style="margin-left: 20px;text-align-last:center;" onchange="rubah()">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -602,7 +660,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">2. </label>
-			<select id="mySelect2" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect2" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -619,7 +677,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">3. </label>
-			<select id="mySelect3" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect3" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -636,7 +694,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">4. </label>
-			<select id="mySelect4" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect4" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -653,7 +711,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">5. </label>
-			<select id="mySelect5" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect5" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -670,7 +728,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">6. </label>
-				<select id="mySelect6" style="margin-left: 20px;text-align-last:center;">
+				<select id="mySelect6" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -687,7 +745,7 @@
 				</select>
 			<br>
 			<label style="margin-left: 30px;">7. </label>
-			<select id="mySelect7" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect7" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -704,7 +762,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">8. </label>
-			<select id="mySelect8" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect8" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -721,7 +779,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 30px;">9. </label>
-			<select id="mySelect9" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect9" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -738,7 +796,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 20px;">10. </label>
-			<select id="mySelect10" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect10" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -755,7 +813,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 20px;">11. </label>
-			<select id="mySelect11" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect11" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -772,7 +830,7 @@
 			</select>
 			<br>
 			<label style="margin-left: 20px;">12. </label>
-			<select id="mySelect12" style="margin-left: 20px;text-align-last:center;">
+			<select id="mySelect12" onchange="rubah()"style="margin-left: 20px;text-align-last:center;">
 				  <option>-- Pilih --</option>
 				  <option>Pasang Heatsink Fan</option>
 				  <option>Pasang VGA Card</option>
@@ -789,8 +847,8 @@
             </select>	  
             <br><br>
             <center>
-                    <button onclick="nav11()" ><- Soal Sebelumnya</button>
-                    <button onclick="nav13()" >Soal Selanjutnya -></button>
+                    <button class="besar"onclick="nav11()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav13()" >Soal Selanjutnya -></button>
                     
             </center>
 	</div>
@@ -868,8 +926,8 @@
 				<br>
 		</div>
 		<center>
-				<button onclick="nav12()" ><- Soal Sebelumnya</button>
-				<button onclick="nav14()" >Soal Selanjutnya -></button>
+				<button class="besar"onclick="nav12()" ><- Soal Sebelumnya</button>
+				<button class="besar"onclick="nav14()" >Soal Selanjutnya -></button>
 				
 		</center>
 	</div>
@@ -883,7 +941,7 @@
 				
 				<div id="tampung3">
 					<div id="fp">
-							<select id="powerledplus" style="margin-top: 50px;text-align-last:center;" >
+							<select id="powerledplus" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -896,7 +954,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="powerledmin" style="margin-top: 50px;text-align-last:center;" >
+							<select id="powerledmin" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -909,7 +967,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="powerswplus" style="margin-top: 50px;text-align-last:center;" >
+							<select id="powerswplus" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -922,7 +980,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="powerswmin" style="margin-top: 50px;text-align-last:center;" >
+							<select id="powerswmin" onchange="rubah()" style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -937,7 +995,7 @@
 					<div id="fp0"> <p style="color: cornsilk;margin-top: 50px;">Pin Kosong</p></div>
 					<div id="fp2"></div>
 					<div id="fp">
-							<select id="hddledplus" style="margin-top: 50px;text-align-last:center;" >
+							<select id="hddledplus" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -950,7 +1008,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="hddledmin" style="margin-top: 50px;text-align-last:center;" >
+							<select id="hddledmin" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -963,7 +1021,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="resetswmin" style="margin-top: 50px;text-align-last:center;" >
+							<select id="resetswmin" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -976,7 +1034,7 @@
 							  </select>
 					</div>
 					<div id="fp">
-							<select id="resetswplus" style="margin-top: 50px;text-align-last:center;" >
+							<select id="resetswplus" onchange="rubah()"style="margin-top: 50px;text-align-last:center;" >
 									<option>-- Pilih --</option>
 									<option style="color:red">RESET SW</option>
 									<option style="color:black">HDD LED </option>
@@ -1145,8 +1203,8 @@
 			</div>
                 <center>
                         <br>
-                        <button onclick="nav13()" ><- Soal Sebelumnya</button>
-                        <button onclick="nav15()" >Soal Selanjutnya -></button>
+                        <button class="besar"onclick="nav13()" ><- Soal Sebelumnya</button>
+                        <button class="besar"onclick="nav15()" >Soal Selanjutnya -></button>
                         
                 </center>
 		</div>
@@ -1252,24 +1310,26 @@
 					</div>
 
             <center>
-                    <button onclick="nav14()" ><- Soal Sebelumnya</button>
+                    <button class="besar"onclick="nav14()" ><- Soal Sebelumnya</button>
                     
                     
             </center>
 				</div>
+				<center><br><br><button onclick="cek()" class="button-selesai">Selesai</button></center>
 		</div>
 				
-					<br>
-					<center><button onclick="cek()" class="button-selesai">Selesai</button></center>
-					<br>
+					
 			</div>
 										
 	  </div>
-
+	  <br>
+					
+	  <br>
 	
 	  
 
-
+	  <br>
+	  </div>
 	  
 	  </div>
 	<script src="../js/loadp.js"></script> 
