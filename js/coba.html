@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <button class="kliksoal">1</button>
+        <button class="kliksoal">2</button>
+        <button class="kliksoal">3</button>
+        <p id="soal"></p>
+        <input type="radio" name="sama"> <span id="a"></span>
+        <br>
+        <input type="radio" name="sama"> <span id="b"></span>
+        <br>
+        <input type="radio" name="sama"> <span id="c"></span>
+        <br>
+        <input type="radio" name="sama"> <span id="d"></span>
+        <br><br>
+
+        <button onclick="cek()"> Cek</button>
+        <button onclick="location.reload();"> Ganti</button>
+        <script>
+		    var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) { 
+            var myObj = JSON.parse(this.responseText);
+            var r = Math.floor(Math.random() * 3);
+			//ambil data dari database
+			document.getElementById("soal").innerHTML = myObj.soal[r];
+			document.getElementById("a").innerHTML = myObj.a[r];
+			document.getElementById("b").innerHTML = myObj.b[r];
+			document.getElementById("c").innerHTML = myObj.c[r];
+            document.getElementById("d").innerHTML = myObj.d[r];
+            
+            
+			
+          }
+        };
+		xmlhttp.open("GET", "kumpulansoal.json", true);
+        xmlhttp.send();
+
+
+        // var arr = [];
+        //     while(arr.length < 3){
+        //         var r = Math.floor(Math.random() * 3) + 1;
+        //         if(arr.indexOf(r) === -1) arr.push(r);
+                
+        //     }
+        //     console.log(arr);
+
+        //     var btnsoalNumber=document.querySelectorAll(".kliksoal");
+        //     console.log(btnsoalNumber);
+        //     for (i=0;i<btnsoalNumber.length;i++){
+        //         btnsoalNumber[i].addEventListener("click",(
+                
+        //         function (){
+        //             console.log("halo");
+        //             for (j=0;j<arr.length;j++){
+        //             document.getElementById("soal").innerHTML = myObj.soal[arr[j]];
+        //             document.getElementById("a").innerHTML = myObj.a[arr[j]];
+        //             document.getElementById("b").innerHTML = myObj.b[arr[j]];
+        //             document.getElementById("c").innerHTML = myObj.c[arr[j]];
+        //             document.getElementById("d").innerHTML = myObj.d[arr[j]];
+        //             }
+        //         }
+        //     )    
+        //     }
+
+        
+        </script>
+    </body>
+</html>

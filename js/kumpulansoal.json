@@ -1,0 +1,25 @@
+{
+	"soal": [
+			"Ibu kota indonesia adalah....",
+			"Hukum bacaan izhar artinya...",
+			"Otaknya komputer adalah..."
+	],
+	"a":  [
+        "Amuntai",
+        "Samar",
+        "RAM"
+    ],
+    "b": ["Jakarta",
+        "Jelas",
+        "CPU"
+    ],
+    "c":  ["Barabai",
+        "Dengung",
+        "Power Supply"
+    ],
+    "d": ["Banjarmasin",
+        "Masuk",
+        "Harddisk"
+    ]
+    
+}
