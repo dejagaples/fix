@@ -384,6 +384,7 @@ function nav1(){
         document.getElementById("oke4").style.width= "200px";
         document.getElementById("s5").width= "350";
         document.getElementById("oke5").style.width= "200px";
+        document.getElementById("hilangkan").hidden= false;
         
 
     } else {
@@ -399,7 +400,7 @@ function nav1(){
         document.getElementById("s3").width= "350";
         document.getElementById("oke4").style.width= "";
         document.getElementById("oke5").style.width= "";
-        
+        document.getElementById("hilangkan").hidden= true;
         }
     }
 

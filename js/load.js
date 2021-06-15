@@ -670,6 +670,7 @@ function sabar1(){
                 document.getElementById("s9").width= "250";
 				document.getElementById("s10").width= "300";
 				document.getElementById("s10").width= "300";
+				document.getElementById("hilangkan").hidden= false;
 
 			} else {
 				document.getElementById("utama").style.paddingLeft= "50px";
@@ -688,7 +689,8 @@ function sabar1(){
                 document.getElementById("oke6").style.width= "";
                 document.getElementById("s8").width= "150";
                 document.getElementById("s9").width= "300";
-                document.getElementById("s10").width= "300";
+				document.getElementById("s10").width= "300";
+				document.getElementById("hilangkan").hidden= true;
 				}
 			}
 

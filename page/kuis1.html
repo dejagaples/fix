@@ -190,7 +190,72 @@
 			var myObj = JSON.parse(this.responseText);
 			var r = Math.floor(Math.random() * 15);
 			//soal bergambar
-			if (r==4){
+			if (r==0){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/obeng.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "10%");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==1){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/obeng.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "10%");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==15){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/obeng.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "10%");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==2){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/baut.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "10%");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==3){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/obeng.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "10%");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==4){
 				var data = {
   				"images": {
     				"bannerImg1": "../gambar/baut7.jpg"
@@ -200,7 +265,7 @@
 				img.src = data.images.bannerImg1;
 				img.setAttribute("class", "banner-img");
 				img.setAttribute("alt", "error");
-				img.setAttribute("width", "10%");
+				img.setAttribute("width", "20%");
 				document.getElementById("img-container").appendChild(img);
 			}
 			else if (r==5){
@@ -235,6 +300,20 @@
 				var data = {
   				"images": {
     				"bannerImg1": "../gambar/sata.jpg"
+  					},
+				};
+				var img = new Image();
+				img.src = data.images.bannerImg1;
+				img.setAttribute("class", "banner-img");
+				img.setAttribute("alt", "error");
+				img.setAttribute("width", "8%");
+				img.setAttribute("style", "margin-left: 20px;");
+				document.getElementById("img-container").appendChild(img);
+			}
+			else if (r==15){
+				var data = {
+  				"images": {
+    				"bannerImg1": "../gambar/jumper.jpg"
   					},
 				};
 				var img = new Image();

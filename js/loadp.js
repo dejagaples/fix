@@ -1409,6 +1409,7 @@ if (r.matches) { // If media query matches
     document.getElementById("drag8").style.height= "65px";
     document.getElementById("drag9").style.width= "60px";
     document.getElementById("drag9").style.height= "60px";
+    document.getElementById("hilangkan").hidden= false;
     
     
 } else {
@@ -1458,6 +1459,7 @@ if (r.matches) { // If media query matches
     document.getElementById("drag8").style.height= "165px";
     document.getElementById("drag9").style.width= "160px";
     document.getElementById("drag9").style.height= "160px";
+    document.getElementById("hilangkan").hidden= true;
     
     
     }

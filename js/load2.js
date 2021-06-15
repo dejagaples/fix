@@ -643,6 +643,7 @@ function nav1(){
         document.getElementById("oke10").style.width= "200px";
         document.getElementById("s9").width= "300";
         document.getElementById("s10").width= "300";
+        document.getElementById("hilangkan").hidden= false;
 
     } else {
         document.getElementById("utama").style.paddingLeft= "50px";
@@ -665,6 +666,7 @@ function nav1(){
         document.getElementById("oke10").style.width= "";
         document.getElementById("s9").width= "350";
         document.getElementById("s10").width= "300";
+        document.getElementById("hilangkan").hidden= true;
         }
     }
 
