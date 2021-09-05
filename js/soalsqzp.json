@@ -1,0 +1,81 @@
+{
+	"soal": [
+		"Perhatikan gambar berikut!<br><img src='../gambar/sps1.JPG' id='s1'><br>Saat merakit komputer di laboratorium, Pak Guru meminta Anda mengambil kabel yang berfungsi untuk menghubungkan Motherboard dengan perangkat penyimpanan. Kabel yang harus diambil adalah nomor ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/jumper.jpg' id='s2' > <br>Alat tersebut mempunyai beberapa fungsi, kecuali ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps3.JPG' id='s3' ><br>Dari gambar tersebut, yang tidak termasuk alat perakitan komputer adalah nomor ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/sps4.JPG' id='s4' ><br>Dari gambar tersebut, yang termasuk perangkat keras komputer adalah nomor ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/sps5.JPG' id='s5' ><br>Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat input komputer adalah nomor ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps6.JPG' id='s6' ><br>Di antara perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat proses komputer adalah nomor ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps7.JPG' id='s7' ><br>Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat output komputer adalah nomor ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps8.JPG' id='s8' > <br>Gambar tersebut menunjukkan proses kegiatan …",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps9.JPG' id='s9' ><br>Perangkat yang letak pemasangannya berada pada Motherboard diantaranya adalah ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/sps10.JPG' id='s10' ><br>Urutan pemasangan kabel tersebut saat perakitan komputer sesuai materi yang telah dipelajari yaitu ...."
+	],
+
+    "a": [
+        "1",
+        "Alternatif ketika kabel front audio tidak berfungsi",
+        "1 dan 2",
+        "1, 2, dan 3",
+        "1, 2, dan 3",
+        "1, 2, dan 3",
+        "1, 2, dan 5",
+        "Memasang power supply",
+        "1, 2, dan 3",
+        "1 - 2 - 3"
+    ],
+    
+    "b": [
+        "3",
+        "Menentukan status Slave dan Master pada Harddisk",
+        "1 dan 3",
+        "2, 3, dan 4",
+        "2, 3, dan 4",
+        "3, 4, dan 5",
+        "2, 4, dan 5",
+        "Memasang Harddisk",
+        "2, 3, dan 4",
+        "1 - 3 - 2"
+    ],
+    
+	"c": [
+        "2 dan 3", 
+        "Mengatur CPU",
+        "2 dan 3",
+        "1, 3, dan 4",
+        "3, 4, dan 5",
+        "1, 2,dan 5",
+        "2, 3, dan 4",
+        "Memasang Optical Disc Drive",
+        "3, 4, dan 5",
+        "2 - 3 - 1"
+    ],
+
+    "d": [
+        "3 dan 4", 
+        "Mereset setingan CMOS",
+        "2 dan 4",
+        "1, 2 dan 4",
+        "1, 2, dan 5",
+        "2, 3, dan 5",
+        "2, 3, dan 5",
+        "Memasang RAM",
+        "1, 3, dan 5",
+        "2 - 1 - 3"
+    ],
+
+    "e": [
+        "1 dan 4", 
+        "Setting RAM",
+        "1 dan 4",
+        "3 dan 4",
+        "2, 3, dan 5",
+        "1,3, dan 5",
+        "1, 3, dan 5",
+        "Memasang CPU",
+        "1, 4, dan 5",
+        "3 - 1 - 2"
+    ]
+
+
+}

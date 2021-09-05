@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<h1 id="a"></h1>
+
+
+<script>
+
+
+
+
+//manggil json
+var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			coba = [];
+			data=10;
+			while(coba.length < 10){
+				var r = Math.floor(Math.random() * 10);
+				if(coba.indexOf(r) === -1) coba.push(r);
+			}
+			
+			//ambil data dari database
+			document.getElementById("demo").innerHTML = myObj.soal[coba[0]];
+			document.getElementById("demo2").innerHTML = myObj.soal[coba [1]];
+			document.getElementById("demo3").innerHTML = myObj.soal[coba [2]];
+			document.getElementById("demo4").innerHTML = myObj.soal[coba [3]];
+			document.getElementById("demo5").innerHTML = myObj.soal[coba [4]];
+			document.getElementById("demo6").innerHTML = myObj.soal[coba [5]];
+			document.getElementById("demo7").innerHTML = myObj.soal[coba [6]];
+			document.getElementById("demo8").innerHTML = myObj.soal[coba [7]];
+			document.getElementById("demo9").innerHTML = myObj.soal[coba [8]];
+			document.getElementById("demo10").innerHTML = myObj.soal[coba [9]];
+			document.getElementById("a").innerHTML = myObj.a[coba[0]];
+			document.getElementById("b").innerHTML = myObj.b[r];
+			document.getElementById("c").innerHTML = myObj.c[r];
+			document.getElementById("d").innerHTML = myObj.d[r];
+			
+			
+
+			
+			}
+		};
+		xmlhttp.open("GET", "../js/soalqz1.json", true);
+		xmlhttp.send();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+	"soal": [
+		"Perhatikan gambar berikut!<br><img src='../gambar/qz3s1.JPG' id='s1'><br>Perangkat-perangkat yang letak pemasangannya berada pada Motherboard diantaranya adalah ….",
+        "Sebelum memasang kabel internal, hal yang harus dilakukan adalah ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz3s3.JPG' id='s3' ><br>Perbedaan cara memasang perangkat nomor 1) dan 2) tersebut adalah ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz3s4.JPG' id='s4'><br>Urutan pemasangan kabel tersebut saat perakitan komputer sesuai materi yang telah dipelajari yaitu ....",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz3s5.JPG' id='s5' ><br>Gambar tersebut menunjukkan proses kegiatan…."
+	],
+
+    "a": [
+        "1, 2, dan 3",
+        "Memasang Casing",
+        "1 dipasang dari luar case, 2 dari dalam case",
+        "1 - 2 - 3",
+        "Memasang power supply"
+    ],
+    
+    "b": [
+        "2, 3, dan 4",
+        "Memasang kabel VGA",
+        "1 dipasang dari dalam case, 2 dari luar case",
+        "1 - 3 - 2",
+        "Memasang Harddisk"
+    ],
+    
+	"c": [
+        "3, 4, dan 5", 
+        "Memasang kabel Front Panel",
+        "1 bersifat volatile, 2 bersifat non volatile",
+        "2 - 3 - 1",
+        "Memasang Optical Disc Drive"
+    ],
+
+    "d": [
+        "1, 3, dan 5", 
+        "Mencari tahu seri Motherboard",
+        "1 bersifat non volatile, 2 bersifat volatile",
+        "2 - 1 - 3",
+        "Memasang RAM"
+    ],
+
+    "e": [
+        "1, 4, dan 5", 
+        "Membersihkan kabel internal",
+        "1 untuk menulis data, 2 untuk membaca data",
+        "3 - 1 - 2",
+        "Memasang CPU"
+    ]
+
+
+}

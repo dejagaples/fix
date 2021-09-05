@@ -1,0 +1,57 @@
+{
+	"soal": [
+		"Perhatikan gambar berikut!<br><img src='../gambar/qz1s1.JPG' id='s1' ><br><p>Saat merakit komputer di laboratorium, Pak Guru meminta Anda mengambil kabel yang berfungsi untuk menghubungkan Motherboard dengan perangkat penyimpanan. Kabel yang harus diambil adalah nomor ....",
+        "Perhatikan gambar berikut!<br><br><img src='../gambar/FPSOAL.JPG' id='s2' ><br><br>Pasangan kabel Front Panel yang seharusnya dipasang pada nomor 1 dan 3 adalah ....",
+        "Perhatikan gambar berikut!<br><img src='../gambar/jumpersoal2.JPG' id='s3' ><br><br>Pemasangan jumper tersebut untuk menentukan status ....",
+        "Perhatikan gambar berikut!<br><img src='../gambar/FP1.jpg' id='s4'><br>Pada kabel Front Panel tersebut, kabel yang bernilai negatif (-) mempunyai warna ….",
+        "Cara yang benar menentukan kabel positif dan negatif pada kabel Front Panel, kecuali ....",
+        "Perhatikan gambar berikut!<br><img src='../gambar/jumper.jpg' id='s6'><br>Alat tersebut mempunyai fungsi sebagai berikut, kecuali …."
+	],
+
+    "a": [
+        "1",
+        "Power LED",
+        "Slave",
+        "Hijau",
+        "Jika ada kabel putih, maka putih adalah negatif (-).",
+        "Alternatif ketika kabel front audio tidak berfungsi"
+    ],
+    
+    "b": [
+        "3",
+        "HDD LED",
+        "Master Standalone",
+        "Hitam",
+        "Jika tidak ada kabel putih namun ada kabel hitam, maka kabel hitam negatif.",
+        "Menentukan status Slave dan Master pada Harddisk"
+    ],
+    
+	"c": [
+        "2 dan 3", 
+        "Power SW",
+        "Cable Select",
+        "Putih",
+        "Jika ada kabel merah, berarti merah negatif (-).",
+        "Mengatur CPU"
+    ],
+
+    "d": [
+        "3 dan 4", 
+        "Reset SW",
+        "Master with Non ATA",
+        "Merah",
+        "Jika tidak ada kabel putih dan hitam, maka kabel merah positif (+).",
+        "Mereset setingan CMOS"
+    ],
+
+    "e": [
+        "1 dan 4", 
+        "Mic Power",
+        "Slave Standalone",
+        "Jingga",
+        "Jika ada kabel hitam, maka hitam negatif (-) dengan syarat kabel putih tidak ada.",
+        "Setting RAM"
+    ]
+
+
+}

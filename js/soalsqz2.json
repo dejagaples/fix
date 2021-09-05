@@ -1,0 +1,81 @@
+{
+	"soal": [
+		"Perhatikan gambar berikut!<br><img src='../gambar/qz2s1.JPG' id='s1' ><br>Fungsi dari perangkat keras a) dan b) tersebut secara berturut-turut adalah ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz2s2.JPG' id='s2' ><br><br>Pernyataan yang benar tentang perangkat 1) dan 2) tersebut yaitu ….",
+        "Perangkat keras yang termasuk dalam kategori perangkat input adalah ....",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz2s4.JPG' id='s4' ><br>Di antara perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat proses komputer adalah ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz2s5.JPG' id='s5'><br>Perangkat yang berfungsi untuk menyerap panas pada CPU adalah ….",
+        "Berikut tahapan yang benar dari proses keluarnya suara pada komputer yaitu ….",
+        "Perhatikan gambar berikut!<br><img src='../gambar/qz2s7.JPG' id='s7'><br>Pak Guru ingin menyimpan dokumen keuangan OSIS di dalam sebuah CD. Anda diminta melakukan burning secara mandiri di laboratorium. Data tersebut akan ditambah per bulannya dengan data terbaru. Anda harus memastikan perangkat yang akan digunakan. Dari gambar tersebut, perangkat yang akan digunakan yaitu ….",
+        "Berikut penjelasan yang benar tentang Power Supply, kecuali ....",
+        "Perhatikan gambar berikut! <br><img src='../gambar/qz2s9.JPG' id='s9' ><br>Dari perangkat-perangkat tersebut, yang termasuk dalam kategori perangkat output komputer adalah ….",
+        "Perhatikan gambar berikut! <br><img src='../gambar/qz2s10.JPG' id='s10' ><br><br>Pada perangkat tersebut terdapat processor yang disebut ...."
+	],
+
+    "a": [
+        "Memproses perintah dan sebagai sistem komunikasi",
+        "1 adalah Harddisk, merupakan penyimpanan sementara, bersifat volatile",
+        "Mouse, keyboard, monitor",
+        "1, 2, dan 3",
+        "1 dan 2",
+        "Software – Sound Card – Kabel Front Audio – Speaker",
+        "1 dan 2",
+        "Berfungsi memompa listrik ke perangkat komputer",
+        "1, 2, dan 5",
+        "CPU"
+    ],
+    
+    "b": [
+        "Sebagai sistem komunikasi dan memproses perintah",
+        "2 adalah Harddisk, merupakan penyimpanan sekunder, bersifat volatile",
+        "Mouse, monitor, printer",
+        "3, 4, dan 5",
+        "2 dan 3",
+        "Sound Card – Sofware – Kabel Front Audio – Speaker",
+        "1 dan 4",
+        "Mengubah arus AC menjadi DC",
+        "2, 4, dan 5",
+        "GPU"
+    ],
+    
+	"c": [
+        "Melindungi hardware lainnya dan sebagai sistem komunikasi", 
+        "1 adalah RAM, merupakan penyimpanan sementara, bersifat non volatile",
+        "CPU, RAM, speaker",
+        "1, 2,dan 5",
+        "3 dan 4",
+        "Sound Card – Kabel Front Audio – Speaker – Sofware",
+        "2 dan 3",
+        "Mengubah arus DC menjadi AC",
+        "2, 3, dan 4",
+        "CU"
+    ],
+
+    "d": [
+        "Melindungi hardware lainnya dan memproses perintah", 
+        "2 adalah RAM, merupakan penyimpanan primer, bersifat volatile",
+        "Keyboard, mouse, scanner",
+        "2, 3, dan 5",
+        "1 dan 4",
+        "Sofware – Kabel Front Audio – Speaker – Sound Card",
+        "3 dan 4",
+        "Memiliki 2 tipe yaitu AT dan ATX",
+        "2, 3, dan 5",
+        "HSF"
+    ],
+
+    "e": [
+        "Sebagai sistem komunikasi dan melindungi hardware lainnya", 
+        "1 adalah RAM, merupakan penyimpanan sementara, bersifat volatile",
+        "Keyboard, mouse, power supply",
+        "1, 3, dan 5",
+        "1 dan 3",
+        "Speaker – Sound Card – Kabel Front Audio – Sofware",
+        "1 dan 3",
+        "Tipe AT merupakan tipe yang lebih lama",
+        "1, 3, dan 5",
+        "ALU"
+    ]
+
+
+}

@@ -1,3 +1,76 @@
+//manggil json
+var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			coba = [];
+			data=10;
+			while(coba.length < 5){
+				var r = Math.floor(Math.random() * 5);
+				if(coba.indexOf(r) === -1) coba.push(r);
+			}
+
+			
+			
+			
+			//ambil data dari database
+			document.getElementById("demo").innerHTML = myObj.soal[coba[0]];
+			document.getElementById("demo2").innerHTML = myObj.soal[coba [1]];
+			document.getElementById("demo3").innerHTML = myObj.soal[coba [2]];
+			document.getElementById("demo4").innerHTML = myObj.soal[coba [3]];
+			document.getElementById("demo5").innerHTML = myObj.soal[coba [4]];
+			document.getElementById("a").innerHTML = myObj.a[coba[0]];
+			document.getElementById("b").innerHTML = myObj.b[coba[0]];
+			document.getElementById("c").innerHTML = myObj.c[coba[0]];
+			document.getElementById("d").innerHTML = myObj.d[coba[0]];
+			document.getElementById("e").innerHTML = myObj.e[coba[0]];
+			document.getElementById("2a").innerHTML = myObj.a[coba[1]];
+			document.getElementById("2b").innerHTML = myObj.b[coba[1]];
+			document.getElementById("2c").innerHTML = myObj.c[coba[1]];
+			document.getElementById("2d").innerHTML = myObj.d[coba[1]];
+			document.getElementById("2e").innerHTML = myObj.e[coba[1]];
+			document.getElementById("3a").innerHTML = myObj.a[coba[2]];
+			document.getElementById("3b").innerHTML = myObj.b[coba[2]];
+			document.getElementById("3c").innerHTML = myObj.c[coba[2]];
+			document.getElementById("3d").innerHTML = myObj.d[coba[2]];
+			document.getElementById("3e").innerHTML = myObj.e[coba[2]];
+			document.getElementById("4a").innerHTML = myObj.a[coba[3]];
+			document.getElementById("4b").innerHTML = myObj.b[coba[3]];
+			document.getElementById("4c").innerHTML = myObj.c[coba[3]];
+			document.getElementById("4d").innerHTML = myObj.d[coba[3]];
+			document.getElementById("4e").innerHTML = myObj.e[coba[3]];
+			document.getElementById("5a").innerHTML = myObj.a[coba[4]];
+			document.getElementById("5b").innerHTML = myObj.b[coba[4]];
+			document.getElementById("5c").innerHTML = myObj.c[coba[4]];
+			document.getElementById("5d").innerHTML = myObj.d[coba[4]];
+			document.getElementById("5e").innerHTML = myObj.e[coba[4]];
+			
+			
+			function responsif(x) {
+				if (x.matches) { // If media query matches
+					
+                    document.getElementById("s1").width= "300";
+                    document.getElementById("s4").width= "350";
+                    document.getElementById("s3").width= "350";
+                    document.getElementById("s5").width= "350";
+					
+	
+				} else {
+                    document.getElementById("s1").width= "400";
+                    document.getElementById("s5").width= "500";
+                    document.getElementById("s4").width= "450";
+                    document.getElementById("s3").width= "350";
+					}
+				}
+			var x = window.matchMedia("(max-width: 700px)");
+			responsif(x); // Call listener function at run time
+			x.addListener(responsif); // Attach listener function on state changes
+			
+			}
+		};
+		xmlhttp.open("GET", "../js/soalqz3.json", true);
+		xmlhttp.send();
+
 function rubah(){
 	if (form.pilihan.value!=""){
 		document.getElementById("k1").style.backgroundColor="blue";
@@ -70,26 +143,26 @@ function startTimer(duration, display) {
                 var n = d.getHours() + ":" + d.getMinutes();
                 var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
-                if(form.pilihan.value=='E. 1, 4, dan 5'){
+                if ((form.pilihan.value=='E. 1, 4, dan 5')||(form.pilihan.value=='D. Mencari tahu seri Motherboard')||(form.pilihan.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form.pilihan.value=='C. 2 - 3 - 1')||(form.pilihan.value=='C. Memasang Optical Disc Drive')){
                     nilai=nilai+20;
                     no1="B";
                 }
-                if (form2.pilihan2.value=='D. Mencari tahu seri Motherboard'){
+                if ((form2.pilihan2.value=='E. 1, 4, dan 5')||(form2.pilihan2.value=='D. Mencari tahu seri Motherboard')||(form2.pilihan2.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form2.pilihan2.value=='C. 2 - 3 - 1')||(form2.pilihan2.value=='C. Memasang Optical Disc Drive')){
                     nilai=nilai+20;
                     no2="B";
                 }
 
-                if (form3.pilihan3.value=='A. 1 dipasang dari luar case, 2 dari dalam case'){
+                if ((form3.pilihan3.value=='E. 1, 4, dan 5')||(form3.pilihan3.value=='D. Mencari tahu seri Motherboard')||(form3.pilihan3.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form3.pilihan3.value=='C. 2 - 3 - 1')||(form3.pilihan3.value=='C. Memasang Optical Disc Drive')){
                     nilai=nilai+20;
                     no3="B";
                 }
 
-                if (form4.pilihan4.value=='C. 2 - 3 - 1'){
+                if ((form4.pilihan4.value=='E. 1, 4, dan 5')||(form4.pilihan4.value=='D. Mencari tahu seri Motherboard')||(form4.pilihan4.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form4.pilihan4.value=='C. 2 - 3 - 1')||(form4.pilihan4.value=='C. Memasang Optical Disc Drive')){
                     nilai=nilai+20;
                     no4="B";
                 }
 
-                if (form5.pilihan5.value=='C. Memasang Optical Disc Drive'){
+                if ((form5.pilihan5.value=='E. 1, 4, dan 5')||(form5.pilihan5.value=='D. Mencari tahu seri Motherboard')||(form5.pilihan5.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form5.pilihan5.value=='C. 2 - 3 - 1')||(form5.pilihan5.value=='C. Memasang Optical Disc Drive')){
                     nilai=nilai+20;
                     no5="B";
                 }
@@ -235,29 +308,29 @@ function cek(){
                 var n = d.getHours() + ":" + d.getMinutes();
             var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     
-                if(form.pilihan.value=='E. 1, 4, dan 5'){
-                    nilai=nilai+20;
-                    no1="B";
-                }
-                if (form2.pilihan2.value=='D. Mencari tahu seri Motherboard'){
-                    nilai=nilai+20;
-                    no2="B";
-                }
+            if ((form.pilihan.value=='E. 1, 4, dan 5')||(form.pilihan.value=='D. Mencari tahu seri Motherboard')||(form.pilihan.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form.pilihan.value=='C. 2 - 3 - 1')||(form.pilihan.value=='C. Memasang Optical Disc Drive')){
+                nilai=nilai+20;
+                no1="B";
+            }
+            if ((form2.pilihan2.value=='E. 1, 4, dan 5')||(form2.pilihan2.value=='D. Mencari tahu seri Motherboard')||(form2.pilihan2.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form2.pilihan2.value=='C. 2 - 3 - 1')||(form2.pilihan2.value=='C. Memasang Optical Disc Drive')){
+                nilai=nilai+20;
+                no2="B";
+            }
 
-                if (form3.pilihan3.value=='A. 1 dipasang dari luar case, 2 dari dalam case'){
-                    nilai=nilai+20;
-                    no3="B";
-                }
+            if ((form3.pilihan3.value=='E. 1, 4, dan 5')||(form3.pilihan3.value=='D. Mencari tahu seri Motherboard')||(form3.pilihan3.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form3.pilihan3.value=='C. 2 - 3 - 1')||(form3.pilihan3.value=='C. Memasang Optical Disc Drive')){
+                nilai=nilai+20;
+                no3="B";
+            }
 
-                if (form4.pilihan4.value=='C. 2 - 3 - 1'){
-                    nilai=nilai+20;
-                    no4="B";
-                }
+            if ((form4.pilihan4.value=='E. 1, 4, dan 5')||(form4.pilihan4.value=='D. Mencari tahu seri Motherboard')||(form4.pilihan4.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form4.pilihan4.value=='C. 2 - 3 - 1')||(form4.pilihan4.value=='C. Memasang Optical Disc Drive')){
+                nilai=nilai+20;
+                no4="B";
+            }
 
-                if (form5.pilihan5.value=='C. Memasang Optical Disc Drive'){
-                    nilai=nilai+20;
-                    no5="B";
-                }
+            if ((form5.pilihan5.value=='E. 1, 4, dan 5')||(form5.pilihan5.value=='D. Mencari tahu seri Motherboard')||(form5.pilihan5.value=='A. 1 dipasang dari luar case, 2 dari dalam case')||(form5.pilihan5.value=='C. 2 - 3 - 1')||(form5.pilihan5.value=='C. Memasang Optical Disc Drive')){
+                nilai=nilai+20;
+                no5="B";
+            }
 
                 //to storage
                 var f = nilai.toFixed(0);

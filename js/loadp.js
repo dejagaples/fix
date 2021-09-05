@@ -1,3 +1,119 @@
+//manggil json
+var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			coba = [];
+			data=10;
+			while(coba.length < 10){
+				var r = Math.floor(Math.random() * 10);
+				if(coba.indexOf(r) === -1) coba.push(r);
+			}
+
+			
+			
+			
+			//ambil data dari database
+			document.getElementById("demo").innerHTML = myObj.soal[coba[0]];
+			document.getElementById("demo2").innerHTML = myObj.soal[coba [1]];
+			document.getElementById("demo3").innerHTML = myObj.soal[coba [2]];
+			document.getElementById("demo4").innerHTML = myObj.soal[coba [3]];
+			document.getElementById("demo5").innerHTML = myObj.soal[coba [4]];
+            document.getElementById("demo6").innerHTML = myObj.soal[coba [5]];
+            document.getElementById("demo7").innerHTML = myObj.soal[coba [6]];
+            document.getElementById("demo8").innerHTML = myObj.soal[coba [7]];
+            document.getElementById("demo9").innerHTML = myObj.soal[coba [8]];
+            document.getElementById("demo10").innerHTML = myObj.soal[coba [9]];
+			document.getElementById("a").innerHTML = myObj.a[coba[0]];
+			document.getElementById("b").innerHTML = myObj.b[coba[0]];
+			document.getElementById("c").innerHTML = myObj.c[coba[0]];
+			document.getElementById("d").innerHTML = myObj.d[coba[0]];
+			document.getElementById("e").innerHTML = myObj.e[coba[0]];
+			document.getElementById("2a").innerHTML = myObj.a[coba[1]];
+			document.getElementById("2b").innerHTML = myObj.b[coba[1]];
+			document.getElementById("2c").innerHTML = myObj.c[coba[1]];
+			document.getElementById("2d").innerHTML = myObj.d[coba[1]];
+			document.getElementById("2e").innerHTML = myObj.e[coba[1]];
+			document.getElementById("3a").innerHTML = myObj.a[coba[2]];
+			document.getElementById("3b").innerHTML = myObj.b[coba[2]];
+			document.getElementById("3c").innerHTML = myObj.c[coba[2]];
+			document.getElementById("3d").innerHTML = myObj.d[coba[2]];
+			document.getElementById("3e").innerHTML = myObj.e[coba[2]];
+			document.getElementById("4a").innerHTML = myObj.a[coba[3]];
+			document.getElementById("4b").innerHTML = myObj.b[coba[3]];
+			document.getElementById("4c").innerHTML = myObj.c[coba[3]];
+			document.getElementById("4d").innerHTML = myObj.d[coba[3]];
+			document.getElementById("4e").innerHTML = myObj.e[coba[3]];
+			document.getElementById("5a").innerHTML = myObj.a[coba[4]];
+			document.getElementById("5b").innerHTML = myObj.b[coba[4]];
+			document.getElementById("5c").innerHTML = myObj.c[coba[4]];
+			document.getElementById("5d").innerHTML = myObj.d[coba[4]];
+			document.getElementById("5e").innerHTML = myObj.e[coba[4]];
+			document.getElementById("6a").innerHTML = myObj.a[coba[5]];
+			document.getElementById("6b").innerHTML = myObj.b[coba[5]];
+			document.getElementById("6c").innerHTML = myObj.c[coba[5]];
+			document.getElementById("6d").innerHTML = myObj.d[coba[5]];
+            document.getElementById("6e").innerHTML = myObj.e[coba[5]];
+            document.getElementById("7a").innerHTML = myObj.a[coba[6]];
+			document.getElementById("7b").innerHTML = myObj.b[coba[6]];
+			document.getElementById("7c").innerHTML = myObj.c[coba[6]];
+			document.getElementById("7d").innerHTML = myObj.d[coba[6]];
+            document.getElementById("7e").innerHTML = myObj.e[coba[6]];
+            document.getElementById("8a").innerHTML = myObj.a[coba[7]];
+			document.getElementById("8b").innerHTML = myObj.b[coba[7]];
+			document.getElementById("8c").innerHTML = myObj.c[coba[7]];
+			document.getElementById("8d").innerHTML = myObj.d[coba[7]];
+            document.getElementById("8e").innerHTML = myObj.e[coba[7]];
+            document.getElementById("9a").innerHTML = myObj.a[coba[8]];
+			document.getElementById("9b").innerHTML = myObj.b[coba[8]];
+			document.getElementById("9c").innerHTML = myObj.c[coba[8]];
+			document.getElementById("9d").innerHTML = myObj.d[coba[8]];
+            document.getElementById("9e").innerHTML = myObj.e[coba[8]];
+            document.getElementById("10a").innerHTML = myObj.a[coba[9]];
+			document.getElementById("10b").innerHTML = myObj.b[coba[9]];
+			document.getElementById("10c").innerHTML = myObj.c[coba[9]];
+			document.getElementById("10d").innerHTML = myObj.d[coba[9]];
+			document.getElementById("10e").innerHTML = myObj.e[coba[9]];
+			
+			
+			
+			function responsif(x) {
+				if (x.matches) { // If media query matches
+					document.getElementById("s1").width= "350";
+                    document.getElementById("s2").width= "200";
+                    document.getElementById("s3").width= "350";
+                    document.getElementById("s4").width= "350";
+                    document.getElementById("s5").width= "350";
+                    document.getElementById("s6").width= "300";
+                    document.getElementById("s7").width= "300";
+                    document.getElementById("s8").width= "330";
+                    document.getElementById("s9").width= "300";
+                    document.getElementById("s10").width= "300";
+                    
+                } else {
+                    document.getElementById("s1").width= "500";
+                    document.getElementById("s2").width= "200";
+                    document.getElementById("s3").width= "500";
+                    document.getElementById("s4").width= "500";
+                    document.getElementById("s5").width= "500";
+                    document.getElementById("s6").width= "400";
+                    document.getElementById("s7").width= "400";
+                    document.getElementById("s8").width= "500";
+                    document.getElementById("s9").width= "400";
+                    document.getElementById("s10").width= "400";
+                    
+                    }
+				}
+			var x = window.matchMedia("(max-width: 700px)");
+			responsif(x); // Call listener function at run time
+			x.addListener(responsif); // Attach listener function on state changes
+			
+			}
+		};
+		xmlhttp.open("GET", "../js/soalsqzp.json", true);
+        xmlhttp.send();
+        
+
 function rubah(){
 	if (form.pilihan.value!=""){
 		document.getElementById("k1").style.backgroundColor="blue";
@@ -122,51 +238,51 @@ function startTimer(duration, display) {
             var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
             
     //soal 1-10
-    if(form.pilihan.value=='D. 3 dan 4'){
+    if ((form.pilihan.value=='D. 3 dan 4')||(form.pilihan.value=='C. Mengatur CPU')||(form.pilihan.value=='B. 1 dan 3')||(form.pilihan.value=='C. 1, 3, dan 4')||(form.pilihan.value=='B. 2, 3, dan 4')||(form.pilihan.value=='C. 1, 2,dan 5')||(form.pilihan.value=='D. 2, 3, dan 5')||(form.pilihan.value=='C. Memasang Optical Disc Drive')||(form.pilihan.value=='E. 1, 4, dan 5')||(form.pilihan.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no1=6;
     }
-    if (form2.pilihan2.value=='C. Mengatur CPU'){
+    if ((form2.pilihan2.value=='D. 3 dan 4')||(form2.pilihan2.value=='C. Mengatur CPU')||(form2.pilihan2.value=='B. 1 dan 3')||(form2.pilihan2.value=='C. 1, 3, dan 4')||(form2.pilihan2.value=='B. 2, 3, dan 4')||(form2.pilihan2.value=='C. 1, 2,dan 5')||(form2.pilihan2.value=='D. 2, 3, dan 5')||(form2.pilihan2.value=='C. Memasang Optical Disc Drive')||(form2.pilihan2.value=='E. 1, 4, dan 5')||(form2.pilihan2.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no2=6;
     }
 
-    if (form3.pilihan3.value=='B. 1 dan 3'){
+    if ((form3.pilihan3.value=='D. 3 dan 4')||(form3.pilihan3.value=='C. Mengatur CPU')||(form3.pilihan3.value=='B. 1 dan 3')||(form3.pilihan3.value=='C. 1, 3, dan 4')||(form3.pilihan3.value=='B. 2, 3, dan 4')||(form3.pilihan3.value=='C. 1, 2,dan 5')||(form3.pilihan3.value=='D. 2, 3, dan 5')||(form3.pilihan3.value=='C. Memasang Optical Disc Drive')||(form3.pilihan3.value=='E. 1, 4, dan 5')||(form3.pilihan3.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no3=6;
     }
 
-    if (form4.pilihan4.value=='C. 1, 3, dan 4'){
+    if ((form4.pilihan4.value=='D. 3 dan 4')||(form4.pilihan4.value=='C. Mengatur CPU')||(form4.pilihan4.value=='B. 1 dan 3')||(form4.pilihan4.value=='C. 1, 3, dan 4')||(form4.pilihan4.value=='B. 2, 3, dan 4')||(form4.pilihan4.value=='C. 1, 2,dan 5')||(form4.pilihan4.value=='D. 2, 3, dan 5')||(form4.pilihan4.value=='C. Memasang Optical Disc Drive')||(form4.pilihan4.value=='E. 1, 4, dan 5')||(form4.pilihan4.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no4=6;
     }
 
-    if (form5.pilihan5.value=='B. 2, 3, dan 4'){
+    if ((form5.pilihan5.value=='D. 3 dan 4')||(form5.pilihan5.value=='C. Mengatur CPU')||(form5.pilihan5.value=='B. 1 dan 3')||(form5.pilihan5.value=='C. 1, 3, dan 4')||(form5.pilihan5.value=='B. 2, 3, dan 4')||(form5.pilihan5.value=='C. 1, 2,dan 5')||(form5.pilihan5.value=='D. 2, 3, dan 5')||(form5.pilihan5.value=='C. Memasang Optical Disc Drive')||(form5.pilihan5.value=='E. 1, 4, dan 5')||(form5.pilihan5.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no5=6;
     }
 
-    if (form6.pilihan6.value=='C. 1, 2,dan 5'){
+    if ((form6.pilihan6.value=='D. 3 dan 4')||(form6.pilihan6.value=='C. Mengatur CPU')||(form6.pilihan6.value=='B. 1 dan 3')||(form6.pilihan6.value=='C. 1, 3, dan 4')||(form6.pilihan6.value=='B. 2, 3, dan 4')||(form6.pilihan6.value=='C. 1, 2,dan 5')||(form6.pilihan6.value=='D. 2, 3, dan 5')||(form6.pilihan6.value=='C. Memasang Optical Disc Drive')||(form6.pilihan6.value=='E. 1, 4, dan 5')||(form6.pilihan6.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no6=6;
     }
 
-    if (form7.pilihan7.value=='D. 2, 3, dan 5'){
+    if ((form7.pilihan7.value=='D. 3 dan 4')||(form7.pilihan7.value=='C. Mengatur CPU')||(form7.pilihan7.value=='B. 1 dan 3')||(form7.pilihan7.value=='C. 1, 3, dan 4')||(form7.pilihan7.value=='B. 2, 3, dan 4')||(form7.pilihan7.value=='C. 1, 2,dan 5')||(form7.pilihan7.value=='D. 2, 3, dan 5')||(form7.pilihan7.value=='C. Memasang Optical Disc Drive')||(form7.pilihan7.value=='E. 1, 4, dan 5')||(form7.pilihan7.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no7=6;
     }
 
-    if (form8.pilihan8.value=='C. Memasang Optical Disc Drive'){
+    if ((form8.pilihan8.value=='D. 3 dan 4')||(form8.pilihan8.value=='C. Mengatur CPU')||(form8.pilihan8.value=='B. 1 dan 3')||(form8.pilihan8.value=='C. 1, 3, dan 4')||(form8.pilihan8.value=='B. 2, 3, dan 4')||(form8.pilihan8.value=='C. 1, 2,dan 5')||(form8.pilihan8.value=='D. 2, 3, dan 5')||(form8.pilihan8.value=='C. Memasang Optical Disc Drive')||(form8.pilihan8.value=='E. 1, 4, dan 5')||(form8.pilihan8.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no8=6;
     }
     
-    if (form9.pilihan9.value=='E. 1, 4, dan 5'){
+    if ((form9.pilihan9.value=='D. 3 dan 4')||(form9.pilihan9.value=='C. Mengatur CPU')||(form9.pilihan9.value=='B. 1 dan 3')||(form9.pilihan9.value=='C. 1, 3, dan 4')||(form9.pilihan9.value=='B. 2, 3, dan 4')||(form9.pilihan9.value=='C. 1, 2,dan 5')||(form9.pilihan9.value=='D. 2, 3, dan 5')||(form9.pilihan9.value=='C. Memasang Optical Disc Drive')||(form9.pilihan9.value=='E. 1, 4, dan 5')||(form9.pilihan9.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no9=6;
     }
 
-    if (form10.pilihan10.value=='C. 2 - 3 - 1'){
+    if ((form10.pilihan10.value=='D. 3 dan 4')||(form10.pilihan10.value=='C. Mengatur CPU')||(form10.pilihan10.value=='B. 1 dan 3')||(form10.pilihan10.value=='C. 1, 3, dan 4')||(form10.pilihan10.value=='B. 2, 3, dan 4')||(form10.pilihan10.value=='C. 1, 2,dan 5')||(form10.pilihan10.value=='D. 2, 3, dan 5')||(form10.pilihan10.value=='C. Memasang Optical Disc Drive')||(form10.pilihan10.value=='E. 1, 4, dan 5')||(form10.pilihan10.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no10=6;
     }
@@ -518,51 +634,52 @@ function cek(){
     var n = d.getHours() + ":" + d.getMinutes();
     var m = d.getDate() + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
     //soal 1-10
-    if(form.pilihan.value=='D. 3 dan 4'){
+    //soal 1-10
+    if ((form.pilihan.value=='D. 3 dan 4')||(form.pilihan.value=='C. Mengatur CPU')||(form.pilihan.value=='B. 1 dan 3')||(form.pilihan.value=='C. 1, 3, dan 4')||(form.pilihan.value=='B. 2, 3, dan 4')||(form.pilihan.value=='C. 1, 2,dan 5')||(form.pilihan.value=='D. 2, 3, dan 5')||(form.pilihan.value=='C. Memasang Optical Disc Drive')||(form.pilihan.value=='E. 1, 4, dan 5')||(form.pilihan.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no1=6;
     }
-    if (form2.pilihan2.value=='C. Mengatur CPU'){
+    if ((form2.pilihan2.value=='D. 3 dan 4')||(form2.pilihan2.value=='C. Mengatur CPU')||(form2.pilihan2.value=='B. 1 dan 3')||(form2.pilihan2.value=='C. 1, 3, dan 4')||(form2.pilihan2.value=='B. 2, 3, dan 4')||(form2.pilihan2.value=='C. 1, 2,dan 5')||(form2.pilihan2.value=='D. 2, 3, dan 5')||(form2.pilihan2.value=='C. Memasang Optical Disc Drive')||(form2.pilihan2.value=='E. 1, 4, dan 5')||(form2.pilihan2.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no2=6;
     }
 
-    if (form3.pilihan3.value=='B. 1 dan 3'){
+    if ((form3.pilihan3.value=='D. 3 dan 4')||(form3.pilihan3.value=='C. Mengatur CPU')||(form3.pilihan3.value=='B. 1 dan 3')||(form3.pilihan3.value=='C. 1, 3, dan 4')||(form3.pilihan3.value=='B. 2, 3, dan 4')||(form3.pilihan3.value=='C. 1, 2,dan 5')||(form3.pilihan3.value=='D. 2, 3, dan 5')||(form3.pilihan3.value=='C. Memasang Optical Disc Drive')||(form3.pilihan3.value=='E. 1, 4, dan 5')||(form3.pilihan3.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no3=6;
     }
 
-    if (form4.pilihan4.value=='C. 1, 3, dan 4'){
+    if ((form4.pilihan4.value=='D. 3 dan 4')||(form4.pilihan4.value=='C. Mengatur CPU')||(form4.pilihan4.value=='B. 1 dan 3')||(form4.pilihan4.value=='C. 1, 3, dan 4')||(form4.pilihan4.value=='B. 2, 3, dan 4')||(form4.pilihan4.value=='C. 1, 2,dan 5')||(form4.pilihan4.value=='D. 2, 3, dan 5')||(form4.pilihan4.value=='C. Memasang Optical Disc Drive')||(form4.pilihan4.value=='E. 1, 4, dan 5')||(form4.pilihan4.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no4=6;
     }
 
-    if (form5.pilihan5.value=='B. 2, 3, dan 4'){
+    if ((form5.pilihan5.value=='D. 3 dan 4')||(form5.pilihan5.value=='C. Mengatur CPU')||(form5.pilihan5.value=='B. 1 dan 3')||(form5.pilihan5.value=='C. 1, 3, dan 4')||(form5.pilihan5.value=='B. 2, 3, dan 4')||(form5.pilihan5.value=='C. 1, 2,dan 5')||(form5.pilihan5.value=='D. 2, 3, dan 5')||(form5.pilihan5.value=='C. Memasang Optical Disc Drive')||(form5.pilihan5.value=='E. 1, 4, dan 5')||(form5.pilihan5.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no5=6;
     }
 
-    if (form6.pilihan6.value=='C. 1, 2,dan 5'){
+    if ((form6.pilihan6.value=='D. 3 dan 4')||(form6.pilihan6.value=='C. Mengatur CPU')||(form6.pilihan6.value=='B. 1 dan 3')||(form6.pilihan6.value=='C. 1, 3, dan 4')||(form6.pilihan6.value=='B. 2, 3, dan 4')||(form6.pilihan6.value=='C. 1, 2,dan 5')||(form6.pilihan6.value=='D. 2, 3, dan 5')||(form6.pilihan6.value=='C. Memasang Optical Disc Drive')||(form6.pilihan6.value=='E. 1, 4, dan 5')||(form6.pilihan6.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no6=6;
     }
 
-    if (form7.pilihan7.value=='D. 2, 3, dan 5'){
+    if ((form7.pilihan7.value=='D. 3 dan 4')||(form7.pilihan7.value=='C. Mengatur CPU')||(form7.pilihan7.value=='B. 1 dan 3')||(form7.pilihan7.value=='C. 1, 3, dan 4')||(form7.pilihan7.value=='B. 2, 3, dan 4')||(form7.pilihan7.value=='C. 1, 2,dan 5')||(form7.pilihan7.value=='D. 2, 3, dan 5')||(form7.pilihan7.value=='C. Memasang Optical Disc Drive')||(form7.pilihan7.value=='E. 1, 4, dan 5')||(form7.pilihan7.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no7=6;
     }
 
-    if (form8.pilihan8.value=='C. Memasang Optical Disc Drive'){
+    if ((form8.pilihan8.value=='D. 3 dan 4')||(form8.pilihan8.value=='C. Mengatur CPU')||(form8.pilihan8.value=='B. 1 dan 3')||(form8.pilihan8.value=='C. 1, 3, dan 4')||(form8.pilihan8.value=='B. 2, 3, dan 4')||(form8.pilihan8.value=='C. 1, 2,dan 5')||(form8.pilihan8.value=='D. 2, 3, dan 5')||(form8.pilihan8.value=='C. Memasang Optical Disc Drive')||(form8.pilihan8.value=='E. 1, 4, dan 5')||(form8.pilihan8.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no8=6;
     }
     
-    if (form9.pilihan9.value=='E. 1, 4, dan 5'){
+    if ((form9.pilihan9.value=='D. 3 dan 4')||(form9.pilihan9.value=='C. Mengatur CPU')||(form9.pilihan9.value=='B. 1 dan 3')||(form9.pilihan9.value=='C. 1, 3, dan 4')||(form9.pilihan9.value=='B. 2, 3, dan 4')||(form9.pilihan9.value=='C. 1, 2,dan 5')||(form9.pilihan9.value=='D. 2, 3, dan 5')||(form9.pilihan9.value=='C. Memasang Optical Disc Drive')||(form9.pilihan9.value=='E. 1, 4, dan 5')||(form9.pilihan9.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no9=6;
     }
 
-    if (form10.pilihan10.value=='C. 2 - 3 - 1'){
+    if ((form10.pilihan10.value=='D. 3 dan 4')||(form10.pilihan10.value=='C. Mengatur CPU')||(form10.pilihan10.value=='B. 1 dan 3')||(form10.pilihan10.value=='C. 1, 3, dan 4')||(form10.pilihan10.value=='B. 2, 3, dan 4')||(form10.pilihan10.value=='C. 1, 2,dan 5')||(form10.pilihan10.value=='D. 2, 3, dan 5')||(form10.pilihan10.value=='C. Memasang Optical Disc Drive')||(form10.pilihan10.value=='E. 1, 4, dan 5')||(form10.pilihan10.value=='C. 2 - 3 - 1')){
         nilai=nilai+6;
         no10=6;
     }
@@ -1369,25 +1486,25 @@ if (r.matches) { // If media query matches
     document.getElementById("kom2").hidden=true;
     document.getElementById("kom3").hidden=true;
     document.getElementById("kom14").hidden=true;
-    document.getElementById("s1").width= "350";
+    // document.getElementById("s1").width= "350";
     document.getElementById("oke").style.width= "200px";
-    document.getElementById("s2").width= "200";
+    // document.getElementById("s2").width= "200";
     document.getElementById("oke2").style.width= "200px";
-    document.getElementById("s3").width= "350";
+    // document.getElementById("s3").width= "350";
     document.getElementById("oke3").style.width= "200px";
-    document.getElementById("s4").width= "350";
+    // document.getElementById("s4").width= "350";
     document.getElementById("oke4").style.width= "200px";
-    document.getElementById("s5").width= "350";
+    // document.getElementById("s5").width= "350";
     document.getElementById("oke5").style.width= "200px";
-    document.getElementById("s6").width= "300";
+    // document.getElementById("s6").width= "300";
     document.getElementById("oke6").style.width= "200px";
-    document.getElementById("s7").width= "300";
+    // document.getElementById("s7").width= "300";
     document.getElementById("oke7").style.width= "200px";
-    document.getElementById("s8").width= "330";
+    // document.getElementById("s8").width= "330";
     document.getElementById("oke8").style.width= "200px";
-    document.getElementById("s9").width= "300";
+    // document.getElementById("s9").width= "300";
     document.getElementById("oke9").style.width= "200px";
-    document.getElementById("s10").width= "300";
+    // document.getElementById("s10").width= "300";
     document.getElementById("oke10").style.width= "200px";
 
     
@@ -1419,25 +1536,25 @@ if (r.matches) { // If media query matches
     document.getElementById("hpya14").hidden=true;
     document.getElementById("utama").style.paddingLeft= "50px";
     document.getElementById("utama").style.paddingRight= "50px";
-    document.getElementById("s1").width= "500";
+    // document.getElementById("s1").width= "500";
     document.getElementById("oke").style.width= "";
-    document.getElementById("s2").width= "200";
+    // document.getElementById("s2").width= "200";
     document.getElementById("oke2").style.width= "";
-    document.getElementById("s3").width= "500";
+    // document.getElementById("s3").width= "500";
     document.getElementById("oke3").style.width= "";    
-    document.getElementById("s4").width= "500";
+    // document.getElementById("s4").width= "500";
     document.getElementById("oke4").style.width= "";    
-    document.getElementById("s5").width= "500";
+    // document.getElementById("s5").width= "500";
     document.getElementById("oke5").style.width= "";    
-    document.getElementById("s6").width= "400";
+    // document.getElementById("s6").width= "400";
     document.getElementById("oke6").style.width= "";    
-    document.getElementById("s7").width= "400";
+    // document.getElementById("s7").width= "400";
     document.getElementById("oke7").style.width= "";    
-    document.getElementById("s8").width= "500";
+    // document.getElementById("s8").width= "500";
     document.getElementById("oke8").style.width= "";
-    document.getElementById("s9").width= "400";
+    // document.getElementById("s9").width= "400";
     document.getElementById("oke9").style.width= "";
-    document.getElementById("s10").width= "400";
+    // document.getElementById("s10").width= "400";
     document.getElementById("oke10").style.width= "";
 
 
