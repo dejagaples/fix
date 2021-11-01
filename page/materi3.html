@@ -252,7 +252,7 @@
 					<code><a href="" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 6</a></code>
 					berikut.
 					<span id="">(Klik tombol untuk menampilkan)</span>
-					<div id=""> 
+					<div id="gd1"> 
 					<center><button class="button-lihat" onclick="tampildvi()">Lihat >></button></center>
 					</div>
 					<span id="gd" > </span>
@@ -265,10 +265,10 @@
 				Bentuk dari kabel HDMI dapat dilihat pada
 					<code><a href="#4gb" style="text-decoration:none;color:rgb(190, 49, 49);">Gambar 7</a></code> berikut.
 					<span id="h5">(Klik tombol untuk menampilkan)</span>
-					<div id="btn5"> 
+					<div id="btnx"> 
 					<center><button class="button-lihat" onclick="tampilhdmi()">Lihat Gambar 7 >></button></center>
 					</div>
-					<span id="g5" > </span>
+					<span id="gx" > </span>
 					
 			</p>
 			<h5><br>7. Kabel Front Panel</h5>
@@ -573,7 +573,7 @@
 				document.getElementById("g7").innerHTML = `
 						<center>
 						<br>
-						<img id="6gb" class="hover03 column" src="../gambar/FP4.png" width="70%"
+						<img id="6gb" class="hover03 column" src="../gambar/FP4.PNG" width="70%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
 						<br>
 						<span style="font-size:12px"><b>Sumber:</b> <a href="http://pengetahuan-tkjku.blogspot.com/2017/03/cara-mudah-memasang-kabel-front-panel.html" target="_blank"> Pengetahuan-tkjku </a></span>
@@ -676,6 +676,38 @@
 				</div>
 				<br>
 				`;
+				document.getElementById("gd").innerHTML=`
+					<center>
+					<img id="5gb" class="hover03 column" src="../gambar/dvi.jpg" width="60%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<span style="font-size:12px"><b>Sumber:</b> <a href="https://id.rsdelivers.com/product/rs-pro/dvi000000002118/rs-pro-dvi-d-to-dvi-d-cable-male-to-male-5m/0489371" target="_blank"> id.rsdelivers.com </a></span>
+						<br>
+						<em><code>Gambar 5</code>. Kabel DVI</em>
+						<br><br>
+							
+						<img id="5gb" class="hover03 column" src="../gambar/dvi2.JPG" width="70%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<span style="font-size:12px"><b>Sumber:</b> <a href="https://www.murdockcruz.com/2018/01/05/sekilas-penjelasan-mengenai-port-dvi-dan-tipenya/#.YJDp4rUzY2x" target="_blank"> murdockcruz.com </a></span>
+						<br>
+						<em><code>Gambar 6</code>. Macam-macam Port DVI</em>
+						</center>
+				`;
+				document.getElementById("gd1").hidden=true;
+				document.getElementById("btnx").hidden=true;
+				document.getElementById("gx").innerHTML=`
+				<center>
+				<img id="5gb" class="hover03 column" src="../gambar/hdmi.jpg" width="60%"
+	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
+						<br>
+						<span style="font-size:12px"><b>Sumber:</b> <a href="https://my-best.id/80826" target="_blank"> My-best.id </a></span>
+						<br>
+						<em><code>Gambar 7</code>. Kabel HDMI</em>
+						</center>
+				`;
+
+
 			} else {
 				document.getElementById("ba").style.width="37.5%";
 				document.getElementById("bas").style.display="block";
@@ -717,6 +749,10 @@
 				document.getElementById("btn6").hidden=false;
 				document.getElementById("btn7").hidden=false;
 				document.getElementById("btn8").hidden=false;
+				document.getElementById("gd").innerHTML="";
+				document.getElementById("gd1").hidden=false;
+				document.getElementById("btnx").hidden=false;
+				document.getElementById("gx").innerHTML="";
 				}
 			}
 
@@ -836,7 +872,7 @@
 						<br>
 						<em><code>Gambar 5</code>. Kabel DVI</em>
 						<br><br>
-						<img id="5gb" class="hover03 column" src="../gambar/dvi2.jpg" width="60%"
+						<img id="5gb" class="hover03 column" src="../gambar/dvi2.JPG" width="60%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
 						<br>
 						<span style="font-size:12px"><b>Sumber:</b> <a href="https://www.murdockcruz.com/2018/01/05/sekilas-penjelasan-mengenai-port-dvi-dan-tipenya/#.YJDp4rUzY2x" target="_blank"> murdockcruz.com </a></span>
@@ -876,7 +912,7 @@
 			document.getElementById("first").hidden=true;
 			document.getElementById("gambar").innerHTML=`
 			<br><br>
-			<img id="6gb" class="hover03 column" src="../gambar/FP4.png" width="60%"
+			<img id="6gb" class="hover03 column" src="../gambar/FP4.PNG" width="60%"
 	  					onmouseover="bigImg(this)"	 onmouseout="normalImg(this)" border="0" alt="error">
 						<br>
 						<span style="font-size:12px"><b>Sumber:</b> <a href="http://pengetahuan-tkjku.blogspot.com/2017/03/cara-mudah-memasang-kabel-front-panel.html" target="_blank"> Pengetahuan-tkjku </a></span>
